@@ -212,7 +212,7 @@ export const pages: Record<string, Page> = {
     blocks: [
       { h: 'Installeren', steps: [
         'Pak de download uit.',
-        'Dubbelklik op “Start-HumanOverride.bat” en klik op Ja.',
+        'Dubbelklik op “Start-Mindveto.bat” en klik op Ja.',
         'Typ 1 om AI te blokkeren. Typ 3 om ook Copilot, Recall en de AI in Edge en Chrome uit te zetten.',
         'Geef kinderen of personeel een gewone account (geen beheerder). Dan kunnen ze het niet ongedaan maken.',
       ], note: 'Windows zegt misschien eerst dat het “je pc heeft beschermd”. Klik op “Meer informatie” en dan op “Toch uitvoeren”. Het script is gewone tekst: je kunt het in Kladblok openen en elke regel lezen.' },
@@ -234,8 +234,8 @@ export const pages: Record<string, Page> = {
       { h: 'Installeren', steps: [
         'Pak de download uit.',
         'Open Terminal in de uitgepakte map.',
-        L('Typ <code>sudo sh human-override.sh on</code> en je wachtwoord.'),
-        L('Om AI weer toe te laten: <code>sudo sh human-override.sh off</code>.'),
+        L('Typ <code>sudo sh mindveto.sh on</code> en je wachtwoord.'),
+        L('Om AI weer toe te laten: <code>sudo sh mindveto.sh off</code>.'),
       ], note: 'Geef kinderen een gewone account (geen beheerder). Dan kunnen ze het hosts-bestand niet wijzigen.' },
       { h: 'Feiten', facts: [
         ['Werkt op', 'macOS, Ubuntu, Debian, Fedora en de meeste Linux-systemen'], ['Ongedaan maken', 'Eén commando'], ['Prijs', 'Gratis'],
@@ -334,7 +334,7 @@ export const pages: Record<string, Page> = {
     title: 'Prijzen',
     desc: 'Blokkeren is gratis. Plus €14,99 per jaar voor gezinnen, €1 per leerling voor scholen, €2,50 per gebruiker per maand voor kantoren.',
     h1: 'Blokkeren is gratis. Extra’s betalen het werk.',
-    lead: 'Vandaag is elke functie gratis terwijl we lanceren. Betaalde plannen starten met de versie op Google Play. Dit zijn de prijzen die we plannen.',
+    lead: 'Vandaag is elke functie gratis terwijl we lanceren. Betaalde plannen starten met de versie op Google Play.',
     blocks: [],
     faq: [
       { q: 'Wanneer moet ik betalen?', a: 'Nu niet. Als de betaalde plannen starten, kies je zelf of je overstapt. Er wordt niets automatisch aangerekend en het gratis plan blijft.' },

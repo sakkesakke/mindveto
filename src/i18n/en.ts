@@ -212,7 +212,7 @@ export const pages: Record<string, Page> = {
     blocks: [
       { h: 'Install', steps: [
         'Unzip the download.',
-        'Double-click “Start-HumanOverride.bat” and click Yes.',
+        'Double-click “Start-Mindveto.bat” and click Yes.',
         'Type 1 to block AI. Type 3 to also switch off Copilot, Recall and the AI in Edge and Chrome.',
         'Give children or staff a normal (non-admin) account. Then they cannot undo it.',
       ], note: 'Windows may first say it “protected your PC”. Click “More info”, then “Run anyway”. The script is plain text: you can open it in Notepad and read every line.' },
@@ -234,8 +234,8 @@ export const pages: Record<string, Page> = {
       { h: 'Install', steps: [
         'Unzip the download.',
         'Open Terminal in the unzipped folder.',
-        L('Type <code>sudo sh human-override.sh on</code> and your password.'),
-        L('To allow AI again: <code>sudo sh human-override.sh off</code>.'),
+        L('Type <code>sudo sh mindveto.sh on</code> and your password.'),
+        L('To allow AI again: <code>sudo sh mindveto.sh off</code>.'),
       ], note: 'Use a normal (non-admin) account for children. Then they cannot change the hosts file.' },
       { h: 'Facts', facts: [
         ['Works on', 'macOS, Ubuntu, Debian, Fedora and most Linux systems'], ['Undo', 'One command'], ['Price', 'Free'],
@@ -334,7 +334,7 @@ export const pages: Record<string, Page> = {
     title: 'Pricing',
     desc: 'Blocking is free. Plus €14.99 a year for families, €1 per pupil for schools, €2.50 per user a month for offices. Free during the launch.',
     h1: 'Blocking is free. Extras pay for the work.',
-    lead: 'Today every feature is free while we launch. Paid plans start with the Google Play version. These are the prices we plan.',
+    lead: 'Today every feature is free while we launch. Paid plans start with the Google Play version.',
     blocks: [],
     faq: [
       { q: 'When do I have to pay?', a: 'Not now. When paid plans start, you choose yourself whether to upgrade. Nothing is charged automatically and the free plan stays.' },

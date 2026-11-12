@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import { LANGS, ROUTES, href, SITE, type Lang, type PageKey } from '../i18n/routes';
 import { UI } from '../i18n/ui';
 import { PRODUCT_NAMES, PRODUCT_LINES, PRODUCT_KEYS } from '../i18n/products';
-import { AI_NAMES, PLANS, EXAM_UI, STREAM_LABEL, PASTE_MOCK } from '../i18n/extra';
+import { AI_NAMES, PLANS, EXAM_UI, STREAM_LABEL, PASTE_MOCK, UI_PREVIEW } from '../i18n/extra';
 import type { Action, Home, Page } from '../i18n/types';
 import * as en from '../i18n/en';
 import * as nl from '../i18n/nl';
@@ -58,7 +58,9 @@ if (!isHome) {
 const X = EXAM_UI[lang];
 const M = PASTE_MOCK[lang];
 const NO_ASIDE: PageKey[] = ['help', 'about', 'privacy', 'terms', 'legal', 'pricing', 'download'];
-const aside = isHome || NO_ASIDE.includes(key) ? null : (key === 'offices' || key === 'paste') ? 'paste' : 'switch';
+const ASIDE: Partial<Record<PageKey, string>> = { offices: 'paste', paste: 'paste', browser: 'popup', parents: 'popup', schools: 'popup', exam: 'exam', android: 'phone', windows: 'win', maclinux: 'mac', network: 'list', about: 'switch' };
+const aside = isHome || NO_ASIDE.includes(key) ? null : ASIDE[key] ?? null;
+const U = UI_PREVIEW[lang];
 const P = PLANS[lang];
 ---
 <Base lang={lang} page={key} title={title} desc={desc} jsonld={jsonld}>
@@ -85,7 +87,7 @@ const P = PLANS[lang];
     </div>
   </section>
   <section class="stream" aria-label="AI services">
-    <div class="wrap"><p><span class="lbl">{STREAM_LABEL[lang]}</span> {AI_NAMES.map((n, i) => <><span style={`transition-delay:${i * 28}ms`}>{n}</span>{' '}</>)}<span style={`transition-delay:${AI_NAMES.length * 28}ms`}>+110</span></p></div>
+    <div class="wrap"><p><span class="lbl">{STREAM_LABEL[lang]}</span> {AI_NAMES.slice(0, 24).map((n, i) => <><span style={`transition-delay:${i * 28}ms`}>{n}</span>{' '}</>)}<span style={`transition-delay:${24 * 28}ms`}>+130</span></p></div>
   </section>
 
   <section class="band paper" id="who" aria-labelledby="who-h">
@@ -101,8 +103,21 @@ const P = PLANS[lang];
     <div class="wrap">
       <h2 id="pr-h">{h.productsH}</h2>
       <p class="lead">{h.productsLead}</p>
-      <div class="products four">
-        {PRODUCT_KEYS.map((k) => <div class="product"><h3><a href={href(k, lang)}>{PRODUCT_NAMES[lang][k]}</a></h3><p>{PRODUCT_LINES[lang][k]}</p></div>)}
+      <div class="toolsplit">
+        <ul class="toollist">
+          {PRODUCT_KEYS.map((k) => <li><a href={href(k, lang)}><span class="tn">{PRODUCT_NAMES[lang][k]}</span><span class="tl">{PRODUCT_LINES[lang][k]}</span></a></li>)}
+        </ul>
+        <figure class="mock">
+          <div class="ui-pop" aria-hidden="true">
+            <div class="ui-head"><img src="/favicon.svg" alt="" width="14" height="20">Mindveto</div>
+            <div class="ui-big"><span>{UI_PREVIEW[lang].on}</span><small>{UI_PREVIEW[lang].tapOff}</small></div>
+            <p class="ui-st">{UI_PREVIEW[lang].st}</p>
+            <p class="ui-h">{UI_PREVIEW[lang].cats}</p>
+            <ul>{UI_PREVIEW[lang].c.map(([n, c, on]) => <li><span class={'ui-box' + (on ? ' on' : '')}></span>{n}<small>{c}</small></li>)}</ul>
+            <p class="ui-pin">{UI_PREVIEW[lang].pin}</p>
+          </div>
+          <figcaption>{UI_PREVIEW[lang].label}</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -140,14 +155,16 @@ const P = PLANS[lang];
   </>
 ) : (
   <>
+  <div class={'wrap pgrid' + (aside ? ' hasside' : '')}>
+  <div class="pmain">
   <header class="pagehead">
-    <div class={'wrap' + (aside ? ' withaside' : '')}>
       <div>
         {isProduct && <p class="crumbs"><a href={href('home', lang)}>Mindveto</a> / <a href={href('download', lang)}>{t.products}</a></p>}
         <h1>{pg!.h1.replace(/\.$/, '')}</h1>
         <p class="lead">{pg!.lead}</p>
         {pg!.actions && <div class="actions">{pg!.actions.map((a) => <a class={'btn ' + (a.solid ? 'solid' : 'line')} href={link(a)} download={a.download ? '' : undefined}>{a.label}</a>)}</div>}
       </div>
+      {aside && aside !== 'switch' && <div class="mside" aria-hidden="true">
       {aside === 'paste' && (
         <figure class="pmock" aria-label={M.h}>
           <p class="pm-h">{M.h}</p>
@@ -156,16 +173,79 @@ const P = PLANS[lang];
           <div class="pm-b"><span class="pm-btn solid">{M.a}</span><span class="pm-btn">{M.b}</span><span class="pm-btn ghost">{M.c}</span></div>
         </figure>
       )}
+      {(aside === 'popup' || aside === 'exam') && (
+        <figure class="mock">
+          <div class="ui-pop" aria-hidden="true">
+            <div class="ui-head"><img src="/favicon.svg" alt="" width="14" height="20">Mindveto</div>
+            {aside === 'exam' && <p class="ui-exam">{U.exam}</p>}
+            <div class="ui-big"><span>{U.on}</span><small>{U.tapOff}</small></div>
+            <p class="ui-st">{U.st}</p>
+            <p class="ui-h">{U.cats}</p>
+            <ul>{U.c.map(([n, c, on]) => <li><span class={'ui-box' + (on ? ' on' : '')}></span>{n}<small>{c}</small></li>)}</ul>
+            <p class="ui-pin">{U.pin}</p>
+          </div>
+          <figcaption>{U.label}</figcaption>
+        </figure>
+      )}
+      {aside === 'phone' && (
+        <figure class="mock">
+          <div class="ui-phone" aria-hidden="true">
+            <div class="ui-ph-in">
+              <p class="ui-ph-t">MINDVETO</p><p class="ui-ph-s">{U.aSub}</p>
+              <div class="ui-ph-btn">{U.aOn}</div>
+              <p class="ui-ph-tap">{U.aTap}</p>
+              <p class="ui-st">{U.aSt}</p>
+              <div class="ui-ph-card">{U.aAlways}</div>
+            </div>
+          </div>
+          <figcaption>{U.label}</figcaption>
+        </figure>
+      )}
+      {(aside === 'win' || aside === 'mac' || aside === 'list') && (
+        <figure class="mock">
+          <pre class="ui-term" aria-label={U.label}>{aside === 'win' ? `  MINDVETO  -  the AI kill switch
+
+  1) Block AI on this PC (or update the list)
+  2) Allow AI again (remove the block)
+  3) Turn off the AI built into Windows,
+     Edge and Chrome (Copilot, Recall, ...)
+  4) Turn that built-in AI back on
+  5) Quit
+
+  Choice: 1
+
+  Done: 161 AI addresses are blocked
+  on this PC. Restart your browser.` : aside === 'mac' ? `$ sudo sh mindveto.sh on
+Password:
+Terms: Mindveto is provided "as is" ...
+Agree? (y/n) y
+Done: 161 AI addresses blocked.
+Restart your browser.
+
+$ sudo sh mindveto.sh off
+AI is allowed again.` : `! Title: Mindveto AI block list
+! Domains: 161
+||chatgpt.com^
+||chat.openai.com^
+||gemini.google.com^
+||claude.ai^
+||copilot.microsoft.com^
+||perplexity.ai^
+||chat.deepseek.com^
+||character.ai^
+...`}</pre>
+          <figcaption>{U.label}</figcaption>
+        </figure>
+      )}
       {aside === 'switch' && (
         <div class="plate mini" aria-hidden="true">
           <span class="switch" aria-checked="true"><span class="screw t"></span><span class="rocker" data-on={h.switchOn} data-off={h.switchOff}><span class="led"></span></span><span class="screw b"></span></span>
         </div>
       )}
-    </div>
+      </div>}
   </header>
-
   <div class="prose">
-    <div class="wrap">
+    <div>
       {key === 'exam' && (
         <section aria-label={X.mkH}>
           <div class="tool" id="make">
@@ -258,6 +338,87 @@ const P = PLANS[lang];
         </section>
       )}
     </div>
+  </div>
+  </div>
+  {aside && <aside class="pside">
+      {aside === 'paste' && (
+        <figure class="pmock" aria-label={M.h}>
+          <p class="pm-h">{M.h}</p>
+          <p class="pm-p">{M.p}</p>
+          <ul>{M.found.map((f) => <li>{f}</li>)}</ul>
+          <div class="pm-b"><span class="pm-btn solid">{M.a}</span><span class="pm-btn">{M.b}</span><span class="pm-btn ghost">{M.c}</span></div>
+        </figure>
+      )}
+      {(aside === 'popup' || aside === 'exam') && (
+        <figure class="mock">
+          <div class="ui-pop" aria-hidden="true">
+            <div class="ui-head"><img src="/favicon.svg" alt="" width="14" height="20">Mindveto</div>
+            {aside === 'exam' && <p class="ui-exam">{U.exam}</p>}
+            <div class="ui-big"><span>{U.on}</span><small>{U.tapOff}</small></div>
+            <p class="ui-st">{U.st}</p>
+            <p class="ui-h">{U.cats}</p>
+            <ul>{U.c.map(([n, c, on]) => <li><span class={'ui-box' + (on ? ' on' : '')}></span>{n}<small>{c}</small></li>)}</ul>
+            <p class="ui-pin">{U.pin}</p>
+          </div>
+          <figcaption>{U.label}</figcaption>
+        </figure>
+      )}
+      {aside === 'phone' && (
+        <figure class="mock">
+          <div class="ui-phone" aria-hidden="true">
+            <div class="ui-ph-in">
+              <p class="ui-ph-t">MINDVETO</p><p class="ui-ph-s">{U.aSub}</p>
+              <div class="ui-ph-btn">{U.aOn}</div>
+              <p class="ui-ph-tap">{U.aTap}</p>
+              <p class="ui-st">{U.aSt}</p>
+              <div class="ui-ph-card">{U.aAlways}</div>
+            </div>
+          </div>
+          <figcaption>{U.label}</figcaption>
+        </figure>
+      )}
+      {(aside === 'win' || aside === 'mac' || aside === 'list') && (
+        <figure class="mock">
+          <pre class="ui-term" tabindex="0" aria-label={U.label}>{aside === 'win' ? `  MINDVETO  -  the AI kill switch
+
+  1) Block AI on this PC (or update the list)
+  2) Allow AI again (remove the block)
+  3) Turn off the AI built into Windows,
+     Edge and Chrome (Copilot, Recall, ...)
+  4) Turn that built-in AI back on
+  5) Quit
+
+  Choice: 1
+
+  Done: 161 AI addresses are blocked
+  on this PC. Restart your browser.` : aside === 'mac' ? `$ sudo sh mindveto.sh on
+Password:
+Terms: Mindveto is provided "as is" ...
+Agree? (y/n) y
+Done: 161 AI addresses blocked.
+Restart your browser.
+
+$ sudo sh mindveto.sh off
+AI is allowed again.` : `! Title: Mindveto AI block list
+! Domains: 161
+||chatgpt.com^
+||chat.openai.com^
+||gemini.google.com^
+||claude.ai^
+||copilot.microsoft.com^
+||perplexity.ai^
+||chat.deepseek.com^
+||character.ai^
+...`}</pre>
+          <figcaption>{U.label}</figcaption>
+        </figure>
+      )}
+      {aside === 'switch' && (
+        <div class="plate mini" aria-hidden="true">
+          <span class="switch" aria-checked="true"><span class="screw t"></span><span class="rocker" data-on={h.switchOn} data-off={h.switchOff}><span class="led"></span></span><span class="screw b"></span></span>
+        </div>
+      )}
+  </aside>}
   </div>
   </>
 )}

@@ -9,7 +9,7 @@ export const PLANS: Record<Lang, { plans: Plan[]; note: string }> = {
     note: 'Planned prices. During the launch every feature is free. Consumer prices include VAT.',
     plans: [
       { name: 'Free', price: '€0', per: 'always', who: 'Everyone', free: true, items: ['Blocks 150+ AI services', 'PIN lock and schedule', 'Your own block and allow lists', 'Browser, Android, Windows, Mac, Linux, network lists'], cta: 'Download free', to: 'download' },
-      { name: 'Plus', price: '€14.99', per: 'per year, or €1.99 per month', who: 'Families and freelancers', items: ['Everything in Free', 'Paste guard with your own words', 'Approved AI', 'Tamper log and alerts on Android', 'School holidays in the schedule', '15 days free to try'], cta: 'Use it free now', to: 'download', pick: true },
+      { name: 'Plus', price: '€14.99', per: 'per year, or €1.99 per month', who: 'Families and freelancers', items: ['Everything in Free', 'Paste guard with your own words', 'Approved AI', 'Tamper log and alerts on Android', 'School holidays in the schedule', '15 days free to try'], cta: 'Start free', to: 'download', pick: true },
       { name: 'School', price: '€1', per: 'per pupil per year, minimum €149', who: 'Schools', items: ['Exam button for every class', 'Roll-out help for IT', 'Data processing agreement', 'Invoice', 'Free pilot for one term'], cta: 'Ask for a pilot', mail: 'School pilot' },
       { name: 'Business', price: '€2.50', per: 'per user per month, minimum 5', who: 'Offices and companies', items: ['Paste guard for the whole team', 'Approved AI set centrally', 'Roll-out help and invoice', 'AI Act and GDPR report (coming)'], cta: 'Talk to us', mail: 'Mindveto for our office' },
     ],
@@ -18,7 +18,7 @@ export const PLANS: Record<Lang, { plans: Plan[]; note: string }> = {
     note: 'Geplande prijzen. Tijdens de lancering is elke functie gratis. Prijzen voor consumenten zijn inclusief btw.',
     plans: [
       { name: 'Gratis', price: '€0', per: 'altijd', who: 'Iedereen', free: true, items: ['Blokkeert 150+ AI-diensten', 'Pincode en rooster', 'Eigen blokkeer- en toelaatlijsten', 'Browser, Android, Windows, Mac, Linux, netwerklijsten'], cta: 'Gratis downloaden', to: 'download' },
-      { name: 'Plus', price: '€14,99', per: 'per jaar, of €1,99 per maand', who: 'Gezinnen en zelfstandigen', items: ['Alles uit Gratis', 'Plakbewaker met je eigen woorden', 'Goedgekeurde AI', 'Sabotagelog en meldingen op Android', 'Schoolvakanties in het rooster', '15 dagen gratis proberen'], cta: 'Nu gratis gebruiken', to: 'download', pick: true },
+      { name: 'Plus', price: '€14,99', per: 'per jaar, of €1,99 per maand', who: 'Gezinnen en zelfstandigen', items: ['Alles uit Gratis', 'Plakbewaker met je eigen woorden', 'Goedgekeurde AI', 'Sabotagelog en meldingen op Android', 'Schoolvakanties in het rooster', '15 dagen gratis proberen'], cta: 'Gratis starten', to: 'download', pick: true },
       { name: 'School', price: '€1', per: 'per leerling per jaar, minimum €149', who: 'Scholen', items: ['Examenknop voor elke klas', 'Hulp bij de uitrol voor IT', 'Verwerkersovereenkomst', 'Factuur', 'Gratis proef van één trimester'], cta: 'Vraag een proef aan', mail: 'Proef voor onze school' },
       { name: 'Business', price: '€2,50', per: 'per gebruiker per maand, minimum 5', who: 'Kantoren en bedrijven', items: ['Plakbewaker voor het hele team', 'Goedgekeurde AI centraal ingesteld', 'Hulp bij de uitrol en factuur', 'Rapport AI-wet en AVG (komt)'], cta: 'Neem contact op', mail: 'Mindveto voor ons kantoor' },
     ],
@@ -27,7 +27,7 @@ export const PLANS: Record<Lang, { plans: Plan[]; note: string }> = {
     note: 'Prix prévus. Pendant le lancement, toutes les fonctions sont gratuites. Les prix pour particuliers incluent la TVA.',
     plans: [
       { name: 'Gratuit', price: '0 €', per: 'toujours', who: 'Tout le monde', free: true, items: ['Bloque 150+ services d’IA', 'PIN et horaire', 'Vos listes de blocage et d’autorisation', 'Navigateur, Android, Windows, Mac, Linux, listes réseau'], cta: 'Télécharger gratuitement', to: 'download' },
-      { name: 'Plus', price: '14,99 €', per: 'par an, ou 1,99 € par mois', who: 'Familles et indépendants', items: ['Tout le Gratuit', 'Garde-collage avec vos propres mots', 'IA approuvée', 'Journal et alertes anti-sabotage sur Android', 'Vacances scolaires dans l’horaire', '15 jours d’essai gratuit'], cta: 'Utiliser gratuitement', to: 'download', pick: true },
+      { name: 'Plus', price: '14,99 €', per: 'par an, ou 1,99 € par mois', who: 'Familles et indépendants', items: ['Tout le Gratuit', 'Garde-collage avec vos propres mots', 'IA approuvée', 'Journal et alertes anti-sabotage sur Android', 'Vacances scolaires dans l’horaire', '15 jours d’essai gratuit'], cta: 'Commencer gratuitement', to: 'download', pick: true },
       { name: 'École', price: '1 €', per: 'par élève et par an, minimum 149 €', who: 'Écoles', items: ['Bouton examen pour chaque classe', 'Aide au déploiement pour l’IT', 'Accord de traitement des données', 'Facture', 'Pilote gratuit d’un trimestre'], cta: 'Demander un pilote', mail: 'Pilote pour notre école' },
       { name: 'Business', price: '2,50 €', per: 'par utilisateur et par mois, minimum 5', who: 'Bureaux et entreprises', items: ['Garde-collage pour toute l’équipe', 'IA approuvée réglée de façon centrale', 'Aide au déploiement et facture', 'Rapport AI Act et RGPD (bientôt)'], cta: 'Nous contacter', mail: 'Mindveto pour notre bureau' },
     ],
@@ -92,4 +92,23 @@ export const PASTE_MOCK: Record<Lang, { h: string; p: string; found: string[]; a
   en: { h: 'Private data in your paste', p: 'You are pasting into an AI chat. We found:', found: ['Bank account number (IBAN)', 'National ID number', 'Your word: “Dossier Peeters”'], a: 'Don’t paste', b: 'Paste without private parts', c: 'Paste anyway' },
   nl: { h: 'Privégegevens in je plakwerk', p: 'Je plakt in een AI-chat. We vonden:', found: ['Rekeningnummer (IBAN)', 'Rijksregisternummer', 'Jouw woord: “Dossier Peeters”'], a: 'Niet plakken', b: 'Plakken zonder privédelen', c: 'Toch plakken' },
   fr: { h: 'Données privées dans votre collage', p: 'Vous collez dans un chat IA. Nous avons trouvé :', found: ['Numéro de compte (IBAN)', 'Numéro de registre national', 'Votre mot : « Dossier Peeters »'], a: 'Ne pas coller', b: 'Coller sans les parties privées', c: 'Coller quand même' },
+};
+
+// Faithful previews of the real apps (texts copied from the extension and the Android app, numbers are an example day).
+export const UI_PREVIEW: Record<Lang, { on: string; tapOff: string; st: string; cats: string; c: [string, number, boolean][]; pin: string; exam: string; aOn: string; aSub: string; aTap: string; aSt: string; aAlways: string; label: string }> = {
+  en: { on: 'AI BLOCKED', tapOff: 'Tap to allow AI again', st: '12 AI attempts blocked today · 348 in total', cats: 'What to block',
+    c: [['AI chatbots', 70, true], ['AI search', 12, true], ['AI images', 22, true], ['AI writing & homework', 21, true], ['Social media (optional, not AI)', 20, false]],
+    pin: 'PIN is set: turning off or changing anything needs the PIN.', exam: 'EXAM MODE: all AI is blocked for 42 more min.',
+    aOn: '✋ AI BLOCKED', aSub: 'The AI kill switch', aTap: 'Tap to allow AI again', aSt: '37 AI lookups blocked today · 912 in total', aAlways: 'Make it always on',
+    label: 'The real app, on an example day' },
+  nl: { on: 'AI GEBLOKKEERD', tapOff: 'Tik om AI weer toe te laten', st: 'Vandaag 12 AI-pogingen geblokkeerd · 348 in totaal', cats: 'Wat blokkeren',
+    c: [['AI-chatbots', 70, true], ['AI-zoekmachines', 12, true], ['AI-afbeeldingen', 22, true], ['AI-schrijven en huiswerk', 21, true], ['Sociale media (optioneel, geen AI)', 20, false]],
+    pin: 'Pincode staat aan: uitzetten of iets wijzigen vraagt de pincode.', exam: 'EXAMENMODUS: alle AI is nog 42 min geblokkeerd.',
+    aOn: '✋ AI GEBLOKKEERD', aSub: 'De AI kill switch', aTap: 'Tik om AI weer toe te laten', aSt: 'Vandaag 37 AI-opvragingen geblokkeerd · 912 in totaal', aAlways: 'Altijd aan',
+    label: 'De echte app, op een voorbeelddag' },
+  fr: { on: 'IA BLOQUÉE', tapOff: 'Touchez pour réautoriser l’IA', st: '12 tentatives d’IA bloquées aujourd’hui · 348 au total', cats: 'Quoi bloquer',
+    c: [['Chatbots IA', 70, true], ['Recherche IA', 12, true], ['Images IA', 22, true], ['Rédaction et devoirs IA', 21, true], ['Réseaux sociaux (option, pas d’IA)', 20, false]],
+    pin: 'PIN actif : désactiver ou modifier demande le PIN.', exam: 'MODE EXAMEN : toute l’IA est bloquée encore 42 min.',
+    aOn: '✋ IA BLOQUÉE', aSub: 'Le kill switch de l’IA', aTap: 'Touchez pour réautoriser l’IA', aSt: '37 requêtes IA bloquées aujourd’hui · 912 au total', aAlways: 'Toujours actif',
+    label: 'La vraie appli, un jour type' },
 };

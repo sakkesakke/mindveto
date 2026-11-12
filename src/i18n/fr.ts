@@ -212,7 +212,7 @@ export const pages: Record<string, Page> = {
     blocks: [
       { h: 'Installer', steps: [
         'Décompressez le téléchargement.',
-        'Double-cliquez sur « Start-HumanOverride.bat » et cliquez sur Oui.',
+        'Double-cliquez sur « Start-Mindveto.bat » et cliquez sur Oui.',
         'Tapez 1 pour bloquer l’IA. Tapez 3 pour couper aussi Copilot, Recall et l’IA d’Edge et de Chrome.',
         'Donnez aux enfants ou au personnel un compte standard (pas administrateur). Ils ne pourront pas l’annuler.',
       ], note: 'Windows peut d’abord dire qu’il « a protégé votre PC ». Cliquez sur « Informations complémentaires », puis « Exécuter quand même ». Le script est du texte simple : vous pouvez l’ouvrir dans le Bloc-notes et lire chaque ligne.' },
@@ -234,8 +234,8 @@ export const pages: Record<string, Page> = {
       { h: 'Installer', steps: [
         'Décompressez le téléchargement.',
         'Ouvrez le Terminal dans le dossier décompressé.',
-        L('Tapez <code>sudo sh human-override.sh on</code> et votre mot de passe.'),
-        L('Pour autoriser l’IA à nouveau : <code>sudo sh human-override.sh off</code>.'),
+        L('Tapez <code>sudo sh mindveto.sh on</code> et votre mot de passe.'),
+        L('Pour autoriser l’IA à nouveau : <code>sudo sh mindveto.sh off</code>.'),
       ], note: 'Donnez aux enfants un compte standard (pas administrateur). Ils ne pourront pas modifier le fichier hosts.' },
       { h: 'Fiche', facts: [
         ['Fonctionne sur', 'macOS, Ubuntu, Debian, Fedora et la plupart des systèmes Linux'], ['Annuler', 'Une commande'], ['Prix', 'Gratuit'],
@@ -334,7 +334,7 @@ export const pages: Record<string, Page> = {
     title: 'Tarifs',
     desc: 'Le blocage est gratuit. Plus 14,99 € par an pour les familles, 1 € par élève pour les écoles, 2,50 € par utilisateur et par mois pour les bureaux.',
     h1: 'Le blocage est gratuit. Les extras financent le travail.',
-    lead: 'Aujourd’hui, toutes les fonctions sont gratuites pendant le lancement. Les formules payantes démarrent avec la version Google Play. Voici les prix prévus.',
+    lead: 'Aujourd’hui, toutes les fonctions sont gratuites pendant le lancement. Les formules payantes démarrent avec la version Google Play.',
     blocks: [],
     faq: [
       { q: 'Quand dois-je payer ?', a: 'Pas maintenant. Quand les formules payantes démarrent, vous choisissez vous-même de passer à une formule payante. Rien n’est débité automatiquement et la formule gratuite reste.' },

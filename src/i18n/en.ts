@@ -1,5 +1,6 @@
 import type { Home, Page } from './types';
 import { DL } from './routes';
+import { COMPANY } from './company';
 
 export const home: Home = {
   title: 'Mindveto: block ChatGPT and 150+ AI tools with one switch',
@@ -448,7 +449,9 @@ export const pages: Record<string, Page> = {
     blocks: [
       { h: 'Publisher', facts: [
         ['Name', 'Amghar Said'], ['Country', 'Belgium'], ['E-mail', L('<a href="mailto:hello@mindveto.app">hello@mindveto.app</a>')],
-        ['Enterprise number', 'Will be shown here before any paid plan starts'],
+        ['Enterprise number', COMPANY.kbo || 'Will be shown here before any paid plan starts'],
+        ...(COMPANY.vat ? [['VAT number', COMPANY.vat] as [string, string]] : []),
+        ...(COMPANY.address ? [['Business address', COMPANY.address] as [string, string]] : []),
       ]},
       { h: 'Hosting', p: ['GitHub Pages, GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.'] },
       { h: 'Intellectual property', p: ['© 2026 Amghar Said. All rights reserved. Product names such as ChatGPT, Gemini, Claude and Copilot belong to their owners and are named only to describe what Mindveto blocks. Mindveto is not affiliated with them.', 'Font: Atkinson Hyperlegible Next, SIL Open Font License, served from this site. School holiday dates: OpenHolidays API (ODbL).'] },

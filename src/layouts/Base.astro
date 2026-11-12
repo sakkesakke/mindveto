@@ -3,6 +3,7 @@ import '../styles/site.css';
 import { LANGS, ROUTES, href, SITE, type Lang, type PageKey } from '../i18n/routes';
 import { UI } from '../i18n/ui';
 import { PRODUCT_NAMES } from '../i18n/products';
+import { COMPANY } from '../i18n/company';
 
 interface Props { lang: Lang; page: PageKey; title: string; desc: string; jsonld?: object[] }
 const { lang, page, title, desc, jsonld = [] } = Astro.props;
@@ -98,7 +99,7 @@ const fullTitle = page === 'home' || title.length > 48 ? title : `${title} | Min
         </ul>
       </div>
     </div>
-    <p class="fine">© 2026 Amghar Said. {t.fine}</p>
+    <p class="fine">© 2026 Amghar Said{COMPANY.kbo ? ` · ${{ en: 'Enterprise no.', nl: 'Ondernemingsnr.', fr: 'N° d’entreprise' }[lang]} ${COMPANY.kbo}` : ''}{COMPANY.address ? ` · ${COMPANY.address}` : ''}. {t.fine}</p>
   </div>
 </footer>
 </body>

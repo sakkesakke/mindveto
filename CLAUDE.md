@@ -7,3 +7,4 @@ no price promises beyond the pricing page; honest limits stay visible. Design: "
 moss for human, violet only for AI, Atkinson Hyperlegible Next weights 400-600, the switch is the only rounded object.
 Checks before merge: `npm run build`, no horizontal scroll at 390 px, axe 0 violations, titles <= 60, descriptions 110-160.
 The extension/app/scripts and their lists live in sakkesakke/geopolcoins (human-override/); this repo only hosts copies.
+Company details (KBO/VAT/business address): fill `src/i18n/company.ts` only; footer + legal page update in all languages.

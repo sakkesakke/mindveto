@@ -1,5 +1,6 @@
 import type { Home, Page } from './types';
 import { DL } from './routes';
+import { COMPANY } from './company';
 
 export const home: Home = {
   title: 'Mindveto: blokkeer ChatGPT en 150+ AI-tools met één schakelaar',
@@ -448,7 +449,9 @@ export const pages: Record<string, Page> = {
     blocks: [
       { h: 'Uitgever', facts: [
         ['Naam', 'Amghar Said'], ['Land', 'België'], ['E-mail', L('<a href="mailto:hello@mindveto.app">hello@mindveto.app</a>')],
-        ['Ondernemingsnummer', 'Komt hier voor een betaald plan start'],
+        ['Ondernemingsnummer', COMPANY.kbo || 'Komt hier voor een betaald plan start'],
+        ...(COMPANY.vat ? [['Btw-nummer', COMPANY.vat] as [string, string]] : []),
+        ...(COMPANY.address ? [['Zakelijk adres', COMPANY.address] as [string, string]] : []),
       ]},
       { h: 'Hosting', p: ['GitHub Pages, GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, VS.'] },
       { h: 'Intellectuele eigendom', p: ['© 2026 Amghar Said. Alle rechten voorbehouden. Productnamen zoals ChatGPT, Gemini, Claude en Copilot zijn van hun eigenaars en worden alleen genoemd om te beschrijven wat Mindveto blokkeert. Mindveto is niet met hen verbonden.', 'Lettertype: Atkinson Hyperlegible Next, SIL Open Font License, geleverd vanaf deze site. Data van schoolvakanties: OpenHolidays API (ODbL).'] },

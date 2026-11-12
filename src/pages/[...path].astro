@@ -87,7 +87,7 @@ const P = PLANS[lang];
     </div>
   </section>
   <section class="stream" aria-label="AI services">
-    <div class="wrap"><p><span class="lbl">{STREAM_LABEL[lang]}</span> {AI_NAMES.slice(0, 24).map((n, i) => <><span style={`transition-delay:${i * 28}ms`}>{n}</span>{' '}</>)}<span style={`transition-delay:${24 * 28}ms`}>+130</span></p></div>
+    <div class="wrap"><p><span class="lbl">{STREAM_LABEL[lang]}</span> {AI_NAMES.slice(0, 14).map((n, i) => <><span style={`transition-delay:${i * 28}ms`}>{n}</span>{' '}</>)}<span style={`transition-delay:${14 * 28}ms`}>+140</span></p></div>
   </section>
 
   <section class="band paper" id="who" aria-labelledby="who-h">
@@ -205,10 +205,13 @@ const P = PLANS[lang];
         <figure class="mock">
           <pre class="ui-term" aria-label={U.label}>{aside === 'win' ? `  MINDVETO  -  the AI kill switch
 
-  1) Block AI on this PC (or update the list)
-  2) Allow AI again (remove the block)
-  3) Turn off the AI built into Windows,
-     Edge and Chrome (Copilot, Recall, ...)
+  1) Block AI on this PC
+     (or update the list)
+  2) Allow AI again
+     (remove the block)
+  3) Turn off the AI built into
+     Windows, Edge and Chrome
+     (Copilot, Recall, ...)
   4) Turn that built-in AI back on
   5) Quit
 
@@ -217,7 +220,7 @@ const P = PLANS[lang];
   Done: 161 AI addresses are blocked
   on this PC. Restart your browser.` : aside === 'mac' ? `$ sudo sh mindveto.sh on
 Password:
-Terms: Mindveto is provided "as is" ...
+Terms: provided "as is" ...
 Agree? (y/n) y
 Done: 161 AI addresses blocked.
 Restart your browser.
@@ -304,7 +307,7 @@ AI is allowed again.` : `! Title: Mindveto AI block list
       {key === 'pricing' && (
         <section aria-label={t.pricing}>
           <div class="plans">
-            {P.plans.map((p) => <div class={'plan' + (p.pick ? ' pick' : '')}><div class="ph"><h2>{p.name}</h2><p class="quiet">{p.who}</p><p class="price">{p.price}<span class="per">{p.per}</span></p></div><ul>{p.items.map((i) => <li>{i}</li>)}</ul><a class={'btn ' + (p.pick ? 'solid' : 'line')} href={p.to ? href(p.to as PageKey, lang) : `mailto:hello@mindveto.app?subject=${encodeURIComponent(p.mail!)}`}>{p.cta}</a></div>)}
+            {P.plans.map((p) => <div class={'plan' + (p.pick ? ' pick' : '')}><div class="ph"><h2>{p.name}</h2><p class="quiet">{p.who}</p><p class="price">{p.price}<span class="per">{p.per}</span></p></div><ul>{p.items.map((i) => <li>{i}</li>)}</ul><a class={'btn ' + (p.pick ? 'solid' : 'line')} href={p.to ? href(p.to as PageKey, lang) : `mailto:hello@mindveto.app?subject=${encodeURIComponent(p.mail!)}`}>{p.cta}</a>{p.sub && <p class="small plan-sub">{p.sub}</p>}</div>)}
           </div>
           <p class="small">{P.note}</p>
         </section>
@@ -315,7 +318,8 @@ AI is allowed again.` : `! Title: Mindveto AI block list
           <h2>{b.h}</h2>
           {b.p?.map((x) => <p set:html={x} />)}
           {b.list && <ul>{b.list.map((x) => <li set:html={x} />)}</ul>}
-          {b.steps && <ol class="steps">{b.steps.map((x) => <li set:html={x} />)}</ol>}
+          {b.steps && !b.fold && <ol class="steps">{b.steps.map((x) => <li set:html={x} />)}</ol>}
+          {b.steps && b.fold && <><p class="quiet">{b.foldLead}</p><details class="fold"><summary>{b.fold}</summary><ol class="steps">{b.steps.map((x) => <li set:html={x} />)}</ol></details></>}
           {b.facts && <table class="facts"><tbody>{b.facts.map(([a, v]) => <tr><th scope="row">{a}</th><td set:html={v} /></tr>)}</tbody></table>}
           {b.note && <p class={'note' + (b.human ? ' human' : '')}>{b.note}</p>}
           {b.actions && <div class="actions">{b.actions.map((a) => <a class={'btn ' + (a.solid ? 'solid' : 'line')} href={link(a)} download={a.download ? '' : undefined}>{a.label}</a>)}</div>}
@@ -333,7 +337,7 @@ AI is allowed again.` : `! Title: Mindveto AI block list
         <section>
           <h2>{t.related}</h2>
           <div class="products">
-            {pg!.related.map((k) => <div class="product"><h3><a href={href(k, lang)}>{PRODUCT_NAMES[lang][k] ?? (C.pages[k]?.title)}</a></h3><p>{PRODUCT_LINES[lang][k] ?? (C.pages[k]?.lead.split(/(?<=[.!?])\s/)[0])}</p></div>)}
+            {pg!.related.slice(0, 2).map((k) => <div class="product"><h3><a href={href(k, lang)}>{PRODUCT_NAMES[lang][k] ?? (C.pages[k]?.title)}</a></h3><p>{PRODUCT_LINES[lang][k] ?? (C.pages[k]?.lead.split(/(?<=[.!?])\s/)[0])}</p></div>)}
           </div>
         </section>
       )}
@@ -381,10 +385,13 @@ AI is allowed again.` : `! Title: Mindveto AI block list
         <figure class="mock">
           <pre class="ui-term" tabindex="0" aria-label={U.label}>{aside === 'win' ? `  MINDVETO  -  the AI kill switch
 
-  1) Block AI on this PC (or update the list)
-  2) Allow AI again (remove the block)
-  3) Turn off the AI built into Windows,
-     Edge and Chrome (Copilot, Recall, ...)
+  1) Block AI on this PC
+     (or update the list)
+  2) Allow AI again
+     (remove the block)
+  3) Turn off the AI built into
+     Windows, Edge and Chrome
+     (Copilot, Recall, ...)
   4) Turn that built-in AI back on
   5) Quit
 
@@ -393,7 +400,7 @@ AI is allowed again.` : `! Title: Mindveto AI block list
   Done: 161 AI addresses are blocked
   on this PC. Restart your browser.` : aside === 'mac' ? `$ sudo sh mindveto.sh on
 Password:
-Terms: Mindveto is provided "as is" ...
+Terms: provided "as is" ...
 Agree? (y/n) y
 Done: 161 AI addresses blocked.
 Restart your browser.

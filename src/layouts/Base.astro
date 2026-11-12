@@ -12,7 +12,7 @@ const nav: PageKey[] = ['parents', 'schools', 'offices', 'download', 'pricing', 
 const productKeys: PageKey[] = ['browser', 'android', 'windows', 'maclinux', 'network', 'exam', 'paste'];
 const org = {
   '@context': 'https://schema.org', '@type': 'Organization', name: 'Mindveto', url: SITE + '/',
-  logo: SITE + '/icon-512.png', founder: { '@type': 'Person', name: 'Amghar Said' },
+  logo: SITE + '/icon-512.png', slogan: 'The AI kill switch', founder: { '@type': 'Person', name: 'Amghar Said' },
 };
 const fullTitle = page === 'home' || title.length > 48 ? title : `${title} | Mindveto`;
 ---
@@ -47,8 +47,8 @@ const fullTitle = page === 'home' || title.length > 48 ? title : `${title} | Min
 <header class="top">
   <div class="wrap">
     <a class="brand" href={href('home', lang)} aria-label="Mindveto, home">
-      <svg viewBox="0 0 27 38" aria-hidden="true"><rect x="1.5" y="1.5" width="24" height="35" rx="7" fill="#f6f7f3" stroke="#18241f" stroke-width="3"/><rect x="7.5" y="8" width="12" height="22" rx="3.5" fill="#18241f"/><rect x="9.5" y="20" width="8" height="8" rx="2" fill="#2f5e4f"/></svg>
-      Mindveto
+      <svg viewBox="0 0 44 62" aria-hidden="true"><rect x="2.5" y="2.5" width="39" height="57" rx="11" fill="#f6f7f3" stroke="#18241f" stroke-width="5"/><rect x="12" y="12" width="20" height="38" rx="5" fill="#fff" stroke="#18241f" stroke-width="2.5"/><path d="M12 31h20v14a5 5 0 0 1-5 5H17a5 5 0 0 1-5-5z" fill="#18241f"/><circle cx="22" cy="20" r="2.4" fill="#5b3ce0"/></svg>
+      Mindveto<span class="tag">The AI kill switch</span>
     </a>
     <details class="menu"><summary>{t.menu}</summary>
       <nav class="nav" aria-label={t.navLabel}>
@@ -70,7 +70,7 @@ const fullTitle = page === 'home' || title.length > 48 ? title : `${title} | Min
   <div class="wrap">
     <div class="cols">
       <div>
-        <p><strong>Mindveto</strong></p>
+        <p class="fbrand"><img src="/brand/mark-dark.svg" alt="" width="22" height="31"><strong>Mindveto</strong><span>The AI kill switch</span></p>
         <p>{t.tagline}</p>
         <p><a href="mailto:hello@mindveto.app">hello@mindveto.app</a></p>
       </div>

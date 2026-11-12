@@ -6,6 +6,8 @@ export type Block = {
   p?: string[];          // paragraphs (may contain inline HTML written by us)
   list?: string[];
   steps?: string[];
+  fold?: string;          // show the steps inside a closed <details> with this summary
+  foldLead?: string;
   facts?: [string, string][];
   note?: string;
   human?: boolean;       // note in the "human" colour instead of the AI colour

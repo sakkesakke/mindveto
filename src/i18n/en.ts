@@ -154,7 +154,7 @@ export const pages: Record<string, Page> = {
         'Your own block and allow lists. The public list updates once a day.',
         'Optional: block social media too (TikTok, Instagram, Snapchat and more). Off until you switch it on.',
       ]},
-      { h: 'Install in one minute', steps: [
+      { h: 'Install in one minute', fold: 'Show the install steps', foldLead: 'Store versions are on the way. Until then you install it by hand in one minute.', steps: [
         'Download the zip above and unzip it (right click, “Extract all”).',
         L('Open <code>chrome://extensions</code> (in Edge: <code>edge://extensions</code>).'),
         'Switch on “Developer mode” (top right).',
@@ -210,7 +210,7 @@ export const pages: Record<string, Page> = {
     lead: 'No extension needed: one download blocks AI addresses for every browser and every app on the computer. It can also switch off the AI built into Windows.',
     actions: [{ label: 'Download for Windows (7 KB)', url: DL + 'human-override-windows.zip', solid: true, download: true }],
     blocks: [
-      { h: 'Install', steps: [
+      { h: 'Install', fold: 'Show the install steps', foldLead: 'Store versions are on the way. Until then you install it by hand in one minute.', steps: [
         'Unzip the download.',
         'Double-click “Start-Mindveto.bat” and click Yes.',
         'Type 1 to block AI. Type 3 to also switch off Copilot, Recall and the AI in Edge and Chrome.',
@@ -280,7 +280,9 @@ export const pages: Record<string, Page> = {
     desc: 'Free exam button for teachers: one tap blocks every AI chatbot in your class’s browsers during a test. No accounts, no pupil names.',
     h1: 'No AI during the test.',
     lead: 'One tap switches every AI chatbot off in the browsers of your class, for as long as the test lasts. Free, no accounts, no pupil names.',
-    blocks: [],
+    blocks: [
+      { h: 'How it works', steps: ['Make a class here. You get a class code and a private teacher link.', 'Pupils open the Mindveto extension, go to “Class · exam mode” and type the code.', 'Tap “Start exam mode”. Within a minute every AI is blocked in their browsers, until the time runs out or you stop it.'] },
+    ],
     faq: [
       { q: 'What do pupils need?', a: L('The <a href="/browser-extension/">Mindveto extension</a> in their browser, joined to your class with the code. On school computers the school installs it once.') },
       { q: 'What does your server keep?', a: 'A hashed class code, a hashed teacher key and the exam end time. No names, no e-mail addresses, no IP addresses.' },

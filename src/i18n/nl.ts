@@ -154,7 +154,7 @@ export const pages: Record<string, Page> = {
         'Je eigen blokkeer- en toelaatlijsten. De openbare lijst wordt dagelijks bijgewerkt.',
         'Optioneel: blokkeer ook sociale media (TikTok, Instagram, Snapchat en meer). Uit tot je het aanzet.',
       ]},
-      { h: 'Installeren in één minuut', steps: [
+      { h: 'Installeren in één minuut', fold: 'Toon de installatiestappen', foldLead: 'De versies in de stores komen eraan. Tot dan installeer je het met de hand in één minuut.', steps: [
         'Download de zip hierboven en pak hem uit (rechtsklik, “Alles uitpakken”).',
         L('Open <code>chrome://extensions</code> (in Edge: <code>edge://extensions</code>).'),
         'Zet “Ontwikkelaarsmodus” aan (rechtsboven).',
@@ -210,7 +210,7 @@ export const pages: Record<string, Page> = {
     lead: 'Geen extensie nodig: één download blokkeert AI-adressen voor elke browser en elke app op de computer. Hij kan ook de AI uitzetten die in Windows zit.',
     actions: [{ label: 'Download voor Windows (7 KB)', url: DL + 'human-override-windows.zip', solid: true, download: true }],
     blocks: [
-      { h: 'Installeren', steps: [
+      { h: 'Installeren', fold: 'Toon de installatiestappen', foldLead: 'De versies in de stores komen eraan. Tot dan installeer je het met de hand in één minuut.', steps: [
         'Pak de download uit.',
         'Dubbelklik op “Start-Mindveto.bat” en klik op Ja.',
         'Typ 1 om AI te blokkeren. Typ 3 om ook Copilot, Recall en de AI in Edge en Chrome uit te zetten.',
@@ -280,7 +280,9 @@ export const pages: Record<string, Page> = {
     desc: 'Gratis examenknop voor leraren: één tik blokkeert elke AI-chatbot in de browsers van je klas tijdens een toets. Geen accounts, geen namen.',
     h1: 'Geen AI tijdens de toets.',
     lead: 'Eén tik zet elke AI-chatbot uit in de browsers van je klas, zolang de toets duurt. Gratis, geen accounts, geen namen van leerlingen.',
-    blocks: [],
+    blocks: [
+      { h: 'Zo werkt het', steps: ['Maak hier een klas. Je krijgt een klascode en een privé-lerarenlink.', 'Leerlingen openen de Mindveto-extensie, gaan naar “Klas · examenmodus” en typen de code.', 'Tik op “Start examenmodus”. Binnen een minuut is elke AI geblokkeerd in hun browsers, tot de tijd om is of jij stopt.'] },
+    ],
     faq: [
       { q: 'Wat hebben leerlingen nodig?', a: L('De <a href="/nl/browserextensie/">Mindveto-extensie</a> in hun browser, gekoppeld aan je klas met de code. Op schoolcomputers installeert de school ze één keer.') },
       { q: 'Wat bewaart jullie server?', a: 'Een gehashte klascode, een gehashte lerarensleutel en het einduur van het examen. Geen namen, geen e-mailadressen, geen IP-adressen.' },

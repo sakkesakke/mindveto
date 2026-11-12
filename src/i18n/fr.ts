@@ -154,7 +154,7 @@ export const pages: Record<string, Page> = {
         'Vos propres listes de blocage et d’autorisation. La liste publique est mise à jour chaque jour.',
         'En option : bloquez aussi les réseaux sociaux (TikTok, Instagram, Snapchat et plus). Désactivé tant que vous ne l’activez pas.',
       ]},
-      { h: 'Installer en une minute', steps: [
+      { h: 'Installer en une minute', fold: 'Afficher les étapes d’installation', foldLead: 'Les versions des boutiques arrivent. D’ici là, vous l’installez à la main en une minute.', steps: [
         'Téléchargez le zip ci-dessus et décompressez-le (clic droit, « Extraire tout »).',
         L('Ouvrez <code>chrome://extensions</code> (dans Edge : <code>edge://extensions</code>).'),
         'Activez le « Mode développeur » (en haut à droite).',
@@ -210,7 +210,7 @@ export const pages: Record<string, Page> = {
     lead: 'Pas besoin d’extension : un téléchargement bloque les adresses d’IA pour tous les navigateurs et toutes les applis de l’ordinateur. Il peut aussi couper l’IA intégrée à Windows.',
     actions: [{ label: 'Télécharger pour Windows (7 Ko)', url: DL + 'human-override-windows.zip', solid: true, download: true }],
     blocks: [
-      { h: 'Installer', steps: [
+      { h: 'Installer', fold: 'Afficher les étapes d’installation', foldLead: 'Les versions des boutiques arrivent. D’ici là, vous l’installez à la main en une minute.', steps: [
         'Décompressez le téléchargement.',
         'Double-cliquez sur « Start-Mindveto.bat » et cliquez sur Oui.',
         'Tapez 1 pour bloquer l’IA. Tapez 3 pour couper aussi Copilot, Recall et l’IA d’Edge et de Chrome.',
@@ -280,7 +280,9 @@ export const pages: Record<string, Page> = {
     desc: 'Bouton examen gratuit : un geste bloque tous les chatbots IA dans les navigateurs de votre classe pendant un test. Sans compte, sans noms.',
     h1: 'Pas d’IA pendant le test.',
     lead: 'Un geste coupe tous les chatbots IA dans les navigateurs de votre classe, pendant toute la durée du test. Gratuit, sans compte, sans noms d’élèves.',
-    blocks: [],
+    blocks: [
+      { h: 'Comment ça marche', steps: ['Créez une classe ici. Vous recevez un code de classe et un lien enseignant privé.', 'Les élèves ouvrent l’extension Mindveto, vont dans « Classe · mode examen » et tapent le code.', 'Touchez « Démarrer le mode examen ». En une minute, toute IA est bloquée dans leurs navigateurs, jusqu’à la fin du temps ou jusqu’à ce que vous arrêtiez.'] },
+    ],
     faq: [
       { q: 'De quoi les élèves ont-ils besoin ?', a: L('De l’<a href="/fr/extension-navigateur/">extension Mindveto</a> dans leur navigateur, reliée à votre classe avec le code. Sur les ordinateurs de l’école, l’école l’installe une fois.') },
       { q: 'Que garde votre serveur ?', a: 'Un code de classe haché, une clé enseignant hachée et l’heure de fin de l’examen. Pas de noms, pas d’adresses e-mail, pas d’adresses IP.' },

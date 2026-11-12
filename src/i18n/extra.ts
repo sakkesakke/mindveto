@@ -10,8 +10,8 @@ export const PLANS: Record<Lang, { plans: Plan[]; note: string }> = {
     plans: [
       { name: 'Free', price: '€0', per: 'always', who: 'Everyone', free: true, items: ['Blocks 150+ AI services', 'PIN lock and schedule', 'Your own block and allow lists', 'Browser, Android, Windows, Mac, Linux, network lists'], cta: 'Download free', to: 'download' },
       { name: 'Plus', price: '€14.99', per: 'per year, or €1.99 per month', who: 'Families and freelancers', items: ['Everything in Free', 'Paste guard with your own words', 'Approved AI', 'Tamper log and alerts on Android', 'School holidays in the schedule', '15 days free to try'], cta: 'Try Plus free', to: 'download', pick: true, sub: 'From the Google Play launch' },
-      { name: 'School', price: '€1', per: 'per pupil per year, minimum €149', who: 'Schools', items: ['Exam button for every class', 'Roll-out help for IT', 'Data processing agreement', 'Invoice', 'Free pilot for one term'], cta: 'Ask for a pilot', mail: 'School pilot' },
-      { name: 'Business', price: '€2.50', per: 'per user per month, minimum 5', who: 'Offices and companies', items: ['Paste guard for the whole team', 'Approved AI set centrally', 'Roll-out help and invoice', 'AI Act and GDPR report (coming)'], cta: 'Talk to us', mail: 'Mindveto for our office' },
+      { name: 'School', price: '€1', per: 'per pupil per year, minimum €149, excl. VAT', who: 'Schools', items: ['Exam button for every class', 'Roll-out help for IT', 'Data processing agreement', 'Invoice', 'Free pilot for one term'], cta: 'Ask for a pilot', mail: 'School pilot' },
+      { name: 'Business', price: '€2.50', per: 'per user per month, minimum 5, excl. VAT', who: 'Offices and companies', items: ['Paste guard for the whole team', 'Approved AI set centrally', 'Roll-out help and invoice', 'AI Act and GDPR report (coming)'], cta: 'Talk to us', mail: 'Mindveto for our office' },
     ],
   },
   nl: {
@@ -19,8 +19,8 @@ export const PLANS: Record<Lang, { plans: Plan[]; note: string }> = {
     plans: [
       { name: 'Gratis', price: '€0', per: 'altijd', who: 'Iedereen', free: true, items: ['Blokkeert 150+ AI-diensten', 'Pincode en rooster', 'Eigen blokkeer- en toelaatlijsten', 'Browser, Android, Windows, Mac, Linux, netwerklijsten'], cta: 'Gratis downloaden', to: 'download' },
       { name: 'Plus', price: '€14,99', per: 'per jaar, of €1,99 per maand', who: 'Gezinnen en zelfstandigen', items: ['Alles uit Gratis', 'Plakbewaker met je eigen woorden', 'Goedgekeurde AI', 'Sabotagelog en meldingen op Android', 'Schoolvakanties in het rooster', '15 dagen gratis proberen'], cta: 'Probeer Plus gratis', to: 'download', pick: true, sub: 'Vanaf de lancering op Google Play' },
-      { name: 'School', price: '€1', per: 'per leerling per jaar, minimum €149', who: 'Scholen', items: ['Examenknop voor elke klas', 'Hulp bij de uitrol voor IT', 'Verwerkersovereenkomst', 'Factuur', 'Gratis proef van één trimester'], cta: 'Vraag een proef aan', mail: 'Proef voor onze school' },
-      { name: 'Business', price: '€2,50', per: 'per gebruiker per maand, minimum 5', who: 'Kantoren en bedrijven', items: ['Plakbewaker voor het hele team', 'Goedgekeurde AI centraal ingesteld', 'Hulp bij de uitrol en factuur', 'Rapport AI-wet en AVG (komt)'], cta: 'Neem contact op', mail: 'Mindveto voor ons kantoor' },
+      { name: 'School', price: '€1', per: 'per leerling per jaar, minimum €149, excl. btw', who: 'Scholen', items: ['Examenknop voor elke klas', 'Hulp bij de uitrol voor IT', 'Verwerkersovereenkomst', 'Factuur', 'Gratis proef van één trimester'], cta: 'Vraag een proef aan', mail: 'Proef voor onze school' },
+      { name: 'Business', price: '€2,50', per: 'per gebruiker per maand, minimum 5, excl. btw', who: 'Kantoren en bedrijven', items: ['Plakbewaker voor het hele team', 'Goedgekeurde AI centraal ingesteld', 'Hulp bij de uitrol en factuur', 'Rapport AI-wet en AVG (komt)'], cta: 'Neem contact op', mail: 'Mindveto voor ons kantoor' },
     ],
   },
   fr: {
@@ -28,8 +28,8 @@ export const PLANS: Record<Lang, { plans: Plan[]; note: string }> = {
     plans: [
       { name: 'Gratuit', price: '0 €', per: 'toujours', who: 'Tout le monde', free: true, items: ['Bloque 150+ services d’IA', 'PIN et horaire', 'Vos listes de blocage et d’autorisation', 'Navigateur, Android, Windows, Mac, Linux, listes réseau'], cta: 'Télécharger gratuitement', to: 'download' },
       { name: 'Plus', price: '14,99 €', per: 'par an, ou 1,99 € par mois', who: 'Familles et indépendants', items: ['Tout le Gratuit', 'Garde-collage avec vos propres mots', 'IA approuvée', 'Journal et alertes anti-sabotage sur Android', 'Vacances scolaires dans l’horaire', '15 jours d’essai gratuit'], cta: 'Essayer Plus gratuitement', to: 'download', pick: true, sub: 'Dès le lancement sur Google Play' },
-      { name: 'École', price: '1 €', per: 'par élève et par an, minimum 149 €', who: 'Écoles', items: ['Bouton examen pour chaque classe', 'Aide au déploiement pour l’IT', 'Accord de traitement des données', 'Facture', 'Pilote gratuit d’un trimestre'], cta: 'Demander un pilote', mail: 'Pilote pour notre école' },
-      { name: 'Business', price: '2,50 €', per: 'par utilisateur et par mois, minimum 5', who: 'Bureaux et entreprises', items: ['Garde-collage pour toute l’équipe', 'IA approuvée réglée de façon centrale', 'Aide au déploiement et facture', 'Rapport AI Act et RGPD (bientôt)'], cta: 'Nous contacter', mail: 'Mindveto pour notre bureau' },
+      { name: 'École', price: '1 €', per: 'par élève et par an, minimum 149 €, HTVA', who: 'Écoles', items: ['Bouton examen pour chaque classe', 'Aide au déploiement pour l’IT', 'Accord de traitement des données', 'Facture', 'Pilote gratuit d’un trimestre'], cta: 'Demander un pilote', mail: 'Pilote pour notre école' },
+      { name: 'Business', price: '2,50 €', per: 'par utilisateur et par mois, minimum 5, HTVA', who: 'Bureaux et entreprises', items: ['Garde-collage pour toute l’équipe', 'IA approuvée réglée de façon centrale', 'Aide au déploiement et facture', 'Rapport AI Act et RGPD (bientôt)'], cta: 'Nous contacter', mail: 'Mindveto pour notre bureau' },
     ],
   },
 };
@@ -112,3 +112,5 @@ export const UI_PREVIEW: Record<Lang, { on: string; tapOff: string; st: string; 
     aOn: 'IA BLOQUÉE', aSub: 'Le kill switch de l’IA', aTap: 'Touchez pour réautoriser l’IA', aSt: '37 requêtes IA bloquées aujourd’hui · 912 au total', aAlways: 'Toujours actif',
     label: 'La vraie appli, un jour type' },
 };
+
+export const VETO_CAP: Record<Lang, string> = { en: 'Veto on. Only your PIN flips it.', nl: 'Veto aan. Alleen jouw pincode zet hem om.', fr: 'Veto activé. Seul votre PIN le rebascule.' };

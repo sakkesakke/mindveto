@@ -7,7 +7,7 @@ export const home: Home = {
   h1: 'Jouw verstand heeft het laatste woord.',
   lead: 'Mindveto zet ChatGPT, Gemini, Copilot en 150+ andere AI-tools uit op een browser, een telefoon, een computer of een heel netwerk. Een pincode bepaalt wie ze weer aan mag zetten.',
   switchOn: 'AI', switchOff: 'Veto', switchLabel: 'Probeer het: zet AI uit op deze pagina',
-  statusOn: 'AI is toegestaan. Zet de schakelaar om.', statusOff: 'Veto. 150+ AI-diensten geblokkeerd.',
+  statusOn: 'AI toegestaan. Zet hem om.', statusOff: 'Veto. 150+ AI-diensten geblokkeerd.',
   how: 'Zo werkt het',
   doorsH: 'Voor wie',
   doors: [

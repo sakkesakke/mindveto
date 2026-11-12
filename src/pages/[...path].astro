@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import { LANGS, ROUTES, href, SITE, type Lang, type PageKey } from '../i18n/routes';
 import { UI } from '../i18n/ui';
 import { PRODUCT_NAMES, PRODUCT_LINES, PRODUCT_KEYS } from '../i18n/products';
-import { AI_NAMES, PLANS, EXAM_UI, STREAM_LABEL, PASTE_MOCK, UI_PREVIEW } from '../i18n/extra';
+import { VETO_CAP, AI_NAMES, PLANS, EXAM_UI, STREAM_LABEL, PASTE_MOCK, UI_PREVIEW } from '../i18n/extra';
 import type { Action, Home, Page } from '../i18n/types';
 import * as en from '../i18n/en';
 import * as nl from '../i18n/nl';
@@ -58,7 +58,7 @@ if (!isHome) {
 const X = EXAM_UI[lang];
 const M = PASTE_MOCK[lang];
 const NO_ASIDE: PageKey[] = ['help', 'about', 'privacy', 'terms', 'legal', 'pricing', 'download'];
-const ASIDE: Partial<Record<PageKey, string>> = { offices: 'paste', paste: 'paste', browser: 'popup', parents: 'popup', schools: 'popup', exam: 'exam', android: 'phone', windows: 'win', maclinux: 'mac', network: 'list', about: 'switch' };
+const ASIDE: Partial<Record<PageKey, string>> = { offices: 'paste', paste: 'paste', browser: 'popup', parents: 'switch', schools: 'popup', exam: 'exam', android: 'phone', windows: 'win', maclinux: 'mac', network: 'list', about: 'switch' };
 const aside = isHome || NO_ASIDE.includes(key) ? null : ASIDE[key] ?? null;
 const U = UI_PREVIEW[lang];
 const P = PLANS[lang];
@@ -87,7 +87,7 @@ const P = PLANS[lang];
     </div>
   </section>
   <section class="stream" aria-label="AI services">
-    <div class="wrap"><p><span class="lbl">{STREAM_LABEL[lang]}</span> {AI_NAMES.slice(0, 14).map((n, i) => <><span style={`transition-delay:${i * 28}ms`}>{n}</span>{' '}</>)}<span style={`transition-delay:${14 * 28}ms`}>+140</span></p></div>
+    <div class="wrap"><p><span class="lbl">{STREAM_LABEL[lang]}</span> {AI_NAMES.slice(0, 9).map((n, i) => <><span style={`transition-delay:${i * 40}ms`}>{n}</span>{' '}</>)}<span style={`transition-delay:${9 * 40}ms`}>+150</span></p></div>
   </section>
 
   <section class="band paper" id="who" aria-labelledby="who-h">
@@ -241,9 +241,10 @@ AI is allowed again.` : `! Title: Mindveto AI block list
         </figure>
       )}
       {aside === 'switch' && (
-        <div class="plate mini" aria-hidden="true">
+        <figure class="plate mini" aria-hidden="true">
           <span class="switch" aria-checked="true"><span class="screw t"></span><span class="rocker" data-on={h.switchOn} data-off={h.switchOff}><span class="led"></span></span><span class="screw b"></span></span>
-        </div>
+          <figcaption class="status">{VETO_CAP[lang]}</figcaption>
+        </figure>
       )}
       </div>}
   </header>
@@ -307,14 +308,14 @@ AI is allowed again.` : `! Title: Mindveto AI block list
       {key === 'pricing' && (
         <section aria-label={t.pricing}>
           <div class="plans">
-            {P.plans.map((p) => <div class={'plan' + (p.pick ? ' pick' : '')}><div class="ph"><h2>{p.name}</h2><p class="quiet">{p.who}</p><p class="price">{p.price}<span class="per">{p.per}</span></p></div><ul>{p.items.map((i) => <li>{i}</li>)}</ul><a class={'btn ' + (p.pick ? 'solid' : 'line')} href={p.to ? href(p.to as PageKey, lang) : `mailto:hello@mindveto.app?subject=${encodeURIComponent(p.mail!)}`}>{p.cta}</a>{p.sub && <p class="small plan-sub">{p.sub}</p>}</div>)}
+            {P.plans.map((p) => <div class={'plan' + (p.pick ? ' pick' : '')}><div class="ph"><h2>{p.name}</h2><p class="quiet">{p.who}</p><p class="price">{p.price}<span class="per">{p.per}</span></p></div><ul>{p.items.map((i) => <li>{i}</li>)}</ul>{p.sub && <p class="small plan-sub">{p.sub}</p>}<a class="btn line" href={p.to ? href(p.to as PageKey, lang) : `mailto:hello@mindveto.app?subject=${encodeURIComponent(p.mail!)}`}>{p.cta}</a></div>)}
           </div>
           <p class="small">{P.note}</p>
         </section>
       )}
 
       {pg!.blocks.map((b, i) => (
-        <section id={b.steps && i > 0 && isProduct ? 'install' : undefined}>
+        <section id={b.steps && i > 0 && isProduct ? 'install' : undefined} class={i === 1 && pg!.blocks.length >= 3 ? 'midband' : undefined}>
           <h2>{b.h}</h2>
           {b.p?.map((x) => <p set:html={x} />)}
           {b.list && <ul>{b.list.map((x) => <li set:html={x} />)}</ul>}
@@ -336,8 +337,8 @@ AI is allowed again.` : `! Title: Mindveto AI block list
       {pg!.related && (
         <section>
           <h2>{t.related}</h2>
-          <div class="products">
-            {pg!.related.slice(0, 2).map((k) => <div class="product"><h3><a href={href(k, lang)}>{PRODUCT_NAMES[lang][k] ?? (C.pages[k]?.title)}</a></h3><p>{PRODUCT_LINES[lang][k] ?? (C.pages[k]?.lead.split(/(?<=[.!?])\s/)[0])}</p></div>)}
+          <div class="rels">
+            {pg!.related.slice(0, 3).map((k) => <a class="rel" href={href(k, lang)}><strong>{PRODUCT_NAMES[lang][k] ?? (C.pages[k]?.title)}</strong><span>{PRODUCT_LINES[lang][k] ?? (C.pages[k]?.desc.split(/(?<=[.!?])\s/)[0])}</span></a>)}
           </div>
         </section>
       )}
@@ -421,9 +422,10 @@ AI is allowed again.` : `! Title: Mindveto AI block list
         </figure>
       )}
       {aside === 'switch' && (
-        <div class="plate mini" aria-hidden="true">
+        <figure class="plate mini" aria-hidden="true">
           <span class="switch" aria-checked="true"><span class="screw t"></span><span class="rocker" data-on={h.switchOn} data-off={h.switchOff}><span class="led"></span></span><span class="screw b"></span></span>
-        </div>
+          <figcaption class="status">{VETO_CAP[lang]}</figcaption>
+        </figure>
       )}
   </aside>}
   </div>

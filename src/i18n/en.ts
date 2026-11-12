@@ -7,7 +7,7 @@ export const home: Home = {
   h1: 'Your mind gets the last word.',
   lead: 'Mindveto switches off ChatGPT, Gemini, Copilot and 150+ other AI tools on a browser, a phone, a computer or a whole network. A PIN decides who can switch them back on.',
   switchOn: 'AI', switchOff: 'Veto', switchLabel: 'Try it: switch AI off on this page',
-  statusOn: 'AI is allowed. Flip the switch.', statusOff: 'Veto. 150+ AI services blocked.',
+  statusOn: 'AI allowed. Flip it.', statusOff: 'Veto. 150+ AI services blocked.',
   how: 'How it works',
   doorsH: 'Who it is for',
   doors: [

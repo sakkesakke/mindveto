@@ -7,7 +7,7 @@ export const home: Home = {
   h1: 'Votre esprit a le dernier mot.',
   lead: 'Mindveto coupe ChatGPT, Gemini, Copilot et 150+ autres outils d’IA sur un navigateur, un téléphone, un ordinateur ou tout un réseau. Un code PIN décide qui peut les rallumer.',
   switchOn: 'IA', switchOff: 'Veto', switchLabel: 'Essayez : coupez l’IA sur cette page',
-  statusOn: 'L’IA est autorisée. Basculez l’interrupteur.', statusOff: 'Veto. 150+ services d’IA bloqués.',
+  statusOn: 'IA autorisée. Basculez-le.', statusOff: 'Veto. 150+ services d’IA bloqués.',
   how: 'Comment ça marche',
   doorsH: 'Pour qui',
   doors: [

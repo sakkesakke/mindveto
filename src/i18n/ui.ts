@@ -7,7 +7,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     home: 'Home', products: 'Products', forWho: 'Who it is for', company: 'Mindveto',
     about: 'About', privacy: 'Privacy', terms: 'Terms', legal: 'Legal information', contact: 'Contact',
     tagline: 'Made in Belgium by Amghar Said.',
-    fine: 'No cookies, no trackers, no ads on this site. Mindveto was called Human Override until November 2026.',
+    fine: 'No cookies, no trackers, no ads on this site.',
     langName: 'English', getFree: 'Download free', related: 'Related',
   },
   nl: {
@@ -16,7 +16,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     home: 'Home', products: 'Producten', forWho: 'Voor wie', company: 'Mindveto',
     about: 'Over ons', privacy: 'Privacy', terms: 'Voorwaarden', legal: 'Wettelijke info', contact: 'Contact',
     tagline: 'Gemaakt in België door Amghar Said.',
-    fine: 'Geen cookies, geen trackers, geen advertenties op deze site. Mindveto heette tot november 2026 Human Override.',
+    fine: 'Geen cookies, geen trackers, geen advertenties op deze site.',
     langName: 'Nederlands', getFree: 'Gratis downloaden', related: 'Ook interessant',
   },
   fr: {
@@ -25,7 +25,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     home: 'Accueil', products: 'Produits', forWho: 'Pour qui', company: 'Mindveto',
     about: 'À propos', privacy: 'Confidentialité', terms: 'Conditions', legal: 'Mentions légales', contact: 'Contact',
     tagline: 'Créé en Belgique par Amghar Said.',
-    fine: 'Pas de cookies, pas de traceurs, pas de publicité sur ce site. Mindveto s’appelait Human Override jusqu’en novembre 2026.',
+    fine: 'Pas de cookies, pas de traceurs, pas de publicité sur ce site.',
     langName: 'Français', getFree: 'Télécharger gratuitement', related: 'À voir aussi',
   },
 };

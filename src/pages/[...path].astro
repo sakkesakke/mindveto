@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import { LANGS, ROUTES, href, SITE, type Lang, type PageKey } from '../i18n/routes';
 import { UI } from '../i18n/ui';
 import { PRODUCT_NAMES, PRODUCT_LINES, PRODUCT_KEYS } from '../i18n/products';
-import { AI_NAMES, PLANS, EXAM_UI } from '../i18n/extra';
+import { AI_NAMES, PLANS, EXAM_UI, STREAM_LABEL, PASTE_MOCK } from '../i18n/extra';
 import type { Action, Home, Page } from '../i18n/types';
 import * as en from '../i18n/en';
 import * as nl from '../i18n/nl';
@@ -56,6 +56,9 @@ if (!isHome) {
   jsonld.push({ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Mindveto', url: SITE + '/', inLanguage: ['en', 'nl', 'fr'] });
 }
 const X = EXAM_UI[lang];
+const M = PASTE_MOCK[lang];
+const NO_ASIDE: PageKey[] = ['help', 'about', 'privacy', 'terms', 'legal', 'pricing', 'download'];
+const aside = isHome || NO_ASIDE.includes(key) ? null : (key === 'offices' || key === 'paste') ? 'paste' : 'switch';
 const P = PLANS[lang];
 ---
 <Base lang={lang} page={key} title={title} desc={desc} jsonld={jsonld}>
@@ -82,7 +85,7 @@ const P = PLANS[lang];
     </div>
   </section>
   <section class="stream" aria-label="AI services">
-    <div class="wrap"><p>{AI_NAMES.map((n, i) => <><span style={`transition-delay:${i * 28}ms`}>{n}</span>{' '}</>)}<span style={`transition-delay:${AI_NAMES.length * 28}ms`}>+110</span></p></div>
+    <div class="wrap"><p><span class="lbl">{STREAM_LABEL[lang]}</span> {AI_NAMES.map((n, i) => <><span style={`transition-delay:${i * 28}ms`}>{n}</span>{' '}</>)}<span style={`transition-delay:${AI_NAMES.length * 28}ms`}>+110</span></p></div>
   </section>
 
   <section class="band paper" id="who" aria-labelledby="who-h">
@@ -98,7 +101,7 @@ const P = PLANS[lang];
     <div class="wrap">
       <h2 id="pr-h">{h.productsH}</h2>
       <p class="lead">{h.productsLead}</p>
-      <div class="products">
+      <div class="products four">
         {PRODUCT_KEYS.map((k) => <div class="product"><h3><a href={href(k, lang)}>{PRODUCT_NAMES[lang][k]}</a></h3><p>{PRODUCT_LINES[lang][k]}</p></div>)}
       </div>
     </div>
@@ -114,7 +117,7 @@ const P = PLANS[lang];
   <section class="band" aria-labelledby="lm-h">
     <div class="wrap split">
       <div><h2 id="lm-h">{h.limitsH}</h2></div>
-      <ul>{h.limits.map((l) => <li>{l}</li>)}</ul>
+      <ul class="rules">{h.limits.map((l) => <li>{l}</li>)}</ul>
     </div>
   </section>
 
@@ -138,11 +141,26 @@ const P = PLANS[lang];
 ) : (
   <>
   <header class="pagehead">
-    <div class="wrap">
-      <p class="crumbs"><a href={href('home', lang)}>Mindveto</a>{isProduct ? <> / <a href={href('download', lang)}>{t.products}</a></> : null}</p>
-      <h1>{pg!.h1.replace(/\.$/, '')}</h1>
-      <p class="lead">{pg!.lead}</p>
-      {pg!.actions && <div class="actions">{pg!.actions.map((a) => <a class={'btn ' + (a.solid ? 'solid' : 'line')} href={link(a)} download={a.download ? '' : undefined}>{a.label}</a>)}</div>}
+    <div class={'wrap' + (aside ? ' withaside' : '')}>
+      <div>
+        {isProduct && <p class="crumbs"><a href={href('home', lang)}>Mindveto</a> / <a href={href('download', lang)}>{t.products}</a></p>}
+        <h1>{pg!.h1.replace(/\.$/, '')}</h1>
+        <p class="lead">{pg!.lead}</p>
+        {pg!.actions && <div class="actions">{pg!.actions.map((a) => <a class={'btn ' + (a.solid ? 'solid' : 'line')} href={link(a)} download={a.download ? '' : undefined}>{a.label}</a>)}</div>}
+      </div>
+      {aside === 'paste' && (
+        <figure class="pmock" aria-label={M.h}>
+          <p class="pm-h">{M.h}</p>
+          <p class="pm-p">{M.p}</p>
+          <ul>{M.found.map((f) => <li>{f}</li>)}</ul>
+          <div class="pm-b"><span class="pm-btn solid">{M.a}</span><span class="pm-btn">{M.b}</span><span class="pm-btn ghost">{M.c}</span></div>
+        </figure>
+      )}
+      {aside === 'switch' && (
+        <div class="plate mini" aria-hidden="true">
+          <span class="switch" aria-checked="true"><span class="screw t"></span><span class="rocker" data-on={h.switchOn} data-off={h.switchOff}><span class="led"></span></span><span class="screw b"></span></span>
+        </div>
+      )}
     </div>
   </header>
 
@@ -206,7 +224,7 @@ const P = PLANS[lang];
       {key === 'pricing' && (
         <section aria-label={t.pricing}>
           <div class="plans">
-            {P.plans.map((p) => <div class={'plan' + (p.free ? ' free' : '')}><h2>{p.name}</h2><p class="quiet">{p.who}</p><p class="price">{p.price} <span class="per">{p.per}</span></p><ul>{p.items.map((i) => <li>{i}</li>)}</ul></div>)}
+            {P.plans.map((p) => <div class={'plan' + (p.pick ? ' pick' : '')}><div class="ph"><h2>{p.name}</h2><p class="quiet">{p.who}</p><p class="price">{p.price}<span class="per">{p.per}</span></p></div><ul>{p.items.map((i) => <li>{i}</li>)}</ul><a class={'btn ' + (p.pick ? 'solid' : 'line')} href={p.to ? href(p.to as PageKey, lang) : `mailto:hello@mindveto.app?subject=${encodeURIComponent(p.mail!)}`}>{p.cta}</a></div>)}
           </div>
           <p class="small">{P.note}</p>
         </section>
@@ -235,7 +253,7 @@ const P = PLANS[lang];
         <section>
           <h2>{t.related}</h2>
           <div class="products">
-            {pg!.related.map((k) => <div class="product"><h3><a href={href(k, lang)}>{PRODUCT_NAMES[lang][k] ?? (C.pages[k]?.title)}</a></h3>{PRODUCT_LINES[lang][k] && <p>{PRODUCT_LINES[lang][k]}</p>}</div>)}
+            {pg!.related.map((k) => <div class="product"><h3><a href={href(k, lang)}>{PRODUCT_NAMES[lang][k] ?? (C.pages[k]?.title)}</a></h3><p>{PRODUCT_LINES[lang][k] ?? (C.pages[k]?.lead.split(/(?<=[.!?])\s/)[0])}</p></div>)}
           </div>
         </section>
       )}

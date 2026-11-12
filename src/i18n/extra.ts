@@ -3,33 +3,33 @@ import type { Lang } from './routes';
 // Names shown in the homepage stream. Only named to describe what is blocked.
 export const AI_NAMES = ['ChatGPT', 'Gemini', 'Claude', 'Copilot', 'Perplexity', 'DeepSeek', 'Grok', 'Mistral Le Chat', 'Meta AI', 'Character.AI', 'Replika', 'Poe', 'Qwen', 'Kimi', 'Pi', 'You.com', 'Phind', 'QuillBot', 'Jasper', 'Writesonic', 'Gamma', 'Brainly AI', 'Photomath', 'Gauth', 'NotebookLM', 'Sora', 'Cursor', 'Windsurf', 'Lovable', 'v0', 'Bolt', 'Undetectable AI', 'Janitor AI', 'Talkie', 'Venice', 'OpenRouter', 'HuggingChat', 'Duck.ai', 'Monica', 'Merlin'];
 
-type Plan = { name: string; price: string; per: string; who: string; items: string[]; free?: boolean };
+type Plan = { name: string; price: string; per: string; who: string; items: string[]; free?: boolean; cta: string; to?: string; mail?: string; pick?: boolean };
 export const PLANS: Record<Lang, { plans: Plan[]; note: string }> = {
   en: {
     note: 'Planned prices. During the launch every feature is free. Consumer prices include VAT.',
     plans: [
-      { name: 'Free', price: '€0', per: 'always', who: 'Everyone', free: true, items: ['Blocks 150+ AI services', 'PIN lock and schedule', 'Your own block and allow lists', 'Browser, Android, Windows, Mac, Linux, network lists'] },
-      { name: 'Plus', price: '€14.99', per: 'per year, or €1.99 per month', who: 'Families and freelancers', items: ['Everything in Free', 'Paste guard with your own words', 'Approved AI', 'Tamper log and alerts on Android', 'School holidays in the schedule', '15 days free to try'] },
-      { name: 'School', price: '€1', per: 'per pupil per year, minimum €149', who: 'Schools', items: ['Exam button for every class', 'Roll-out help for IT', 'Data processing agreement', 'Invoice', 'Free pilot for one term'] },
-      { name: 'Business', price: '€2.50', per: 'per user per month, minimum 5', who: 'Offices and companies', items: ['Paste guard for the whole team', 'Approved AI set centrally', 'Roll-out help and invoice', 'AI Act and GDPR report (coming)'] },
+      { name: 'Free', price: '€0', per: 'always', who: 'Everyone', free: true, items: ['Blocks 150+ AI services', 'PIN lock and schedule', 'Your own block and allow lists', 'Browser, Android, Windows, Mac, Linux, network lists'], cta: 'Download free', to: 'download' },
+      { name: 'Plus', price: '€14.99', per: 'per year, or €1.99 per month', who: 'Families and freelancers', items: ['Everything in Free', 'Paste guard with your own words', 'Approved AI', 'Tamper log and alerts on Android', 'School holidays in the schedule', '15 days free to try'], cta: 'Use it free now', to: 'download', pick: true },
+      { name: 'School', price: '€1', per: 'per pupil per year, minimum €149', who: 'Schools', items: ['Exam button for every class', 'Roll-out help for IT', 'Data processing agreement', 'Invoice', 'Free pilot for one term'], cta: 'Ask for a pilot', mail: 'School pilot' },
+      { name: 'Business', price: '€2.50', per: 'per user per month, minimum 5', who: 'Offices and companies', items: ['Paste guard for the whole team', 'Approved AI set centrally', 'Roll-out help and invoice', 'AI Act and GDPR report (coming)'], cta: 'Talk to us', mail: 'Mindveto for our office' },
     ],
   },
   nl: {
     note: 'Geplande prijzen. Tijdens de lancering is elke functie gratis. Prijzen voor consumenten zijn inclusief btw.',
     plans: [
-      { name: 'Gratis', price: '€0', per: 'altijd', who: 'Iedereen', free: true, items: ['Blokkeert 150+ AI-diensten', 'Pincode en rooster', 'Eigen blokkeer- en toelaatlijsten', 'Browser, Android, Windows, Mac, Linux, netwerklijsten'] },
-      { name: 'Plus', price: '€14,99', per: 'per jaar, of €1,99 per maand', who: 'Gezinnen en zelfstandigen', items: ['Alles uit Gratis', 'Plakbewaker met je eigen woorden', 'Goedgekeurde AI', 'Sabotagelog en meldingen op Android', 'Schoolvakanties in het rooster', '15 dagen gratis proberen'] },
-      { name: 'School', price: '€1', per: 'per leerling per jaar, minimum €149', who: 'Scholen', items: ['Examenknop voor elke klas', 'Hulp bij de uitrol voor IT', 'Verwerkersovereenkomst', 'Factuur', 'Gratis proef van één trimester'] },
-      { name: 'Business', price: '€2,50', per: 'per gebruiker per maand, minimum 5', who: 'Kantoren en bedrijven', items: ['Plakbewaker voor het hele team', 'Goedgekeurde AI centraal ingesteld', 'Hulp bij de uitrol en factuur', 'Rapport AI-wet en AVG (komt)'] },
+      { name: 'Gratis', price: '€0', per: 'altijd', who: 'Iedereen', free: true, items: ['Blokkeert 150+ AI-diensten', 'Pincode en rooster', 'Eigen blokkeer- en toelaatlijsten', 'Browser, Android, Windows, Mac, Linux, netwerklijsten'], cta: 'Gratis downloaden', to: 'download' },
+      { name: 'Plus', price: '€14,99', per: 'per jaar, of €1,99 per maand', who: 'Gezinnen en zelfstandigen', items: ['Alles uit Gratis', 'Plakbewaker met je eigen woorden', 'Goedgekeurde AI', 'Sabotagelog en meldingen op Android', 'Schoolvakanties in het rooster', '15 dagen gratis proberen'], cta: 'Nu gratis gebruiken', to: 'download', pick: true },
+      { name: 'School', price: '€1', per: 'per leerling per jaar, minimum €149', who: 'Scholen', items: ['Examenknop voor elke klas', 'Hulp bij de uitrol voor IT', 'Verwerkersovereenkomst', 'Factuur', 'Gratis proef van één trimester'], cta: 'Vraag een proef aan', mail: 'Proef voor onze school' },
+      { name: 'Business', price: '€2,50', per: 'per gebruiker per maand, minimum 5', who: 'Kantoren en bedrijven', items: ['Plakbewaker voor het hele team', 'Goedgekeurde AI centraal ingesteld', 'Hulp bij de uitrol en factuur', 'Rapport AI-wet en AVG (komt)'], cta: 'Neem contact op', mail: 'Mindveto voor ons kantoor' },
     ],
   },
   fr: {
     note: 'Prix prévus. Pendant le lancement, toutes les fonctions sont gratuites. Les prix pour particuliers incluent la TVA.',
     plans: [
-      { name: 'Gratuit', price: '0 €', per: 'toujours', who: 'Tout le monde', free: true, items: ['Bloque 150+ services d’IA', 'PIN et horaire', 'Vos listes de blocage et d’autorisation', 'Navigateur, Android, Windows, Mac, Linux, listes réseau'] },
-      { name: 'Plus', price: '14,99 €', per: 'par an, ou 1,99 € par mois', who: 'Familles et indépendants', items: ['Tout le Gratuit', 'Garde-collage avec vos propres mots', 'IA approuvée', 'Journal et alertes anti-sabotage sur Android', 'Vacances scolaires dans l’horaire', '15 jours d’essai gratuit'] },
-      { name: 'École', price: '1 €', per: 'par élève et par an, minimum 149 €', who: 'Écoles', items: ['Bouton examen pour chaque classe', 'Aide au déploiement pour l’IT', 'Accord de traitement des données', 'Facture', 'Pilote gratuit d’un trimestre'] },
-      { name: 'Business', price: '2,50 €', per: 'par utilisateur et par mois, minimum 5', who: 'Bureaux et entreprises', items: ['Garde-collage pour toute l’équipe', 'IA approuvée réglée de façon centrale', 'Aide au déploiement et facture', 'Rapport AI Act et RGPD (bientôt)'] },
+      { name: 'Gratuit', price: '0 €', per: 'toujours', who: 'Tout le monde', free: true, items: ['Bloque 150+ services d’IA', 'PIN et horaire', 'Vos listes de blocage et d’autorisation', 'Navigateur, Android, Windows, Mac, Linux, listes réseau'], cta: 'Télécharger gratuitement', to: 'download' },
+      { name: 'Plus', price: '14,99 €', per: 'par an, ou 1,99 € par mois', who: 'Familles et indépendants', items: ['Tout le Gratuit', 'Garde-collage avec vos propres mots', 'IA approuvée', 'Journal et alertes anti-sabotage sur Android', 'Vacances scolaires dans l’horaire', '15 jours d’essai gratuit'], cta: 'Utiliser gratuitement', to: 'download', pick: true },
+      { name: 'École', price: '1 €', per: 'par élève et par an, minimum 149 €', who: 'Écoles', items: ['Bouton examen pour chaque classe', 'Aide au déploiement pour l’IT', 'Accord de traitement des données', 'Facture', 'Pilote gratuit d’un trimestre'], cta: 'Demander un pilote', mail: 'Pilote pour notre école' },
+      { name: 'Business', price: '2,50 €', per: 'par utilisateur et par mois, minimum 5', who: 'Bureaux et entreprises', items: ['Garde-collage pour toute l’équipe', 'IA approuvée réglée de façon centrale', 'Aide au déploiement et facture', 'Rapport AI Act et RGPD (bientôt)'], cta: 'Nous contacter', mail: 'Mindveto pour notre bureau' },
     ],
   },
 };
@@ -83,4 +83,13 @@ export const EXAM_UI: Record<Lang, Record<string, string>> = {
     other: 'Ce lien concerne une autre classe. Cet appareil a déjà une classe : touchez d’abord « Oublier cette classe sur cet appareil », puis rouvrez le lien.',
     yes: 'Touchez encore pour oublier',
   },
+};
+
+export const STREAM_LABEL: Record<Lang, string> = { en: 'On the list', nl: 'Op de lijst', fr: 'Sur la liste' };
+
+// Paste guard mock shown on the offices and paste guard pages (static picture of the real dialog).
+export const PASTE_MOCK: Record<Lang, { h: string; p: string; found: string[]; a: string; b: string; c: string }> = {
+  en: { h: 'Private data in your paste', p: 'You are pasting into an AI chat. We found:', found: ['Bank account number (IBAN)', 'National ID number', 'Your word: “Dossier Peeters”'], a: 'Don’t paste', b: 'Paste without private parts', c: 'Paste anyway' },
+  nl: { h: 'Privégegevens in je plakwerk', p: 'Je plakt in een AI-chat. We vonden:', found: ['Rekeningnummer (IBAN)', 'Rijksregisternummer', 'Jouw woord: “Dossier Peeters”'], a: 'Niet plakken', b: 'Plakken zonder privédelen', c: 'Toch plakken' },
+  fr: { h: 'Données privées dans votre collage', p: 'Vous collez dans un chat IA. Nous avons trouvé :', found: ['Numéro de compte (IBAN)', 'Numéro de registre national', 'Votre mot : « Dossier Peeters »'], a: 'Ne pas coller', b: 'Coller sans les parties privées', c: 'Coller quand même' },
 };

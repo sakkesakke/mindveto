@@ -13,13 +13,13 @@ export function GET() {
     .map((f) => `- ${f.q} ${strip(f.a)}`);
   const body = [
     '# Mindveto',
-    `> ${en.home.lead} Free to use. Made by Amghar Said, an independent maker in Belgium. Formerly called Human Override.`,
+    `> ${en.home.lead} Free to use. Made by Amghar Said, an independent maker. Available worldwide. Formerly called Human Override.`,
     [
       'Key facts:',
       '- What it is: an AI blocker ("AI kill switch") for browsers, Android, Windows, Mac, Linux and whole networks.',
       '- What it blocks: ChatGPT, Gemini, Copilot, Claude, Character.AI and 150+ other AI services, from a public list that updates daily.',
       '- Privacy: all checks run on the device. No account, no cookies, no trackers. Nothing typed, pasted or visited is sent to Mindveto.',
-      '- Extras: PIN lock, schedule with school holidays (Belgium, Netherlands, France), exam button for teachers, paste guard for offices, approved-AI list.',
+      '- Extras: PIN lock, schedule (with built-in school holidays for Belgium, the Netherlands and France), exam button for teachers, paste guard for offices, approved-AI list.',
       '- Languages: English, Dutch (/nl/), French (/fr/). Contact: hello@mindveto.app',
     ].join('\n'),
     'Honest limits:\n' + en.home.limits.map((l) => `- ${l}`).join('\n'),

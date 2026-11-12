@@ -366,16 +366,16 @@ export const pages: Record<string, Page> = {
       { q: 'An AI tool is not blocked.', a: 'Add it to your own block list now, and mail us the address. We add new AI services to the public list.' },
       { q: 'How do I uninstall it?', a: 'Browser: remove it on the extensions page. Android: switch it off, then uninstall. Windows: run the script and type 2. Mac and Linux: run the script with “off”.' },
       { q: 'Does Mindveto use AI?', a: 'No. Blocking and the paste guard use plain rules on your device.' },
-      { q: 'Who makes Mindveto?', a: L('Amghar Said, an independent maker in Belgium. <a href="/about/">About</a>.') },
+      { q: 'Who makes Mindveto?', a: L('Amghar Said, an independent maker. <a href="/about/">About</a>.') },
     ],
     related: ['guide', 'download', 'privacy'],
   },
 
   about: {
     title: 'About Mindveto',
-    desc: 'Mindveto is made by Amghar Said in Belgium. Why we build an AI kill switch, how we keep it private, and what happens if we ever stop.',
+    desc: 'Mindveto is made by Amghar Said, an independent maker. Why we build an AI kill switch, how we keep it private, and what happens if we ever stop.',
     h1: 'People should decide when AI is part of their day.',
-    lead: 'Mindveto is made by Amghar Said, an independent maker in Belgium. It started as Human Override in 2026 and got its own name in November 2026.',
+    lead: 'Mindveto is made by Amghar Said, an independent maker. It started as Human Override in 2026 and got its own name in November 2026.',
     blocks: [
       { h: 'Why the name', p: [
         'In the 1980s the brain researcher Benjamin Libet described how our conscious mind can stop an urge just before we act: a veto. Mindveto gives that pause to people who want it from AI.',

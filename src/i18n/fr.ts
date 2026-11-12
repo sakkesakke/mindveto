@@ -366,16 +366,16 @@ export const pages: Record<string, Page> = {
       { q: 'Un outil d’IA n’est pas bloqué.', a: 'Ajoutez-le tout de suite à votre liste de blocage et envoyez-nous l’adresse. Nous ajoutons les nouveaux services d’IA à la liste publique.' },
       { q: 'Comment le désinstaller ?', a: 'Navigateur : retirez-le sur la page des extensions. Android : coupez-le, puis désinstallez l’appli. Windows : lancez le script et tapez 2. Mac et Linux : lancez le script avec « off ».' },
       { q: 'Mindveto utilise-t-il de l’IA ?', a: 'Non. Le blocage et le garde-collage utilisent des règles simples sur votre appareil.' },
-      { q: 'Qui fait Mindveto ?', a: L('Amghar Said, un créateur indépendant en Belgique. <a href="/fr/a-propos/">À propos</a>.') },
+      { q: 'Qui fait Mindveto ?', a: L('Amghar Said, un créateur indépendant. <a href="/fr/a-propos/">À propos</a>.') },
     ],
     related: ['guide', 'download', 'privacy'],
   },
 
   about: {
     title: 'À propos de Mindveto',
-    desc: 'Mindveto est créé par Amghar Said en Belgique. Pourquoi un bouton d’arrêt de l’IA, comment nous protégeons votre vie privée.',
+    desc: 'Mindveto est créé par Amghar Said, créateur indépendant. Pourquoi un bouton d’arrêt de l’IA, comment nous protégeons votre vie privée.',
     h1: 'Chacun décide quand l’IA fait partie de sa journée.',
-    lead: 'Mindveto est créé par Amghar Said, un créateur indépendant en Belgique. Il a commencé en 2026 sous le nom Human Override et a reçu son propre nom en novembre 2026.',
+    lead: 'Mindveto est créé par Amghar Said, un créateur indépendant. Il a commencé en 2026 sous le nom Human Override et a reçu son propre nom en novembre 2026.',
     blocks: [
       { h: 'Pourquoi ce nom', p: [
         'Dans les années 1980, le chercheur Benjamin Libet a décrit comment notre esprit conscient peut arrêter une impulsion juste avant d’agir : un veto. Mindveto offre cette pause face à l’IA à qui la veut.',

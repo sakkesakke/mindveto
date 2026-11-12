@@ -366,16 +366,16 @@ export const pages: Record<string, Page> = {
       { q: 'Een AI-tool wordt niet geblokkeerd.', a: 'Zet hem nu op je eigen blokkeerlijst en mail ons het adres. We voegen nieuwe AI-diensten toe aan de openbare lijst.' },
       { q: 'Hoe verwijder ik het?', a: 'Browser: verwijder het op de extensiepagina. Android: zet het uit en verwijder de app. Windows: start het script en typ 2. Mac en Linux: start het script met “off”.' },
       { q: 'Gebruikt Mindveto zelf AI?', a: 'Nee. Blokkeren en de plakbewaker gebruiken gewone regels op je toestel.' },
-      { q: 'Wie maakt Mindveto?', a: L('Amghar Said, een onafhankelijke maker in België. <a href="/nl/over/">Over ons</a>.') },
+      { q: 'Wie maakt Mindveto?', a: L('Amghar Said, een onafhankelijke maker. <a href="/nl/over/">Over ons</a>.') },
     ],
     related: ['guide', 'download', 'privacy'],
   },
 
   about: {
     title: 'Over Mindveto',
-    desc: 'Mindveto wordt gemaakt door Amghar Said in België. Waarom we een AI-noodknop bouwen, hoe we het privé houden en wat er gebeurt als we stoppen.',
+    desc: 'Mindveto wordt gemaakt door Amghar Said, een onafhankelijke maker. Waarom we een AI-noodknop bouwen, hoe we het privé houden en wat er gebeurt als we stoppen.',
     h1: 'Mensen beslissen zelf wanneer AI deel is van hun dag.',
-    lead: 'Mindveto wordt gemaakt door Amghar Said, een onafhankelijke maker in België. Het begon in 2026 als Human Override en kreeg in november 2026 een eigen naam.',
+    lead: 'Mindveto wordt gemaakt door Amghar Said, een onafhankelijke maker. Het begon in 2026 als Human Override en kreeg in november 2026 een eigen naam.',
     blocks: [
       { h: 'Waarom de naam', p: [
         'In de jaren 1980 beschreef hersenonderzoeker Benjamin Libet hoe ons bewuste denken een impuls kan stoppen vlak voor we handelen: een veto. Mindveto geeft die pauze aan wie ze wil tegenover AI.',

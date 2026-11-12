@@ -14,6 +14,7 @@ const productKeys: PageKey[] = ['browser', 'android', 'windows', 'maclinux', 'ne
 const org = {
   '@context': 'https://schema.org', '@type': 'Organization', name: 'Mindveto', url: SITE + '/',
   logo: SITE + '/icon-512.png', slogan: 'The AI kill switch', founder: { '@type': 'Person', name: 'Amghar Said' },
+  email: 'hello@mindveto.app', contactPoint: { '@type': 'ContactPoint', contactType: 'customer support', email: 'hello@mindveto.app', availableLanguage: ['en', 'nl', 'fr'] },
 };
 const fullTitle = page === 'home' || title.length > 48 ? title : `${title} | Mindveto`;
 ---

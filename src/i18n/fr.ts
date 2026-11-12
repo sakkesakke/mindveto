@@ -3,7 +3,7 @@ import { DL } from './routes';
 import { COMPANY } from './company';
 
 export const home: Home = {
-  title: 'Mindveto : bloquez ChatGPT et 150+ outils d’IA d’un seul geste',
+  title: 'Mindveto : bloquez ChatGPT et 150+ outils d’IA d’un geste',
   desc: 'Bloquez ChatGPT, Gemini, Copilot et 150+ outils d’IA sur navigateurs, Android, Windows, Mac et réseaux. PIN, bouton examen. Gratuit, sans pistage.',
   h1: 'Votre esprit a le dernier mot.',
   lead: 'Mindveto coupe ChatGPT, Gemini, Copilot et 150+ autres outils d’IA sur un navigateur, un téléphone, un ordinateur ou tout un réseau. Un code PIN décide qui peut les rallumer.',
@@ -334,7 +334,7 @@ export const pages: Record<string, Page> = {
   },
 
   pricing: {
-    title: 'Tarifs',
+    title: 'Tarifs Mindveto : Gratuit, Plus, École et Business',
     desc: 'Le blocage est gratuit. Plus 14,99 € par an pour les familles, 1 € par élève pour les écoles, 2,50 € par utilisateur et par mois pour les bureaux.',
     h1: 'Le blocage est gratuit. Les extras financent le travail.',
     lead: 'Aujourd’hui, toutes les fonctions sont gratuites pendant le lancement. Les formules payantes démarrent avec la version Google Play.',

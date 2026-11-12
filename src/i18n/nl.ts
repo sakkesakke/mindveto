@@ -3,7 +3,7 @@ import { DL } from './routes';
 import { COMPANY } from './company';
 
 export const home: Home = {
-  title: 'Mindveto: blokkeer ChatGPT en 150+ AI-tools met één schakelaar',
+  title: 'Mindveto: blokkeer ChatGPT en 150+ AI-tools met één knop',
   desc: 'Blokkeer ChatGPT, Gemini, Copilot en 150+ AI-tools op browsers, Android, Windows, Mac en netwerken. Pincode, examenknop, plakbewaker. Gratis.',
   h1: 'Jouw verstand heeft het laatste woord.',
   lead: 'Mindveto zet ChatGPT, Gemini, Copilot en 150+ andere AI-tools uit op een browser, een telefoon, een computer of een heel netwerk. Een pincode bepaalt wie ze weer aan mag zetten.',
@@ -334,7 +334,7 @@ export const pages: Record<string, Page> = {
   },
 
   pricing: {
-    title: 'Prijzen',
+    title: 'Mindveto prijzen: Gratis, Plus, School en Business',
     desc: 'Blokkeren is gratis. Plus €14,99 per jaar voor gezinnen, €1 per leerling voor scholen, €2,50 per gebruiker per maand voor kantoren.',
     h1: 'Blokkeren is gratis. Extra’s betalen het werk.',
     lead: 'Vandaag is elke functie gratis terwijl we lanceren. Betaalde plannen starten met de versie op Google Play.',

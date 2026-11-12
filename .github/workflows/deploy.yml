@@ -14,8 +14,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 22
           cache: npm
@@ -24,7 +24,7 @@ jobs:
       - name: No external fonts or trackers in the build
         run: |
           if grep -rlE "fonts\.googleapis|fonts\.gstatic|googletagmanager|google-analytics|facebook\.net|hotjar" dist; then echo "External request found"; exit 1; fi
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: dist
   deploy:
@@ -35,4 +35,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+      - name: Tell search engines (IndexNow, key is public by design)
+        continue-on-error: true
+        run: |
+          urls=$(curl -fsS https://mindveto.app/sitemap-0.xml | grep -o '<loc>[^<]*' | sed 's/<loc>//' | jq -R . | jq -sc .)
+          curl -fsS -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' \
+            -d "{\"host\":\"mindveto.app\",\"key\":\"fb08984bdeeea30dde687c89aac8f489\",\"keyLocation\":\"https://mindveto.app/fb08984bdeeea30dde687c89aac8f489.txt\",\"urlList\":$urls}"

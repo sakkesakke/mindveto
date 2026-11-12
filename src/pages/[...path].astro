@@ -52,6 +52,11 @@ if (!isHome) {
     applicationCategory: 'SecurityApplication', operatingSystem: { browser: 'Chrome, Edge, Brave, Opera', android: 'Android 8+', windows: 'Windows 10, Windows 11', maclinux: 'macOS, Linux', network: 'Any' }[key as string],
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' }, author: { '@type': 'Person', name: 'Amghar Said' }, url: SITE + href(key, lang),
   });
+  if (key === 'paste' || key === 'offices') jsonld.push({
+    '@context': 'https://schema.org', '@type': 'VideoObject', name: pg!.title, description: pg!.desc, inLanguage: lang,
+    thumbnailUrl: `${SITE}/media/paste-guard-${lang}.jpg`, contentUrl: `${SITE}/media/paste-guard-${lang}.mp4`,
+    uploadDate: '2026-11-12T12:00:00+01:00', duration: 'PT9S',
+  });
 } else {
   jsonld.push({ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Mindveto', url: SITE + '/', inLanguage: ['en', 'nl', 'fr'] });
 }

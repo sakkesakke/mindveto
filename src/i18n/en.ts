@@ -334,7 +334,7 @@ export const pages: Record<string, Page> = {
   },
 
   pricing: {
-    title: 'Pricing',
+    title: 'Mindveto pricing: Free, Plus, School and Business',
     desc: 'Blocking is free. Plus €14.99 a year for families, €1 per pupil for schools, €2.50 per user a month for offices. Free during the launch.',
     h1: 'Blocking is free. Extras pay for the work.',
     lead: 'Today every feature is free while we launch. Paid plans start with the Google Play version.',

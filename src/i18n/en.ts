@@ -384,7 +384,7 @@ export const pages: Record<string, Page> = {
         'No account, no tracking, no ads, no data sales.',
         'Honest limits, written on the product pages, not hidden in small print.',
         'Blocking stays free.',
-        'Made and supported in Dutch, French and English.',
+        'Website in 8 languages; e-mail support in English, Dutch and French.',
       ]},
       { h: 'If we ever stop', p: [
         'Everything you installed keeps working: the extension, the app and the scripts block from the list already on your device. You can always remove them in the normal way.',

@@ -384,7 +384,7 @@ export const pages: Record<string, Page> = {
         'Pas de compte, pas de pistage, pas de publicité, pas de vente de données.',
         'Des limites honnêtes, écrites sur les pages produits et pas en petits caractères.',
         'Le blocage reste gratuit.',
-        'Créé et suivi en français, néerlandais et anglais.',
+        'Site en 8 langues ; assistance par e-mail en anglais, néerlandais et français.',
       ]},
       { h: 'Si nous arrêtons un jour', p: [
         'Tout ce que vous avez installé continue de fonctionner : l’extension, l’appli et les scripts bloquent avec la liste déjà présente sur votre appareil. Vous pouvez toujours les retirer normalement.',

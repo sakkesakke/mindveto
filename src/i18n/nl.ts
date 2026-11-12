@@ -384,7 +384,7 @@ export const pages: Record<string, Page> = {
         'Geen account, geen tracking, geen advertenties, geen verkoop van gegevens.',
         'Eerlijke grenzen, op de productpagina’s en niet in kleine lettertjes.',
         'Blokkeren blijft gratis.',
-        'Gemaakt en ondersteund in het Nederlands, Frans en Engels.',
+        'Website in 8 talen; ondersteuning per e-mail in het Engels, Nederlands en Frans.',
       ]},
       { h: 'Als we ooit stoppen', p: [
         'Alles wat je installeerde blijft werken: de extensie, de app en de scripts blokkeren met de lijst die al op je toestel staat. Je kunt ze altijd op de gewone manier verwijderen.',

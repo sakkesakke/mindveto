@@ -32,6 +32,51 @@ export const PLANS: Record<Lang, { plans: Plan[]; note: string }> = {
       { name: 'Business', price: '2,50 €', per: 'par utilisateur et par mois, minimum 5, HTVA', who: 'Bureaux et entreprises', items: ['Garde-collage pour toute l’équipe', 'IA approuvée réglée de façon centrale', 'Aide au déploiement et facture', 'Rapport AI Act et RGPD (bientôt)'], cta: 'Nous contacter', mail: 'Mindveto pour notre bureau' },
     ],
   },
+  es: {
+    note: 'Precios previstos. Durante el lanzamiento todas las funciones son gratis. Los precios para particulares incluyen el IVA.',
+    plans: [
+      { name: 'Gratis', price: '0 €', per: 'siempre', who: 'Todo el mundo', free: true, items: ['Bloquea más de 150 servicios de IA', 'PIN y horario', 'Tus propias listas de bloqueo y permiso', 'Navegador, Android, Windows, Mac, Linux, listas de red'], cta: 'Descargar gratis', to: 'download' },
+      { name: 'Plus', price: '14,99 €', per: 'al año, o 1,99 € al mes', who: 'Familias y autónomos', items: ['Todo lo de Gratis', 'Guardia de pegado con tus propias palabras', 'IA aprobada', 'Registro de manipulación y alertas en Android', 'Vacaciones escolares en el horario', '15 días de prueba gratis'], cta: 'Prueba Plus gratis', to: 'download', pick: true, sub: 'Desde el lanzamiento en Google Play' },
+      { name: 'Escuela', price: '1 €', per: 'por alumno al año, mínimo 149 €, IVA no incluido', who: 'Escuelas', items: ['Botón de examen para cada clase', 'Ayuda con la instalación para IT', 'Acuerdo de tratamiento de datos', 'Factura', 'Piloto gratis durante un trimestre'], cta: 'Pide un piloto', mail: 'Piloto para nuestra escuela' },
+      { name: 'Business', price: '2,50 €', per: 'por usuario al mes, mínimo 5, IVA no incluido', who: 'Oficinas y empresas', items: ['Guardia de pegado para todo el equipo', 'IA aprobada fijada de forma central', 'Ayuda con la instalación y factura', 'Informe AI Act y RGPD (próximamente)'], cta: 'Habla con nosotros', mail: 'Mindveto para nuestra oficina' },
+    ],
+  },
+  de: {
+    note: 'Geplante Preise. Während des Starts sind alle Funktionen kostenlos. Preise für Privatkunden inklusive MwSt.',
+    plans: [
+      { name: 'Kostenlos', price: '0 €', per: 'immer', who: 'Alle', free: true, items: ['Blockiert über 150 KI-Dienste', 'PIN und Zeitplan', 'Eigene Sperr- und Erlaubt-Listen', 'Browser, Android, Windows, Mac, Linux, Netzwerklisten'], cta: 'Kostenlos herunterladen', to: 'download' },
+      { name: 'Plus', price: '14,99 €', per: 'pro Jahr, oder 1,99 € pro Monat', who: 'Familien und Selbstständige', items: ['Alles aus Kostenlos', 'Einfüge-Schutz mit eigenen Wörtern', 'Freigegebene KI', 'Manipulationsprotokoll und Warnungen auf Android', 'Schulferien im Zeitplan', '15 Tage kostenlos testen'], cta: 'Plus kostenlos testen', to: 'download', pick: true, sub: 'Ab dem Start bei Google Play' },
+      { name: 'Schule', price: '1 €', per: 'pro Schüler und Jahr, mindestens 149 €, zzgl. MwSt.', who: 'Schulen', items: ['Prüfungsknopf für jede Klasse', 'Hilfe beim Ausrollen für die IT', 'Auftragsverarbeitungsvertrag', 'Rechnung', 'Kostenloser Pilot für ein Halbjahr'], cta: 'Pilot anfragen', mail: 'Pilot für unsere Schule' },
+      { name: 'Business', price: '2,50 €', per: 'pro Nutzer und Monat, mindestens 5, zzgl. MwSt.', who: 'Büros und Unternehmen', items: ['Einfüge-Schutz für das ganze Team', 'Freigegebene KI zentral festgelegt', 'Hilfe beim Ausrollen und Rechnung', 'Bericht zu AI Act und DSGVO (bald)'], cta: 'Sprechen Sie uns an', mail: 'Mindveto für unser Büro' },
+    ],
+  },
+  pt: {
+    note: 'Preços previstos. Durante o lançamento todas as funções são gratuitas. Os preços para consumidores incluem IVA.',
+    plans: [
+      { name: 'Grátis', price: '0 €', per: 'sempre', who: 'Todos', free: true, items: ['Bloqueia mais de 150 serviços de IA', 'PIN e horário', 'Suas próprias listas de bloqueio e permissão', 'Navegador, Android, Windows, Mac, Linux, listas de rede'], cta: 'Baixar grátis', to: 'download' },
+      { name: 'Plus', price: '14,99 €', per: 'por ano, ou 1,99 € por mês', who: 'Famílias e autônomos', items: ['Tudo do Grátis', 'Guarda de colagem com suas próprias palavras', 'IA aprovada', 'Registro de violação e alertas no Android', 'Férias escolares no horário', '15 dias de teste grátis'], cta: 'Teste o Plus grátis', to: 'download', pick: true, sub: 'A partir do lançamento no Google Play' },
+      { name: 'Escola', price: '1 €', per: 'por aluno por ano, mínimo 149 €, sem IVA', who: 'Escolas', items: ['Botão de prova para cada turma', 'Ajuda na instalação para a TI', 'Acordo de tratamento de dados', 'Fatura', 'Piloto grátis por um trimestre'], cta: 'Peça um piloto', mail: 'Piloto para a nossa escola' },
+      { name: 'Business', price: '2,50 €', per: 'por usuário por mês, mínimo 5, sem IVA', who: 'Escritórios e empresas', items: ['Guarda de colagem para toda a equipe', 'IA aprovada definida centralmente', 'Ajuda na instalação e fatura', 'Relatório AI Act e RGPD/LGPD (em breve)'], cta: 'Fale conosco', mail: 'Mindveto para o nosso escritório' },
+    ],
+  },
+  it: {
+    note: 'Prezzi previsti. Durante il lancio tutte le funzioni sono gratuite. I prezzi per i consumatori includono l’IVA.',
+    plans: [
+      { name: 'Gratis', price: '0 €', per: 'sempre', who: 'Tutti', free: true, items: ['Blocca oltre 150 servizi di IA', 'PIN e orario', 'Le tue liste di blocco e di permesso', 'Browser, Android, Windows, Mac, Linux, liste di rete'], cta: 'Scarica gratis', to: 'download' },
+      { name: 'Plus', price: '14,99 €', per: 'all’anno, o 1,99 € al mese', who: 'Famiglie e liberi professionisti', items: ['Tutto di Gratis', 'Guardia incolla con le tue parole', 'IA approvata', 'Registro manomissioni e avvisi su Android', 'Vacanze scolastiche nell’orario', '15 giorni di prova gratis'], cta: 'Prova Plus gratis', to: 'download', pick: true, sub: 'Dal lancio su Google Play' },
+      { name: 'Scuola', price: '1 €', per: 'per studente all’anno, minimo 149 €, IVA esclusa', who: 'Scuole', items: ['Pulsante esame per ogni classe', 'Aiuto all’installazione per l’IT', 'Accordo sul trattamento dei dati', 'Fattura', 'Pilota gratuito per un quadrimestre'], cta: 'Chiedi un pilota', mail: 'Pilota per la nostra scuola' },
+      { name: 'Business', price: '2,50 €', per: 'per utente al mese, minimo 5, IVA esclusa', who: 'Uffici e aziende', items: ['Guardia incolla per tutto il team', 'IA approvata impostata centralmente', 'Aiuto all’installazione e fattura', 'Report AI Act e GDPR (in arrivo)'], cta: 'Parla con noi', mail: 'Mindveto per il nostro ufficio' },
+    ],
+  },
+  ar: {
+    note: 'أسعار مخطط لها. خلال فترة الإطلاق كل الميزات مجانية. أسعار الأفراد تشمل ضريبة القيمة المضافة.',
+    plans: [
+      { name: 'مجاني', price: '0 €', per: 'دائمًا', who: 'للجميع', free: true, items: ['يحظر أكثر من 150 خدمة ذكاء اصطناعي', 'رمز PIN وجدول زمني', 'قوائم الحظر والسماح الخاصة بك', 'المتصفح وأندرويد وويندوز وماك ولينكس وقوائم الشبكة'], cta: 'نزّل مجانًا', to: 'download' },
+      { name: 'Plus', price: '14.99 €', per: 'سنويًا، أو 1.99 € شهريًا', who: 'العائلات والمستقلون', items: ['كل ما في المجاني', 'حارس اللصق بكلماتك الخاصة', 'ذكاء اصطناعي معتمد', 'سجل العبث وتنبيهات على أندرويد', 'العطل المدرسية في الجدول', 'تجربة مجانية لمدة 15 يومًا'], cta: 'جرّب Plus مجانًا', to: 'download', pick: true, sub: 'مع الإطلاق على Google Play' },
+      { name: 'المدرسة', price: '1 €', per: 'لكل طالب سنويًا، بحد أدنى 149 €، دون ضريبة', who: 'المدارس', items: ['زر امتحان لكل فصل', 'مساعدة فريق تقنية المعلومات في التثبيت', 'اتفاقية معالجة البيانات', 'فاتورة', 'تجربة مجانية لفصل دراسي'], cta: 'اطلب تجربة', mail: 'تجربة لمدرستنا' },
+      { name: 'Business', price: '2.50 €', per: 'لكل مستخدم شهريًا، بحد أدنى 5، دون ضريبة', who: 'المكاتب والشركات', items: ['حارس اللصق للفريق كله', 'ذكاء اصطناعي معتمد يُضبط مركزيًا', 'مساعدة في التثبيت وفاتورة', 'تقرير قانون الذكاء الاصطناعي واللائحة العامة لحماية البيانات (قريبًا)'], cta: 'تواصل معنا', mail: 'Mindveto لمكتبنا' },
+    ],
+  },
 };
 
 export const EXAM_UI: Record<Lang, Record<string, string>> = {
@@ -83,19 +128,99 @@ export const EXAM_UI: Record<Lang, Record<string, string>> = {
     other: 'Ce lien concerne une autre classe. Cet appareil a déjà une classe : touchez d’abord « Oublier cette classe sur cet appareil », puis rouvrez le lien.',
     yes: 'Touchez encore pour oublier',
   },
+  es: {
+    mkH: 'Crea tu clase', mkP: 'Recibes un código de clase para los alumnos y un enlace privado de docente para ti.', mkB: 'Crear una clase',
+    clH: 'Tu código de clase',
+    s1: 'Los alumnos instalan la extensión Mindveto en su navegador (ordenadores del centro: una sola vez).',
+    s2: 'Abren la extensión, van a “Class · exam mode”, escriben este código y pulsan Join. (La extensión está en inglés por ahora.)',
+    s3: 'La escuela o el docente pone el PIN en la extensión, no el alumno, para que un alumno no pueda salir de la clase.',
+    cp: 'Copiar mi enlace privado de docente', fg: 'Olvidar esta clase en este dispositivo',
+    keep: 'Guarda el enlace de docente en privado: quien lo tenga puede iniciar y detener el examen. Guárdalo como marcador para usar la clase en otro dispositivo.',
+    exH: 'Modo examen', dur: '¿Cuánto tiempo?', go: 'Iniciar modo examen', st: 'Detener ahora',
+    lim: 'Límites honestos: funciona en los navegadores donde la extensión se unió a tu clase, y puede tardar hasta un minuto en que todos los navegadores lo sigan. No bloquea teléfonos ni otros navegadores. En los ordenadores del centro, instala la extensión mediante políticas del navegador. Durante el examen se bloquean todas las categorías de IA, también la IA que tu escuela aprueba normalmente.',
+    on: 'Modo examen activado: quedan {t}', off: 'El modo examen está desactivado. La IA sigue los ajustes normales.',
+    slow: 'Demasiadas solicitudes ahora mismo. Inténtalo de nuevo en un minuto.', net: 'No se pudo conectar con el servidor. Revisa tu internet e inténtalo de nuevo.',
+    bad: 'Este enlace de docente no es válido (o ya no lo es).', copied: 'Copiado. Guárdalo en privado.',
+    other: 'Este enlace es de otra clase. Este dispositivo ya tiene una clase: pulsa primero “Olvidar esta clase en este dispositivo” y vuelve a abrir el enlace.',
+    yes: 'Pulsa otra vez para olvidar',
+  },
+  de: {
+    mkH: 'Klasse anlegen', mkP: 'Sie erhalten einen Klassencode für die Schüler und einen privaten Lehrkraft-Link für sich.', mkB: 'Klasse anlegen',
+    clH: 'Ihr Klassencode',
+    s1: 'Die Schüler installieren die Mindveto-Erweiterung im Browser (Schulrechner: einmalig).',
+    s2: 'Sie öffnen die Erweiterung, gehen zu „Class · exam mode“, geben diesen Code ein und tippen auf Join. (Die Erweiterung ist vorerst auf Englisch.)',
+    s3: 'Die Schule oder Lehrkraft setzt die PIN in der Erweiterung, nicht der Schüler. So kann niemand die Klasse verlassen.',
+    cp: 'Meinen privaten Lehrkraft-Link kopieren', fg: 'Diese Klasse auf diesem Gerät vergessen',
+    keep: 'Halten Sie den Lehrkraft-Link privat: Wer ihn hat, kann die Prüfung starten und stoppen. Speichern Sie ihn als Lesezeichen, um die Klasse auf einem anderen Gerät zu nutzen.',
+    exH: 'Prüfungsmodus', dur: 'Wie lange?', go: 'Prüfungsmodus starten', st: 'Jetzt stoppen',
+    lim: 'Ehrliche Grenzen: Es wirkt in Browsern, in denen die Erweiterung Ihrer Klasse beigetreten ist, und es kann bis zu einer Minute dauern, bis jeder Browser folgt. Handys und andere Browser werden nicht blockiert. Installieren Sie die Erweiterung auf Schulrechnern per Browser-Richtlinie. Während der Prüfung ist jede KI-Kategorie blockiert, auch KI, die Ihre Schule sonst erlaubt.',
+    on: 'Prüfungsmodus läuft: noch {t}', off: 'Prüfungsmodus ist aus. KI folgt den normalen Einstellungen.',
+    slow: 'Gerade zu viele Anfragen. Versuchen Sie es in einer Minute erneut.', net: 'Server nicht erreichbar. Prüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.',
+    bad: 'Dieser Lehrkraft-Link ist nicht (mehr) gültig.', copied: 'Kopiert. Bitte privat halten.',
+    other: 'Dieser Link gehört zu einer anderen Klasse. Dieses Gerät hat schon eine Klasse: Tippen Sie zuerst auf „Diese Klasse auf diesem Gerät vergessen“ und öffnen Sie den Link dann erneut.',
+    yes: 'Noch einmal tippen zum Vergessen',
+  },
+  pt: {
+    mkH: 'Crie sua turma', mkP: 'Você recebe um código de turma para os alunos e um link privado de professor para você.', mkB: 'Criar uma turma',
+    clH: 'Seu código de turma',
+    s1: 'Os alunos instalam a extensão Mindveto no navegador (computadores da escola: uma só vez).',
+    s2: 'Eles abrem a extensão, vão em “Class · exam mode”, digitam este código e tocam em Join. (Por enquanto a extensão está em inglês.)',
+    s3: 'A escola ou o professor define o PIN na extensão, não o aluno, para que o aluno não possa sair da turma.',
+    cp: 'Copiar meu link privado de professor', fg: 'Esquecer esta turma neste dispositivo',
+    keep: 'Mantenha o link de professor privado: quem o tiver pode iniciar e parar a prova. Salve-o como favorito para usar a turma em outro dispositivo.',
+    exH: 'Modo prova', dur: 'Por quanto tempo?', go: 'Iniciar modo prova', st: 'Parar agora',
+    lim: 'Limites honestos: funciona nos navegadores em que a extensão entrou na sua turma, e pode levar até um minuto até todos os navegadores seguirem. Não bloqueia celulares nem outros navegadores. Nos computadores da escola, instale a extensão por política do navegador. Durante a prova todas as categorias de IA ficam bloqueadas, até a IA que a escola normalmente aprova.',
+    on: 'Modo prova ativo: faltam {t}', off: 'O modo prova está desligado. A IA segue as configurações normais.',
+    slow: 'Muitas solicitações agora. Tente de novo em um minuto.', net: 'Não foi possível acessar o servidor. Verifique sua internet e tente de novo.',
+    bad: 'Este link de professor não é (mais) válido.', copied: 'Copiado. Mantenha-o privado.',
+    other: 'Este link é de outra turma. Este dispositivo já tem uma turma: toque primeiro em “Esquecer esta turma neste dispositivo” e abra o link de novo.',
+    yes: 'Toque de novo para esquecer',
+  },
+  it: {
+    mkH: 'Crea la tua classe', mkP: 'Ricevi un codice classe per gli studenti e un link privato da insegnante per te.', mkB: 'Crea una classe',
+    clH: 'Il tuo codice classe',
+    s1: 'Gli studenti installano l’estensione Mindveto nel browser (computer della scuola: una sola volta).',
+    s2: 'Aprono l’estensione, vanno su “Class · exam mode”, digitano questo codice e toccano Join. (Per ora l’estensione è in inglese.)',
+    s3: 'La scuola o l’insegnante imposta il PIN nell’estensione, non lo studente, così nessuno può uscire dalla classe.',
+    cp: 'Copia il mio link privato da insegnante', fg: 'Dimentica questa classe su questo dispositivo',
+    keep: 'Tieni privato il link da insegnante: chi lo ha può avviare e fermare l’esame. Salvalo nei preferiti per usare la classe su un altro dispositivo.',
+    exH: 'Modalità esame', dur: 'Per quanto tempo?', go: 'Avvia modalità esame', st: 'Ferma ora',
+    lim: 'Limiti onesti: funziona nei browser in cui l’estensione si è unita alla tua classe, e può servire fino a un minuto prima che ogni browser si adegui. Non blocca telefoni né altri browser. Sui computer della scuola, installa l’estensione tramite criteri del browser. Durante l’esame ogni categoria di IA è bloccata, anche l’IA che la scuola di solito approva.',
+    on: 'Modalità esame attiva: mancano {t}', off: 'La modalità esame è spenta. L’IA segue le impostazioni normali.',
+    slow: 'Troppe richieste in questo momento. Riprova tra un minuto.', net: 'Impossibile raggiungere il server. Controlla la connessione e riprova.',
+    bad: 'Questo link da insegnante non è (più) valido.', copied: 'Copiato. Tienilo privato.',
+    other: 'Questo link è di un’altra classe. Questo dispositivo ha già una classe: tocca prima “Dimentica questa classe su questo dispositivo”, poi riapri il link.',
+    yes: 'Tocca di nuovo per dimenticare',
+  },
+  ar: {
+    mkH: 'أنشئ فصلك', mkP: 'تحصل على رمز فصل للطلاب ورابط معلّم خاص بك.', mkB: 'أنشئ فصلًا',
+    clH: 'رمز فصلك',
+    s1: 'يثبّت الطلاب إضافة Mindveto في متصفحهم (أجهزة المدرسة: مرة واحدة).',
+    s2: 'يفتحون الإضافة، ويذهبون إلى “Class · exam mode”، ويكتبون هذا الرمز ثم يضغطون Join. (الإضافة بالإنجليزية حاليًا.)',
+    s3: 'تضبط المدرسة أو المعلّم رمز PIN في الإضافة، وليس الطالب، حتى لا يستطيع الطالب مغادرة الفصل.',
+    cp: 'انسخ رابط المعلّم الخاص بي', fg: 'انسَ هذا الفصل على هذا الجهاز',
+    keep: 'احتفظ برابط المعلّم سرًّا: من يملكه يستطيع بدء الامتحان وإيقافه. احفظه في المفضلة لاستخدام الفصل على جهاز آخر.',
+    exH: 'وضع الامتحان', dur: 'كم المدة؟', go: 'ابدأ وضع الامتحان', st: 'أوقف الآن',
+    lim: 'حدود صريحة: يعمل في المتصفحات التي انضمت فيها الإضافة إلى فصلك، وقد يستغرق الأمر دقيقة حتى تتبعه كل المتصفحات. لا يحظر الهواتف ولا المتصفحات الأخرى. على أجهزة المدرسة، ثبّت الإضافة عبر سياسة المتصفح. أثناء الامتحان تُحظر كل فئات الذكاء الاصطناعي، حتى التي تعتمدها مدرستك عادةً.',
+    on: 'وضع الامتحان مفعّل: متبقٍّ {t}', off: 'وضع الامتحان متوقف. يتبع الذكاء الاصطناعي الإعدادات العادية.',
+    slow: 'طلبات كثيرة الآن. حاول مرة أخرى بعد دقيقة.', net: 'تعذّر الوصول إلى الخادم. تحقّق من اتصالك وحاول مرة أخرى.',
+    bad: 'رابط المعلّم هذا غير صالح (أو لم يعد صالحًا).', copied: 'تم النسخ. احتفظ به سرًّا.',
+    other: 'هذا الرابط لفصل آخر. لدى هذا الجهاز فصل بالفعل: اضغط أولًا على “انسَ هذا الفصل على هذا الجهاز” ثم افتح الرابط مرة أخرى.',
+    yes: 'اضغط مرة أخرى للنسيان',
+  },
 };
 
-export const STREAM_LABEL: Record<Lang, string> = { en: 'On the list', nl: 'Op de lijst', fr: 'Sur la liste' };
+export const STREAM_LABEL: Record<Lang, string> = { en: 'On the list', nl: 'Op de lijst', fr: 'Sur la liste', es: 'En la lista', de: 'Auf der Liste', pt: 'Na lista', it: 'Nella lista', ar: 'على القائمة' };
 
 // Paste guard mock shown on the offices and paste guard pages (static picture of the real dialog).
-export const PASTE_MOCK: Record<Lang, { h: string; p: string; found: string[]; a: string; b: string; c: string }> = {
+export const PASTE_MOCK: Partial<Record<Lang, { h: string; p: string; found: string[]; a: string; b: string; c: string }>> = {
   en: { h: 'Private data in your paste', p: 'You are pasting into an AI chat. We found:', found: ['Bank account number (IBAN)', 'National ID number', 'Your word: “Dossier Peeters”'], a: 'Don’t paste', b: 'Paste without private parts', c: 'Paste anyway' },
   nl: { h: 'Privégegevens in je plakwerk', p: 'Je plakt in een AI-chat. We vonden:', found: ['Rekeningnummer (IBAN)', 'Rijksregisternummer', 'Jouw woord: “Dossier Peeters”'], a: 'Niet plakken', b: 'Plakken zonder privédelen', c: 'Toch plakken' },
   fr: { h: 'Données privées dans votre collage', p: 'Vous collez dans un chat IA. Nous avons trouvé :', found: ['Numéro de compte (IBAN)', 'Numéro de registre national', 'Votre mot : « Dossier Peeters »'], a: 'Ne pas coller', b: 'Coller sans les parties privées', c: 'Coller quand même' },
 };
 
 // Faithful previews of the real apps (texts copied from the extension and the Android app, numbers are an example day).
-export const UI_PREVIEW: Record<Lang, { on: string; tapOff: string; st: string; cats: string; c: [string, number, boolean][]; pin: string; exam: string; aOn: string; aSub: string; aTap: string; aSt: string; aAlways: string; label: string }> = {
+export const UI_PREVIEW: Partial<Record<Lang, { on: string; tapOff: string; st: string; cats: string; c: [string, number, boolean][]; pin: string; exam: string; aOn: string; aSub: string; aTap: string; aSt: string; aAlways: string; label: string }>> = {
   en: { on: 'AI BLOCKED', tapOff: 'Tap to allow AI again', st: '12 AI attempts blocked today · 348 in total', cats: 'What to block',
     c: [['AI chatbots', 70, true], ['AI search', 12, true], ['AI images', 22, true], ['AI writing & homework', 21, true], ['Social media (optional, not AI)', 20, false]],
     pin: 'PIN is set: turning off or changing anything needs the PIN.', exam: 'EXAM MODE: all AI is blocked for 42 more min.',
@@ -113,4 +238,4 @@ export const UI_PREVIEW: Record<Lang, { on: string; tapOff: string; st: string; 
     label: 'La vraie appli, un jour type' },
 };
 
-export const VETO_CAP: Record<Lang, string> = { en: 'Veto on. Only your PIN flips it.', nl: 'Veto aan. Alleen jouw pincode zet hem om.', fr: 'Veto activé. Seul votre PIN le rebascule.' };
+export const VETO_CAP: Record<Lang, string> = { en: 'Veto on. Only your PIN flips it.', nl: 'Veto aan. Alleen jouw pincode zet hem om.', fr: 'Veto activé. Seul votre PIN le rebascule.', es: 'Veto activado. Solo tu PIN lo cambia.', de: 'Veto an. Nur Ihre PIN schaltet es um.', pt: 'Veto ligado. Só o seu PIN o muda.', it: 'Veto attivo. Solo il tuo PIN lo cambia.', ar: 'الفيتو مفعّل. رمز PIN الخاص بك وحده يغيّره.' };

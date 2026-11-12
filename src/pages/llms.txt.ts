@@ -20,7 +20,7 @@ export function GET() {
       '- What it blocks: ChatGPT, Gemini, Copilot, Claude, Character.AI and 150+ other AI services, from a public list that updates daily.',
       '- Privacy: all checks run on the device. No account, no cookies, no trackers. Nothing typed, pasted or visited is sent to Mindveto.',
       '- Extras: PIN lock, schedule (with built-in school holidays for Belgium, the Netherlands and France), exam button for teachers, paste guard for offices, approved-AI list.',
-      '- Languages: English, Dutch (/nl/), French (/fr/). Contact: hello@mindveto.app',
+      '- Languages: English, Dutch (/nl/), French (/fr/), Spanish (/es/), German (/de/), Portuguese (/pt/), Italian (/it/), Arabic (/ar/). Apps in English, Dutch and French. Contact: hello@mindveto.app',
     ].join('\n'),
     'Honest limits:\n' + en.home.limits.map((l) => `- ${l}`).join('\n'),
     group('Guides', ['guide', 'policy', 'help']),

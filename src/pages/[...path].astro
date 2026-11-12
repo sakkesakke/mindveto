@@ -2,14 +2,20 @@
 import Base from '../layouts/Base.astro';
 import { LANGS, ROUTES, href, SITE, type Lang, type PageKey } from '../i18n/routes';
 import { UI } from '../i18n/ui';
+import { localize } from '../i18n/localize';
 import { PRODUCT_NAMES, PRODUCT_LINES, PRODUCT_KEYS } from '../i18n/products';
 import { VETO_CAP, AI_NAMES, PLANS, EXAM_UI, STREAM_LABEL, PASTE_MOCK, UI_PREVIEW } from '../i18n/extra';
 import type { Action, Home, Page } from '../i18n/types';
 import * as en from '../i18n/en';
 import * as nl from '../i18n/nl';
 import * as fr from '../i18n/fr';
+import * as es from '../i18n/es';
+import * as de from '../i18n/de';
+import * as pt from '../i18n/pt';
+import * as it from '../i18n/it';
+import * as ar from '../i18n/ar';
 
-const CONTENT = { en, nl, fr } as const;
+const CONTENT = { en, nl, fr, es, de, pt, it, ar } as const;
 
 export function getStaticPaths() {
   const out = [];
@@ -24,7 +30,7 @@ export function getStaticPaths() {
 
 const { key, lang } = Astro.props as { key: PageKey; lang: Lang };
 const t = UI[lang];
-const C = CONTENT[lang];
+const C = localize(CONTENT[lang], lang);
 const isHome = key === 'home';
 const h: Home = C.home;
 const pg: Page | undefined = isHome ? undefined : C.pages[key];
@@ -62,7 +68,7 @@ if (!isHome) {
     uploadDate: '2026-11-12T12:00:00+01:00', duration: 'PT9S',
   });
 } else {
-  jsonld.push({ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Mindveto', url: SITE + '/', inLanguage: ['en', 'nl', 'fr'] });
+  jsonld.push({ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Mindveto', url: SITE + '/', inLanguage: [...LANGS] });
   jsonld.push({
     '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'Mindveto', description: desc, url: SITE + href('home', lang),
     applicationCategory: 'SecurityApplication', operatingSystem: 'Chrome, Edge, Brave, Opera, Android 8+, Windows 10, Windows 11, macOS, Linux',
@@ -70,16 +76,13 @@ if (!isHome) {
   });
 }
 const X = EXAM_UI[lang];
-const DEMO = {
-  en: { h: 'See it work', cap: '9 seconds, no sound. Recorded with the real extension on a test page; the numbers are made up.' },
-  nl: { h: 'Zie het werken', cap: '9 seconden, zonder geluid. Opgenomen met de echte extensie op een testpagina; de nummers zijn verzonnen.' },
-  fr: { h: 'Voyez-le à l’œuvre', cap: '9 secondes, sans son. Enregistré avec la vraie extension sur une page de test ; les numéros sont fictifs.' },
-} as const;
-const M = PASTE_MOCK[lang];
+const DEMO = { h: t.demoH, cap: t.demoCap };
+const VL = ['en', 'nl', 'fr'].includes(lang) ? lang : 'en'; // demo videos exist in EN/NL/FR; other languages show the English one
+const M = PASTE_MOCK[lang] ?? PASTE_MOCK.en;
 const NO_ASIDE: PageKey[] = ['help', 'about', 'privacy', 'terms', 'legal', 'pricing', 'download', 'policy', 'guide'];
 const ASIDE: Partial<Record<PageKey, string>> = { offices: 'paste', paste: 'paste', browser: 'popup', parents: 'switch', schools: 'popup', exam: 'exam', android: 'phone', windows: 'win', maclinux: 'mac', network: 'list', about: 'switch' };
 const aside = isHome || NO_ASIDE.includes(key) ? null : ASIDE[key] ?? null;
-const U = UI_PREVIEW[lang];
+const U = UI_PREVIEW[lang] ?? UI_PREVIEW.en;
 const P = PLANS[lang];
 ---
 <Base lang={lang} page={key} title={title} desc={desc} jsonld={jsonld}>
@@ -129,13 +132,13 @@ const P = PLANS[lang];
         <figure class="mock">
           <div class="ui-pop" aria-hidden="true">
             <div class="ui-head"><img src="/favicon.svg" alt="" width="14" height="20">Mindveto</div>
-            <div class="ui-big"><span>{UI_PREVIEW[lang].on}</span><small>{UI_PREVIEW[lang].tapOff}</small></div>
-            <p class="ui-st">{UI_PREVIEW[lang].st}</p>
-            <p class="ui-h">{UI_PREVIEW[lang].cats}</p>
-            <ul>{UI_PREVIEW[lang].c.map(([n, c, on]) => <li><span class={'ui-box' + (on ? ' on' : '')}></span>{n}<small>{c}</small></li>)}</ul>
-            <p class="ui-pin">{UI_PREVIEW[lang].pin}</p>
+            <div class="ui-big"><span>{U.on}</span><small>{U.tapOff}</small></div>
+            <p class="ui-st">{U.st}</p>
+            <p class="ui-h">{U.cats}</p>
+            <ul>{U.c.map(([n, c, on]) => <li><span class={'ui-box' + (on ? ' on' : '')}></span>{n}<small>{c}</small></li>)}</ul>
+            <p class="ui-pin">{U.pin}</p>
           </div>
-          <figcaption>{UI_PREVIEW[lang].label}</figcaption>
+          <figcaption>{U.label}</figcaption>
         </figure>
       </div>
     </div>
@@ -325,12 +328,12 @@ AI is allowed again.` : `! Title: Mindveto AI block list
       )}
 
       {(key === 'paste' || key === 'offices') && (
-        <section class="wide demo" aria-label={DEMO[lang].h}>
-          <h2>{DEMO[lang].h}</h2>
-          <video controls muted playsinline preload="none" width="960" height="540" poster={`/media/paste-guard-${lang}.jpg`}>
-            <source src={`/media/paste-guard-${lang}.mp4`} type="video/mp4">
+        <section class="wide demo" aria-label={DEMO.h}>
+          <h2>{DEMO.h}</h2>
+          <video controls muted playsinline preload="none" width="960" height="540" poster={`/media/paste-guard-${VL}.jpg`}>
+            <source src={`/media/paste-guard-${VL}.mp4`} type="video/mp4">
           </video>
-          <p class="small">{DEMO[lang].cap}</p>
+          <p class="small">{DEMO.cap}</p>
         </section>
       )}
 

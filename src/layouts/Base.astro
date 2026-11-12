@@ -1,6 +1,6 @@
 ---
 import '../styles/site.css';
-import { LANGS, ROUTES, href, SITE, type Lang, type PageKey } from '../i18n/routes';
+import { LANGS, RTL, ROUTES, href, SITE, type Lang, type PageKey } from '../i18n/routes';
 import { UI } from '../i18n/ui';
 import { PRODUCT_NAMES } from '../i18n/products';
 import { COMPANY } from '../i18n/company';
@@ -17,11 +17,12 @@ const org = {
   description: 'Mindveto makes an AI blocker for browsers, Android, Windows, Mac, Linux and networks. It runs on the device and collects no personal data.',
   foundingDate: '2026', areaServed: 'Worldwide', knowsAbout: ['AI blocking', 'parental controls', 'exam proctoring without surveillance', 'data loss prevention for AI chatbots'],
   email: 'hello@mindveto.app', contactPoint: { '@type': 'ContactPoint', contactType: 'customer support', email: 'hello@mindveto.app', availableLanguage: ['en', 'nl', 'fr'] },
+  inLanguage: [...LANGS],
 };
 const fullTitle = page === 'home' || title.length > 48 ? title : `${title} | Mindveto`;
 ---
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} dir={RTL.includes(lang) ? 'rtl' : 'ltr'}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,7 +40,7 @@ const fullTitle = page === 'home' || title.length > 48 ? title : `${title} | Min
 <meta property="og:description" content={desc}>
 <meta property="og:url" content={url}>
 <meta property="og:image" content={SITE + '/og.png'}>
-<meta property="og:locale" content={{ en: 'en_GB', nl: 'nl_BE', fr: 'fr_BE' }[lang]}>
+<meta property="og:locale" content={t.locale}>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#e6eae4">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -63,9 +64,11 @@ const fullTitle = page === 'home' || title.length > 48 ? title : `${title} | Min
     <nav class="nav" aria-label={t.navLabel}>
       {nav.map((k) => <a href={href(k, lang)} aria-current={k === page ? 'page' : undefined}>{t[k]}</a>)}
     </nav>
-    <div class="langs">
-      {LANGS.map((l) => <a href={href(page, l)} hreflang={l} lang={l} aria-current={l === lang ? 'true' : undefined} title={UI[l].langName}>{l.toUpperCase()}</a>)}
-    </div>
+    <details class="langsw"><summary aria-label={t.langLabel}>{lang.toUpperCase()}</summary>
+      <div class="langs">
+        {LANGS.map((l) => <a href={href(page, l)} hreflang={l} lang={l} aria-current={l === lang ? 'true' : undefined}>{UI[l].langName}</a>)}
+      </div>
+    </details>
   </div>
 </header>
 <main id="main">
@@ -90,7 +93,7 @@ const fullTitle = page === 'home' || title.length > 48 ? title : `${title} | Min
           <li><a href={href('schools', lang)}>{t.schools}</a></li>
           <li><a href={href('offices', lang)}>{t.offices}</a></li>
           <li><a href={href('pricing', lang)}>{t.pricing}</a></li>
-          <li><a href={href('guide', lang)}>{{ en: 'How to block ChatGPT', nl: 'ChatGPT blokkeren', fr: 'Bloquer ChatGPT' }[lang]}</a></li>
+          <li><a href={href('guide', lang)}>{t.guide}</a></li>
         </ul>
       </div>
       <div>
@@ -104,7 +107,7 @@ const fullTitle = page === 'home' || title.length > 48 ? title : `${title} | Min
         </ul>
       </div>
     </div>
-    <p class="fine">© 2026 Amghar Said{COMPANY.kbo ? ` · ${{ en: 'Enterprise no.', nl: 'Ondernemingsnr.', fr: 'N° d’entreprise' }[lang]} ${COMPANY.kbo}` : ''}{COMPANY.address ? ` · ${COMPANY.address}` : ''}. {t.fine}</p>
+    <p class="fine">© 2026 Amghar Said{COMPANY.kbo ? ` · ${t.ent} ${COMPANY.kbo}` : ''}{COMPANY.address ? ` · ${COMPANY.address}` : ''}. {t.fine}</p>
   </div>
 </footer>
 </body>

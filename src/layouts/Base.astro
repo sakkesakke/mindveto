@@ -1,0 +1,105 @@
+---
+import '../styles/site.css';
+import { LANGS, ROUTES, href, SITE, type Lang, type PageKey } from '../i18n/routes';
+import { UI } from '../i18n/ui';
+import { PRODUCT_NAMES } from '../i18n/products';
+
+interface Props { lang: Lang; page: PageKey; title: string; desc: string; jsonld?: object[] }
+const { lang, page, title, desc, jsonld = [] } = Astro.props;
+const t = UI[lang];
+const url = SITE + href(page, lang);
+const nav: PageKey[] = ['parents', 'schools', 'offices', 'download', 'pricing', 'help'];
+const productKeys: PageKey[] = ['browser', 'android', 'windows', 'maclinux', 'network', 'exam', 'paste'];
+const org = {
+  '@context': 'https://schema.org', '@type': 'Organization', name: 'Mindveto', url: SITE + '/',
+  logo: SITE + '/icon-512.png', founder: { '@type': 'Person', name: 'Amghar Said' },
+};
+const fullTitle = page === 'home' || title.length > 48 ? title : `${title} | Mindveto`;
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://zslzbfbqrtfpvgbjhssd.supabase.co; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<meta name="referrer" content="no-referrer">
+<title>{fullTitle}</title>
+<meta name="description" content={desc}>
+<link rel="canonical" href={url}>
+{LANGS.map((l) => <link rel="alternate" hreflang={l} href={SITE + href(page, l)} />)}
+<link rel="alternate" hreflang="x-default" href={SITE + href(page, 'en')}>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mindveto">
+<meta property="og:title" content={title}>
+<meta property="og:description" content={desc}>
+<meta property="og:url" content={url}>
+<meta property="og:image" content={SITE + '/og.png'}>
+<meta property="og:locale" content={{ en: 'en_GB', nl: 'nl_BE', fr: 'fr_BE' }[lang]}>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#e6eae4">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icon-512.png">
+<link rel="preload" href="/fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json" set:html={JSON.stringify([org, ...jsonld])} />
+</head>
+<body>
+<a class="skip" href="#main">{t.skip}</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href={href('home', lang)} aria-label="Mindveto, home">
+      <svg viewBox="0 0 27 38" aria-hidden="true"><rect x="1.5" y="1.5" width="24" height="35" rx="7" fill="#f6f7f3" stroke="#18241f" stroke-width="3"/><rect x="7.5" y="8" width="12" height="22" rx="3.5" fill="#18241f"/><rect x="9.5" y="20" width="8" height="8" rx="2" fill="#2f5e4f"/></svg>
+      Mindveto
+    </a>
+    <details class="menu"><summary>{t.menu}</summary>
+      <nav class="nav" aria-label={t.navLabel}>
+        {nav.map((k) => <a href={href(k, lang)} aria-current={k === page ? 'page' : undefined}>{t[k]}</a>)}
+      </nav>
+    </details>
+    <nav class="nav" aria-label={t.navLabel}>
+      {nav.map((k) => <a href={href(k, lang)} aria-current={k === page ? 'page' : undefined}>{t[k]}</a>)}
+    </nav>
+    <div class="langs">
+      {LANGS.map((l) => <a href={href(page, l)} hreflang={l} lang={l} aria-current={l === lang ? 'true' : undefined} title={UI[l].langName}>{l.toUpperCase()}</a>)}
+    </div>
+  </div>
+</header>
+<main id="main">
+  <slot />
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <p><strong>Mindveto</strong></p>
+        <p>{t.tagline}</p>
+        <p><a href="mailto:hello@mindveto.app">hello@mindveto.app</a></p>
+      </div>
+      <div>
+        <h2>{t.products}</h2>
+        <ul>{productKeys.map((k) => <li><a href={href(k, lang)}>{PRODUCT_NAMES[lang][k]}</a></li>)}</ul>
+      </div>
+      <div>
+        <h2>{t.forWho}</h2>
+        <ul>
+          <li><a href={href('parents', lang)}>{t.parents}</a></li>
+          <li><a href={href('schools', lang)}>{t.schools}</a></li>
+          <li><a href={href('offices', lang)}>{t.offices}</a></li>
+          <li><a href={href('pricing', lang)}>{t.pricing}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>{t.company}</h2>
+        <ul>
+          <li><a href={href('about', lang)}>{t.about}</a></li>
+          <li><a href={href('help', lang)}>{t.help}</a></li>
+          <li><a href={href('privacy', lang)}>{t.privacy}</a></li>
+          <li><a href={href('terms', lang)}>{t.terms}</a></li>
+          <li><a href={href('legal', lang)}>{t.legal}</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine">© 2026 Amghar Said. {t.fine}</p>
+  </div>
+</footer>
+</body>
+</html>

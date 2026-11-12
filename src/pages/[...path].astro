@@ -1,0 +1,246 @@
+---
+import Base from '../layouts/Base.astro';
+import { LANGS, ROUTES, href, SITE, type Lang, type PageKey } from '../i18n/routes';
+import { UI } from '../i18n/ui';
+import { PRODUCT_NAMES, PRODUCT_LINES, PRODUCT_KEYS } from '../i18n/products';
+import { AI_NAMES, PLANS, EXAM_UI } from '../i18n/extra';
+import type { Action, Home, Page } from '../i18n/types';
+import * as en from '../i18n/en';
+import * as nl from '../i18n/nl';
+import * as fr from '../i18n/fr';
+
+const CONTENT = { en, nl, fr } as const;
+
+export function getStaticPaths() {
+  const out = [];
+  for (const key of Object.keys(ROUTES) as PageKey[]) {
+    for (const lang of LANGS) {
+      const p = ROUTES[key][lang].replace(/\/$/, '');
+      out.push({ params: { path: p || undefined }, props: { key, lang } });
+    }
+  }
+  return out;
+}
+
+const { key, lang } = Astro.props as { key: PageKey; lang: Lang };
+const t = UI[lang];
+const C = CONTENT[lang];
+const isHome = key === 'home';
+const h: Home = C.home;
+const pg: Page | undefined = isHome ? undefined : C.pages[key];
+const isProduct = PRODUCT_KEYS.includes(key);
+
+const link = (a: Action) => (a.to ? href(a.to, lang) : a.url!);
+const title = isHome ? h.title : pg!.title;
+const desc = isHome ? h.desc : pg!.desc;
+
+const jsonld: object[] = [];
+if (!isHome) {
+  jsonld.push({
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Mindveto', item: SITE + href('home', lang) },
+      { '@type': 'ListItem', position: 2, name: pg!.h1.replace(/\.$/, ''), item: SITE + href(key, lang) },
+    ],
+  });
+  if (pg!.faq?.length) jsonld.push({
+    '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: pg!.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a.replace(/<[^>]+>/g, '') } })),
+  });
+  if (isProduct && key !== 'exam' && key !== 'paste') jsonld.push({
+    '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'Mindveto ' + PRODUCT_NAMES[lang][key],
+    applicationCategory: 'SecurityApplication', operatingSystem: { browser: 'Chrome, Edge, Brave, Opera', android: 'Android 8+', windows: 'Windows 10, Windows 11', maclinux: 'macOS, Linux', network: 'Any' }[key as string],
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' }, author: { '@type': 'Person', name: 'Amghar Said' }, url: SITE + href(key, lang),
+  });
+} else {
+  jsonld.push({ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Mindveto', url: SITE + '/', inLanguage: ['en', 'nl', 'fr'] });
+}
+const X = EXAM_UI[lang];
+const P = PLANS[lang];
+---
+<Base lang={lang} page={key} title={title} desc={desc} jsonld={jsonld}>
+{isHome ? (
+  <>
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap">
+      <div>
+        <h1 id="h1">{h.h1.replace(/\.$/, '')}</h1>
+        <p class="lead">{h.lead}</p>
+        <div class="actions">
+          <a class="btn solid" href={href('download', lang)}>{t.getFree}</a>
+          <a class="btn line" href="#who">{h.doorsH}</a>
+        </div>
+      </div>
+      <div class="plate">
+        <button class="switch" id="sw" type="button" role="switch" aria-checked="false" aria-label={h.switchLabel}>
+          <span class="screw t"></span>
+          <span class="rocker" data-on={h.switchOn} data-off={h.switchOff}><span class="led"></span></span>
+          <span class="screw b"></span>
+        </button>
+        <p class="status" id="st" aria-live="polite">{h.statusOn}</p>
+      </div>
+    </div>
+  </section>
+  <section class="stream" aria-label="AI services">
+    <div class="wrap"><p>{AI_NAMES.map((n, i) => <><span style={`transition-delay:${i * 28}ms`}>{n}</span>{' '}</>)}<span style={`transition-delay:${AI_NAMES.length * 28}ms`}>+110</span></p></div>
+  </section>
+
+  <section class="band paper" id="who" aria-labelledby="who-h">
+    <div class="wrap">
+      <h2 id="who-h">{h.doorsH}</h2>
+      <ul class="doors">
+        {h.doors.map((d) => <li><a href={href(d.key, lang)}><span class="who">{d.who}</span><span class="why">{d.why}</span><span class="go">{d.go}</span></a></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="pr-h">
+    <div class="wrap">
+      <h2 id="pr-h">{h.productsH}</h2>
+      <p class="lead">{h.productsLead}</p>
+      <div class="products">
+        {PRODUCT_KEYS.map((k) => <div class="product"><h3><a href={href(k, lang)}>{PRODUCT_NAMES[lang][k]}</a></h3><p>{PRODUCT_LINES[lang][k]}</p></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="band paper" aria-labelledby="pf-h">
+    <div class="wrap split">
+      <div><h2 id="pf-h">{h.proofH}</h2><p>{h.proofP}</p></div>
+      <ul class="ledger">{h.ledger.map(([a, b, z]) => <li class={z ? 'zero' : ''}><b>{a}</b><span>{b}</span></li>)}</ul>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="lm-h">
+    <div class="wrap split">
+      <div><h2 id="lm-h">{h.limitsH}</h2></div>
+      <ul>{h.limits.map((l) => <li>{l}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="band paper" aria-labelledby="pc-h">
+    <div class="wrap split">
+      <div><h2 id="pc-h">{h.priceH}</h2></div>
+      <div><p class="lead">{h.priceP}</p><p><a class="btn line" href={href('pricing', lang)}>{h.priceGo}</a></p></div>
+    </div>
+  </section>
+
+  <script is:inline define:vars={{ sOn: h.statusOn, sOff: h.statusOff }}>
+    var sw = document.getElementById('sw'), st = document.getElementById('st');
+    sw.addEventListener('click', function () {
+      var v = sw.getAttribute('aria-checked') !== 'true';
+      sw.setAttribute('aria-checked', String(v));
+      document.body.classList.toggle('vetoed', v);
+      st.textContent = v ? sOff : sOn;
+    });
+  </script>
+  </>
+) : (
+  <>
+  <header class="pagehead">
+    <div class="wrap">
+      <p class="crumbs"><a href={href('home', lang)}>Mindveto</a>{isProduct ? <> / <a href={href('download', lang)}>{t.products}</a></> : null}</p>
+      <h1>{pg!.h1.replace(/\.$/, '')}</h1>
+      <p class="lead">{pg!.lead}</p>
+      {pg!.actions && <div class="actions">{pg!.actions.map((a) => <a class={'btn ' + (a.solid ? 'solid' : 'line')} href={link(a)} download={a.download ? '' : undefined}>{a.label}</a>)}</div>}
+    </div>
+  </header>
+
+  <div class="prose">
+    <div class="wrap">
+      {key === 'exam' && (
+        <section aria-label={X.mkH}>
+          <div class="tool" id="make">
+            <h2>{X.mkH}</h2>
+            <p>{X.mkP}</p>
+            <button class="btn solid" id="mk" type="button">{X.mkB}</button>
+          </div>
+          <div class="tool" id="klass" hidden>
+            <h2>{X.clH}</h2>
+            <div class="code" id="code" aria-live="polite"></div>
+            <ol class="steps"><li>{X.s1}</li><li>{X.s2}</li><li>{X.s3}</li></ol>
+            <div class="actions"><button class="btn line" id="copy" type="button">{X.cp}</button><button class="btn line" id="forget" type="button">{X.fg}</button></div>
+            <p class="small">{X.keep}</p>
+          </div>
+          <div class="tool" id="exam" hidden>
+            <h2>{X.exH}</h2>
+            <p class="state off" id="state" aria-live="polite"></p>
+            <label for="mins">{X.dur}</label><br>
+            <select id="mins"><option value="30">30 min</option><option value="45">45 min</option><option value="60" selected>60 min</option><option value="90">90 min</option><option value="120">120 min</option><option value="180">180 min</option><option value="240">240 min</option></select>
+            <button class="btn solid" id="go" type="button">{X.go}</button>
+            <div class="actions"><button class="btn line" id="stop" type="button">{X.st}</button></div>
+            <p class="small">{X.lim}</p>
+          </div>
+          <p class="msg" id="msg" role="alert"></p>
+          <script is:inline define:vars={{ X }}>
+          (function(){
+          var API='https://zslzbfbqrtfpvgbjhssd.supabase.co/rest/v1/rpc/',KEY='sb_publishable_90hLwzv3xb0aZmPtaHKZag_1hKkG0EN';
+          var CODE=/^[A-HJ-NP-Z2-9]{8}$/,TKEY=/^[0-9a-f]{64}$/;
+          var $=function(i){return document.getElementById(i)},C=null,until=0,armed=0;
+          function msg(s){$('msg').textContent=s||''}
+          function rpc(fn,body){return fetch(API+fn,{method:'POST',cache:'no-store',credentials:'omit',headers:{apikey:KEY,'Content-Type':'application/json'},body:JSON.stringify(body||{})}).then(function(r){if(!r.ok)throw new Error('http');return r.json()})}
+          function save(){try{if(C)localStorage.setItem('ho_class',JSON.stringify(C));else localStorage.removeItem('ho_class')}catch(e){}}
+          function load(){var other=false;try{var s=JSON.parse(localStorage.getItem('ho_class')||'null');if(s&&CODE.test(s.code)&&TKEY.test(s.key))C={code:s.code,key:s.key};
+            var h=location.hash.slice(1).split('.');if(h.length===2&&CODE.test(h[0])&&TKEY.test(h[1])){history.replaceState(null,'',location.pathname);
+              if(C&&(C.code!==h[0]||C.key!==h[1]))other=true;else{C={code:h[0],key:h[1]};save()}}}catch(e){}return other}
+          function fmt(ms){var s=Math.max(0,Math.round(ms/1000)),m=Math.floor(s/60);s=s%60;return m+':'+(s<10?'0':'')+s}
+          function draw(){$('make').hidden=!!C;$('klass').hidden=!C;$('exam').hidden=!C;if(!C)return;
+            $('code').textContent=C.code.slice(0,4)+'-'+C.code.slice(4);
+            var on=until>Date.now(),st=$('state');st.className='state '+(on?'on':'off');st.textContent=on?X.on.replace('{t}',fmt(until-Date.now())):X.off;$('stop').disabled=!on;}
+          function poll(){if(!C)return;rpc('exam_status',{p_code:C.code}).then(function(n){if(n===-1){msg(X.bad);return}if(typeof n==='number'){until=n>0?Date.now()+n*1000:0;draw()}}).catch(function(){})}
+          function set(min){msg('');$('go').disabled=true;rpc('exam_set',{p_code:C.code,p_key:C.key,p_minutes:min}).then(function(j){$('go').disabled=false;
+            if(j&&j.ok){until=min>0?Date.now()+min*60000:0;draw()}else msg(j&&j.err==='slow'?X.slow:X.bad)}).catch(function(){$('go').disabled=false;msg(X.net)})}
+          $('mk').onclick=function(){msg('');$('mk').disabled=true;rpc('exam_create').then(function(j){$('mk').disabled=false;
+            if(j&&CODE.test(j.code)&&TKEY.test(j.key)){C={code:j.code,key:j.key};save();until=0;draw()}else msg(X.slow)}).catch(function(){$('mk').disabled=false;msg(X.net)})};
+          $('go').onclick=function(){set(parseInt($('mins').value,10)||60)};
+          $('stop').onclick=function(){set(0)};
+          $('copy').onclick=function(){var u=location.origin+location.pathname+'#'+C.code+'.'+C.key;(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(function(){msg(X.copied)},function(){msg(u)})};
+          $('forget').onclick=function(){if(Date.now()-armed>5000){armed=Date.now();$('forget').textContent=X.yes;return}C=null;save();until=0;armed=0;$('forget').textContent=X.fg;draw()};
+          addEventListener('hashchange',function(){if(location.hash.length>1){var o=load();until=0;draw();poll();msg(o?X.other:'')}});
+          var other=load();draw();poll();setInterval(poll,20000);setInterval(draw,1000);if(other)msg(X.other);
+          })();
+          </script>
+        </section>
+      )}
+
+      {key === 'pricing' && (
+        <section aria-label={t.pricing}>
+          <div class="plans">
+            {P.plans.map((p) => <div class={'plan' + (p.free ? ' free' : '')}><h2>{p.name}</h2><p class="quiet">{p.who}</p><p class="price">{p.price} <span class="per">{p.per}</span></p><ul>{p.items.map((i) => <li>{i}</li>)}</ul></div>)}
+          </div>
+          <p class="small">{P.note}</p>
+        </section>
+      )}
+
+      {pg!.blocks.map((b, i) => (
+        <section id={b.steps && i > 0 && isProduct ? 'install' : undefined}>
+          <h2>{b.h}</h2>
+          {b.p?.map((x) => <p set:html={x} />)}
+          {b.list && <ul>{b.list.map((x) => <li set:html={x} />)}</ul>}
+          {b.steps && <ol class="steps">{b.steps.map((x) => <li set:html={x} />)}</ol>}
+          {b.facts && <table class="facts"><tbody>{b.facts.map(([a, v]) => <tr><th scope="row">{a}</th><td set:html={v} /></tr>)}</tbody></table>}
+          {b.note && <p class={'note' + (b.human ? ' human' : '')}>{b.note}</p>}
+          {b.actions && <div class="actions">{b.actions.map((a) => <a class={'btn ' + (a.solid ? 'solid' : 'line')} href={link(a)} download={a.download ? '' : undefined}>{a.label}</a>)}</div>}
+        </section>
+      ))}
+
+      {pg!.faq && (
+        <section class="faq">
+          <h2>{t.help}</h2>
+          {pg!.faq.map((f) => <details><summary>{f.q}</summary><p set:html={f.a} /></details>)}
+        </section>
+      )}
+
+      {pg!.related && (
+        <section>
+          <h2>{t.related}</h2>
+          <div class="products">
+            {pg!.related.map((k) => <div class="product"><h3><a href={href(k, lang)}>{PRODUCT_NAMES[lang][k] ?? (C.pages[k]?.title)}</a></h3>{PRODUCT_LINES[lang][k] && <p>{PRODUCT_LINES[lang][k]}</p>}</div>)}
+          </div>
+        </section>
+      )}
+    </div>
+  </div>
+  </>
+)}
+</Base>

@@ -1,0 +1,29 @@
+name: Sync block lists and downloads
+# The lists and app files are built in sakkesakke/geopolcoins (human-override/).
+# This copies them here once a day so mindveto.app/downloads/ stays current.
+on:
+  schedule:
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download current files
+        run: |
+          set -e
+          base=https://raw.githubusercontent.com/sakkesakke/geopolcoins/main/human-override
+          for f in adblock.txt hosts.txt domains.txt lists.json LICENSE.txt human-override-1.2.1.zip human-override-android.apk human-override-android.sha256 human-override-mac-linux.zip human-override-pro-pack.zip human-override-windows.zip; do
+            curl -fsSL "$base/$f" -o "public/downloads/$f"
+          done
+      - name: Commit if changed
+        run: |
+          git config user.name "mindveto-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/downloads
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "Sync block lists and downloads"
+          git push

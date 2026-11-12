@@ -1,0 +1,587 @@
+{
+ "version": "2026-11-10c",
+ "categories": {
+  "chat": {
+   "name": "AI chatbots",
+   "domains": [
+    "aistudio.google.com",
+    "anthropic.com",
+    "bard.google.com",
+    "c.ai",
+    "chai-research.com",
+    "character.ai",
+    "chat.com",
+    "chat.deepseek.com",
+    "chat.mistral.ai",
+    "chat.openai.com",
+    "chat.qwen.ai",
+    "chatbotapp.ai",
+    "chatglm.cn",
+    "chatgpt.com",
+    "chatpdf.com",
+    "chatsonic.com",
+    "claude.ai",
+    "claude.com",
+    "claudeusercontent.com",
+    "copilot.cloud.microsoft",
+    "copilot.microsoft.com",
+    "deepseek.com",
+    "doubao.com",
+    "duck.ai",
+    "gemini.google",
+    "gemini.google.com",
+    "getmerlin.in",
+    "grok.com",
+    "groq.com",
+    "hix.ai",
+    "huggingchat.co",
+    "humata.ai",
+    "janitorai.com",
+    "jenni.ai",
+    "kimi.com",
+    "kimi.moonshot.cn",
+    "labs.google",
+    "lmarena.ai",
+    "lmsys.org",
+    "m365copilot.com",
+    "manus.im",
+    "maxai.me",
+    "merlin.foyer.work",
+    "meta.ai",
+    "mistral.ai",
+    "monica.im",
+    "notebooklm.google",
+    "notebooklm.google.com",
+    "oaistatic.com",
+    "oaiusercontent.com",
+    "openai.com",
+    "openrouter.ai",
+    "perplexity.ai",
+    "pi.ai",
+    "poe.com",
+    "qwen.ai",
+    "replika.com",
+    "sider.ai",
+    "sora.com",
+    "t3.chat",
+    "talkie-ai.com",
+    "venice.ai",
+    "x.ai",
+    "yiyan.baidu.com",
+    "z.ai"
+   ],
+   "paths": [
+    "bing.com/chat",
+    "duckduckgo.com/aichat",
+    "github.com/copilot",
+    "huggingface.co/chat",
+    "www.bing.com/chat"
+   ]
+  },
+  "search": {
+   "name": "AI search & research",
+   "domains": [
+    "andisearch.com",
+    "consensus.app",
+    "elicit.com",
+    "felo.ai",
+    "genspark.ai",
+    "iask.ai",
+    "komo.ai",
+    "phind.com",
+    "pplx.ai",
+    "scite.ai",
+    "you.com"
+   ],
+   "paths": [
+    "kagi.com/assistant"
+   ]
+  },
+  "image": {
+   "name": "AI images",
+   "domains": [
+    "midjourney.com",
+    "leonardo.ai",
+    "ideogram.ai",
+    "stability.ai",
+    "dreamstudio.ai",
+    "playground.com",
+    "krea.ai",
+    "civitai.com",
+    "nightcafe.studio",
+    "deepai.org",
+    "craiyon.com",
+    "lexica.art",
+    "firefly.adobe.com",
+    "starryai.com",
+    "getimg.ai",
+    "tensor.art",
+    "seaart.ai",
+    "pixai.art",
+    "recraft.ai"
+   ],
+   "paths": [
+    "bing.com/images/create",
+    "freepik.com/pikaso",
+    "www.bing.com/images/create"
+   ]
+  },
+  "media": {
+   "name": "AI video, voice & music",
+   "domains": [
+    "runwayml.com",
+    "pika.art",
+    "lumalabs.ai",
+    "klingai.com",
+    "hailuoai.video",
+    "haiper.ai",
+    "synthesia.io",
+    "heygen.com",
+    "d-id.com",
+    "suno.com",
+    "udio.com",
+    "elevenlabs.io",
+    "murf.ai",
+    "play.ht",
+    "invideo.io",
+    "veed.io",
+    "descript.com",
+    "captions.ai",
+    "vidu.com",
+    "pollo.ai"
+   ],
+   "paths": []
+  },
+  "writing": {
+   "name": "AI writing & homework",
+   "domains": [
+    "jasper.ai",
+    "writesonic.com",
+    "copy.ai",
+    "rytr.me",
+    "quillbot.com",
+    "wordtune.com",
+    "gamma.app",
+    "tome.app",
+    "beautiful.ai",
+    "photomath.com",
+    "mathway.com",
+    "gauthmath.com",
+    "brainly.com",
+    "socratic.org",
+    "chegg.com",
+    "undetectable.ai",
+    "stealthgpt.ai",
+    "humanizeai.pro",
+    "smodin.io",
+    "writehuman.ai"
+   ],
+   "paths": [
+    "studocu.com/ai"
+   ]
+  },
+  "coding": {
+   "name": "AI coding",
+   "domains": [
+    "cursor.com",
+    "windsurf.com",
+    "codeium.com",
+    "tabnine.com",
+    "v0.dev",
+    "v0.app",
+    "bolt.new",
+    "lovable.dev",
+    "blackbox.ai",
+    "codegpt.co"
+   ],
+   "paths": [
+    "replit.com/ai"
+   ]
+  },
+  "record": {
+   "domains": [
+    "otter.ai",
+    "fireflies.ai",
+    "read.ai",
+    "fathom.video",
+    "tldv.io",
+    "notta.ai",
+    "sembly.ai",
+    "meetgeek.ai",
+    "avoma.com",
+    "supernormal.com",
+    "granola.ai",
+    "meetjamie.ai",
+    "tactiq.io",
+    "limitless.ai",
+    "rewind.ai",
+    "plaud.ai"
+   ]
+  }
+ },
+ "services": {
+  "chatgpt": {
+   "name": "ChatGPT",
+   "domains": [
+    "chatgpt.com",
+    "chat.openai.com",
+    "openai.com",
+    "oaistatic.com",
+    "oaiusercontent.com",
+    "chat.com"
+   ]
+  },
+  "copilot": {
+   "name": "Microsoft Copilot",
+   "domains": [
+    "copilot.microsoft.com",
+    "copilot.cloud.microsoft",
+    "m365copilot.com"
+   ],
+   "paths": [
+    "bing.com/chat"
+   ]
+  },
+  "gemini": {
+   "name": "Google Gemini",
+   "domains": [
+    "gemini.google.com",
+    "gemini.google",
+    "bard.google.com"
+   ]
+  },
+  "claude": {
+   "name": "Claude",
+   "domains": [
+    "claude.ai",
+    "claude.com",
+    "claudeusercontent.com",
+    "anthropic.com"
+   ]
+  },
+  "mistral": {
+   "name": "Mistral Le Chat",
+   "domains": [
+    "chat.mistral.ai",
+    "mistral.ai"
+   ]
+  },
+  "perplexity": {
+   "name": "Perplexity",
+   "domains": [
+    "perplexity.ai",
+    "pplx.ai"
+   ]
+  },
+  "notebooklm": {
+   "name": "NotebookLM",
+   "domains": [
+    "notebooklm.google.com",
+    "notebooklm.google"
+   ]
+  },
+  "deepseek": {
+   "name": "DeepSeek",
+   "domains": [
+    "chat.deepseek.com",
+    "deepseek.com"
+   ]
+  },
+  "ghcopilot": {
+   "name": "GitHub Copilot",
+   "domains": [],
+   "paths": [
+    "github.com/copilot"
+   ]
+  }
+ },
+ "holidays": {
+  "source": "OpenHolidays API data (openholidaysapi.org), licence ODbL 1.0",
+  "regions": {
+   "BE-NL": [
+    [
+     "2026-11-02",
+     "2026-11-08"
+    ],
+    [
+     "2026-12-21",
+     "2027-01-03"
+    ],
+    [
+     "2027-02-08",
+     "2027-02-14"
+    ],
+    [
+     "2027-03-29",
+     "2027-04-11"
+    ],
+    [
+     "2027-07-01",
+     "2027-08-31"
+    ],
+    [
+     "2027-11-01",
+     "2027-11-07"
+    ],
+    [
+     "2027-12-27",
+     "2028-01-09"
+    ],
+    [
+     "2028-02-28",
+     "2028-03-05"
+    ],
+    [
+     "2028-04-03",
+     "2028-04-17"
+    ],
+    [
+     "2028-07-01",
+     "2028-08-31"
+    ],
+    [
+     "2028-10-30",
+     "2028-11-05"
+    ],
+    [
+     "2028-12-25",
+     "2029-01-07"
+    ]
+   ],
+   "BE-FR": [
+    [
+     "2026-10-19",
+     "2026-11-01"
+    ],
+    [
+     "2026-12-21",
+     "2027-01-03"
+    ],
+    [
+     "2027-02-22",
+     "2027-03-07"
+    ],
+    [
+     "2027-04-26",
+     "2027-05-09"
+    ]
+   ],
+   "NL-NO": [
+    [
+     "2026-10-10",
+     "2026-10-18"
+    ],
+    [
+     "2026-12-19",
+     "2027-01-03"
+    ],
+    [
+     "2027-02-20",
+     "2027-02-28"
+    ],
+    [
+     "2027-04-24",
+     "2027-05-02"
+    ],
+    [
+     "2027-07-10",
+     "2027-08-22"
+    ],
+    [
+     "2027-10-16",
+     "2027-10-24"
+    ],
+    [
+     "2027-12-25",
+     "2028-01-09"
+    ],
+    [
+     "2028-02-19",
+     "2028-02-27"
+    ],
+    [
+     "2028-04-29",
+     "2028-05-07"
+    ],
+    [
+     "2028-07-15",
+     "2028-08-27"
+    ],
+    [
+     "2028-10-14",
+     "2028-10-22"
+    ],
+    [
+     "2028-12-23",
+     "2029-01-07"
+    ]
+   ],
+   "NL-MI": [
+    [
+     "2026-10-17",
+     "2026-10-25"
+    ],
+    [
+     "2026-12-19",
+     "2027-01-03"
+    ],
+    [
+     "2027-02-20",
+     "2027-02-28"
+    ],
+    [
+     "2027-04-24",
+     "2027-05-02"
+    ],
+    [
+     "2027-07-17",
+     "2027-08-29"
+    ],
+    [
+     "2027-10-16",
+     "2027-10-24"
+    ],
+    [
+     "2027-12-25",
+     "2028-01-09"
+    ],
+    [
+     "2028-02-26",
+     "2028-03-05"
+    ],
+    [
+     "2028-04-29",
+     "2028-05-07"
+    ],
+    [
+     "2028-07-08",
+     "2028-08-20"
+    ],
+    [
+     "2028-10-21",
+     "2028-10-29"
+    ],
+    [
+     "2028-12-23",
+     "2029-01-07"
+    ]
+   ],
+   "NL-ZU": [
+    [
+     "2026-10-17",
+     "2026-10-25"
+    ],
+    [
+     "2026-12-19",
+     "2027-01-03"
+    ],
+    [
+     "2027-02-13",
+     "2027-03-21"
+    ],
+    [
+     "2027-04-24",
+     "2027-05-02"
+    ],
+    [
+     "2027-07-24",
+     "2027-09-05"
+    ],
+    [
+     "2027-10-23",
+     "2027-10-31"
+    ],
+    [
+     "2027-12-25",
+     "2028-01-09"
+    ],
+    [
+     "2028-02-26",
+     "2028-03-05"
+    ],
+    [
+     "2028-04-29",
+     "2028-05-07"
+    ],
+    [
+     "2028-07-22",
+     "2028-09-03"
+    ],
+    [
+     "2028-10-21",
+     "2028-10-29"
+    ],
+    [
+     "2028-12-23",
+     "2029-01-07"
+    ]
+   ],
+   "FR-ZA": [
+    [
+     "2026-10-18",
+     "2026-11-01"
+    ],
+    [
+     "2026-12-20",
+     "2027-01-03"
+    ],
+    [
+     "2027-02-14",
+     "2027-02-28"
+    ],
+    [
+     "2027-04-11",
+     "2027-04-25"
+    ],
+    [
+     "2027-05-06",
+     "2027-05-09"
+    ]
+   ],
+   "FR-ZB": [
+    [
+     "2026-10-18",
+     "2026-11-01"
+    ],
+    [
+     "2026-12-20",
+     "2027-01-03"
+    ],
+    [
+     "2027-02-21",
+     "2027-03-07"
+    ],
+    [
+     "2027-04-18",
+     "2027-05-02"
+    ],
+    [
+     "2027-05-06",
+     "2027-05-09"
+    ]
+   ],
+   "FR-ZC": [
+    [
+     "2026-10-18",
+     "2026-11-01"
+    ],
+    [
+     "2026-12-20",
+     "2027-01-03"
+    ],
+    [
+     "2027-02-07",
+     "2027-02-21"
+    ],
+    [
+     "2027-04-04",
+     "2027-04-18"
+    ],
+    [
+     "2027-05-06",
+     "2027-05-09"
+    ]
+   ]
+  }
+ }
+}

@@ -14,6 +14,7 @@ export const ROUTES = {
   network:  { en: 'network/',          nl: 'nl/netwerk/',          fr: 'fr/reseau/' },
   exam:     { en: 'exam-button/',      nl: 'nl/examenknop/',       fr: 'fr/bouton-examen/' },
   paste:    { en: 'paste-guard/',      nl: 'nl/plakbewaker/',      fr: 'fr/garde-collage/' },
+  guide:    { en: 'block-chatgpt/',    nl: 'nl/chatgpt-blokkeren/', fr: 'fr/bloquer-chatgpt/' },
   policy:   { en: 'ai-policy-template/', nl: 'nl/ai-beleid-sjabloon/', fr: 'fr/modele-politique-ia/' },
   download: { en: 'download/',         nl: 'nl/download/',         fr: 'fr/telecharger/' },
   pricing:  { en: 'pricing/',          nl: 'nl/prijzen/',          fr: 'fr/tarifs/' },

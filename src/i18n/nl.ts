@@ -368,7 +368,7 @@ export const pages: Record<string, Page> = {
       { q: 'Gebruikt Mindveto zelf AI?', a: 'Nee. Blokkeren en de plakbewaker gebruiken gewone regels op je toestel.' },
       { q: 'Wie maakt Mindveto?', a: L('Amghar Said, een onafhankelijke maker in België. <a href="/nl/over/">Over ons</a>.') },
     ],
-    related: ['download', 'privacy'],
+    related: ['guide', 'download', 'privacy'],
   },
 
   about: {
@@ -457,6 +457,49 @@ export const pages: Record<string, Page> = {
       { h: 'Intellectuele eigendom', p: ['© 2026 Amghar Said. Alle rechten voorbehouden. Productnamen zoals ChatGPT, Gemini, Claude en Copilot zijn van hun eigenaars en worden alleen genoemd om te beschrijven wat Mindveto blokkeert. Mindveto is niet met hen verbonden.', 'Lettertype: Atkinson Hyperlegible Next, SIL Open Font License, geleverd vanaf deze site. Data van schoolvakanties: OpenHolidays API (ODbL).'] },
     ],
   },
+  guide: {
+    title: 'ChatGPT blokkeren op elk toestel (gids 2026)',
+    desc: 'Blokkeer ChatGPT in Chrome, op Windows, Mac, Android, iPhone of op het hele wifi-netwerk. Gratis stappen per toestel, met de eerlijke grenzen erbij.',
+    h1: 'ChatGPT blokkeren, op elk toestel.',
+    lead: 'Het korte antwoord: blokkeer het adres chatgpt.com (en chat.openai.com) in de browser, op de computer, op de telefoon of op de router. Deze pagina toont de gratis manier voor elk toestel, en welke bij jouw situatie past.',
+    actions: [{ label: 'Download Mindveto gratis', to: 'download', solid: true }, { label: 'Welke versie heb ik nodig?', to: 'help' }],
+    blocks: [
+      { h: 'Kies de manier die past', facts: [
+        ['Eén browser (Chrome, Edge, Brave, Opera)', L('<a href="/nl/browserextensie/">Browserextensie</a>: één schakelaar, pincode. Ongeveer 1 minuut.')],
+        ['Een hele Windows-pc, elke browser en app', L('<a href="/nl/windows/">Windows-download</a>: zet de AI-adressen in het hosts-bestand.')],
+        ['Een Mac of Linux-computer', L('<a href="/nl/mac-linux/">Eén opdracht</a> in Terminal.')],
+        ['Een Android-telefoon, ook in apps', L('<a href="/nl/android/">Android-app</a> met een lokaal filter en een pincode.')],
+        ['Een iPhone', L('Een DNS-dienst met onze <a href="/nl/netwerk/">gratis lijst</a>, of Apple Schermtijd voor losse sites.')],
+        ['Elk toestel op de wifi', L('<a href="/nl/netwerk/">Netwerklijsten</a> voor Pi-hole, AdGuard Home of de DNS van school of kantoor.')],
+      ]},
+      { h: 'ChatGPT blokkeren in Chrome of Edge', steps: [
+        L('Download de <a href="/nl/browserextensie/">Mindveto-extensie</a> en pak het zip-bestand uit.'),
+        L('Open <code>chrome://extensions</code> (in Edge: <code>edge://extensions</code>) en zet “Ontwikkelaarsmodus” aan.'),
+        'Klik op “Uitgepakte extensie laden” en kies de uitgepakte map.',
+        'Open Mindveto, zet de schakelaar om en kies een pincode. ChatGPT, Gemini, Copilot en 150+ andere AI-tools tonen nu een blokkeerpagina.',
+        'Zet op de pagina “Details” van de extensie “Toestaan in incognitomodus” aan, anders worden privévensters niet geblokkeerd.',
+      ]},
+      { h: 'ChatGPT blokkeren zonder software', p: [
+        L('Je kunt het met de hand doen. Zet op een computer deze regels in het hosts-bestand (beheerdersrechten nodig): <code>0.0.0.0 chatgpt.com</code> en <code>0.0.0.0 chat.openai.com</code>. Op een router met Pi-hole of AdGuard Home zet je dezelfde twee namen op de blokkeerlijst.'),
+        L('Het nadeel: ChatGPT is er één van vele. Gemini, Copilot, Claude, Character.AI en de rest blijven open, en elke week komen er nieuwe bij. Daarom houdt Mindveto een <a href="/nl/netwerk/">openbare lijst van 150+ AI-diensten</a> bij die elke dag wordt bijgewerkt. Je kunt die lijst gebruiken zonder iets van ons te installeren.'),
+      ]},
+      { h: 'Eerlijke grenzen van elke manier', list: [
+        'Een blokkade werkt alleen waar je ze installeert. Een kind of collega kan nog een andere telefoon of een ander netwerk gebruiken.',
+        'Wie beheerder is van het toestel kan een blokkade verwijderen. Geef kinderen en personeel een gewoon account (geen beheerder).',
+        'Browserextensies dekken geen andere browsers of apps. Blokkeer daarvoor op de computer, de telefoon of het netwerk.',
+        'Lijsten die hele domeinen blokkeren kunnen geen losse pagina blokkeren. Enkele blokkades op paginaniveau, zoals Bing Chat, werken alleen in de browserextensie.',
+      ], note: 'Blokkeren werkt het best samen met een duidelijke afspraak: wanneer mag AI, en waarom nu niet. Mindveto leest niets en stuurt niets; het zorgt alleen dat AI-adressen niet openen.', human: true },
+    ],
+    faq: [
+      { q: 'Hoe blokkeer ik ChatGPT op de telefoon van mijn kind?', a: L('Op Android: installeer de <a href="/nl/android/">Mindveto-app</a>, zet “Altijd-aan VPN” aan en kies een pincode. Op een iPhone: gebruik een DNS-dienst met onze gratis lijst, of Apple Schermtijd om chatgpt.com te blokkeren. Zie <a href="/nl/ouders/">voor ouders</a>.') },
+      { q: 'Hoe blokkeer ik ChatGPT op schoolcomputers?', a: L('Installeer de extensie verplicht via Chrome- of Edge-beleid en blokkeer AI op de school-DNS met het IT-pakket. Leerkrachten kunnen ook de <a href="/nl/examenknop/">examenknop</a> gebruiken. Zie <a href="/nl/scholen/">voor scholen</a>.') },
+      { q: 'Hoe blokkeer ik ChatGPT op het werk maar laat ik Copilot toe?', a: L('Vink in de extensie de AI aan die je kantoor goedkeurt en laat de rest geblokkeerd. De <a href="/nl/plakbewaker/">plakbewaker</a> waarschuwt ook voor privégegevens in een AI-site geplakt worden. Zie <a href="/nl/kantoren/">voor kantoren</a>.') },
+      { q: 'Is ChatGPT blokkeren gratis?', a: 'Ja. Blokkeren, de pincode en het rooster zijn gratis in Mindveto, en de blokkeerlijsten zijn gratis te gebruiken.' },
+      { q: 'Kan ik ChatGPT alleen tijdens huiswerk of werkuren blokkeren?', a: 'Ja. De browserextensie heeft een rooster, met de schoolvakanties van België, Nederland en Frankrijk ingebouwd.' },
+    ],
+    related: ['browser', 'android', 'network'],
+  },
+
   policy: {
     title: 'Gratis AI-beleid-sjabloon voor kleine kantoren',
     desc: 'Een AI-beleid van één pagina voor boekhouders, advocaten en andere kleine kantoren: welke tools mogen, wat nooit in AI gaat en hoe je het opvolgt. Gratis.',

@@ -368,7 +368,7 @@ export const pages: Record<string, Page> = {
       { q: 'Mindveto utilise-t-il de l’IA ?', a: 'Non. Le blocage et le garde-collage utilisent des règles simples sur votre appareil.' },
       { q: 'Qui fait Mindveto ?', a: L('Amghar Said, un créateur indépendant en Belgique. <a href="/fr/a-propos/">À propos</a>.') },
     ],
-    related: ['download', 'privacy'],
+    related: ['guide', 'download', 'privacy'],
   },
 
   about: {
@@ -457,6 +457,49 @@ export const pages: Record<string, Page> = {
       { h: 'Propriété intellectuelle', p: ['© 2026 Amghar Said. Tous droits réservés. Les noms de produits comme ChatGPT, Gemini, Claude et Copilot appartiennent à leurs propriétaires et ne sont cités que pour décrire ce que bloque Mindveto. Mindveto n’y est pas affilié.', 'Police : Atkinson Hyperlegible Next, SIL Open Font License, servie depuis ce site. Dates des vacances scolaires : OpenHolidays API (ODbL).'] },
     ],
   },
+  guide: {
+    title: 'Bloquer ChatGPT sur tout appareil (guide 2026)',
+    desc: 'Bloquez ChatGPT dans Chrome, sur Windows, Mac, Android, iPhone ou tout le réseau Wi-Fi. Étapes gratuites par appareil, avec les limites honnêtes.',
+    h1: 'Bloquer ChatGPT, sur chaque appareil.',
+    lead: 'La réponse courte : bloquez l’adresse chatgpt.com (et chat.openai.com) dans le navigateur, sur l’ordinateur, sur le téléphone ou sur le routeur. Cette page montre la méthode gratuite pour chacun, et laquelle convient à votre situation.',
+    actions: [{ label: 'Télécharger Mindveto gratuitement', to: 'download', solid: true }, { label: 'Quelle version me faut-il ?', to: 'help' }],
+    blocks: [
+      { h: 'Choisissez la méthode qui convient', facts: [
+        ['Un navigateur (Chrome, Edge, Brave, Opera)', L('<a href="/fr/extension-navigateur/">Extension de navigateur</a> : un interrupteur, un PIN. Environ 1 minute.')],
+        ['Tout un PC Windows, chaque navigateur et application', L('<a href="/fr/windows/">Téléchargement Windows</a> : ajoute les adresses d’IA au fichier hosts.')],
+        ['Un Mac ou un ordinateur Linux', L('<a href="/fr/mac-linux/">Une commande</a> dans le Terminal.')],
+        ['Un téléphone Android, aussi dans les applications', L('<a href="/fr/android/">Application Android</a> avec un filtre local et un PIN.')],
+        ['Un iPhone', L('Un service DNS avec notre <a href="/fr/reseau/">liste gratuite</a>, ou Temps d’écran d’Apple pour des sites précis.')],
+        ['Tous les appareils du Wi-Fi', L('<a href="/fr/reseau/">Listes réseau</a> pour Pi-hole, AdGuard Home ou le DNS de l’école ou du bureau.')],
+      ]},
+      { h: 'Bloquer ChatGPT dans Chrome ou Edge', steps: [
+        L('Téléchargez l’<a href="/fr/extension-navigateur/">extension Mindveto</a> et décompressez-la.'),
+        L('Ouvrez <code>chrome://extensions</code> (dans Edge : <code>edge://extensions</code>) et activez le « Mode développeur ».'),
+        'Cliquez sur « Charger l’extension non empaquetée » et choisissez le dossier décompressé.',
+        'Ouvrez Mindveto, basculez l’interrupteur et choisissez un PIN. ChatGPT, Gemini, Copilot et 150+ autres outils d’IA affichent maintenant une page de blocage.',
+        'Sur la page « Détails » de l’extension, activez « Autoriser en mode navigation privée », sinon les fenêtres privées ne sont pas bloquées.',
+      ]},
+      { h: 'Bloquer ChatGPT sans logiciel', p: [
+        L('Vous pouvez le faire à la main. Sur un ordinateur, ajoutez ces lignes au fichier hosts (droits d’administrateur nécessaires) : <code>0.0.0.0 chatgpt.com</code> et <code>0.0.0.0 chat.openai.com</code>. Sur un routeur avec Pi-hole ou AdGuard Home, ajoutez ces deux noms à la liste de blocage.'),
+        L('Le problème : ChatGPT n’est qu’un outil parmi beaucoup. Gemini, Copilot, Claude, Character.AI et les autres restent ouverts, et de nouveaux apparaissent chaque semaine. C’est pourquoi Mindveto tient une <a href="/fr/reseau/">liste publique de 150+ services d’IA</a>, mise à jour chaque jour. Vous pouvez utiliser cette liste sans rien installer de chez nous.'),
+      ]},
+      { h: 'Les limites honnêtes de chaque méthode', list: [
+        'Un blocage ne fonctionne que là où vous l’installez. Un enfant ou un collègue peut encore utiliser un autre téléphone ou un autre réseau.',
+        'L’administrateur de l’appareil peut retirer un blocage. Donnez aux enfants et au personnel un compte normal (non administrateur).',
+        'Les extensions de navigateur ne couvrent ni les autres navigateurs ni les applications. Pour cela, bloquez sur l’ordinateur, le téléphone ou le réseau.',
+        'Les listes qui bloquent des domaines entiers ne peuvent pas bloquer une seule page. Quelques blocages au niveau de la page, comme Bing Chat, ne fonctionnent que dans l’extension.',
+      ], note: 'Le blocage fonctionne mieux avec une règle claire : quand l’IA est-elle permise, et pourquoi pas maintenant. Mindveto ne lit rien et n’envoie rien ; il empêche seulement les adresses d’IA de s’ouvrir.', human: true },
+    ],
+    faq: [
+      { q: 'Comment bloquer ChatGPT sur le téléphone de mon enfant ?', a: L('Sur Android : installez l’<a href="/fr/android/">application Mindveto</a>, activez « VPN permanent » et choisissez un PIN. Sur iPhone : utilisez un service DNS avec notre liste gratuite, ou Temps d’écran d’Apple pour bloquer chatgpt.com. Voir <a href="/fr/parents/">pour les parents</a>.') },
+      { q: 'Comment bloquer ChatGPT sur les ordinateurs de l’école ?', a: L('Installez l’extension de force par stratégie Chrome ou Edge et bloquez l’IA sur le DNS de l’école avec le pack IT. Les enseignants peuvent aussi utiliser le <a href="/fr/bouton-examen/">bouton examen</a>. Voir <a href="/fr/ecoles/">pour les écoles</a>.') },
+      { q: 'Comment bloquer ChatGPT au travail tout en autorisant Copilot ?', a: L('Dans l’extension, cochez l’IA que votre bureau approuve et laissez le reste bloqué. Le <a href="/fr/garde-collage/">garde-collage</a> avertit aussi avant que des données privées soient collées dans un site d’IA. Voir <a href="/fr/bureaux/">pour les bureaux</a>.') },
+      { q: 'Bloquer ChatGPT, est-ce gratuit ?', a: 'Oui. Le blocage, le PIN et l’horaire sont gratuits dans Mindveto, et les listes de blocage sont gratuites.' },
+      { q: 'Puis-je bloquer ChatGPT seulement pendant les devoirs ou les heures de travail ?', a: 'Oui. L’extension a un horaire, avec les vacances scolaires de Belgique, des Pays-Bas et de France intégrées.' },
+    ],
+    related: ['browser', 'android', 'network'],
+  },
+
   policy: {
     title: 'Modèle gratuit de politique IA pour petits bureaux',
     desc: 'Une politique IA d’une page pour comptables, avocats et autres petits bureaux : outils approuvés, ce qui n’entre jamais dans l’IA et comment le suivre.',

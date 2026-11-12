@@ -34,7 +34,11 @@ const link = (a: Action) => (a.to ? href(a.to, lang) : a.url!);
 const title = isHome ? h.title : pg!.title;
 const desc = isHome ? h.desc : pg!.desc;
 
-const jsonld: object[] = [];
+const BUILT = new Date().toISOString().slice(0, 10);
+const jsonld: object[] = [{
+  '@context': 'https://schema.org', '@type': 'WebPage', name: title, description: desc, url: SITE + href(key, lang), inLanguage: lang,
+  dateModified: BUILT, isPartOf: { '@type': 'WebSite', name: 'Mindveto', url: SITE + '/' },
+}];
 if (!isHome) {
   jsonld.push({
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
@@ -59,6 +63,11 @@ if (!isHome) {
   });
 } else {
   jsonld.push({ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Mindveto', url: SITE + '/', inLanguage: ['en', 'nl', 'fr'] });
+  jsonld.push({
+    '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'Mindveto', description: desc, url: SITE + href('home', lang),
+    applicationCategory: 'SecurityApplication', operatingSystem: 'Chrome, Edge, Brave, Opera, Android 8+, Windows 10, Windows 11, macOS, Linux',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' }, author: { '@type': 'Person', name: 'Amghar Said' },
+  });
 }
 const X = EXAM_UI[lang];
 const DEMO = {
@@ -67,7 +76,7 @@ const DEMO = {
   fr: { h: 'Voyez-le à l’œuvre', cap: '9 secondes, sans son. Enregistré avec la vraie extension sur une page de test ; les numéros sont fictifs.' },
 } as const;
 const M = PASTE_MOCK[lang];
-const NO_ASIDE: PageKey[] = ['help', 'about', 'privacy', 'terms', 'legal', 'pricing', 'download', 'policy'];
+const NO_ASIDE: PageKey[] = ['help', 'about', 'privacy', 'terms', 'legal', 'pricing', 'download', 'policy', 'guide'];
 const ASIDE: Partial<Record<PageKey, string>> = { offices: 'paste', paste: 'paste', browser: 'popup', parents: 'switch', schools: 'popup', exam: 'exam', android: 'phone', windows: 'win', maclinux: 'mac', network: 'list', about: 'switch' };
 const aside = isHome || NO_ASIDE.includes(key) ? null : ASIDE[key] ?? null;
 const U = UI_PREVIEW[lang];

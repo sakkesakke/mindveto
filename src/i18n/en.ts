@@ -368,7 +368,7 @@ export const pages: Record<string, Page> = {
       { q: 'Does Mindveto use AI?', a: 'No. Blocking and the paste guard use plain rules on your device.' },
       { q: 'Who makes Mindveto?', a: L('Amghar Said, an independent maker in Belgium. <a href="/about/">About</a>.') },
     ],
-    related: ['download', 'privacy'],
+    related: ['guide', 'download', 'privacy'],
   },
 
   about: {
@@ -457,6 +457,49 @@ export const pages: Record<string, Page> = {
       { h: 'Intellectual property', p: ['© 2026 Amghar Said. All rights reserved. Product names such as ChatGPT, Gemini, Claude and Copilot belong to their owners and are named only to describe what Mindveto blocks. Mindveto is not affiliated with them.', 'Font: Atkinson Hyperlegible Next, SIL Open Font License, served from this site. School holiday dates: OpenHolidays API (ODbL).'] },
     ],
   },
+  guide: {
+    title: 'How to block ChatGPT on any device (2026 guide)',
+    desc: 'Block ChatGPT on Chrome, Windows, Mac, Android, iPhone or a whole Wi-Fi network. Free step-by-step methods, with the honest limits of each one.',
+    h1: 'How to block ChatGPT, on every device.',
+    lead: 'The short answer: block the address chatgpt.com (and chat.openai.com) in the browser, on the computer, on the phone or on the router. This page shows the free way to do each one, and which one fits your situation.',
+    actions: [{ label: 'Download Mindveto free', to: 'download', solid: true }, { label: 'Which version do I need?', to: 'help' }],
+    blocks: [
+      { h: 'Pick the method that fits', facts: [
+        ['One browser (Chrome, Edge, Brave, Opera)', L('<a href="/browser-extension/">Browser extension</a>: one switch, PIN lock. About 1 minute.')],
+        ['A whole Windows PC, every browser and app', L('<a href="/windows/">Windows download</a>: adds the AI addresses to the hosts file.')],
+        ['A Mac or Linux computer', L('<a href="/mac-linux/">One command</a> in Terminal.')],
+        ['An Android phone, also inside apps', L('<a href="/android/">Android app</a> with a local filter and a PIN.')],
+        ['An iPhone', L('A DNS service with our <a href="/network/">free list</a>, or Apple Screen Time for single sites.')],
+        ['Every device on the Wi-Fi', L('<a href="/network/">Network lists</a> for Pi-hole, AdGuard Home or the school or office DNS.')],
+      ]},
+      { h: 'Block ChatGPT in Chrome or Edge', steps: [
+        L('Download the <a href="/browser-extension/">Mindveto extension</a> and unzip it.'),
+        L('Open <code>chrome://extensions</code> (in Edge: <code>edge://extensions</code>) and switch on “Developer mode”.'),
+        'Click “Load unpacked” and choose the unzipped folder.',
+        'Open Mindveto, flip the switch and set a PIN. ChatGPT, Gemini, Copilot and 150+ other AI tools now show a blocked page.',
+        'On the extension’s “Details” page, switch on “Allow in Incognito”, or private windows are not blocked.',
+      ]},
+      { h: 'Block ChatGPT without any software', p: [
+        L('You can block it by hand. On a computer, add these lines to the hosts file (administrator rights needed): <code>0.0.0.0 chatgpt.com</code> and <code>0.0.0.0 chat.openai.com</code>. On a router with Pi-hole or AdGuard Home, add the same two names to the block list.'),
+        L('The catch: ChatGPT is one of many. Gemini, Copilot, Claude, Character.AI and the rest stay open, and new ones appear every week. That is why Mindveto keeps a <a href="/network/">public list of 150+ AI services</a> that updates daily. You can use that list without installing anything from us.'),
+      ]},
+      { h: 'Honest limits of every method', list: [
+        'A block works only where you install it. A child or colleague can still use another phone or another network.',
+        'Whoever is administrator of the device can remove a block. Give children and staff a normal (non-admin) account.',
+        'Browser extensions do not cover other browsers or apps. For that, block on the computer, the phone or the network.',
+        'Lists that block whole domains cannot block a single page. A few page-level blocks, such as Bing Chat, only work in the browser extension.',
+      ], note: 'Blocking works best together with a clear rule: when is AI allowed, and why not now. Mindveto reads nothing and sends nothing; it only stops AI addresses from opening.', human: true },
+    ],
+    faq: [
+      { q: 'How do I block ChatGPT on my child’s phone?', a: L('On Android, install the <a href="/android/">Mindveto app</a>, turn on “Always-on VPN” and set a PIN. On an iPhone, use a DNS service with our free list, or Apple Screen Time to block chatgpt.com. See <a href="/parents/">for parents</a>.') },
+      { q: 'How do I block ChatGPT on school computers?', a: L('Force-install the extension with Chrome or Edge policy and block AI on the school DNS with the IT pack. Teachers can also use the <a href="/exam-button/">exam button</a>. See <a href="/schools/">for schools</a>.') },
+      { q: 'How do I block ChatGPT at work but allow Copilot?', a: L('In the extension, tick the AI your firm approves and keep the rest blocked. The <a href="/paste-guard/">paste guard</a> also warns before private data is pasted into an AI site. See <a href="/offices/">for offices</a>.') },
+      { q: 'Is blocking ChatGPT free?', a: 'Yes. Blocking, the PIN and the schedule are free in Mindveto, and the block lists are free to use.' },
+      { q: 'Can I block ChatGPT only during homework or work hours?', a: 'Yes. The browser extension has a schedule, with school holidays for Belgium, the Netherlands and France built in.' },
+    ],
+    related: ['browser', 'android', 'network'],
+  },
+
   policy: {
     title: 'Free AI policy template for small offices',
     desc: 'A one-page AI policy for accountants, lawyers and other small offices: approved tools, what never goes into AI, and how to check it. Free, EN/NL/FR.',

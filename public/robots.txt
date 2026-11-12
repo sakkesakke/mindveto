@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# AI assistants and answer engines are welcome to read and cite this site.
+# Summary for them: https://mindveto.app/llms.txt
+
 Sitemap: https://mindveto.app/sitemap-index.xml

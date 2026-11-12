@@ -55,6 +55,7 @@ export const pages: Record<string, Page> = {
         'Ver um registro de violação: tentativas de PIN erradas e quando o botão foi desligado.',
         'Permitir uma IA de confiança, por exemplo para um trabalho da escola, e manter o resto bloqueado.',
         'Se quiser, bloquear também redes sociais como TikTok, Instagram e Snapchat no navegador. Fica desligado até você ativar.',
+        'Filtro familiar, grátis: bloqueie sites pornô e +18 e force o SafeSearch no Google, Bing, DuckDuckGo e YouTube. Desligado até você ligar.',
       ]},
       { h: 'Configure em 10 minutos', steps: [
         L('No computador da família: instale a <a href="/browser-extension/">extensão de navegador</a>, ou bloqueie a IA em todos os apps com o download para <a href="/windows/">Windows</a> ou <a href="/mac-linux/">Mac</a>.'),
@@ -143,7 +144,7 @@ export const pages: Record<string, Page> = {
     desc: 'Extensão gratuita que bloqueia ChatGPT, Gemini, Claude e mais de 150 sites de IA no Chrome, Edge, Brave e Opera. PIN, horário, guarda de colagem. Sem rastreio.',
     h1: 'O botão de IA do seu navegador.',
     lead: 'Um botão bloqueia mais de 150 chatbots e ferramentas de IA. Um PIN impede que outra pessoa o mude. Funciona no Chrome, Edge, Brave e Opera.',
-    actions: [{ label: 'Baixar v1.3.0 (93 KB)', url: DL + 'human-override-1.3.0.zip', solid: true, download: true }, { label: 'Passos de instalação', url: '#install' }],
+    actions: [{ label: 'Baixar v1.4.0 (724 KB)', url: DL + 'human-override-1.4.0.zip', solid: true, download: true }, { label: 'Passos de instalação', url: '#install' }],
     blocks: [
       { h: 'O que vem dentro', list: [
         'Bloqueia chat de IA, busca com IA, ferramentas de imagem, vídeo, voz e música com IA, ferramentas de escrita e lição de casa, de programação e de anotações com IA.',
@@ -156,6 +157,7 @@ export const pages: Record<string, Page> = {
         'Suas próprias listas de bloqueio e permissão. A lista pública é atualizada uma vez por dia.',
         'Opcional: bloquear também redes sociais (TikTok, Instagram, Snapchat e mais). Desligado até você ativar.',
         'Por enquanto a extensão está em inglês, holandês e francês.',
+        'Filtro familiar: bloqueia mais de 60.000 sites pornô e +18 e força o SafeSearch no Google, Bing, DuckDuckGo e YouTube. Desligado até você ligar; com um PIN, só você pode desligá-lo.',
       ]},
       { h: 'Instale em um minuto', fold: 'Mostrar os passos de instalação', foldLead: 'As versões das lojas estão a caminho. Até lá, você instala à mão em um minuto.', steps: [
         'Baixe o zip acima e descompacte (botão direito, “Extrair tudo”).',
@@ -165,7 +167,7 @@ export const pages: Record<string, Page> = {
         'Fixe o ícone na barra, abra-o e defina um PIN.',
       ], note: 'Para pais e escolas: na página “Detalhes” da extensão, ative “Permitir no modo anônimo”. Senão as janelas anônimas não são bloqueadas.' },
       { h: 'Dados', facts: [
-        ['Versão', '1.3.0 (Manifest V3)'], ['Tamanho', '93 KB'], ['Navegadores', 'Chrome, Edge, Brave, Opera. Firefox e lojas oficiais: em breve'],
+        ['Versão', '1.4.0 (Manifest V3)'], ['Tamanho', '724 KB'], ['Navegadores', 'Chrome, Edge, Brave, Opera. Firefox e lojas oficiais: em breve'],
         ['Permissões', 'Regras de bloqueio, armazenamento local, um temporizador diário'], ['Dados enviados', 'Nenhum. Só a lista pública é baixada uma vez por dia'], ['Preço', 'Grátis'],
       ]},
     ],
@@ -186,6 +188,7 @@ export const pages: Record<string, Page> = {
       { h: 'Como funciona', p: [
         'O app roda no celular um pequeno filtro local de nomes da internet (DNS). Quando um app pede um endereço de IA, o filtro responde que ele não existe. Todo o resto funciona normalmente.',
         'Só essas consultas de nomes passam pelo app. Nada é enviado para nós.',
+        'Filtro familiar opcional: ligue “Sites adultos” e “SafeSearch” no app. Os sites pornô não abrem em nenhum app, e Google, Bing, DuckDuckGo e YouTube mostram resultados seguros. Com um PIN, desligar pede o PIN.',
       ]},
       { h: 'Instalar', steps: [
         'Abra o link de download no celular.',
@@ -211,13 +214,14 @@ export const pages: Record<string, Page> = {
     desc: 'Download gratuito para Windows que bloqueia ChatGPT e mais de 150 serviços de IA em todos os navegadores e apps, e pode desligar o Copilot e o Recall.',
     h1: 'Bloqueie a IA no PC com Windows inteiro.',
     lead: 'Sem extensão: um download bloqueia endereços de IA para todos os navegadores e apps do computador. Também pode desligar a IA integrada ao Windows.',
-    actions: [{ label: 'Baixar para Windows (7 KB)', url: DL + 'human-override-windows.zip', solid: true, download: true }],
+    actions: [{ label: 'Baixar para Windows (490 KB)', url: DL + 'human-override-windows.zip', solid: true, download: true }],
     blocks: [
       { h: 'Instalar', fold: 'Mostrar os passos de instalação', foldLead: 'As versões das lojas estão a caminho. Até lá, você instala à mão em um minuto.', steps: [
         'Descompacte o download.',
         'Clique duas vezes em “Start-Mindveto.bat” e clique em Sim.',
         'Digite 1 para bloquear a IA. Digite 3 para desligar também o Copilot, o Recall e a IA do Edge e do Chrome.',
         'Dê a crianças ou funcionários uma conta normal (sem administrador). Assim não conseguem desfazer.',
+        'Digite 5 para ligar o filtro familiar: sites pornô e +18 bloqueados, SafeSearch forçado no Google, Bing e YouTube. Digite 6 para desligar.',
       ], note: 'O Windows pode dizer primeiro que “protegeu o computador”. Clique em “Mais informações” e depois em “Executar assim mesmo”. O script é texto puro: você pode abri-lo no Bloco de Notas e ler cada linha. O script está em inglês.' },
       { h: 'Dados', facts: [
         ['Funciona em', 'Windows 10 e 11'], ['Como', 'Adiciona endereços de IA ao arquivo hosts do Windows e define políticas oficiais do Windows para a IA integrada'],
@@ -232,13 +236,14 @@ export const pages: Record<string, Page> = {
     desc: 'Script gratuito que bloqueia ChatGPT e mais de 150 serviços de IA em todos os navegadores e apps de um Mac ou computador Linux. Um comando liga, outro desliga.',
     h1: 'Um comando. IA desligada no Mac ou Linux inteiro.',
     lead: 'O script adiciona endereços de IA ao arquivo hosts do sistema, então todos os navegadores e apps do computador ficam cobertos.',
-    actions: [{ label: 'Baixar para Mac e Linux (5 KB)', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }],
+    actions: [{ label: 'Baixar para Mac e Linux (485 KB)', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }],
     blocks: [
       { h: 'Instalar', steps: [
         'Descompacte o download.',
         'Abra o Terminal na pasta descompactada.',
         L('Digite <code>sudo sh mindveto.sh on</code> e sua senha.'),
         L('Para permitir a IA de novo: <code>sudo sh mindveto.sh off</code>.'),
+        L('Filtro familiar (sites pornô e +18, SafeSearch): <code>sudo sh mindveto.sh family-on</code>, e <code>family-off</code> para desfazer.'),
       ], note: 'Use uma conta normal (sem administrador) para as crianças. Assim elas não podem mudar o arquivo hosts.' },
       { h: 'Dados', facts: [
         ['Funciona em', 'macOS, Ubuntu, Debian, Fedora e a maioria dos sistemas Linux'], ['Desfazer', 'Um comando'], ['Preço', 'Grátis'],
@@ -326,10 +331,10 @@ export const pages: Record<string, Page> = {
     h1: 'Baixar o Mindveto.',
     lead: 'Escolha o dispositivo que quer proteger. Tudo é grátis e não precisa de conta. Por enquanto os apps estão em inglês, holandês e francês.',
     blocks: [
-      { h: 'Extensão de navegador', p: ['Chrome, Edge, Brave e Opera. Versão 1.3.0, 93 KB.'], actions: [{ label: 'Baixar', url: DL + 'human-override-1.3.0.zip', solid: true, download: true }, { label: 'Passos de instalação', to: 'browser' }] },
+      { h: 'Extensão de navegador', p: ['Chrome, Edge, Brave e Opera. Versão 1.4.0, 724 KB.'], actions: [{ label: 'Baixar', url: DL + 'human-override-1.4.0.zip', solid: true, download: true }, { label: 'Passos de instalação', to: 'browser' }] },
       { h: 'App para Android (beta)', p: ['Bloqueia a IA em todos os apps. 45 KB.'], actions: [{ label: 'Baixar', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Passos de instalação', to: 'android' }] },
-      { h: 'Windows', p: ['Todos os navegadores e apps do PC. 7 KB.'], actions: [{ label: 'Baixar', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Passos de instalação', to: 'windows' }] },
-      { h: 'Mac e Linux', p: ['Um comando, no sistema todo. 5 KB.'], actions: [{ label: 'Baixar', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Passos de instalação', to: 'maclinux' }] },
+      { h: 'Windows', p: ['Todos os navegadores e apps do PC. 490 KB.'], actions: [{ label: 'Baixar', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Passos de instalação', to: 'windows' }] },
+      { h: 'Mac e Linux', p: ['Um comando, no sistema todo. 485 KB.'], actions: [{ label: 'Baixar', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Passos de instalação', to: 'maclinux' }] },
       { h: 'Pacote de TI e listas', p: ['Arquivos para DNS, firewall e políticas de navegador. 13 KB.'], actions: [{ label: 'Baixar', url: DL + 'human-override-pro-pack.zip', solid: true, download: true }, { label: 'Todas as listas', to: 'network' }] },
     ],
     related: ['help', 'pricing'],

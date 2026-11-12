@@ -54,6 +54,7 @@ export const pages: Record<string, Page> = {
         'Bekijk het sabotagelog: verkeerde pincodes en wanneer de schakelaar uit is gezet.',
         'Laat één AI toe die je vertrouwt, bijvoorbeeld voor een schoolproject, en houd de rest geblokkeerd.',
         'Als je wilt, blokkeer je in de browser ook sociale media zoals TikTok, Instagram en Snapchat. Dat staat uit tot je het aanzet.',
+        'Gezinsfilter, gratis: blokkeer porno- en 18+-sites en zet SafeSearch vast in Google, Bing, DuckDuckGo en YouTube. Staat uit tot jij het aanzet.',
       ]},
       { h: 'In 10 minuten ingesteld', steps: [
         L('Op de gezinscomputer: installeer de <a href="/nl/browserextensie/">browserextensie</a>, of blokkeer AI in elke app met de download voor <a href="/nl/windows/">Windows</a> of <a href="/nl/mac-linux/">Mac</a>.'),
@@ -142,7 +143,7 @@ export const pages: Record<string, Page> = {
     desc: 'Gratis extensie die ChatGPT, Gemini, Claude en 150+ AI-sites blokkeert in Chrome, Edge, Brave en Opera. Pincode, rooster, plakbewaker.',
     h1: 'De AI-schakelaar voor je browser.',
     lead: 'Eén schakelaar blokkeert 150+ AI-chatbots en AI-tools. Een pincode zorgt dat niemand anders het wijzigt. Werkt in Chrome, Edge, Brave en Opera.',
-    actions: [{ label: 'Download v1.3.0 (93 KB)', url: DL + 'human-override-1.3.0.zip', solid: true, download: true }, { label: 'Installatiestappen', url: '#install' }],
+    actions: [{ label: 'Download v1.4.0 (724 KB)', url: DL + 'human-override-1.4.0.zip', solid: true, download: true }, { label: 'Installatiestappen', url: '#install' }],
     blocks: [
       { h: 'Wat erin zit', list: [
         'Blokkeert AI-chat, AI-zoeken, AI-tools voor beeld, video, stem en muziek, AI voor schrijven en huiswerk, AI voor programmeren en AI-notulisten.',
@@ -154,6 +155,7 @@ export const pages: Record<string, Page> = {
         'Sabotagelog en een rood teken op het icoon na een verkeerde pincode.',
         'Je eigen blokkeer- en toelaatlijsten. De openbare lijst wordt dagelijks bijgewerkt.',
         'Optioneel: blokkeer ook sociale media (TikTok, Instagram, Snapchat en meer). Uit tot je het aanzet.',
+        'Gezinsfilter: blokkeert 60.000+ porno- en 18+-sites en zet SafeSearch vast in Google, Bing, DuckDuckGo en YouTube. Staat uit tot jij het aanzet; met een pincode kan alleen jij het uitzetten.',
       ]},
       { h: 'Installeren in één minuut', fold: 'Toon de installatiestappen', foldLead: 'De versies in de stores komen eraan. Tot dan installeer je het met de hand in één minuut.', steps: [
         'Download de zip hierboven en pak hem uit (rechtsklik, “Alles uitpakken”).',
@@ -163,7 +165,7 @@ export const pages: Record<string, Page> = {
         'Maak het icoon vast in je werkbalk, open het en stel een pincode in.',
       ], note: 'Voor ouders en scholen: zet op de pagina “Details” van de extensie “Toestaan in incognito” aan. Anders worden privévensters niet geblokkeerd.' },
       { h: 'Feiten', facts: [
-        ['Versie', '1.3.0 (Manifest V3)'], ['Grootte', '93 KB'], ['Browsers', 'Chrome, Edge, Brave, Opera. Firefox en de officiële stores: binnenkort'],
+        ['Versie', '1.4.0 (Manifest V3)'], ['Grootte', '724 KB'], ['Browsers', 'Chrome, Edge, Brave, Opera. Firefox en de officiële stores: binnenkort'],
         ['Rechten', 'Blokkeerregels, lokale opslag, een dagelijkse timer'], ['Verstuurde gegevens', 'Geen. Alleen de openbare lijst wordt dagelijks opgehaald'], ['Prijs', 'Gratis'],
       ]},
     ],
@@ -184,6 +186,7 @@ export const pages: Record<string, Page> = {
       { h: 'Hoe het werkt', p: [
         'De app draait een klein lokaal filter voor internetnamen (DNS) op de telefoon. Vraagt een app een AI-adres op, dan antwoordt het filter dat het niet bestaat. Al de rest werkt gewoon.',
         'Alleen die naamopvragingen gaan door de app. Er gaat niets naar ons.',
+        'Optioneel gezinsfilter: zet in de app “Volwassenensites” en “SafeSearch” aan. Pornosites openen dan in geen enkele app, en Google, Bing, DuckDuckGo en YouTube tonen veilige resultaten. Met een pincode kan het alleen met de pincode uit.',
       ]},
       { h: 'Installeren', steps: [
         'Open de downloadlink op de telefoon.',
@@ -209,13 +212,14 @@ export const pages: Record<string, Page> = {
     desc: 'Gratis Windows-download die ChatGPT en 150+ AI-diensten blokkeert in elke browser en app, en Copilot en Recall kan uitzetten.',
     h1: 'Blokkeer AI op de hele Windows-pc.',
     lead: 'Geen extensie nodig: één download blokkeert AI-adressen voor elke browser en elke app op de computer. Hij kan ook de AI uitzetten die in Windows zit.',
-    actions: [{ label: 'Download voor Windows (7 KB)', url: DL + 'human-override-windows.zip', solid: true, download: true }],
+    actions: [{ label: 'Download voor Windows (490 KB)', url: DL + 'human-override-windows.zip', solid: true, download: true }],
     blocks: [
       { h: 'Installeren', fold: 'Toon de installatiestappen', foldLead: 'De versies in de stores komen eraan. Tot dan installeer je het met de hand in één minuut.', steps: [
         'Pak de download uit.',
         'Dubbelklik op “Start-Mindveto.bat” en klik op Ja.',
         'Typ 1 om AI te blokkeren. Typ 3 om ook Copilot, Recall en de AI in Edge en Chrome uit te zetten.',
         'Geef kinderen of personeel een gewone account (geen beheerder). Dan kunnen ze het niet ongedaan maken.',
+        'Typ 5 om het gezinsfilter aan te zetten: porno- en 18+-sites geblokkeerd, SafeSearch vast in Google, Bing en YouTube. Typ 6 om het uit te zetten.',
       ], note: 'Windows zegt misschien eerst dat het “je pc heeft beschermd”. Klik op “Meer informatie” en dan op “Toch uitvoeren”. Het script is gewone tekst: je kunt het in Kladblok openen en elke regel lezen.' },
       { h: 'Feiten', facts: [
         ['Werkt op', 'Windows 10 en 11'], ['Hoe', 'Zet AI-adressen in het hosts-bestand van Windows, en gebruikt officiële Windows-beleidsregels voor ingebouwde AI'],
@@ -230,13 +234,14 @@ export const pages: Record<string, Page> = {
     desc: 'Gratis script dat ChatGPT en 150+ AI-diensten blokkeert in elke browser en app op een Mac of Linux-computer. Eén commando aan, één uit.',
     h1: 'Eén commando. AI uit op de hele Mac of Linux-computer.',
     lead: 'Het script zet AI-adressen in het hosts-bestand van het systeem, zodat elke browser en app op de computer meedoet.',
-    actions: [{ label: 'Download voor Mac en Linux (5 KB)', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }],
+    actions: [{ label: 'Download voor Mac en Linux (485 KB)', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }],
     blocks: [
       { h: 'Installeren', steps: [
         'Pak de download uit.',
         'Open Terminal in de uitgepakte map.',
         L('Typ <code>sudo sh mindveto.sh on</code> en je wachtwoord.'),
         L('Om AI weer toe te laten: <code>sudo sh mindveto.sh off</code>.'),
+        L('Gezinsfilter (porno- en 18+-sites, SafeSearch): <code>sudo sh mindveto.sh family-on</code>, en <code>family-off</code> om het ongedaan te maken.'),
       ], note: 'Geef kinderen een gewone account (geen beheerder). Dan kunnen ze het hosts-bestand niet wijzigen.' },
       { h: 'Feiten', facts: [
         ['Werkt op', 'macOS, Ubuntu, Debian, Fedora en de meeste Linux-systemen'], ['Ongedaan maken', 'Eén commando'], ['Prijs', 'Gratis'],
@@ -324,10 +329,10 @@ export const pages: Record<string, Page> = {
     h1: 'Mindveto downloaden.',
     lead: 'Kies het toestel dat je wilt beschermen. Alles is gratis en vraagt geen account.',
     blocks: [
-      { h: 'Browserextensie', p: ['Chrome, Edge, Brave en Opera. Versie 1.3.0, 93 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-1.3.0.zip', solid: true, download: true }, { label: 'Installatiestappen', to: 'browser' }] },
+      { h: 'Browserextensie', p: ['Chrome, Edge, Brave en Opera. Versie 1.4.0, 724 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-1.4.0.zip', solid: true, download: true }, { label: 'Installatiestappen', to: 'browser' }] },
       { h: 'Android-app (bèta)', p: ['Blokkeert AI in elke app. 45 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Installatiestappen', to: 'android' }] },
-      { h: 'Windows', p: ['Elke browser en app op de pc. 7 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Installatiestappen', to: 'windows' }] },
-      { h: 'Mac en Linux', p: ['Eén commando, voor het hele systeem. 5 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Installatiestappen', to: 'maclinux' }] },
+      { h: 'Windows', p: ['Elke browser en app op de pc. 490 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Installatiestappen', to: 'windows' }] },
+      { h: 'Mac en Linux', p: ['Eén commando, voor het hele systeem. 485 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Installatiestappen', to: 'maclinux' }] },
       { h: 'IT-pakket en lijsten', p: ['Bestanden voor DNS, firewall en browserbeleid. 13 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-pro-pack.zip', solid: true, download: true }, { label: 'Alle lijsten', to: 'network' }] },
     ],
     related: ['help', 'pricing'],

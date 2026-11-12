@@ -134,7 +134,7 @@ export const pages: Record<string, Page> = {
       { q: 'Do you see what my staff paste?', a: 'No. The check runs on the computer. Pasted text is never stored or sent.' },
       { q: 'What does it cost?', a: L('The plan for teams is €2.50 per user per month. During the launch it is free. See <a href="/pricing/">pricing</a>.') },
     ],
-    related: ['paste', 'browser', 'network'],
+    related: ['paste', 'policy', 'browser'],
   },
 
   browser: {
@@ -456,5 +456,22 @@ export const pages: Record<string, Page> = {
       { h: 'Hosting', p: ['GitHub Pages, GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.'] },
       { h: 'Intellectual property', p: ['© 2026 Amghar Said. All rights reserved. Product names such as ChatGPT, Gemini, Claude and Copilot belong to their owners and are named only to describe what Mindveto blocks. Mindveto is not affiliated with them.', 'Font: Atkinson Hyperlegible Next, SIL Open Font License, served from this site. School holiday dates: OpenHolidays API (ODbL).'] },
     ],
+  },
+  policy: {
+    title: 'Free AI policy template for small offices',
+    desc: 'A one-page AI policy for accountants, lawyers and other small offices: approved tools, what never goes into AI, and how to check it. Free, EN/NL/FR.',
+    h1: 'An AI policy your team reads in two minutes.',
+    lead: 'A one-page template for accountants, lawyers, notaries and other small offices. Copy it, fill in the parts in brackets, and share it with your team.',
+    actions: [{ label: 'Print or save as PDF', url: '#print', solid: true }, { label: 'For offices', to: 'offices' }],
+    blocks: [
+      { h: 'Why have one', p: ['Since 2 February 2025, the EU AI Act asks organisations that use AI tools to help their staff understand them (AI literacy). A short written policy is a simple first step, and it protects your clients’ data.'] },
+      { h: '1. Purpose', p: ['We use AI where it helps us work better. Client data and confidential files stay protected. This policy says which tools we use and what never goes into them.'] },
+      { h: '2. Approved AI tools', list: ['[Tool, for example Microsoft Copilot with our business account]: allowed for [drafting, summarising our own texts].', 'All other AI chatbots, AI search and AI writing tools are not used on work devices or for work.'] },
+      { h: '3. Never put into an AI tool', list: ['Names of clients together with their data.', 'Bank account and card numbers.', 'National register, social security or other ID numbers.', 'Contracts, tax returns, medical or HR files.', 'Passwords, access codes and keys.', 'Anything marked confidential.'] },
+      { h: '4. Before you use AI output', list: ['Check facts, figures and sources yourself.', 'A person signs off on every advice or letter that goes to a client.', 'Say that AI helped when a client asks, or when the law or your professional rules require it.'] },
+      { h: '5. How we keep to it', list: ['On work computers, Mindveto blocks AI tools we did not approve and warns before private data is pasted into an AI chat. The check runs on the computer; nothing is sent.', 'The settings are locked with a PIN held by [name].'] },
+      { h: '6. Mistakes and questions', p: ['Pasted something by mistake? Tell [name] the same day. We would rather know early than late.', 'Owner of this policy: [name]. Last review: [date]. Next review: [date plus six months].'], note: 'This template helps you start; it is not legal advice. Check your professional rules, and inform staff before you introduce new IT rules.', human: true },
+    ],
+    related: ['offices', 'paste', 'pricing'],
   },
 };

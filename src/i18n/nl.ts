@@ -134,7 +134,7 @@ export const pages: Record<string, Page> = {
       { q: 'Zien jullie wat mijn personeel plakt?', a: 'Nee. De controle gebeurt op de computer. Geplakte tekst wordt nooit bewaard of verstuurd.' },
       { q: 'Wat kost het?', a: L('Het plan voor teams is €2,50 per gebruiker per maand. Tijdens de lancering is het gratis. Zie <a href="/nl/prijzen/">prijzen</a>.') },
     ],
-    related: ['paste', 'browser', 'network'],
+    related: ['paste', 'policy', 'browser'],
   },
 
   browser: {
@@ -456,5 +456,22 @@ export const pages: Record<string, Page> = {
       { h: 'Hosting', p: ['GitHub Pages, GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, VS.'] },
       { h: 'Intellectuele eigendom', p: ['© 2026 Amghar Said. Alle rechten voorbehouden. Productnamen zoals ChatGPT, Gemini, Claude en Copilot zijn van hun eigenaars en worden alleen genoemd om te beschrijven wat Mindveto blokkeert. Mindveto is niet met hen verbonden.', 'Lettertype: Atkinson Hyperlegible Next, SIL Open Font License, geleverd vanaf deze site. Data van schoolvakanties: OpenHolidays API (ODbL).'] },
     ],
+  },
+  policy: {
+    title: 'Gratis AI-beleid-sjabloon voor kleine kantoren',
+    desc: 'Een AI-beleid van één pagina voor boekhouders, advocaten en andere kleine kantoren: welke tools mogen, wat nooit in AI gaat en hoe je het opvolgt. Gratis.',
+    h1: 'Een AI-beleid dat je team in twee minuten leest.',
+    lead: 'Een sjabloon van één pagina voor boekhouders, advocaten, notarissen en andere kleine kantoren. Kopieer het, vul de delen tussen haakjes in en deel het met je team.',
+    actions: [{ label: 'Afdrukken of opslaan als pdf', url: '#print', solid: true }, { label: 'Voor kantoren', to: 'offices' }],
+    blocks: [
+      { h: 'Waarom je er een nodig hebt', p: ['Sinds 2 februari 2025 vraagt de Europese AI-verordening aan organisaties die AI-tools gebruiken om hun personeel er wegwijs in te maken (AI-geletterdheid). Een kort, geschreven beleid is een eenvoudige eerste stap, en het beschermt de gegevens van je klanten.'] },
+      { h: '1. Doel', p: ['We gebruiken AI waar het ons werk beter maakt. Klantgegevens en vertrouwelijke dossiers blijven beschermd. Dit beleid zegt welke tools we gebruiken en wat er nooit in gaat.'] },
+      { h: '2. Goedgekeurde AI-tools', list: ['[Tool, bijvoorbeeld Microsoft Copilot met onze zakelijke account]: toegestaan voor [opstellen, onze eigen teksten samenvatten].', 'Alle andere AI-chatbots, AI-zoekmachines en AI-schrijftools gebruiken we niet op werktoestellen of voor ons werk.'] },
+      { h: '3. Nooit in een AI-tool', list: ['Namen van klanten samen met hun gegevens.', 'Rekening- en kaartnummers.', 'Rijksregister-, BSN- of andere identiteitsnummers.', 'Contracten, belastingaangiftes, medische of personeelsdossiers.', 'Wachtwoorden, toegangscodes en sleutels.', 'Alles wat als vertrouwelijk gemarkeerd is.'] },
+      { h: '4. Voor je AI-resultaten gebruikt', list: ['Controleer feiten, cijfers en bronnen zelf.', 'Een mens keurt elk advies of elke brief aan een klant goed.', 'Zeg dat AI hielp als een klant ernaar vraagt, of als de wet of je beroepsregels het vragen.'] },
+      { h: '5. Hoe we het opvolgen', list: ['Op werkcomputers blokkeert Mindveto AI-tools die we niet goedkeurden en waarschuwt het voor privégegevens in een AI-chat geplakt worden. De controle gebeurt op de computer; er wordt niets verstuurd.', 'De instellingen zijn vergrendeld met een pincode die [naam] beheert.'] },
+      { h: '6. Vergissingen en vragen', p: ['Per vergissing iets geplakt? Meld het dezelfde dag aan [naam]. We weten het liever vroeg dan laat.', 'Eigenaar van dit beleid: [naam]. Laatst nagekeken: [datum]. Volgende controle: [datum plus zes maanden].'], note: 'Dit sjabloon helpt je op weg; het is geen juridisch advies. Kijk je beroepsregels na en informeer je personeel voor je nieuwe IT-regels invoert.', human: true },
+    ],
+    related: ['offices', 'paste', 'pricing'],
   },
 };

@@ -134,7 +134,7 @@ export const pages: Record<string, Page> = {
       { q: 'Voyez-vous ce que colle mon personnel ?', a: 'Non. La vérification se fait sur l’ordinateur. Le texte collé n’est jamais conservé ni envoyé.' },
       { q: 'Combien ça coûte ?', a: L('La formule pour équipes est de 2,50 € par utilisateur et par mois. Pendant le lancement, c’est gratuit. Voir les <a href="/fr/tarifs/">tarifs</a>.') },
     ],
-    related: ['paste', 'browser', 'network'],
+    related: ['paste', 'policy', 'browser'],
   },
 
   browser: {
@@ -456,5 +456,22 @@ export const pages: Record<string, Page> = {
       { h: 'Hébergement', p: ['GitHub Pages, GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.'] },
       { h: 'Propriété intellectuelle', p: ['© 2026 Amghar Said. Tous droits réservés. Les noms de produits comme ChatGPT, Gemini, Claude et Copilot appartiennent à leurs propriétaires et ne sont cités que pour décrire ce que bloque Mindveto. Mindveto n’y est pas affilié.', 'Police : Atkinson Hyperlegible Next, SIL Open Font License, servie depuis ce site. Dates des vacances scolaires : OpenHolidays API (ODbL).'] },
     ],
+  },
+  policy: {
+    title: 'Modèle gratuit de politique IA pour petits bureaux',
+    desc: 'Une politique IA d’une page pour comptables, avocats et autres petits bureaux : outils approuvés, ce qui n’entre jamais dans l’IA et comment le suivre.',
+    h1: 'Une politique IA que votre équipe lit en deux minutes.',
+    lead: 'Un modèle d’une page pour comptables, avocats, notaires et autres petits bureaux. Copiez-le, complétez les parties entre crochets et partagez-le avec votre équipe.',
+    actions: [{ label: 'Imprimer ou enregistrer en PDF', url: '#print', solid: true }, { label: 'Pour les bureaux', to: 'offices' }],
+    blocks: [
+      { h: 'Pourquoi en avoir une', p: ['Depuis le 2 février 2025, le règlement européen sur l’IA demande aux organisations qui utilisent des outils d’IA d’aider leur personnel à les comprendre (maîtrise de l’IA). Une courte politique écrite est un premier pas simple, et elle protège les données de vos clients.'] },
+      { h: '1. Objectif', p: ['Nous utilisons l’IA quand elle améliore notre travail. Les données clients et les dossiers confidentiels restent protégés. Cette politique dit quels outils nous utilisons et ce qui n’y entre jamais.'] },
+      { h: '2. Outils d’IA approuvés', list: ['[Outil, par exemple Microsoft Copilot avec notre compte professionnel] : autorisé pour [rédiger, résumer nos propres textes].', 'Les autres chatbots, moteurs de recherche et outils de rédaction IA ne sont pas utilisés sur les appareils de travail ni pour le travail.'] },
+      { h: '3. Jamais dans un outil d’IA', list: ['Des noms de clients avec leurs données.', 'Des numéros de compte et de carte.', 'Des numéros de registre national, de sécurité sociale ou d’identité.', 'Des contrats, déclarations fiscales, dossiers médicaux ou RH.', 'Des mots de passe, codes d’accès et clés.', 'Tout ce qui est marqué confidentiel.'] },
+      { h: '4. Avant d’utiliser un résultat d’IA', list: ['Vérifiez vous-même les faits, chiffres et sources.', 'Une personne valide chaque avis ou lettre envoyé à un client.', 'Indiquez que l’IA a aidé si un client le demande, ou si la loi ou vos règles professionnelles l’exigent.'] },
+      { h: '5. Comment nous le respectons', list: ['Sur les ordinateurs de travail, Mindveto bloque les outils d’IA non approuvés et avertit avant que des données privées soient collées dans un chat IA. La vérification se fait sur l’ordinateur ; rien n’est envoyé.', 'Les réglages sont verrouillés par un PIN géré par [nom].'] },
+      { h: '6. Erreurs et questions', p: ['Vous avez collé quelque chose par erreur ? Signalez-le à [nom] le jour même. Mieux vaut le savoir tôt que tard.', 'Responsable de cette politique : [nom]. Dernière révision : [date]. Prochaine révision : [date plus six mois].'], note: 'Ce modèle vous aide à démarrer ; ce n’est pas un avis juridique. Vérifiez vos règles professionnelles et informez le personnel avant d’introduire de nouvelles règles IT.', human: true },
+    ],
+    related: ['offices', 'paste', 'pricing'],
   },
 };

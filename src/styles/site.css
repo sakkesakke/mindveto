@@ -349,3 +349,14 @@ code, kbd { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; fo
 /* one paper band per inner page, full width, like the home rhythm */
 .prose section.midband { position: relative; padding-block: var(--s7); background: var(--paper); box-shadow: 0 0 0 100vmax var(--paper); clip-path: inset(0 -100vmax); }
 @media (min-width: 768px) { .stream p { max-width: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } }
+
+@media print {
+  .top, .foot, .actions, .crumbs, .skip, .pside, .mside { display: none !important; }
+  body { background: #fff; font-size: 11pt; }
+  .prose section, .prose section.midband { display: block !important; background: none; box-shadow: none; clip-path: none; padding: 0; margin: 0 0 10pt; }
+  h1 { font-size: 20pt; } .prose h2 { font-size: 13pt; position: static; margin: 0 0 4pt; }
+  .pagehead { padding: 0 0 8pt; } a { color: inherit; text-decoration: none; }
+}
+
+.demo video { display: block; width: 100%; max-width: 46rem; height: auto; border-radius: 12px; border: 1px solid var(--rule); background: #fff; margin: var(--s3) 0 var(--s2); }
+.demo h2 { font-size: clamp(1.4rem, 2.2vw, 1.9rem); }

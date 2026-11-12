@@ -16,7 +16,7 @@ jobs:
         run: |
           set -e
           base=https://raw.githubusercontent.com/sakkesakke/geopolcoins/main/human-override
-          for f in adblock.txt hosts.txt domains.txt lists.json LICENSE.txt human-override-1.2.1.zip human-override-android.apk human-override-android.sha256 human-override-mac-linux.zip human-override-pro-pack.zip human-override-windows.zip; do
+          for f in adblock.txt hosts.txt domains.txt lists.json LICENSE.txt human-override-1.3.0.zip human-override-android.apk human-override-android.sha256 human-override-mac-linux.zip human-override-pro-pack.zip human-override-windows.zip; do
             curl -fsSL "$base/$f" -o "public/downloads/$f"
           done
       - name: Commit if changed

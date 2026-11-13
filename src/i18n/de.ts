@@ -55,7 +55,7 @@ export const pages: Record<string, Page> = {
         'Ein Manipulationsprotokoll sehen: falsche PIN-Versuche und wann der Schalter ausgeschaltet wurde.',
         'Eine vertrauenswürdige KI erlauben, etwa für ein Schulprojekt, und den Rest gesperrt lassen.',
         'Auf Wunsch auch soziale Medien wie TikTok, Instagram und Snapchat im Browser sperren. Aus, bis Sie es einschalten.',
-        'Familienfilter, kostenlos: Porno- und Ab-18-Seiten sperren und SafeSearch in Google, Bing, DuckDuckGo und YouTube erzwingen. Aus, bis du ihn einschaltest.',
+        'Familienfilter, kostenlos: Porno- und Ab-18-Seiten sperren und SafeSearch in Google, Bing, DuckDuckGo und YouTube erzwingen. Aus, bis du ihn einschaltest. Optional: auch VPN-, Proxy- und Secure-DNS-Seiten sperren, damit der Filter nicht leicht zu umgehen ist.',
       ]},
       { h: 'In 10 Minuten eingerichtet', steps: [
         L('Auf dem Familien-PC: Installieren Sie die <a href="/browser-extension/">Browser-Erweiterung</a>, oder sperren Sie KI in jeder App mit dem Download für <a href="/windows/">Windows</a> oder <a href="/mac-linux/">Mac</a>.'),
@@ -144,7 +144,7 @@ export const pages: Record<string, Page> = {
     desc: 'Kostenlose Erweiterung: sperrt ChatGPT, Gemini, Claude und über 150 KI-Seiten in Chrome, Edge, Brave und Opera. PIN, Zeitplan, Einfüge-Schutz. Kein Tracking.',
     h1: 'Der KI-Schalter für Ihren Browser.',
     lead: 'Ein Schalter sperrt über 150 KI-Chatbots und KI-Tools. Eine PIN verhindert, dass jemand anderes ihn ändert. Funktioniert in Chrome, Edge, Brave und Opera.',
-    actions: [{ label: 'v1.4.0 herunterladen (724 KB)', url: DL + 'human-override-1.4.0.zip', solid: true, download: true }, { label: 'Installationsschritte', url: '#install' }],
+    actions: [{ label: 'v1.5.0 herunterladen (724 KB)', url: DL + 'human-override-1.5.0.zip', solid: true, download: true }, { label: 'Installationsschritte', url: '#install' }],
     blocks: [
       { h: 'Was drin ist', list: [
         'Sperrt KI-Chat, KI-Suche, KI-Bild-, Video-, Stimm- und Musiktools, KI-Schreib- und Hausaufgabentools, KI-Programmiertools und KI-Protokollanten.',
@@ -157,7 +157,7 @@ export const pages: Record<string, Page> = {
         'Eigene Sperr- und Erlaubt-Listen. Die öffentliche Liste wird einmal täglich aktualisiert.',
         'Optional: auch soziale Medien sperren (TikTok, Instagram, Snapchat und mehr). Aus, bis Sie es einschalten.',
         'Die Erweiterung ist vorerst auf Englisch, Niederländisch und Französisch.',
-        'Familienfilter: sperrt über 60.000 Porno- und Ab-18-Seiten und erzwingt SafeSearch in Google, Bing, DuckDuckGo und YouTube. Aus, bis du ihn einschaltest; mit PIN kannst nur du ihn ausschalten.',
+        'Familienfilter: sperrt über 60.000 Porno- und Ab-18-Seiten und erzwingt SafeSearch in Google, Bing, DuckDuckGo und YouTube. Aus, bis du ihn einschaltest; mit PIN kannst nur du ihn ausschalten. Optional: sperrt auch VPN-, Proxy-, Tor- und Secure-DNS-Seiten, damit der Filter nicht einfach umgangen wird.',
       ]},
       { h: 'In einer Minute installiert', fold: 'Installationsschritte zeigen', foldLead: 'Store-Versionen sind unterwegs. Bis dahin installieren Sie sie in einer Minute von Hand.', steps: [
         'Laden Sie das Zip oben herunter und entpacken Sie es (Rechtsklick, „Alle extrahieren“).',
@@ -167,7 +167,7 @@ export const pages: Record<string, Page> = {
         'Heften Sie das Symbol an die Leiste, öffnen Sie es und setzen Sie eine PIN.',
       ], note: 'Für Eltern und Schulen: Schalten Sie auf der Seite „Details“ der Erweiterung „Im Inkognitomodus zulassen“ ein. Sonst werden private Fenster nicht gesperrt.' },
       { h: 'Fakten', facts: [
-        ['Version', '1.4.0 (Manifest V3)'], ['Größe', '724 KB'], ['Browser', 'Chrome, Edge, Brave, Opera. Firefox und die offiziellen Stores: bald'],
+        ['Version', '1.5.0 (Manifest V3)'], ['Größe', '724 KB'], ['Browser', 'Chrome, Edge, Brave, Opera. Firefox und die offiziellen Stores: bald'],
         ['Berechtigungen', 'Sperrregeln, lokaler Speicher, ein täglicher Timer'], ['Gesendete Daten', 'Keine. Nur die öffentliche Liste wird einmal täglich geladen'], ['Preis', 'Kostenlos'],
       ]},
     ],
@@ -188,7 +188,7 @@ export const pages: Record<string, Page> = {
       { h: 'So funktioniert es', p: [
         'Die App betreibt auf dem Handy einen kleinen lokalen Filter für Internet-Namen (DNS). Fragt eine App nach einer KI-Adresse, antwortet der Filter, dass es sie nicht gibt. Alles andere funktioniert normal.',
         'Nur diese Namensabfragen laufen durch die App. An uns wird nichts gesendet.',
-        'Optionaler Familienfilter: Schalte in der App „Erwachsenenseiten“ und „SafeSearch“ ein. Pornoseiten öffnen sich dann in keiner App, und Google, Bing, DuckDuckGo und YouTube zeigen sichere Ergebnisse. Mit PIN lässt er sich nur mit der PIN ausschalten.',
+        'Optionaler Familienfilter: Schalte in der App „Erwachsenenseiten“ und „SafeSearch“ ein. Pornoseiten öffnen sich dann in keiner App, und Google, Bing, DuckDuckGo und YouTube zeigen sichere Ergebnisse. Mit PIN lässt er sich nur mit der PIN ausschalten. Ein dritter Schalter sperrt VPN-, Proxy- und Secure-DNS-Dienste, damit der Filter nicht leicht zu umgehen ist.',
       ]},
       { h: 'Installieren', steps: [
         'Öffnen Sie den Download-Link auf dem Handy.',
@@ -221,7 +221,7 @@ export const pages: Record<string, Page> = {
         'Doppelklicken Sie auf „Start-Mindveto.bat“ und klicken Sie auf Ja.',
         'Tippen Sie 1, um KI zu sperren. Tippen Sie 3, um auch Copilot, Recall und die KI in Edge und Chrome abzuschalten.',
         'Geben Sie Kindern oder Personal ein normales Konto (ohne Admin-Rechte). Dann können sie es nicht rückgängig machen.',
-        'Tippe 5, um den Familienfilter einzuschalten: Porno- und Ab-18-Seiten gesperrt, SafeSearch in Google, Bing und YouTube erzwungen. Tippe 6, um ihn auszuschalten.',
+        'Tippe 5, um den Familienfilter einzuschalten: Porno- und Ab-18-Seiten gesperrt, SafeSearch in Google, Bing und YouTube erzwungen. Tippe 6, um ihn auszuschalten. Er sperrt auch VPN-, Proxy- und Secure-DNS-Seiten und schaltet Secure DNS in Chrome, Edge und Firefox aus.',
       ], note: 'Windows meldet eventuell zuerst, dass es „den PC geschützt“ hat. Klicken Sie auf „Weitere Informationen“, dann auf „Trotzdem ausführen“. Das Skript ist reiner Text: Sie können es im Editor öffnen und jede Zeile lesen. Das Skript ist auf Englisch.' },
       { h: 'Fakten', facts: [
         ['Läuft auf', 'Windows 10 und 11'], ['Wie', 'Trägt KI-Adressen in die Windows-hosts-Datei ein und setzt offizielle Windows-Richtlinien für eingebaute KI'],
@@ -243,7 +243,7 @@ export const pages: Record<string, Page> = {
         'Öffnen Sie das Terminal im entpackten Ordner.',
         L('Tippen Sie <code>sudo sh mindveto.sh on</code> und Ihr Passwort.'),
         L('Um KI wieder zu erlauben: <code>sudo sh mindveto.sh off</code>.'),
-        L('Familienfilter (Porno- und Ab-18-Seiten, SafeSearch): <code>sudo sh mindveto.sh family-on</code>, und <code>family-off</code> zum Rückgängigmachen.'),
+        L('Familienfilter (Porno- und Ab-18-Seiten, SafeSearch): <code>sudo sh mindveto.sh family-on</code>, und <code>family-off</code> zum Rückgängigmachen. Er sperrt auch VPN-, Proxy- und Secure-DNS-Seiten.'),
       ], note: 'Nutzen Sie für Kinder ein normales Konto (ohne Admin-Rechte). Dann können sie die hosts-Datei nicht ändern.' },
       { h: 'Fakten', facts: [
         ['Läuft auf', 'macOS, Ubuntu, Debian, Fedora und den meisten Linux-Systemen'], ['Rückgängig', 'Ein Befehl'], ['Preis', 'Kostenlos'],
@@ -331,7 +331,7 @@ export const pages: Record<string, Page> = {
     h1: 'Mindveto herunterladen.',
     lead: 'Wählen Sie das Gerät, das Sie schützen möchten. Alles ist kostenlos und braucht kein Konto. Die Apps sind vorerst auf Englisch, Niederländisch und Französisch.',
     blocks: [
-      { h: 'Browser-Erweiterung', p: ['Chrome, Edge, Brave und Opera. Version 1.4.0, 724 KB.'], actions: [{ label: 'Herunterladen', url: DL + 'human-override-1.4.0.zip', solid: true, download: true }, { label: 'Installationsschritte', to: 'browser' }] },
+      { h: 'Browser-Erweiterung', p: ['Chrome, Edge, Brave und Opera. Version 1.5.0, 724 KB.'], actions: [{ label: 'Herunterladen', url: DL + 'human-override-1.5.0.zip', solid: true, download: true }, { label: 'Installationsschritte', to: 'browser' }] },
       { h: 'Android-App (Beta)', p: ['Sperrt KI in jeder App. 45 KB.'], actions: [{ label: 'Herunterladen', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Installationsschritte', to: 'android' }] },
       { h: 'Windows', p: ['Jeder Browser und jede App auf dem PC. 490 KB.'], actions: [{ label: 'Herunterladen', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Installationsschritte', to: 'windows' }] },
       { h: 'Mac und Linux', p: ['Ein Befehl, systemweit. 485 KB.'], actions: [{ label: 'Herunterladen', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Installationsschritte', to: 'maclinux' }] },

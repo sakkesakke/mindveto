@@ -54,7 +54,7 @@ export const pages: Record<string, Page> = {
         'Consulter le journal anti-sabotage : PIN erronés et moments où l’interrupteur a été coupé.',
         'Autoriser une IA de confiance, par exemple pour un projet scolaire, et garder le reste bloqué.',
         'Si vous le souhaitez, bloquer aussi les réseaux sociaux comme TikTok, Instagram et Snapchat dans le navigateur. Désactivé tant que vous ne l’activez pas.',
-        'Filtre famille, gratuit : bloquez les sites porno et 18+ et imposez SafeSearch dans Google, Bing, DuckDuckGo et YouTube. Désactivé tant que vous ne l’activez pas.',
+        'Filtre famille, gratuit : bloquez les sites porno et 18+ et imposez SafeSearch dans Google, Bing, DuckDuckGo et YouTube. Désactivé tant que vous ne l’activez pas. En option : bloquez aussi les sites de VPN, de proxy et de DNS sécurisé, pour que le filtre ne soit pas facile à contourner.',
       ]},
       { h: 'Prêt en 10 minutes', steps: [
         L('Sur l’ordinateur familial : installez l’<a href="/fr/extension-navigateur/">extension de navigateur</a>, ou bloquez l’IA dans toutes les applis avec le téléchargement <a href="/fr/windows/">Windows</a> ou <a href="/fr/mac-linux/">Mac</a>.'),
@@ -143,7 +143,7 @@ export const pages: Record<string, Page> = {
     desc: 'Extension gratuite qui bloque ChatGPT, Gemini, Claude et 150+ sites d’IA dans Chrome, Edge, Brave et Opera. PIN, horaire, garde-collage.',
     h1: 'L’interrupteur d’IA pour votre navigateur.',
     lead: 'Un interrupteur bloque 150+ chatbots et outils d’IA. Un PIN empêche quiconque de le modifier. Fonctionne dans Chrome, Edge, Brave et Opera.',
-    actions: [{ label: 'Télécharger v1.4.0 (724 Ko)', url: DL + 'human-override-1.4.0.zip', solid: true, download: true }, { label: 'Étapes d’installation', url: '#install' }],
+    actions: [{ label: 'Télécharger v1.5.0 (724 Ko)', url: DL + 'human-override-1.5.0.zip', solid: true, download: true }, { label: 'Étapes d’installation', url: '#install' }],
     blocks: [
       { h: 'Ce qu’il contient', list: [
         'Bloque le chat IA, la recherche IA, les outils d’image, vidéo, voix et musique IA, l’IA de rédaction et de devoirs, l’IA de programmation et les preneurs de notes IA.',
@@ -155,7 +155,7 @@ export const pages: Record<string, Page> = {
         'Journal anti-sabotage et une marque rouge sur l’icône après un PIN erroné.',
         'Vos propres listes de blocage et d’autorisation. La liste publique est mise à jour chaque jour.',
         'En option : bloquez aussi les réseaux sociaux (TikTok, Instagram, Snapchat et plus). Désactivé tant que vous ne l’activez pas.',
-        'Filtre famille : bloque plus de 60 000 sites porno et 18+ et impose SafeSearch dans Google, Bing, DuckDuckGo et YouTube. Désactivé tant que vous ne l’activez pas ; avec un PIN, vous seul pouvez le couper.',
+        'Filtre famille : bloque plus de 60 000 sites porno et 18+ et impose SafeSearch dans Google, Bing, DuckDuckGo et YouTube. Désactivé tant que vous ne l’activez pas ; avec un PIN, vous seul pouvez le couper. En option : bloque aussi les sites de VPN, de proxy, Tor et DNS sécurisé, pour que le filtre ne soit pas simple à contourner.',
       ]},
       { h: 'Installer en une minute', fold: 'Afficher les étapes d’installation', foldLead: 'Les versions des boutiques arrivent. D’ici là, vous l’installez à la main en une minute.', steps: [
         'Téléchargez le zip ci-dessus et décompressez-le (clic droit, « Extraire tout »).',
@@ -165,7 +165,7 @@ export const pages: Record<string, Page> = {
         'Épinglez l’icône dans votre barre d’outils, ouvrez-la et définissez un PIN.',
       ], note: 'Pour les parents et les écoles : sur la page « Détails » de l’extension, activez « Autoriser en navigation privée ». Sinon, les fenêtres privées ne sont pas bloquées.' },
       { h: 'Fiche', facts: [
-        ['Version', '1.4.0 (Manifest V3)'], ['Taille', '724 Ko'], ['Navigateurs', 'Chrome, Edge, Brave, Opera. Firefox et les boutiques officielles : bientôt'],
+        ['Version', '1.5.0 (Manifest V3)'], ['Taille', '724 Ko'], ['Navigateurs', 'Chrome, Edge, Brave, Opera. Firefox et les boutiques officielles : bientôt'],
         ['Autorisations', 'Règles de blocage, stockage local, un minuteur quotidien'], ['Données envoyées', 'Aucune. Seule la liste publique est téléchargée chaque jour'], ['Prix', 'Gratuit'],
       ]},
     ],
@@ -186,7 +186,7 @@ export const pages: Record<string, Page> = {
       { h: 'Comment ça marche', p: [
         'L’appli fait tourner un petit filtre local de noms internet (DNS) sur le téléphone. Quand une appli demande une adresse d’IA, le filtre répond qu’elle n’existe pas. Tout le reste fonctionne normalement.',
         'Seules ces demandes de noms passent par l’appli. Rien ne nous est envoyé.',
-        'Filtre famille en option : activez « Sites pour adultes » et « SafeSearch » dans l’appli. Les sites porno ne s’ouvrent alors dans aucune appli, et Google, Bing, DuckDuckGo et YouTube montrent des résultats sûrs. Avec un PIN, il faut le PIN pour le couper.',
+        'Filtre famille en option : activez « Sites pour adultes » et « SafeSearch » dans l’appli. Les sites porno ne s’ouvrent alors dans aucune appli, et Google, Bing, DuckDuckGo et YouTube montrent des résultats sûrs. Avec un PIN, il faut le PIN pour le couper. Un troisième interrupteur bloque les services de VPN, de proxy et de DNS sécurisé, pour que le filtre ne soit pas facile à contourner.',
       ]},
       { h: 'Installer', steps: [
         'Ouvrez le lien de téléchargement sur le téléphone.',
@@ -219,7 +219,7 @@ export const pages: Record<string, Page> = {
         'Double-cliquez sur « Start-Mindveto.bat » et cliquez sur Oui.',
         'Tapez 1 pour bloquer l’IA. Tapez 3 pour couper aussi Copilot, Recall et l’IA d’Edge et de Chrome.',
         'Donnez aux enfants ou au personnel un compte standard (pas administrateur). Ils ne pourront pas l’annuler.',
-        'Tapez 5 pour activer le filtre famille : sites porno et 18+ bloqués, SafeSearch imposé dans Google, Bing et YouTube. Tapez 6 pour le couper.',
+        'Tapez 5 pour activer le filtre famille : sites porno et 18+ bloqués, SafeSearch imposé dans Google, Bing et YouTube. Tapez 6 pour le couper. Il bloque aussi les sites de VPN, de proxy et de DNS sécurisé et coupe le DNS sécurisé dans Chrome, Edge et Firefox.',
       ], note: 'Windows peut d’abord dire qu’il « a protégé votre PC ». Cliquez sur « Informations complémentaires », puis « Exécuter quand même ». Le script est du texte simple : vous pouvez l’ouvrir dans le Bloc-notes et lire chaque ligne.' },
       { h: 'Fiche', facts: [
         ['Fonctionne sur', 'Windows 10 et 11'], ['Comment', 'Ajoute les adresses d’IA au fichier hosts de Windows et utilise les stratégies officielles de Windows pour l’IA intégrée'],
@@ -241,7 +241,7 @@ export const pages: Record<string, Page> = {
         'Ouvrez le Terminal dans le dossier décompressé.',
         L('Tapez <code>sudo sh mindveto.sh on</code> et votre mot de passe.'),
         L('Pour autoriser l’IA à nouveau : <code>sudo sh mindveto.sh off</code>.'),
-        L('Filtre famille (sites porno et 18+, SafeSearch) : <code>sudo sh mindveto.sh family-on</code>, et <code>family-off</code> pour annuler.'),
+        L('Filtre famille (sites porno et 18+, SafeSearch) : <code>sudo sh mindveto.sh family-on</code>, et <code>family-off</code> pour annuler. Il bloque aussi les sites de VPN, de proxy et de DNS sécurisé.'),
       ], note: 'Donnez aux enfants un compte standard (pas administrateur). Ils ne pourront pas modifier le fichier hosts.' },
       { h: 'Fiche', facts: [
         ['Fonctionne sur', 'macOS, Ubuntu, Debian, Fedora et la plupart des systèmes Linux'], ['Annuler', 'Une commande'], ['Prix', 'Gratuit'],
@@ -329,7 +329,7 @@ export const pages: Record<string, Page> = {
     h1: 'Télécharger Mindveto.',
     lead: 'Choisissez l’appareil à protéger. Tout est gratuit et sans compte.',
     blocks: [
-      { h: 'Extension de navigateur', p: ['Chrome, Edge, Brave et Opera. Version 1.4.0, 724 Ko.'], actions: [{ label: 'Télécharger', url: DL + 'human-override-1.4.0.zip', solid: true, download: true }, { label: 'Étapes d’installation', to: 'browser' }] },
+      { h: 'Extension de navigateur', p: ['Chrome, Edge, Brave et Opera. Version 1.5.0, 724 Ko.'], actions: [{ label: 'Télécharger', url: DL + 'human-override-1.5.0.zip', solid: true, download: true }, { label: 'Étapes d’installation', to: 'browser' }] },
       { h: 'Appli Android (bêta)', p: ['Bloque l’IA dans toutes les applis. 45 Ko.'], actions: [{ label: 'Télécharger', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Étapes d’installation', to: 'android' }] },
       { h: 'Windows', p: ['Tous les navigateurs et applis du PC. 490 Ko.'], actions: [{ label: 'Télécharger', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Étapes d’installation', to: 'windows' }] },
       { h: 'Mac et Linux', p: ['Une commande, pour tout le système. 485 Ko.'], actions: [{ label: 'Télécharger', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Étapes d’installation', to: 'maclinux' }] },

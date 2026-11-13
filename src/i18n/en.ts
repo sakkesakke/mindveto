@@ -54,7 +54,7 @@ export const pages: Record<string, Page> = {
         'See a tamper log: wrong PIN attempts and when the switch was turned off.',
         'Allow one AI you trust, for example for a school project, and keep the rest blocked.',
         'If you want, also block social media such as TikTok, Instagram and Snapchat in the browser. It is off unless you switch it on.',
-        'Family filter, free: block porn and 18+ sites and force SafeSearch in Google, Bing, DuckDuckGo and YouTube. Off until you switch it on. Optional: also block VPN, proxy and secure-DNS sites, so the filter is not easy to skip.',
+        'Family filter, free: block porn and 18+ sites and force SafeSearch in Google, Bing, DuckDuckGo and YouTube. Off until you switch it on. Optional: also block VPN, proxy and secure-DNS sites, so the filter is not easy to skip. Also optional: block gambling and betting sites, and dating apps and random video chat.',
       ]},
       { h: 'Set it up in 10 minutes', steps: [
         L('On the family computer: install the <a href="/browser-extension/">browser extension</a>, or block AI in every app with the <a href="/windows/">Windows</a> or <a href="/mac-linux/">Mac</a> download.'),
@@ -143,7 +143,7 @@ export const pages: Record<string, Page> = {
     desc: 'Free extension that blocks ChatGPT, Gemini, Claude and 150+ AI sites in Chrome, Edge, Brave and Opera. PIN, schedule, paste guard. No tracking.',
     h1: 'The AI switch for your browser.',
     lead: 'One switch blocks 150+ AI chatbots and AI tools. A PIN stops anyone else from changing it. Works in Chrome, Edge, Brave and Opera.',
-    actions: [{ label: 'Download v1.5.0 (724 KB)', url: DL + 'human-override-1.5.0.zip', solid: true, download: true }, { label: 'Install steps', url: '#install' }],
+    actions: [{ label: 'Download v1.6.0 (735 KB)', url: DL + 'human-override-1.6.0.zip', solid: true, download: true }, { label: 'Install steps', url: '#install' }],
     blocks: [
       { h: 'What is inside', list: [
         'Blocks AI chat, AI search, AI image, video, voice and music tools, AI writing and homework tools, AI coding tools and AI note-takers.',
@@ -155,7 +155,7 @@ export const pages: Record<string, Page> = {
         'Tamper log and a red mark on the icon after a wrong PIN.',
         'Your own block and allow lists. The public list updates once a day.',
         'Optional: block social media too (TikTok, Instagram, Snapchat and more). Off until you switch it on.',
-        'Family filter: block 60,000+ porn and 18+ sites and force SafeSearch in Google, Bing, DuckDuckGo and YouTube. Off until you switch it on; with a PIN, only you can switch it off. Optional: also block VPN, proxy, Tor and secure-DNS sites, so the filter cannot simply be skipped.',
+        'Family filter: block 60,000+ porn and 18+ sites and force SafeSearch in Google, Bing, DuckDuckGo and YouTube. Off until you switch it on; with a PIN, only you can switch it off. Optional: also block VPN, proxy, Tor and secure-DNS sites, so the filter cannot simply be skipped. Also optional: block gambling and betting sites, and dating apps and random video chat.',
       ]},
       { h: 'Install in one minute', fold: 'Show the install steps', foldLead: 'Store versions are on the way. Until then you install it by hand in one minute.', steps: [
         'Download the zip above and unzip it (right click, “Extract all”).',
@@ -165,7 +165,7 @@ export const pages: Record<string, Page> = {
         'Pin the icon to your toolbar, open it and set a PIN.',
       ], note: 'For parents and schools: on the extension’s “Details” page, switch on “Allow in Incognito”. Otherwise private windows are not blocked.' },
       { h: 'Facts', facts: [
-        ['Version', '1.5.0 (Manifest V3)'], ['Size', '724 KB'], ['Browsers', 'Chrome, Edge, Brave, Opera. Firefox and the official stores: coming soon'],
+        ['Version', '1.6.0 (Manifest V3)'], ['Size', '735 KB'], ['Browsers', 'Chrome, Edge, Brave, Opera. Firefox and the official stores: coming soon'],
         ['Permissions', 'Blocking rules, local storage, a daily timer'], ['Data sent', 'None. Only the public list is downloaded once a day'], ['Price', 'Free'],
       ]},
     ],
@@ -186,7 +186,7 @@ export const pages: Record<string, Page> = {
       { h: 'How it works', p: [
         'The app runs a small local filter for internet names (DNS) on the phone. When an app asks for an AI address, the filter answers that it does not exist. Everything else works as normal.',
         'Only these name lookups pass through the app. Nothing is sent to us.',
-        'Optional family filter: switch on “Adult sites” and “SafeSearch” in the app. Porn sites then do not open in any app, and Google, Bing, DuckDuckGo and YouTube show safe results. With a PIN set, switching it off needs the PIN. A third switch blocks VPN, proxy and secure-DNS services, so the filter is not easy to skip.',
+        'Optional family filter: switch on “Adult sites” and “SafeSearch” in the app. Porn sites then do not open in any app, and Google, Bing, DuckDuckGo and YouTube show safe results. With a PIN set, switching it off needs the PIN. A third switch blocks VPN, proxy and secure-DNS services, so the filter is not easy to skip. Also optional: block gambling and betting sites, and dating apps and random video chat.',
       ]},
       { h: 'Install', steps: [
         'Open the download link on the phone.',
@@ -212,14 +212,14 @@ export const pages: Record<string, Page> = {
     desc: 'Free Windows download that blocks ChatGPT and 150+ AI services in every browser and app, and can switch off Copilot and Recall.',
     h1: 'Block AI on the whole Windows PC.',
     lead: 'No extension needed: one download blocks AI addresses for every browser and every app on the computer. It can also switch off the AI built into Windows.',
-    actions: [{ label: 'Download for Windows (490 KB)', url: DL + 'human-override-windows.zip', solid: true, download: true }],
+    actions: [{ label: 'Download for Windows (501 KB)', url: DL + 'human-override-windows.zip', solid: true, download: true }],
     blocks: [
       { h: 'Install', fold: 'Show the install steps', foldLead: 'Store versions are on the way. Until then you install it by hand in one minute.', steps: [
         'Unzip the download.',
         'Double-click “Start-Mindveto.bat” and click Yes.',
         'Type 1 to block AI. Type 3 to also switch off Copilot, Recall and the AI in Edge and Chrome.',
         'Give children or staff a normal (non-admin) account. Then they cannot undo it.',
-        'Type 5 to switch on the family filter: porn and 18+ sites blocked, SafeSearch forced in Google, Bing and YouTube. Type 6 to switch it off. It also blocks VPN, proxy and secure-DNS sites and switches off secure DNS in Chrome, Edge and Firefox.',
+        'Type 5 to switch on the family filter: porn and 18+ sites blocked, SafeSearch forced in Google, Bing and YouTube. Type 6 to switch it off. It also blocks VPN, proxy and secure-DNS sites and switches off secure DNS in Chrome, Edge and Firefox. Option 5 also asks about gambling and dating sites.',
       ], note: 'Windows may first say it “protected your PC”. Click “More info”, then “Run anyway”. The script is plain text: you can open it in Notepad and read every line.' },
       { h: 'Facts', facts: [
         ['Works on', 'Windows 10 and 11'], ['How', 'Adds AI addresses to the Windows hosts file, and sets official Windows policies for built-in AI'],
@@ -234,14 +234,14 @@ export const pages: Record<string, Page> = {
     desc: 'Free script that blocks ChatGPT and 150+ AI services in every browser and app on a Mac or Linux computer. One command on, one off.',
     h1: 'One command. AI off on the whole Mac or Linux computer.',
     lead: 'The script adds AI addresses to the system hosts file, so every browser and app on the computer is covered.',
-    actions: [{ label: 'Download for Mac and Linux (485 KB)', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }],
+    actions: [{ label: 'Download for Mac and Linux (498 KB)', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }],
     blocks: [
       { h: 'Install', steps: [
         'Unzip the download.',
         'Open Terminal in the unzipped folder.',
         L('Type <code>sudo sh mindveto.sh on</code> and your password.'),
         L('To allow AI again: <code>sudo sh mindveto.sh off</code>.'),
-        L('Family filter (porn and 18+ sites, SafeSearch): <code>sudo sh mindveto.sh family-on</code>, and <code>family-off</code> to undo. It also blocks VPN, proxy and secure-DNS sites.'),
+        L('Family filter (porn and 18+ sites, SafeSearch): <code>sudo sh mindveto.sh family-on</code>, and <code>family-off</code> to undo. It also blocks VPN, proxy and secure-DNS sites. Add <code>gambling dating</code> to also block those sites.'),
       ], note: 'Use a normal (non-admin) account for children. Then they cannot change the hosts file.' },
       { h: 'Facts', facts: [
         ['Works on', 'macOS, Ubuntu, Debian, Fedora and most Linux systems'], ['Undo', 'One command'], ['Price', 'Free'],
@@ -329,10 +329,10 @@ export const pages: Record<string, Page> = {
     h1: 'Download Mindveto.',
     lead: 'Pick the device you want to protect. Everything is free and needs no account.',
     blocks: [
-      { h: 'Browser extension', p: ['Chrome, Edge, Brave and Opera. Version 1.5.0, 724 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-1.5.0.zip', solid: true, download: true }, { label: 'Install steps', to: 'browser' }] },
+      { h: 'Browser extension', p: ['Chrome, Edge, Brave and Opera. Version 1.6.0, 735 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-1.6.0.zip', solid: true, download: true }, { label: 'Install steps', to: 'browser' }] },
       { h: 'Android app (beta)', p: ['Blocks AI in every app. 45 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Install steps', to: 'android' }] },
-      { h: 'Windows', p: ['Every browser and app on the PC. 490 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Install steps', to: 'windows' }] },
-      { h: 'Mac and Linux', p: ['One command, system-wide. 485 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Install steps', to: 'maclinux' }] },
+      { h: 'Windows', p: ['Every browser and app on the PC. 501 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Install steps', to: 'windows' }] },
+      { h: 'Mac and Linux', p: ['One command, system-wide. 498 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Install steps', to: 'maclinux' }] },
       { h: 'IT pack and lists', p: ['DNS, firewall and browser-policy files. 13 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-pro-pack.zip', solid: true, download: true }, { label: 'All lists', to: 'network' }] },
     ],
     related: ['help', 'pricing'],

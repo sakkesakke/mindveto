@@ -16,18 +16,24 @@ jobs:
         run: |
           set -e
           base=https://raw.githubusercontent.com/sakkesakke/geopolcoins/main/human-override
-          for f in adblock.txt hosts.txt domains.txt lists.json LICENSE.txt human-override-1.5.0.zip human-override-android.apk human-override-android.sha256 human-override-mac-linux.zip human-override-pro-pack.zip human-override-windows.zip; do
+          for f in adblock.txt hosts.txt domains.txt lists.json LICENSE.txt human-override-1.6.0.zip human-override-android.apk human-override-android.sha256 human-override-mac-linux.zip human-override-pro-pack.zip human-override-windows.zip; do
             curl -fsSL "$base/$f" -o "public/downloads/$f"
           done
           mkdir -p public/downloads/adult
           for f in hosts.txt adblock.txt domains.txt NOTICE.txt; do
             curl -fsSL "$base/adult/$f" -o "public/downloads/adult/$f"
           done
+          for k in gamble dating; do
+            mkdir -p public/downloads/$k
+            for f in hosts.txt adblock.txt domains.txt; do
+              curl -fsSL "$base/$k/$f" -o "public/downloads/$k/$f"
+            done
+          done
           mkdir -p public/downloads/bypass
           for f in hosts.txt adblock.txt domains.txt; do
             curl -fsSL "$base/bypass/$f" -o "public/downloads/bypass/$f"
           done
-          rm -f public/downloads/human-override-1.3.0.zip public/downloads/human-override-1.4.0.zip
+          rm -f public/downloads/human-override-1.3.0.zip public/downloads/human-override-1.4.0.zip public/downloads/human-override-1.5.0.zip
       - name: Commit if changed
         run: |
           git config user.name "mindveto-bot"

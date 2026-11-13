@@ -382,6 +382,10 @@ export const pages: Record<string, Page> = {
     h1: 'People should decide when AI is part of their day.',
     lead: 'Mindveto is made by Amghar Said, an independent maker. It started as Human Override in 2026 and got its own name in November 2026.',
     blocks: [
+      { h: 'Who makes it', p: [
+        'Amghar Said coordinates educational stays for teenagers in his day job. Technology has been his passion for 30 years, and Mindveto is a project he builds alongside his work.',
+        L('Follow him or send a message on <a href="https://www.linkedin.com/in/amghar-said-67a95a22/" rel="me">LinkedIn</a>.'),
+      ]},
       { h: 'Why the name', p: [
         'In the 1980s the brain researcher Benjamin Libet described how our conscious mind can stop an urge just before we act: a veto. Mindveto gives that pause to people who want it from AI.',
       ]},

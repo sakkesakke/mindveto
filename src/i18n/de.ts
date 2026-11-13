@@ -384,6 +384,10 @@ export const pages: Record<string, Page> = {
     h1: 'Menschen sollten entscheiden, wann KI Teil ihres Tages ist.',
     lead: 'Mindveto wird von Amghar Said entwickelt, einem unabhängigen Entwickler. Es begann 2026 als Human Override und bekam im November 2026 einen eigenen Namen.',
     blocks: [
+      { h: 'Wer es macht', p: [
+        'Im Beruf koordiniert Amghar Said pädagogische Aufenthalte für Jugendliche. Technik ist seit 30 Jahren seine Leidenschaft, und Mindveto baut er neben seiner Arbeit.',
+        L('Folge ihm oder schreib ihm auf <a href="https://www.linkedin.com/in/amghar-said-67a95a22/" rel="me">LinkedIn</a>.'),
+      ]},
       { h: 'Warum der Name', p: [
         'In den 1980er-Jahren beschrieb der Hirnforscher Benjamin Libet, wie unser Bewusstsein einen Impuls kurz vor dem Handeln stoppen kann: ein Veto. Mindveto gibt diese Pause allen, die sie bei KI wollen.',
       ]},

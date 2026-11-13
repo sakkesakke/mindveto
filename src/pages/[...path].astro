@@ -60,7 +60,7 @@ if (!isHome) {
   if (isProduct && key !== 'exam' && key !== 'paste') jsonld.push({
     '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'Mindveto ' + PRODUCT_NAMES[lang][key],
     applicationCategory: 'SecurityApplication', operatingSystem: { browser: 'Chrome, Edge, Brave, Opera', android: 'Android 8+', windows: 'Windows 10, Windows 11', maclinux: 'macOS, Linux', network: 'Any' }[key as string],
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' }, author: { '@type': 'Person', name: 'Amghar Said' }, url: SITE + href(key, lang),
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' }, author: { '@type': 'Person', name: 'Amghar Said', sameAs: ['https://www.linkedin.com/in/amghar-said-67a95a22/'] }, url: SITE + href(key, lang),
   });
   if (key === 'paste' || key === 'offices') jsonld.push({
     '@context': 'https://schema.org', '@type': 'VideoObject', name: pg!.title, description: pg!.desc, inLanguage: lang,
@@ -72,7 +72,7 @@ if (!isHome) {
   jsonld.push({
     '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'Mindveto', description: desc, url: SITE + href('home', lang),
     applicationCategory: 'SecurityApplication', operatingSystem: 'Chrome, Edge, Brave, Opera, Android 8+, Windows 10, Windows 11, macOS, Linux',
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' }, author: { '@type': 'Person', name: 'Amghar Said' },
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' }, author: { '@type': 'Person', name: 'Amghar Said', sameAs: ['https://www.linkedin.com/in/amghar-said-67a95a22/'] },
   });
 }
 const X = EXAM_UI[lang];

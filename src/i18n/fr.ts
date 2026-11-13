@@ -382,6 +382,10 @@ export const pages: Record<string, Page> = {
     h1: 'Chacun décide quand l’IA fait partie de sa journée.',
     lead: 'Mindveto est créé par Amghar Said, un créateur indépendant. Il a commencé en 2026 sous le nom Human Override et a reçu son propre nom en novembre 2026.',
     blocks: [
+      { h: 'Qui le fait', p: [
+        'Dans son métier, Amghar Said coordonne des séjours éducatifs pour adolescents. La technologie est sa passion depuis 30 ans, et Mindveto est un projet qu’il construit à côté de son travail.',
+        L('Suivez-le ou écrivez-lui sur <a href="https://www.linkedin.com/in/amghar-said-67a95a22/" rel="me">LinkedIn</a>.'),
+      ]},
       { h: 'Pourquoi ce nom', p: [
         'Dans les années 1980, le chercheur Benjamin Libet a décrit comment notre esprit conscient peut arrêter une impulsion juste avant d’agir : un veto. Mindveto offre cette pause face à l’IA à qui la veut.',
       ]},

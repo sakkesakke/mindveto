@@ -406,7 +406,7 @@ export const pages: Record<string, Page> = {
     title: 'Privacybeleid',
     desc: 'Mindveto verzamelt geen persoonsgegevens: geen cookies, geen trackers, geen accounts. Wat de site, apps en examenmodus verwerken, en je rechten.',
     h1: 'Privacybeleid',
-    lead: 'Kort: we verzamelen geen persoonsgegevens. Deze pagina legt uit welke paar dingen wel een server raken, en wat je rechten zijn. Versie 1, 12 november 2026.',
+    lead: 'Kort: we verzamelen geen persoonsgegevens. Deze pagina legt uit welke paar dingen wel een server raken, en wat je rechten zijn. Versie 2, 13 november 2026.',
     blocks: [
       { h: 'Wie verantwoordelijk is', p: [L('Amghar Said, België. Contact: <a href="mailto:hello@mindveto.app">hello@mindveto.app</a>.')] },
       { h: 'Deze website', list: [
@@ -418,6 +418,7 @@ export const pages: Record<string, Page> = {
         'Blokkeren, de plakbewaker en alle instellingen werken op je toestel. Geplakte tekst wordt nooit bewaard of verstuurd.',
         'De browserextensie haalt één keer per dag de openbare blokkeerlijst op. Ze stuurt daarbij geen persoonsgegevens mee.',
         'De Android-app filtert alleen naamopvragingen op de telefoon. Hij stuurt ons niets.',
+        'Om websitenamen op te zoeken, stuurt de Android-app opvragingen die niet geblokkeerd zijn door naar de DNS-server die je telefoon al gebruikt. Antwoordt die niet, dan gebruikt de app Cloudflare (1.1.1.1) of Quad9 (9.9.9.9). Die diensten zien de websitenaam en je IP-adres, zoals bij elke DNS-opvraging.',
       ]},
       { h: 'Examenmodus', p: [
         'Als een leraar een klas maakt, bewaart onze database (Supabase, Frankfurt, EU) een gehashte klascode, een gehashte lerarensleutel en het einduur van het examen. Extensies in de klas sturen alleen de klascode, één keer per minuut. Om misbruik te stoppen, wordt een gehashte versie van het IP-adres één uur bewaard. Geen namen, geen e-mailadressen.',
@@ -464,6 +465,7 @@ export const pages: Record<string, Page> = {
       ]},
       { h: 'Hosting', p: ['GitHub Pages, GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, VS.'] },
       { h: 'Intellectuele eigendom', p: ['© 2026 Amghar Said. Alle rechten voorbehouden. Productnamen zoals ChatGPT, Gemini, Claude en Copilot zijn van hun eigenaars en worden alleen genoemd om te beschrijven wat Mindveto blokkeert. Mindveto is niet met hen verbonden.', 'Lettertype: Atkinson Hyperlegible Next, SIL Open Font License, geleverd vanaf deze site. Data van schoolvakanties: OpenHolidays API (ODbL).'] },
+      { h: 'Bronnen en licenties', p: [L('Schoolvakanties: gegevens van de OpenHolidays API, <a href="https://www.openholidaysapi.org/">openholidaysapi.org</a>, ODbL 1.0. Blokkeerlijsten voor volwassenensites en gokken: Sinfonietta/hostfiles, StevenBlack/hosts (clefspeare13) en bigdargon/hostsVN, MIT-licentie; de volledige vermeldingen zitten in elke download. Lettertype: Atkinson Hyperlegible Next, Braille Institute, SIL Open Font License 1.1.')] },
     ],
   },
   guide: {

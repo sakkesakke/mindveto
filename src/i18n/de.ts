@@ -408,7 +408,7 @@ export const pages: Record<string, Page> = {
     title: 'Datenschutzerklärung',
     desc: 'Mindveto erhebt keine personenbezogenen Daten: keine Cookies, keine Tracker, keine Konten. Was Website, Apps und Prüfungsmodus verarbeiten. Ihre DSGVO-Rechte.',
     h1: 'Datenschutzerklärung',
-    lead: 'Kurz: Wir erheben keine personenbezogenen Daten. Diese Seite erklärt die wenigen Dinge, die einen Server berühren, und Ihre Rechte. Version 1, 12. November 2026. Maßgeblich ist die englische Fassung.',
+    lead: 'Kurz: Wir erheben keine personenbezogenen Daten. Diese Seite erklärt die wenigen Dinge, die einen Server berühren, und Ihre Rechte. Version 2, 13. November 2026. Maßgeblich ist die englische Fassung.',
     blocks: [
       { h: 'Verantwortlicher', p: [L('Amghar Said, Belgien. Kontakt: <a href="mailto:hello@mindveto.app">hello@mindveto.app</a>.')] },
       { h: 'Diese Website', list: [
@@ -420,6 +420,7 @@ export const pages: Record<string, Page> = {
         'Sperren, Einfüge-Schutz und alle Einstellungen laufen auf Ihrem Gerät. Eingefügter Text wird nie gespeichert oder gesendet.',
         'Die Browser-Erweiterung lädt einmal täglich die öffentliche Sperrliste. Sie sendet dabei keine personenbezogenen Daten.',
         'Die Android-App filtert nur Namensabfragen auf dem Handy. Sie sendet uns nichts.',
+        'Um Website-Namen aufzulösen, gibt die Android-App nicht gesperrte Anfragen an den DNS-Server weiter, den dein Handy ohnehin nutzt. Antwortet er nicht, nutzt sie Cloudflare (1.1.1.1) oder Quad9 (9.9.9.9). Diese Dienste sehen den Website-Namen und deine IP-Adresse, wie bei jeder DNS-Anfrage.',
       ]},
       { h: 'Prüfungsmodus', p: [
         'Wenn eine Lehrkraft eine Klasse anlegt, speichert unsere Datenbank (Supabase, Frankfurt, EU) einen gehashten Klassencode, einen gehashten Lehrkraft-Schlüssel und das Prüfungsende. Erweiterungen in der Klasse senden nur den Klassencode, einmal pro Minute. Gegen Missbrauch wird eine gehashte Version der IP-Adresse eine Stunde lang gespeichert. Keine Namen, keine E-Mail-Adressen.',
@@ -466,6 +467,7 @@ export const pages: Record<string, Page> = {
       ]},
       { h: 'Hosting', p: ['GitHub Pages, GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.'] },
       { h: 'Geistiges Eigentum', p: ['© 2026 Amghar Said. Alle Rechte vorbehalten. Produktnamen wie ChatGPT, Gemini, Claude und Copilot gehören ihren Inhabern und werden nur genannt, um zu beschreiben, was Mindveto sperrt. Mindveto ist mit ihnen nicht verbunden.', 'Schrift: Atkinson Hyperlegible Next, SIL Open Font License, von dieser Website ausgeliefert. Schulferien-Daten: OpenHolidays API (ODbL).'] },
+      { h: 'Quellen und Lizenzen', p: [L('Schulferien: Daten der OpenHolidays API, <a href="https://www.openholidaysapi.org/">openholidaysapi.org</a>, ODbL 1.0. Sperrlisten für Erwachseneninhalte und Glücksspiel: Sinfonietta/hostfiles, StevenBlack/hosts (clefspeare13) und bigdargon/hostsVN, MIT-Lizenz; die vollständigen Hinweise liegen jedem Download bei. Schrift: Atkinson Hyperlegible Next, Braille Institute, SIL Open Font License 1.1.')] },
     ],
   },
 

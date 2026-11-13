@@ -406,7 +406,7 @@ export const pages: Record<string, Page> = {
     title: 'Politique de confidentialité',
     desc: 'Mindveto ne collecte aucune donnée personnelle : pas de cookies, pas de traceurs, pas de comptes. Ce qui est traité, et vos droits RGPD.',
     h1: 'Politique de confidentialité',
-    lead: 'En bref : nous ne collectons aucune donnée personnelle. Cette page explique les quelques éléments qui touchent un serveur, et vos droits. Version 1, 12 novembre 2026.',
+    lead: 'En bref : nous ne collectons aucune donnée personnelle. Cette page explique les quelques éléments qui touchent un serveur, et vos droits. Version 2, 13 novembre 2026.',
     blocks: [
       { h: 'Responsable', p: [L('Amghar Said, Belgique. Contact : <a href="mailto:hello@mindveto.app">hello@mindveto.app</a>.')] },
       { h: 'Ce site', list: [
@@ -418,6 +418,7 @@ export const pages: Record<string, Page> = {
         'Le blocage, le garde-collage et tous les réglages fonctionnent sur votre appareil. Le texte collé n’est jamais conservé ni envoyé.',
         'L’extension de navigateur télécharge la liste publique une fois par jour. Elle n’envoie aucune donnée personnelle avec cette demande.',
         'L’appli Android filtre seulement les demandes de noms sur le téléphone. Elle ne nous envoie rien.',
+        'Pour trouver les noms de sites, l’appli Android transmet les demandes non bloquées au serveur DNS que votre téléphone utilise déjà. S’il ne répond pas, elle utilise Cloudflare (1.1.1.1) ou Quad9 (9.9.9.9). Ces services voient le nom du site et votre adresse IP, comme pour toute demande DNS.',
       ]},
       { h: 'Mode examen', p: [
         'Quand un enseignant crée une classe, notre base de données (Supabase, Francfort, UE) conserve un code de classe haché, une clé enseignant hachée et l’heure de fin de l’examen. Les extensions de la classe n’envoient que le code de classe, une fois par minute. Pour éviter les abus, une version hachée de l’adresse IP est conservée une heure. Pas de noms, pas d’adresses e-mail.',
@@ -464,6 +465,7 @@ export const pages: Record<string, Page> = {
       ]},
       { h: 'Hébergement', p: ['GitHub Pages, GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.'] },
       { h: 'Propriété intellectuelle', p: ['© 2026 Amghar Said. Tous droits réservés. Les noms de produits comme ChatGPT, Gemini, Claude et Copilot appartiennent à leurs propriétaires et ne sont cités que pour décrire ce que bloque Mindveto. Mindveto n’y est pas affilié.', 'Police : Atkinson Hyperlegible Next, SIL Open Font License, servie depuis ce site. Dates des vacances scolaires : OpenHolidays API (ODbL).'] },
+      { h: 'Sources et licences', p: [L('Vacances scolaires : données de l’API OpenHolidays, <a href="https://www.openholidaysapi.org/">openholidaysapi.org</a>, ODbL 1.0. Listes de blocage adultes et jeux d’argent : Sinfonietta/hostfiles, StevenBlack/hosts (clefspeare13) et bigdargon/hostsVN, licence MIT ; les mentions complètes accompagnent chaque téléchargement. Police : Atkinson Hyperlegible Next, Braille Institute, SIL Open Font License 1.1.')] },
     ],
   },
   guide: {

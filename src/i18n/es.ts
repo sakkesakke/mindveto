@@ -408,7 +408,7 @@ export const pages: Record<string, Page> = {
     title: 'Política de privacidad',
     desc: 'Mindveto no recoge datos personales: sin cookies, sin rastreadores, sin cuentas. Qué tratan la web, las apps y el modo examen, y tus derechos según el RGPD.',
     h1: 'Política de privacidad',
-    lead: 'Versión corta: no recogemos datos personales. Esta página explica las pocas cosas que sí pasan por un servidor, y tus derechos. Versión 1, 12 de noviembre de 2026. La versión inglesa es la de referencia.',
+    lead: 'Versión corta: no recogemos datos personales. Esta página explica las pocas cosas que sí pasan por un servidor, y tus derechos. Versión 2, 13 de noviembre de 2026. La versión inglesa es la de referencia.',
     blocks: [
       { h: 'Responsable', p: [L('Amghar Said, Bélgica. Contacto: <a href="mailto:hello@mindveto.app">hello@mindveto.app</a>.')] },
       { h: 'Esta web', list: [
@@ -420,6 +420,7 @@ export const pages: Record<string, Page> = {
         'El bloqueo, la guardia de pegado y todos los ajustes funcionan en tu dispositivo. El texto pegado nunca se guarda ni se envía.',
         'La extensión descarga la lista pública de bloqueo una vez al día. No envía datos personales con esa petición.',
         'La app de Android solo filtra consultas de nombres de internet en el móvil. No nos envía nada.',
+        'Para buscar nombres de sitios, la app de Android pasa las consultas no bloqueadas al servidor DNS que tu teléfono ya usa. Si no responde, usa Cloudflare (1.1.1.1) o Quad9 (9.9.9.9). Esos servicios ven el nombre del sitio y tu dirección IP, como en cualquier consulta DNS.',
       ]},
       { h: 'Modo examen', p: [
         'Cuando un docente crea una clase, nuestra base de datos (Supabase, Fráncfort, UE) guarda un código de clase cifrado (hash), una clave de docente cifrada y la hora de fin del examen. Las extensiones de la clase envían solo el código de clase una vez por minuto. Para evitar abusos, se guarda una versión cifrada de la dirección IP durante una hora. Sin nombres, sin correos.',
@@ -466,6 +467,7 @@ export const pages: Record<string, Page> = {
       ]},
       { h: 'Alojamiento', p: ['GitHub Pages, GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, EE. UU.'] },
       { h: 'Propiedad intelectual', p: ['© 2026 Amghar Said. Todos los derechos reservados. Nombres de productos como ChatGPT, Gemini, Claude y Copilot pertenecen a sus dueños y se citan solo para describir lo que bloquea Mindveto. Mindveto no está afiliado a ellos.', 'Fuente: Atkinson Hyperlegible Next, SIL Open Font License, servida desde esta web. Fechas de vacaciones escolares: OpenHolidays API (ODbL).'] },
+      { h: 'Fuentes y licencias', p: [L('Vacaciones escolares: datos de la API OpenHolidays, <a href="https://www.openholidaysapi.org/">openholidaysapi.org</a>, ODbL 1.0. Listas de bloqueo de adultos y apuestas: Sinfonietta/hostfiles, StevenBlack/hosts (clefspeare13) y bigdargon/hostsVN, licencia MIT; los avisos completos van en cada descarga. Fuente: Atkinson Hyperlegible Next, Braille Institute, SIL Open Font License 1.1.')] },
     ],
   },
 

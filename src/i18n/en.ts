@@ -406,7 +406,7 @@ export const pages: Record<string, Page> = {
     title: 'Privacy policy',
     desc: 'Mindveto collects no personal data: no cookies, no trackers, no accounts. What the site, apps and exam mode process, and your GDPR rights.',
     h1: 'Privacy policy',
-    lead: 'Short version: we collect no personal data. This page explains the few things that do touch a server, and your rights. Version 1, 12 November 2026.',
+    lead: 'Short version: we collect no personal data. This page explains the few things that do touch a server, and your rights. Version 2, 13 November 2026.',
     blocks: [
       { h: 'Who is responsible', p: [L('Amghar Said, Belgium. Contact: <a href="mailto:hello@mindveto.app">hello@mindveto.app</a>.')] },
       { h: 'This website', list: [
@@ -418,6 +418,7 @@ export const pages: Record<string, Page> = {
         'Blocking, the paste guard and all settings work on your device. Pasted text is never stored or sent.',
         'The browser extension downloads the public block list once a day. It sends no personal data with that request.',
         'The Android app only filters internet name lookups on the phone. It sends nothing to us.',
+        'To look up website names, the Android app passes lookups that are not blocked to the DNS server your phone already uses. If that does not answer, it uses Cloudflare (1.1.1.1) or Quad9 (9.9.9.9). Those services see the website name and your IP address, as with any DNS lookup.',
       ]},
       { h: 'Exam mode', p: [
         'When a teacher makes a class, our database (Supabase, Frankfurt, EU) stores a hashed class code, a hashed teacher key and the exam end time. Extensions in the class send only the class code once a minute. To stop abuse, a hashed version of the IP address is kept for one hour. No names, no e-mail addresses.',
@@ -464,6 +465,7 @@ export const pages: Record<string, Page> = {
       ]},
       { h: 'Hosting', p: ['GitHub Pages, GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.'] },
       { h: 'Intellectual property', p: ['© 2026 Amghar Said. All rights reserved. Product names such as ChatGPT, Gemini, Claude and Copilot belong to their owners and are named only to describe what Mindveto blocks. Mindveto is not affiliated with them.', 'Font: Atkinson Hyperlegible Next, SIL Open Font License, served from this site. School holiday dates: OpenHolidays API (ODbL).'] },
+      { h: 'Sources and licences', p: [L('School holiday dates: OpenHolidays API data, <a href="https://www.openholidaysapi.org/">openholidaysapi.org</a>, ODbL 1.0. Adult and gambling block lists: Sinfonietta/hostfiles, StevenBlack/hosts (clefspeare13) and bigdargon/hostsVN, MIT licence; full notices ship with every download. Font: Atkinson Hyperlegible Next, Braille Institute, SIL Open Font License 1.1.')] },
     ],
   },
   guide: {

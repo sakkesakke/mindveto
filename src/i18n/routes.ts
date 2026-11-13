@@ -16,6 +16,7 @@ export const ROUTES = {
   exam:     { en: 'exam-button/',      nl: 'nl/examenknop/',       fr: 'fr/bouton-examen/' , es: 'es/boton-examen/', de: 'de/pruefungsknopf/', pt: 'pt/botao-exame/', it: 'it/pulsante-esame/', ar: 'ar/exam-button/' },
   paste:    { en: 'paste-guard/',      nl: 'nl/plakbewaker/',      fr: 'fr/garde-collage/' , es: 'es/guardia-pegado/', de: 'de/einfuege-schutz/', pt: 'pt/guarda-colagem/', it: 'it/guardia-incolla/', ar: 'ar/paste-guard/' },
   guide:    { en: 'block-chatgpt/',    nl: 'nl/chatgpt-blokkeren/', fr: 'fr/bloquer-chatgpt/' , es: 'es/bloquear-chatgpt/', de: 'de/chatgpt-blockieren/', pt: 'pt/bloquear-chatgpt/', it: 'it/bloccare-chatgpt/', ar: 'ar/block-chatgpt/' },
+  family:   { en: 'block-porn/', nl: 'nl/porno-blokkeren/', fr: 'fr/bloquer-porno/', es: 'es/bloquear-porno/', de: 'de/pornos-blockieren/', pt: 'pt/bloquear-pornografia/', it: 'it/bloccare-porno/', ar: 'ar/block-porn/' },
   policy:   { en: 'ai-policy-template/', nl: 'nl/ai-beleid-sjabloon/', fr: 'fr/modele-politique-ia/' , es: 'es/plantilla-politica-ia/', de: 'de/ki-richtlinie-vorlage/', pt: 'pt/modelo-politica-ia/', it: 'it/modello-policy-ia/', ar: 'ar/ai-policy-template/' },
   download: { en: 'download/',         nl: 'nl/download/',         fr: 'fr/telecharger/' , es: 'es/descargar/', de: 'de/herunterladen/', pt: 'pt/baixar/', it: 'it/scarica/', ar: 'ar/download/' },
   pricing:  { en: 'pricing/',          nl: 'nl/prijzen/',          fr: 'fr/tarifs/' , es: 'es/precios/', de: 'de/preise/', pt: 'pt/precos/', it: 'it/prezzi/', ar: 'ar/pricing/' },

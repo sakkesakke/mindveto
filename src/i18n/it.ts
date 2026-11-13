@@ -13,7 +13,7 @@ export const home: Home = {
   how: 'Come funziona',
   doorsH: 'Per chi è',
   doors: [
-    { key: 'parents', who: 'Genitori', why: 'Compagni IA a mezzanotte, compiti scritti da un chatbot. Bloccalo sul PC di famiglia e sul telefono di tuo figlio.', go: 'Per i genitori' },
+    { key: 'parents', who: 'Genitori', why: 'Compagni IA a mezzanotte, compiti scritti da un chatbot. Bloccalo sul PC di famiglia e sul telefono di tuo figlio. Nuovo: un filtro famiglia gratuito per siti porno, di scommesse e di incontri.', go: 'Per i genitori' },
     { key: 'schools', who: 'Scuole', why: 'Un pulsante esame per gli insegnanti, e file che l’IT può installare oggi su ogni computer della scuola.', go: 'Per le scuole' },
     { key: 'offices', who: 'Uffici', why: 'Pratiche dei clienti, IBAN e contratti restano fuori dai chatbot pubblici. Solo l’IA che il tuo studio approva.', go: 'Per gli uffici' },
   ],
@@ -72,7 +72,7 @@ export const pages: Record<string, Page> = {
       { q: 'Mio figlio usa un portatile della scuola. Posso installarlo lì?', a: 'Chiedi prima alla scuola. I dispositivi scolastici sono gestiti dalla scuola, e molte scuole possono installare Mindveto per tutti gli studenti in una volta.' },
       { q: 'È davvero gratis?', a: 'Sì. Blocco, PIN e orario restano gratis. Un piano Plus a pagamento con extra per le famiglie arriva con il lancio su Google Play.' },
     ],
-    related: ['browser', 'android', 'windows'],
+    related: ['family', 'browser', 'android'],
   },
 
   schools: {
@@ -183,7 +183,7 @@ export const pages: Record<string, Page> = {
     desc: 'App Android che blocca ChatGPT, Gemini, Character.AI e oltre 150 servizi di IA in ogni app del telefono. PIN e avvisi di manomissione. Non invia nulla.',
     h1: 'IA spenta in ogni app del telefono.',
     lead: 'I browser sono solo metà della storia: le app di IA vivono sul telefono. L’app Mindveto per Android blocca gli indirizzi di IA per ogni app, e ti avvisa se qualcuno prova a spegnerla.',
-    actions: [{ label: 'Scarica per Android (45 KB, beta)', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'SHA-256', url: DL + 'human-override-android.sha256' }],
+    actions: [{ label: 'Scarica per Android (389 KB, beta)', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'SHA-256', url: DL + 'human-override-android.sha256' }],
     blocks: [
       { h: 'Come funziona', p: [
         'L’app esegue sul telefono un piccolo filtro locale per i nomi di internet (DNS). Quando un’app chiede un indirizzo di IA, il filtro risponde che non esiste. Tutto il resto funziona normalmente.',
@@ -198,7 +198,7 @@ export const pages: Record<string, Page> = {
         'Imposta un PIN.',
       ], note: 'Beta: per aggiornare, disinstalla prima la versione vecchia. La versione su Google Play arriverà con 15 giorni di Plus gratis. Per ora l’app è in inglese, olandese e francese.' },
       { h: 'Dati', facts: [
-        ['Versione', 'Beta, Android 16 (SDK 36)'], ['Dimensione', '45 KB'], ['Requisiti', 'Android 8 o successivo'],
+        ['Versione', 'Beta, Android 16 (SDK 36)'], ['Dimensione', '389 KB'], ['Requisiti', 'Android 8 o successivo'],
         ['Avvisi di manomissione', 'Sì, una notifica se la protezione si ferma'], ['Dati inviati', 'Nessuno'], ['Prezzo', 'Gratis durante la beta'],
       ]},
     ],
@@ -332,7 +332,7 @@ export const pages: Record<string, Page> = {
     lead: 'Scegli il dispositivo che vuoi proteggere. Tutto è gratis e non serve un account. Per ora le app sono in inglese, olandese e francese.',
     blocks: [
       { h: 'Estensione per browser', p: ['Chrome, Edge, Brave e Opera. Versione 1.6.0, 735 KB.'], actions: [{ label: 'Scarica', url: DL + 'human-override-1.6.0.zip', solid: true, download: true }, { label: 'Passi di installazione', to: 'browser' }] },
-      { h: 'App Android (beta)', p: ['Blocca l’IA in ogni app. 45 KB.'], actions: [{ label: 'Scarica', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Passi di installazione', to: 'android' }] },
+      { h: 'App Android (beta)', p: ['Blocca l’IA in ogni app. 389 KB.'], actions: [{ label: 'Scarica', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Passi di installazione', to: 'android' }] },
       { h: 'Windows', p: ['Ogni browser e app del PC. 501 KB.'], actions: [{ label: 'Scarica', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Passi di installazione', to: 'windows' }] },
       { h: 'Mac e Linux', p: ['Un comando, in tutto il sistema. 498 KB.'], actions: [{ label: 'Scarica', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Passi di installazione', to: 'maclinux' }] },
       { h: 'Pacchetto IT e liste', p: ['File per DNS, firewall e criteri del browser. 13 KB.'], actions: [{ label: 'Scarica', url: DL + 'human-override-pro-pack.zip', solid: true, download: true }, { label: 'Tutte le liste', to: 'network' }] },
@@ -525,4 +525,6 @@ export const pages: Record<string, Page> = {
     ],
     related: ['offices', 'paste', 'pricing'],
   },
+
+  family: {"title": "Bloccare siti porno, di scommesse e di incontri", "desc": "Filtro famiglia gratuito: blocca siti porno e 18+, scommesse e incontri, imponi SafeSearch e ferma i trucchi con le VPN. Browser, Android, Windows, Mac.", "h1": "Blocca i siti porno, di scommesse e di incontri.", "lead": "Mindveto ha un filtro famiglia accanto all’interruttore dell’IA. Scegli tu cosa blocca, e un PIN mantiene la tua scelta. È spento finché non lo accendi.", "actions": [{"label": "Scarica gratis", "to": "download", "solid": true}, {"label": "Per i genitori", "to": "parents"}], "blocks": [{"h": "Cosa puoi attivare", "list": ["Siti per adulti: oltre 60.000 siti porno e 18+.", "SafeSearch: Google, Bing, DuckDuckGo e YouTube mostrano solo risultati sicuri, qualunque cosa dicano le impostazioni di ricerca.", "Gioco d’azzardo: 1.600 siti di scommesse, casinò e poker.", "Incontri: 65 app di incontri e siti di videochat casuale.", "Anti-aggiramento: i siti noti di VPN, proxy e Tor, così il filtro non si salta con un clic.", "Ogni parte ha il suo interruttore. Funziona separata dall’interruttore dell’IA."]}, {"h": "Come attivarlo", "steps": ["Browser: installa l’<a href=\"/browser-extension/\">estensione per browser</a>, aprila e spunta ciò che vuoi nel filtro famiglia (“Family filter”).", "Android: installa l’<a href=\"/android/\">app Android</a> e usa gli interruttori del filtro famiglia. Così funziona in ogni app del telefono.", "Windows: avvia il <a href=\"/windows/\">download per Windows</a> e digita 5. Chiede di scommesse e incontri.", "Mac e Linux: usa il <a href=\"/mac-linux/\">download per Mac e Linux</a> e digita <code>sudo sh mindveto.sh family-on gambling dating</code>.", "Nell’estensione e nell’app imposta un PIN: per spegnere il filtro servirà il PIN. Sul computer, dai a tuo figlio un account normale (non amministratore)."]}, {"h": "Limiti onesti", "list": ["Nessun filtro prende tutto. Ogni giorno nascono siti nuovi, e le immagini possono ancora comparire in chat, app e social.", "Le liste fermano i siti conosciuti. Un bambino con il telefono di un amico o un account amministratore può aggirarle.", "Su Android il filtro funziona finché Mindveto è acceso. Attiva “VPN sempre attiva” perché resti acceso."], "note": "Mindveto non registra quali siti vengono visitati e non ci invia nulla. Un filtro aiuta; parlare con tuo figlio aiuta di più.", "human": true}, {"h": "In breve", "facts": [["Prezzo", "Gratis"], ["Siti per adulti", "60.000+"], ["Siti di gioco d’azzardo", "1.600"], ["Incontri e videochat", "65"], ["Liste", "Liste aperte (licenza MIT) e le nostre liste"], ["Dati inviati", "Nessuno"]]}], "faq": [{"q": "Il filtro famiglia è gratis?", "a": "Sì. Oggi fa parte dei download gratuiti di Mindveto."}, {"q": "Blocca anche l’IA?", "a": "Solo se lo vuoi. L’interruttore dell’IA e il filtro famiglia funzionano separati: puoi usare l’uno senza l’altro."}, {"q": "Funziona su iPhone o su tutto il Wi-Fi?", "a": "Non c’è ancora un’app per iPhone. Puoi usare le stesse liste gratuite in un filtro DNS come AdGuard Home o Pi-hole: vedi <a href=\"/network/\">intera rete</a>."}, {"q": "Può bloccare per errore un sito normale?", "a": "Può succedere con qualsiasi lista. Nell’estensione puoi consentire un sito di cui ti fidi; la tua scelta vince sul filtro."}], "related": ["parents", "browser", "android"]},
 };

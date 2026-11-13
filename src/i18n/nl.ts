@@ -12,7 +12,7 @@ export const home: Home = {
   how: 'Zo werkt het',
   doorsH: 'Voor wie',
   doors: [
-    { key: 'parents', who: 'Ouders', why: 'AI-vriendjes om middernacht, huiswerk geschreven door een chatbot. Zet het vast op de gezinscomputer en de telefoon van je kind.', go: 'Voor ouders' },
+    { key: 'parents', who: 'Ouders', why: 'AI-vriendjes om middernacht, huiswerk geschreven door een chatbot. Zet het vast op de gezinscomputer en de telefoon van je kind. Nieuw: een gratis gezinsfilter voor porno-, gok- en datingsites.', go: 'Voor ouders' },
     { key: 'schools', who: 'Scholen', why: 'Een examenknop voor leraren, en bestanden die IT vandaag op elke schoolcomputer kan uitrollen.', go: 'Voor scholen' },
     { key: 'offices', who: 'Kantoren', why: 'Klantdossiers, IBAN’s en contracten blijven uit publieke chatbots. Laat alleen de AI toe die je kantoor goedkeurt.', go: 'Voor kantoren' },
   ],
@@ -71,7 +71,7 @@ export const pages: Record<string, Page> = {
       { q: 'Mijn kind gebruikt een laptop van school. Kan ik het daarop zetten?', a: 'Vraag het eerst aan de school. Schooltoestellen worden door de school beheerd, en veel scholen kunnen Mindveto voor alle leerlingen tegelijk installeren.' },
       { q: 'Is het echt gratis?', a: 'Ja. Blokkeren, pincode en rooster blijven gratis. Een betaald Plus-plan met extra’s voor gezinnen komt met de lancering op Google Play.' },
     ],
-    related: ['browser', 'android', 'windows'],
+    related: ['family', 'browser', 'android'],
   },
 
   schools: {
@@ -181,7 +181,7 @@ export const pages: Record<string, Page> = {
     desc: 'Android-app die ChatGPT, Gemini, Character.AI en 150+ AI-diensten blokkeert in elke app op de telefoon. Pincode en sabotagemeldingen.',
     h1: 'AI uit in elke app op de telefoon.',
     lead: 'De browser is maar de helft: AI-apps staan op de telefoon. De Android-app van Mindveto blokkeert AI-adressen voor elke app, en meldt het als iemand hem probeert uit te zetten.',
-    actions: [{ label: 'Download voor Android (45 KB, bèta)', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'SHA-256', url: DL + 'human-override-android.sha256' }],
+    actions: [{ label: 'Download voor Android (389 KB, bèta)', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'SHA-256', url: DL + 'human-override-android.sha256' }],
     blocks: [
       { h: 'Hoe het werkt', p: [
         'De app draait een klein lokaal filter voor internetnamen (DNS) op de telefoon. Vraagt een app een AI-adres op, dan antwoordt het filter dat het niet bestaat. Al de rest werkt gewoon.',
@@ -196,7 +196,7 @@ export const pages: Record<string, Page> = {
         'Stel een pincode in.',
       ], note: 'Bèta: verwijder eerst de oude versie om bij te werken. De versie op Google Play komt eraan, met 15 dagen Plus gratis.' },
       { h: 'Feiten', facts: [
-        ['Versie', 'Bèta, gericht op Android 16 (SDK 36)'], ['Grootte', '45 KB'], ['Vereist', 'Android 8 of nieuwer'],
+        ['Versie', 'Bèta, gericht op Android 16 (SDK 36)'], ['Grootte', '389 KB'], ['Vereist', 'Android 8 of nieuwer'],
         ['Sabotagemeldingen', 'Ja, een melding als de bescherming stopt'], ['Verstuurde gegevens', 'Geen'], ['Prijs', 'Gratis tijdens de bèta'],
       ]},
     ],
@@ -330,7 +330,7 @@ export const pages: Record<string, Page> = {
     lead: 'Kies het toestel dat je wilt beschermen. Alles is gratis en vraagt geen account.',
     blocks: [
       { h: 'Browserextensie', p: ['Chrome, Edge, Brave en Opera. Versie 1.6.0, 735 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-1.6.0.zip', solid: true, download: true }, { label: 'Installatiestappen', to: 'browser' }] },
-      { h: 'Android-app (bèta)', p: ['Blokkeert AI in elke app. 45 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Installatiestappen', to: 'android' }] },
+      { h: 'Android-app (bèta)', p: ['Blokkeert AI in elke app. 389 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Installatiestappen', to: 'android' }] },
       { h: 'Windows', p: ['Elke browser en app op de pc. 501 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Installatiestappen', to: 'windows' }] },
       { h: 'Mac en Linux', p: ['Eén commando, voor het hele systeem. 498 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Installatiestappen', to: 'maclinux' }] },
       { h: 'IT-pakket en lijsten', p: ['Bestanden voor DNS, firewall en browserbeleid. 13 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-pro-pack.zip', solid: true, download: true }, { label: 'Alle lijsten', to: 'network' }] },
@@ -522,4 +522,6 @@ export const pages: Record<string, Page> = {
     ],
     related: ['offices', 'paste', 'pricing'],
   },
+
+  family: {"title": "Porno-, gok- en datingsites gratis blokkeren", "desc": "Gratis gezinsfilter: blokkeer porno- en 18+-sites, gok- en datingsites, zet SafeSearch vast en stop VPN-trucs. Voor browser, Android, Windows en Mac.", "h1": "Blokkeer porno-, gok- en datingsites.", "lead": "Mindveto heeft naast de AI-schakelaar een gezinsfilter. Jij kiest wat het blokkeert, en een pincode houdt je keuze vast. Het staat uit tot jij het aanzet.", "actions": [{"label": "Gratis downloaden", "to": "download", "solid": true}, {"label": "Voor ouders", "to": "parents"}], "blocks": [{"h": "Wat je kunt aanzetten", "list": ["Volwassenensites: 60.000+ porno- en 18+-sites.", "SafeSearch: Google, Bing, DuckDuckGo en YouTube tonen alleen veilige resultaten, wat er ook in de zoekinstellingen staat.", "Gokken: 1.600 wed-, casino- en pokersites.", "Dating: 65 datingapps en sites voor willekeurige videochat.", "Anti-omzeilen: bekende VPN-, proxy- en Tor-sites, zodat het filter niet met één klik omzeild wordt.", "Elk onderdeel heeft een eigen schakelaar. Het werkt los van de AI-schakelaar."]}, {"h": "Zo zet je het aan", "steps": ["Browser: installeer de <a href=\"/nl/browserextensie/\">browserextensie</a>, open ze en vink onder “Gezinsfilter” aan wat je wilt.", "Android: installeer de <a href=\"/nl/android/\">Android-app</a> en gebruik de schakelaars onder “Gezinsfilter”. Het werkt dan in elke app op de telefoon.", "Windows: start de <a href=\"/nl/windows/\">Windows-download</a> en typ 5. Het script vraagt naar gokken en dating.", "Mac en Linux: gebruik de <a href=\"/nl/mac-linux/\">download voor Mac en Linux</a> en typ <code>sudo sh mindveto.sh family-on gambling dating</code>.", "Stel in de extensie en de app een pincode in: het filter uitzetten vraagt dan de pincode. Geef je kind op een computer een gewone account (geen beheerder)."]}, {"h": "Eerlijke grenzen", "list": ["Geen enkel filter vangt alles. Er komen elke dag nieuwe sites bij, en beelden kunnen nog opduiken in chats, apps en sociale media.", "De lijsten stoppen bekende sites. Een kind met de telefoon van een vriend of een beheerdersaccount kan eromheen.", "Op Android werkt het filter zolang Mindveto aanstaat. Zet “Altijd-aan VPN” aan, dan blijft het aan."], "note": "Mindveto houdt niet bij welke sites bezocht worden en stuurt niets naar ons. Een filter helpt; praten met je kind helpt meer.", "human": true}, {"h": "Feiten", "facts": [["Prijs", "Gratis"], ["Volwassenensites", "60.000+"], ["Goksites", "1.600"], ["Dating en videochat", "65"], ["Lijsten", "Open lijsten (MIT-licentie) plus onze eigen lijsten"], ["Verstuurde gegevens", "Geen"]]}], "faq": [{"q": "Is het gezinsfilter gratis?", "a": "Ja. Het zit vandaag in de gratis downloads van Mindveto."}, {"q": "Blokkeert het ook AI?", "a": "Alleen als je dat wilt. De AI-schakelaar en het gezinsfilter werken los van elkaar: je kunt het ene zonder het andere gebruiken."}, {"q": "Werkt het op een iPhone of op de hele wifi?", "a": "Er is nog geen iPhone-app. Je kunt dezelfde gratis lijsten gebruiken in een DNS-filter zoals AdGuard Home of Pi-hole: zie <a href=\"/nl/netwerk/\">hele netwerk</a>."}, {"q": "Blokkeert het per ongeluk een gewone site?", "a": "Dat kan bij elke lijst gebeuren. In de browserextensie kun je een site die je vertrouwt toelaten; jouw keuze gaat voor op het filter."}], "related": ["parents", "browser", "android"]},
 };

@@ -8,7 +8,7 @@ const line = (k: PageKey) => `- [${en.pages[k].title}](${SITE}/${ROUTES[k].en}):
 const group = (h: string, keys: PageKey[]) => `## ${h}\n\n${keys.map(line).join('\n')}`;
 
 export function GET() {
-  const faqs = (['guide', 'help', 'parents', 'schools', 'offices'] as PageKey[])
+  const faqs = (['guide', 'family', 'help', 'parents', 'schools', 'offices'] as PageKey[])
     .flatMap((k) => en.pages[k].faq ?? [])
     .map((f) => `- ${f.q} ${strip(f.a)}`);
   const body = [
@@ -19,11 +19,12 @@ export function GET() {
       '- What it is: an AI blocker ("AI kill switch") for browsers, Android, Windows, Mac, Linux and whole networks.',
       '- What it blocks: ChatGPT, Gemini, Copilot, Claude, Character.AI and 150+ other AI services, from a public list that updates daily.',
       '- Privacy: all checks run on the device. No account, no cookies, no trackers. Nothing typed, pasted or visited is sent to Mindveto.',
+      '- Family filter (optional, off by default, free to use today): blocks 60,000+ porn and 18+ sites, 1,600 gambling sites, 65 dating and random video chat sites, well-known VPN/proxy sites, and forces SafeSearch in Google, Bing, DuckDuckGo and YouTube.',
       '- Extras: PIN lock, schedule (with built-in school holidays for Belgium, the Netherlands and France), exam button for teachers, paste guard for offices, approved-AI list.',
       '- Languages: English, Dutch (/nl/), French (/fr/), Spanish (/es/), German (/de/), Portuguese (/pt/), Italian (/it/), Arabic (/ar/). Apps in English, Dutch and French. Contact: hello@mindveto.app',
     ].join('\n'),
     'Honest limits:\n' + en.home.limits.map((l) => `- ${l}`).join('\n'),
-    group('Guides', ['guide', 'policy', 'help']),
+    group('Guides', ['guide', 'family', 'policy', 'help']),
     group('Who it is for', ['parents', 'schools', 'offices']),
     group('Products', ['browser', 'android', 'windows', 'maclinux', 'network', 'exam', 'paste']),
     group('Company', ['download', 'pricing', 'about', 'privacy', 'terms']),

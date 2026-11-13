@@ -13,7 +13,7 @@ export const home: Home = {
   how: 'So funktioniert es',
   doorsH: 'Für wen',
   doors: [
-    { key: 'parents', who: 'Eltern', why: 'KI-Begleiter um Mitternacht, Hausaufgaben vom Chatbot. Sperren Sie es auf dem Familien-PC und dem Handy Ihres Kindes.', go: 'Für Eltern' },
+    { key: 'parents', who: 'Eltern', why: 'KI-Begleiter um Mitternacht, Hausaufgaben vom Chatbot. Sperren Sie es auf dem Familien-PC und dem Handy Ihres Kindes. Neu: ein kostenloser Familienfilter für Porno-, Glücksspiel- und Dating-Seiten.', go: 'Für Eltern' },
     { key: 'schools', who: 'Schulen', why: 'Ein Prüfungsknopf für Lehrkräfte und Dateien, die die IT heute auf jedem Schulrechner ausrollen kann.', go: 'Für Schulen' },
     { key: 'offices', who: 'Büros', why: 'Mandantenakten, IBANs und Verträge bleiben aus öffentlichen Chatbots. Nur die KI, die Ihr Büro freigibt.', go: 'Für Büros' },
   ],
@@ -72,7 +72,7 @@ export const pages: Record<string, Page> = {
       { q: 'Mein Kind nutzt einen Schul-Laptop. Kann ich es dort installieren?', a: 'Fragen Sie zuerst die Schule. Schulgeräte werden von der Schule verwaltet, und viele Schulen können Mindveto für alle Schüler auf einmal installieren.' },
       { q: 'Ist es wirklich kostenlos?', a: 'Ja. Sperren, PIN und Zeitplan bleiben kostenlos. Ein bezahlter Plus-Plan mit Extras für Familien kommt mit dem Google-Play-Launch.' },
     ],
-    related: ['browser', 'android', 'windows'],
+    related: ['family', 'browser', 'android'],
   },
 
   schools: {
@@ -183,7 +183,7 @@ export const pages: Record<string, Page> = {
     desc: 'Android-App, die ChatGPT, Gemini, Character.AI und über 150 KI-Dienste in jeder App auf dem Handy sperrt. PIN und Manipulationswarnungen. Nichts wird gesendet.',
     h1: 'KI aus, in jeder App auf dem Handy.',
     lead: 'Browser sind nur die halbe Geschichte: KI-Apps leben auf dem Handy. Die Mindveto-App für Android sperrt KI-Adressen für jede App und meldet, wenn jemand versucht, sie abzuschalten.',
-    actions: [{ label: 'Für Android herunterladen (45 KB, Beta)', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'SHA-256', url: DL + 'human-override-android.sha256' }],
+    actions: [{ label: 'Für Android herunterladen (389 KB, Beta)', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'SHA-256', url: DL + 'human-override-android.sha256' }],
     blocks: [
       { h: 'So funktioniert es', p: [
         'Die App betreibt auf dem Handy einen kleinen lokalen Filter für Internet-Namen (DNS). Fragt eine App nach einer KI-Adresse, antwortet der Filter, dass es sie nicht gibt. Alles andere funktioniert normal.',
@@ -198,7 +198,7 @@ export const pages: Record<string, Page> = {
         'Setzen Sie eine PIN.',
       ], note: 'Beta: Deinstallieren Sie zum Aktualisieren zuerst die alte Version. Die Google-Play-Version kommt mit 15 Tagen Plus gratis. Die App ist vorerst auf Englisch, Niederländisch und Französisch.' },
       { h: 'Fakten', facts: [
-        ['Version', 'Beta, Ziel Android 16 (SDK 36)'], ['Größe', '45 KB'], ['Voraussetzung', 'Android 8 oder neuer'],
+        ['Version', 'Beta, Ziel Android 16 (SDK 36)'], ['Größe', '389 KB'], ['Voraussetzung', 'Android 8 oder neuer'],
         ['Manipulationswarnungen', 'Ja, eine Meldung, wenn der Schutz stoppt'], ['Gesendete Daten', 'Keine'], ['Preis', 'Kostenlos während der Beta'],
       ]},
     ],
@@ -332,7 +332,7 @@ export const pages: Record<string, Page> = {
     lead: 'Wählen Sie das Gerät, das Sie schützen möchten. Alles ist kostenlos und braucht kein Konto. Die Apps sind vorerst auf Englisch, Niederländisch und Französisch.',
     blocks: [
       { h: 'Browser-Erweiterung', p: ['Chrome, Edge, Brave und Opera. Version 1.6.0, 735 KB.'], actions: [{ label: 'Herunterladen', url: DL + 'human-override-1.6.0.zip', solid: true, download: true }, { label: 'Installationsschritte', to: 'browser' }] },
-      { h: 'Android-App (Beta)', p: ['Sperrt KI in jeder App. 45 KB.'], actions: [{ label: 'Herunterladen', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Installationsschritte', to: 'android' }] },
+      { h: 'Android-App (Beta)', p: ['Sperrt KI in jeder App. 389 KB.'], actions: [{ label: 'Herunterladen', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Installationsschritte', to: 'android' }] },
       { h: 'Windows', p: ['Jeder Browser und jede App auf dem PC. 501 KB.'], actions: [{ label: 'Herunterladen', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Installationsschritte', to: 'windows' }] },
       { h: 'Mac und Linux', p: ['Ein Befehl, systemweit. 498 KB.'], actions: [{ label: 'Herunterladen', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Installationsschritte', to: 'maclinux' }] },
       { h: 'IT-Paket und Listen', p: ['Dateien für DNS, Firewall und Browser-Richtlinien. 13 KB.'], actions: [{ label: 'Herunterladen', url: DL + 'human-override-pro-pack.zip', solid: true, download: true }, { label: 'Alle Listen', to: 'network' }] },
@@ -525,4 +525,6 @@ export const pages: Record<string, Page> = {
     ],
     related: ['offices', 'paste', 'pricing'],
   },
+
+  family: {"title": "Porno-, Glücksspiel- und Dating-Seiten sperren", "desc": "Kostenloser Familienfilter: Porno- und Ab-18-Seiten, Glücksspiel und Dating sperren, SafeSearch erzwingen. Für Browser, Android, Windows und Mac.", "h1": "Porno-, Glücksspiel- und Dating-Seiten sperren.", "lead": "Mindveto hat neben dem KI-Schalter einen Familienfilter. Du wählst, was er sperrt, und eine PIN hält deine Wahl fest. Er ist aus, bis du ihn einschaltest.", "actions": [{"label": "Kostenlos herunterladen", "to": "download", "solid": true}, {"label": "Für Eltern", "to": "parents"}], "blocks": [{"h": "Was du einschalten kannst", "list": ["Erwachsenenseiten: über 60.000 Porno- und Ab-18-Seiten.", "SafeSearch: Google, Bing, DuckDuckGo und YouTube zeigen nur sichere Ergebnisse, egal was in den Sucheinstellungen steht.", "Glücksspiel: 1.600 Wett-, Casino- und Pokerseiten.", "Dating: 65 Dating-Apps und Seiten für Zufalls-Videochats.", "Umgehungsschutz: bekannte VPN-, Proxy- und Tor-Seiten, damit der Filter nicht mit einem Klick umgangen wird.", "Jeder Teil hat einen eigenen Schalter. Er arbeitet getrennt vom KI-Schalter."]}, {"h": "So schaltest du ihn ein", "steps": ["Browser: Installiere die <a href=\"/browser-extension/\">Browser-Erweiterung</a>, öffne sie und hake beim Familienfilter („Family filter“) an, was du willst.", "Android: Installiere die <a href=\"/android/\">Android-App</a> und nutze die Schalter beim Familienfilter. Er wirkt dann in jeder App auf dem Handy.", "Windows: Starte den <a href=\"/windows/\">Windows-Download</a> und tippe 5. Das Skript fragt nach Glücksspiel und Dating.", "Mac und Linux: Nutze den <a href=\"/mac-linux/\">Download für Mac und Linux</a> und tippe <code>sudo sh mindveto.sh family-on gambling dating</code>.", "Lege in der Erweiterung und in der App eine PIN fest: Ausschalten verlangt dann die PIN. Gib deinem Kind am Computer ein normales Konto (kein Admin)."]}, {"h": "Ehrliche Grenzen", "list": ["Kein Filter erwischt alles. Jeden Tag entstehen neue Seiten, und Bilder können weiter in Chats, Apps und sozialen Medien auftauchen.", "Die Listen stoppen bekannte Seiten. Ein Kind mit dem Handy eines Freundes oder einem Admin-Konto kommt daran vorbei.", "Auf Android wirkt der Filter, solange Mindveto an ist. Schalte „Durchgehend aktives VPN“ ein, damit es an bleibt."], "note": "Mindveto zeichnet nicht auf, welche Seiten besucht werden, und sendet nichts an uns. Ein Filter hilft; mit deinem Kind zu reden hilft mehr.", "human": true}, {"h": "Fakten", "facts": [["Preis", "Kostenlos"], ["Erwachsenenseiten", "60.000+"], ["Glücksspielseiten", "1.600"], ["Dating und Videochat", "65"], ["Listen", "Offene Listen (MIT-Lizenz) und unsere eigenen Listen"], ["Gesendete Daten", "Keine"]]}], "faq": [{"q": "Ist der Familienfilter kostenlos?", "a": "Ja. Er gehört heute zu den kostenlosen Mindveto-Downloads."}, {"q": "Sperrt er auch KI?", "a": "Nur wenn du das willst. KI-Schalter und Familienfilter arbeiten getrennt: Du kannst das eine ohne das andere nutzen."}, {"q": "Funktioniert er auf dem iPhone oder im ganzen WLAN?", "a": "Es gibt noch keine iPhone-App. Du kannst dieselben kostenlosen Listen in einem DNS-Filter wie AdGuard Home oder Pi-hole nutzen: siehe <a href=\"/network/\">ganzes Netzwerk</a>."}, {"q": "Sperrt er versehentlich eine normale Seite?", "a": "Das kann bei jeder Liste passieren. In der Erweiterung kannst du eine Seite erlauben, der du vertraust; deine Wahl geht vor."}], "related": ["parents", "browser", "android"]},
 };

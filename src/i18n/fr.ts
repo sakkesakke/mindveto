@@ -12,7 +12,7 @@ export const home: Home = {
   how: 'Comment ça marche',
   doorsH: 'Pour qui',
   doors: [
-    { key: 'parents', who: 'Parents', why: 'Des « amis IA » à minuit, des devoirs écrits par un chatbot. Verrouillez l’ordinateur familial et le téléphone de votre enfant.', go: 'Pour les parents' },
+    { key: 'parents', who: 'Parents', why: 'Des « amis IA » à minuit, des devoirs écrits par un chatbot. Verrouillez l’ordinateur familial et le téléphone de votre enfant. Nouveau : un filtre famille gratuit pour les sites porno, de jeux d’argent et de rencontre.', go: 'Pour les parents' },
     { key: 'schools', who: 'Écoles', why: 'Un bouton examen pour les enseignants, et des fichiers que l’IT peut déployer dès aujourd’hui sur chaque ordinateur.', go: 'Pour les écoles' },
     { key: 'offices', who: 'Bureaux', why: 'Les dossiers clients, IBAN et contrats restent hors des chatbots publics. N’autorisez que l’IA approuvée par votre cabinet.', go: 'Pour les bureaux' },
   ],
@@ -71,7 +71,7 @@ export const pages: Record<string, Page> = {
       { q: 'Mon enfant utilise un portable de l’école. Puis-je l’y installer ?', a: 'Demandez d’abord à l’école. Les appareils scolaires sont gérés par l’école, et beaucoup d’écoles peuvent installer Mindveto pour tous les élèves à la fois.' },
       { q: 'C’est vraiment gratuit ?', a: 'Oui. Le blocage, le PIN et l’horaire restent gratuits. Une formule Plus payante avec des extras pour les familles arrive avec le lancement sur Google Play.' },
     ],
-    related: ['browser', 'android', 'windows'],
+    related: ['family', 'browser', 'android'],
   },
 
   schools: {
@@ -181,7 +181,7 @@ export const pages: Record<string, Page> = {
     desc: 'Appli Android qui bloque ChatGPT, Gemini, Character.AI et 150+ services d’IA dans toutes les applis du téléphone. PIN et alertes.',
     h1: 'L’IA coupée dans toutes les applis du téléphone.',
     lead: 'Le navigateur n’est que la moitié de l’histoire : les applis d’IA vivent sur le téléphone. L’appli Android de Mindveto bloque les adresses d’IA pour toutes les applis, et vous prévient si quelqu’un essaie de la couper.',
-    actions: [{ label: 'Télécharger pour Android (45 Ko, bêta)', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'SHA-256', url: DL + 'human-override-android.sha256' }],
+    actions: [{ label: 'Télécharger pour Android (389 Ko, bêta)', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'SHA-256', url: DL + 'human-override-android.sha256' }],
     blocks: [
       { h: 'Comment ça marche', p: [
         'L’appli fait tourner un petit filtre local de noms internet (DNS) sur le téléphone. Quand une appli demande une adresse d’IA, le filtre répond qu’elle n’existe pas. Tout le reste fonctionne normalement.',
@@ -196,7 +196,7 @@ export const pages: Record<string, Page> = {
         'Définissez un PIN.',
       ], note: 'Bêta : pour mettre à jour, désinstallez d’abord l’ancienne version. La version Google Play arrive, avec 15 jours de Plus gratuits.' },
       { h: 'Fiche', facts: [
-        ['Version', 'Bêta, cible Android 16 (SDK 36)'], ['Taille', '45 Ko'], ['Nécessite', 'Android 8 ou plus récent'],
+        ['Version', 'Bêta, cible Android 16 (SDK 36)'], ['Taille', '389 Ko'], ['Nécessite', 'Android 8 ou plus récent'],
         ['Alertes anti-sabotage', 'Oui, une notification si la protection s’arrête'], ['Données envoyées', 'Aucune'], ['Prix', 'Gratuit pendant la bêta'],
       ]},
     ],
@@ -330,7 +330,7 @@ export const pages: Record<string, Page> = {
     lead: 'Choisissez l’appareil à protéger. Tout est gratuit et sans compte.',
     blocks: [
       { h: 'Extension de navigateur', p: ['Chrome, Edge, Brave et Opera. Version 1.6.0, 735 Ko.'], actions: [{ label: 'Télécharger', url: DL + 'human-override-1.6.0.zip', solid: true, download: true }, { label: 'Étapes d’installation', to: 'browser' }] },
-      { h: 'Appli Android (bêta)', p: ['Bloque l’IA dans toutes les applis. 45 Ko.'], actions: [{ label: 'Télécharger', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Étapes d’installation', to: 'android' }] },
+      { h: 'Appli Android (bêta)', p: ['Bloque l’IA dans toutes les applis. 389 Ko.'], actions: [{ label: 'Télécharger', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Étapes d’installation', to: 'android' }] },
       { h: 'Windows', p: ['Tous les navigateurs et applis du PC. 501 Ko.'], actions: [{ label: 'Télécharger', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Étapes d’installation', to: 'windows' }] },
       { h: 'Mac et Linux', p: ['Une commande, pour tout le système. 498 Ko.'], actions: [{ label: 'Télécharger', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Étapes d’installation', to: 'maclinux' }] },
       { h: 'Pack IT et listes', p: ['Fichiers DNS, pare-feu et stratégies de navigateur. 13 Ko.'], actions: [{ label: 'Télécharger', url: DL + 'human-override-pro-pack.zip', solid: true, download: true }, { label: 'Toutes les listes', to: 'network' }] },
@@ -522,4 +522,6 @@ export const pages: Record<string, Page> = {
     ],
     related: ['offices', 'paste', 'pricing'],
   },
+
+  family: {"title": "Bloquer les sites porno, de jeux et de rencontre", "desc": "Filtre famille gratuit : bloquez les sites porno et 18+, les jeux d’argent et les rencontres, imposez SafeSearch. Navigateur, Android, Windows, Mac.", "h1": "Bloquez les sites porno, de jeux d’argent et de rencontre.", "lead": "Mindveto a un filtre famille à côté de l’interrupteur IA. Vous choisissez ce qu’il bloque, et un PIN garde votre choix. Il est désactivé tant que vous ne l’activez pas.", "actions": [{"label": "Télécharger gratuitement", "to": "download", "solid": true}, {"label": "Pour les parents", "to": "parents"}], "blocks": [{"h": "Ce que vous pouvez activer", "list": ["Sites pour adultes : plus de 60 000 sites porno et 18+.", "SafeSearch : Google, Bing, DuckDuckGo et YouTube ne montrent que des résultats sûrs, quels que soient les réglages de recherche.", "Jeux d’argent : 1 600 sites de paris, de casino et de poker.", "Rencontres : 65 applis de rencontre et sites de chat vidéo aléatoire.", "Anti-contournement : les sites connus de VPN, de proxy et de Tor, pour que le filtre ne soit pas contourné en un clic.", "Chaque partie a son propre interrupteur. Elle fonctionne séparément de l’interrupteur IA."]}, {"h": "Comment l’activer", "steps": ["Navigateur : installez l’<a href=\"/fr/extension-navigateur/\">extension de navigateur</a>, ouvrez-la et cochez ce que vous voulez sous « Filtre familial ».", "Android : installez l’<a href=\"/fr/android/\">appli Android</a> et utilisez les interrupteurs sous « Filtre familial ». Il fonctionne alors dans toutes les applis du téléphone.", "Windows : lancez le <a href=\"/fr/windows/\">téléchargement Windows</a> et tapez 5. Le script propose les jeux d’argent et les rencontres.", "Mac et Linux : utilisez le <a href=\"/fr/mac-linux/\">téléchargement Mac et Linux</a> et tapez <code>sudo sh mindveto.sh family-on gambling dating</code>.", "Dans l’extension et l’appli, définissez un PIN : couper le filtre demande alors le PIN. Sur un ordinateur, donnez à votre enfant un compte normal (non administrateur)."]}, {"h": "Limites honnêtes", "list": ["Aucun filtre ne bloque tout. De nouveaux sites apparaissent chaque jour, et des images peuvent encore apparaître dans les chats, les applis et les réseaux sociaux.", "Les listes arrêtent les sites connus. Un enfant avec le téléphone d’un ami ou un compte administrateur peut les contourner.", "Sur Android, le filtre fonctionne tant que Mindveto est actif. Activez « VPN permanent » pour qu’il le reste."], "note": "Mindveto n’enregistre pas les sites visités et ne nous envoie rien. Un filtre aide ; parler avec votre enfant aide davantage.", "human": true}, {"h": "En bref", "facts": [["Prix", "Gratuit"], ["Sites pour adultes", "60 000+"], ["Sites de jeux d’argent", "1 600"], ["Rencontres et chat vidéo", "65"], ["Listes", "Listes ouvertes (licence MIT) et nos propres listes"], ["Données envoyées", "Aucune"]]}], "faq": [{"q": "Le filtre famille est-il gratuit ?", "a": "Oui. Il fait partie des téléchargements gratuits de Mindveto aujourd’hui."}, {"q": "Bloque-t-il aussi l’IA ?", "a": "Seulement si vous le voulez. L’interrupteur IA et le filtre famille fonctionnent séparément : vous pouvez utiliser l’un sans l’autre."}, {"q": "Fonctionne-t-il sur iPhone ou sur tout le Wi-Fi ?", "a": "Il n’y a pas encore d’appli iPhone. Vous pouvez utiliser les mêmes listes gratuites dans un filtre DNS comme AdGuard Home ou Pi-hole : voir <a href=\"/fr/reseau/\">tout le réseau</a>."}, {"q": "Peut-il bloquer un site normal par erreur ?", "a": "Cela peut arriver avec toute liste. Dans l’extension, vous pouvez autoriser un site de confiance ; votre choix passe avant le filtre."}], "related": ["parents", "browser", "android"]},
 };

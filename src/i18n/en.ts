@@ -12,7 +12,7 @@ export const home: Home = {
   how: 'How it works',
   doorsH: 'Who it is for',
   doors: [
-    { key: 'parents', who: 'Parents', why: 'AI companions at midnight, homework written by a chatbot. Lock it on the family PC and the child’s phone.', go: 'For parents' },
+    { key: 'parents', who: 'Parents', why: 'AI companions at midnight, homework written by a chatbot. Lock it on the family PC and the child’s phone. New: a free family filter for porn, gambling and dating sites.', go: 'For parents' },
     { key: 'schools', who: 'Schools', why: 'An exam button for teachers, and files IT can roll out to every school computer today.', go: 'For schools' },
     { key: 'offices', who: 'Offices', why: 'Keep client files, IBANs and contracts out of public chatbots. Allow only the AI your firm approves.', go: 'For offices' },
   ],
@@ -71,7 +71,7 @@ export const pages: Record<string, Page> = {
       { q: 'My child uses a school laptop. Can I install it there?', a: 'Ask the school first. School devices are managed by the school, and many schools can install Mindveto for all pupils at once.' },
       { q: 'Is it really free?', a: 'Yes. Blocking, PIN and schedule stay free. A paid Plus plan with extras for families comes with the Google Play launch.' },
     ],
-    related: ['browser', 'android', 'windows'],
+    related: ['family', 'browser', 'android'],
   },
 
   schools: {
@@ -181,7 +181,7 @@ export const pages: Record<string, Page> = {
     desc: 'Android app that blocks ChatGPT, Gemini, Character.AI and 150+ AI services in every app on the phone. PIN and tamper alerts. Nothing sent.',
     h1: 'AI off in every app on the phone.',
     lead: 'Browsers are only half the story: AI apps live on the phone. The Mindveto Android app blocks AI addresses for every app, and tells you if someone tries to switch it off.',
-    actions: [{ label: 'Download for Android (45 KB, beta)', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'SHA-256', url: DL + 'human-override-android.sha256' }],
+    actions: [{ label: 'Download for Android (389 KB, beta)', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'SHA-256', url: DL + 'human-override-android.sha256' }],
     blocks: [
       { h: 'How it works', p: [
         'The app runs a small local filter for internet names (DNS) on the phone. When an app asks for an AI address, the filter answers that it does not exist. Everything else works as normal.',
@@ -196,7 +196,7 @@ export const pages: Record<string, Page> = {
         'Set a PIN.',
       ], note: 'Beta: to update, uninstall the old version first. The Google Play version is coming, with a 15-day free trial of Plus.' },
       { h: 'Facts', facts: [
-        ['Version', 'Beta, target Android 16 (SDK 36)'], ['Size', '45 KB'], ['Needs', 'Android 8 or newer'],
+        ['Version', 'Beta, target Android 16 (SDK 36)'], ['Size', '389 KB'], ['Needs', 'Android 8 or newer'],
         ['Tamper alerts', 'Yes, a notification if protection stops'], ['Data sent', 'None'], ['Price', 'Free during the beta'],
       ]},
     ],
@@ -330,7 +330,7 @@ export const pages: Record<string, Page> = {
     lead: 'Pick the device you want to protect. Everything is free and needs no account.',
     blocks: [
       { h: 'Browser extension', p: ['Chrome, Edge, Brave and Opera. Version 1.6.0, 735 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-1.6.0.zip', solid: true, download: true }, { label: 'Install steps', to: 'browser' }] },
-      { h: 'Android app (beta)', p: ['Blocks AI in every app. 45 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Install steps', to: 'android' }] },
+      { h: 'Android app (beta)', p: ['Blocks AI in every app. 389 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Install steps', to: 'android' }] },
       { h: 'Windows', p: ['Every browser and app on the PC. 501 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Install steps', to: 'windows' }] },
       { h: 'Mac and Linux', p: ['One command, system-wide. 498 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Install steps', to: 'maclinux' }] },
       { h: 'IT pack and lists', p: ['DNS, firewall and browser-policy files. 13 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-pro-pack.zip', solid: true, download: true }, { label: 'All lists', to: 'network' }] },
@@ -522,4 +522,6 @@ export const pages: Record<string, Page> = {
     ],
     related: ['offices', 'paste', 'pricing'],
   },
+
+  family: {"title": "Block porn, gambling and dating sites for free", "desc": "Free family filter: block porn and 18+ sites, gambling and dating apps, force SafeSearch and stop VPN tricks. For browser, Android, Windows and Mac.", "h1": "Block porn, gambling and dating sites.", "lead": "Mindveto has a family filter next to the AI switch. You choose what it blocks, and a PIN keeps your choice in place. It is off until you switch it on.", "actions": [{"label": "Download free", "to": "download", "solid": true}, {"label": "For parents", "to": "parents"}], "blocks": [{"h": "What you can switch on", "list": ["Adult sites: 60,000+ porn and 18+ sites.", "SafeSearch: Google, Bing, DuckDuckGo and YouTube show safe results only, whatever the search settings say.", "Gambling: 1,600 betting, casino and poker sites.", "Dating: 65 dating apps and random video chat sites.", "Anti-bypass: well-known VPN, proxy and Tor sites, so the filter is not skipped with one click.", "Each part has its own switch. It works apart from the AI switch."]}, {"h": "Switch it on", "steps": ["Browser: install the <a href=\"/browser-extension/\">browser extension</a>, open it and tick what you want under “Family filter”.", "Android: install the <a href=\"/android/\">Android app</a> and use the switches under “Family filter”. It then works in every app on the phone.", "Windows: run the <a href=\"/windows/\">Windows download</a> and type 5. It asks about gambling and dating.", "Mac and Linux: use the <a href=\"/mac-linux/\">Mac and Linux download</a> and type <code>sudo sh mindveto.sh family-on gambling dating</code>.", "In the extension and the app, set a PIN: switching the filter off then needs the PIN. On a computer, give your child a normal (non-admin) account."]}, {"h": "Honest limits", "list": ["No filter catches everything. New sites appear every day, and images can still show up in chats, apps and social media.", "The lists stop known sites. A child with a friend’s phone or an admin account can get around them.", "On Android the filter works while Mindveto is on. Turn on “Always-on VPN” so it stays on."], "note": "Mindveto does not record which sites are visited and sends nothing to us. A filter helps; talking with your child helps more.", "human": true}, {"h": "Facts", "facts": [["Price", "Free"], ["Adult sites", "60,000+"], ["Gambling sites", "1,600"], ["Dating and video chat", "65"], ["Lists", "Open lists (MIT licence) plus our own lists"], ["Data sent", "None"]]}], "faq": [{"q": "Is the family filter free?", "a": "Yes. It is part of the free Mindveto downloads today."}, {"q": "Does it also block AI?", "a": "Only if you want that. The AI switch and the family filter work apart: you can use one without the other."}, {"q": "Does it work on an iPhone or on the whole Wi-Fi?", "a": "There is no iPhone app yet. You can use the same free lists in a DNS filter such as AdGuard Home or Pi-hole: see <a href=\"/network/\">whole network</a>."}, {"q": "Will it block a normal site by mistake?", "a": "That can happen with any list. In the browser extension you can allow a site you trust; your choice wins over the filter."}], "related": ["parents", "browser", "android"]},
 };

@@ -24,6 +24,10 @@ jobs:
       - name: No external fonts or trackers in the build
         run: |
           if grep -rlE "fonts\.googleapis|fonts\.gstatic|googletagmanager|google-analytics|facebook\.net|hotjar" dist; then echo "External request found"; exit 1; fi
+      - name: Site check (links, titles, descriptions, hreflang)
+        run: python3 scripts/check.py
+      - name: Quality gate (Lighthouse, every score 90 or higher)
+        run: sh scripts/lighthouse.sh
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: dist

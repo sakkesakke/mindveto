@@ -113,7 +113,7 @@ export const pages: Record<string, Page> = {
     desc: 'Paste guard for offices: a warning before IBANs, ID numbers, client lists or confidential text go into AI chats. Allow only approved AI.',
     h1: 'Client data stays out of public chatbots.',
     lead: 'An accountant pastes a bank statement into a chatbot to “summarise it”. Mindveto stops that moment on the screen, before the data leaves the office.',
-    actions: [{ label: 'See the paste guard', to: 'paste', solid: true }, { label: 'Pricing for teams', to: 'pricing' }],
+    actions: [{ label: 'Protect private data in ChatGPT', to: 'paste', solid: true }, { label: 'Pricing for teams', to: 'pricing' }],
     blocks: [
       { h: 'What it does for a firm', list: [
         'Allow only the AI your firm approves (for example Microsoft Copilot with your business account) and block the other 150+.',

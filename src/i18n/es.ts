@@ -114,7 +114,7 @@ export const pages: Record<string, Page> = {
     desc: 'Guardia de pegado para oficinas: un aviso antes de que IBAN, números de identidad, listas de clientes o textos confidenciales lleguen a chats de IA.',
     h1: 'Los datos de clientes se quedan fuera de los chatbots públicos.',
     lead: 'Un contable pega un extracto bancario en un chatbot para “resumirlo”. Mindveto detiene ese momento en la pantalla, antes de que los datos salgan de la oficina.',
-    actions: [{ label: 'Ver la guardia de pegado', to: 'paste', solid: true }, { label: 'Precios para equipos', to: 'pricing' }],
+    actions: [{ label: 'Proteger datos privados en ChatGPT', to: 'paste', solid: true }, { label: 'Precios para equipos', to: 'pricing' }],
     blocks: [
       { h: 'Qué hace por una empresa', list: [
         'Permite solo la IA que aprueba tu empresa (por ejemplo Microsoft Copilot con tu cuenta de empresa) y bloquea las otras 150+.',

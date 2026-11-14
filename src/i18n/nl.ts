@@ -113,7 +113,7 @@ export const pages: Record<string, Page> = {
     desc: 'Plakbewaker voor kantoren: een waarschuwing voor IBAN’s, klantlijsten of vertrouwelijke tekst in AI-chats belanden. Alleen goedgekeurde AI.',
     h1: 'Klantgegevens blijven uit publieke chatbots.',
     lead: 'Een boekhouder plakt een rekeninguittreksel in een chatbot om het “samen te vatten”. Mindveto stopt dat moment op het scherm, voor de gegevens het kantoor verlaten.',
-    actions: [{ label: 'Bekijk de plakbewaker', to: 'paste', solid: true }, { label: 'Prijzen voor teams', to: 'pricing' }],
+    actions: [{ label: 'Bescherm privégegevens in ChatGPT', to: 'paste', solid: true }, { label: 'Prijzen voor teams', to: 'pricing' }],
     blocks: [
       { h: 'Wat het doet voor een kantoor', list: [
         'Laat alleen de AI toe die je kantoor goedkeurt (bijvoorbeeld Microsoft Copilot met je zakelijke account) en blokkeer de andere 150+.',

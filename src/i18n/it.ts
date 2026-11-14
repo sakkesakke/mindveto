@@ -114,7 +114,7 @@ export const pages: Record<string, Page> = {
     desc: 'Guardia incolla per uffici: un avviso prima che IBAN, numeri d’identità, liste di clienti o testi riservati finiscano nelle chat di IA. Solo IA approvata.',
     h1: 'I dati dei clienti restano fuori dai chatbot pubblici.',
     lead: 'Un commercialista incolla un estratto conto in un chatbot per “riassumerlo”. Mindveto ferma quel momento sullo schermo, prima che i dati escano dallo studio.',
-    actions: [{ label: 'Vedi la guardia incolla', to: 'paste', solid: true }, { label: 'Prezzi per i team', to: 'pricing' }],
+    actions: [{ label: 'Proteggere i dati privati in ChatGPT', to: 'paste', solid: true }, { label: 'Prezzi per i team', to: 'pricing' }],
     blocks: [
       { h: 'Cosa fa per uno studio', list: [
         'Consente solo l’IA che il tuo studio approva (per esempio Microsoft Copilot con l’account aziendale) e blocca le altre 150+.',

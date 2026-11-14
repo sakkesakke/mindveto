@@ -114,7 +114,7 @@ export const pages: Record<string, Page> = {
     desc: 'Guarda de colagem para escritórios: um aviso antes que IBAN, números de identidade, listas de clientes ou textos confidenciais cheguem a chats de IA.',
     h1: 'Dados de clientes ficam fora dos chatbots públicos.',
     lead: 'Um contador cola um extrato bancário num chatbot para “resumir”. O Mindveto para esse momento na tela, antes que os dados saiam do escritório.',
-    actions: [{ label: 'Ver a guarda de colagem', to: 'paste', solid: true }, { label: 'Preços para equipes', to: 'pricing' }],
+    actions: [{ label: 'Proteger dados privados no ChatGPT', to: 'paste', solid: true }, { label: 'Preços para equipes', to: 'pricing' }],
     blocks: [
       { h: 'O que faz por um escritório', list: [
         'Permite só a IA que seu escritório aprova (por exemplo Microsoft Copilot com a conta da empresa) e bloqueia as outras 150+.',

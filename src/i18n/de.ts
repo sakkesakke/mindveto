@@ -114,7 +114,7 @@ export const pages: Record<string, Page> = {
     desc: 'Einfüge-Schutz für Büros: eine Warnung, bevor IBANs, Ausweisnummern, Kundenlisten oder vertrauliche Texte in KI-Chats landen. Nur freigegebene KI.',
     h1: 'Mandantendaten bleiben aus öffentlichen Chatbots.',
     lead: 'Eine Steuerfachangestellte fügt einen Kontoauszug in einen Chatbot ein, um ihn „zusammenzufassen“. Mindveto stoppt diesen Moment auf dem Bildschirm, bevor die Daten das Büro verlassen.',
-    actions: [{ label: 'Einfüge-Schutz ansehen', to: 'paste', solid: true }, { label: 'Preise für Teams', to: 'pricing' }],
+    actions: [{ label: 'Private Daten in ChatGPT schützen', to: 'paste', solid: true }, { label: 'Preise für Teams', to: 'pricing' }],
     blocks: [
       { h: 'Was es für ein Büro tut', list: [
         'Nur die KI erlauben, die Ihr Büro freigibt (zum Beispiel Microsoft Copilot mit Ihrem Geschäftskonto), und die anderen 150+ sperren.',

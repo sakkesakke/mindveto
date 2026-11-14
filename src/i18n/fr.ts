@@ -113,7 +113,7 @@ export const pages: Record<string, Page> = {
     desc: 'Garde-collage pour bureaux : un avertissement avant que des IBAN, listes clients ou textes confidentiels n’entrent dans un chat IA.',
     h1: 'Les données clients restent hors des chatbots publics.',
     lead: 'Un comptable colle un extrait bancaire dans un chatbot pour « le résumer ». Mindveto arrête ce moment à l’écran, avant que les données ne quittent le bureau.',
-    actions: [{ label: 'Voir le garde-collage', to: 'paste', solid: true }, { label: 'Tarifs pour équipes', to: 'pricing' }],
+    actions: [{ label: 'Protéger les données privées dans ChatGPT', to: 'paste', solid: true }, { label: 'Tarifs pour équipes', to: 'pricing' }],
     blocks: [
       { h: 'Ce qu’il fait pour un cabinet', list: [
         'N’autorise que l’IA approuvée par votre cabinet (par exemple Microsoft Copilot avec votre compte professionnel) et bloque les 150+ autres.',

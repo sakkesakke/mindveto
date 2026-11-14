@@ -6,8 +6,9 @@ import { COMPANY } from './company';
 export const home: Home = {
   title: 'Mindveto: bloquea ChatGPT y más de 150 IA con un interruptor',
   desc: 'Bloquea ChatGPT, Gemini, Copilot y más de 150 herramientas de IA en navegadores, Android, Windows, Mac y redes. PIN, botón de examen. Gratis, sin rastreo.',
-  h1: 'Tu mente tiene la última palabra.',
-  lead: 'Mindveto apaga ChatGPT, Gemini, Copilot y más de 150 herramientas de IA en un navegador, un teléfono, un ordenador o toda una red. Un PIN decide quién puede volver a encenderlas.',
+  h1: 'Apaga ChatGPT y más de 150 herramientas de IA.',
+  motto: 'Tu mente tiene la última palabra.', trust: 'Gratis. Sin cuenta, sin rastreo. Hecho por Amghar Said.', mockOn: 'El chat de IA está abierto', mockOff: 'Bloqueado por Mindveto',
+  lead: 'Para padres, escuelas y oficinas. Mindveto funciona en un navegador, un teléfono, un ordenador o toda una red, y un PIN decide quién puede volver a encender la IA.',
   switchOn: 'IA', switchOff: 'Veto', switchLabel: 'Pruébalo: apaga la IA en esta página',
   statusOn: 'IA permitida. Pulsa el interruptor.', statusOff: 'Veto. Más de 150 servicios de IA bloqueados.',
   how: 'Cómo funciona',

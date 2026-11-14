@@ -5,8 +5,9 @@ import { COMPANY } from './company';
 export const home: Home = {
   title: 'Mindveto: blokkeer ChatGPT en 150+ AI-tools met één knop',
   desc: 'Blokkeer ChatGPT, Gemini, Copilot en 150+ AI-tools op browsers, Android, Windows, Mac en netwerken. Pincode, examenknop, plakbewaker. Gratis.',
-  h1: 'Jouw verstand heeft het laatste woord.',
-  lead: 'Mindveto zet ChatGPT, Gemini, Copilot en 150+ andere AI-tools uit op een browser, een telefoon, een computer of een heel netwerk. Een pincode bepaalt wie ze weer aan mag zetten.',
+  h1: 'Zet ChatGPT en 150+ AI-tools uit.',
+  motto: 'Jouw verstand heeft het laatste woord.', trust: 'Gratis. Geen account, geen tracking. Gemaakt door Amghar Said.', mockOn: 'AI-chat staat open', mockOff: 'Geblokkeerd door Mindveto',
+  lead: 'Voor ouders, scholen en kantoren. Mindveto werkt in een browser, op een telefoon, een computer of een heel netwerk, en een pincode bepaalt wie AI weer aan mag zetten.',
   switchOn: 'AI', switchOff: 'Veto', switchLabel: 'Probeer het: zet AI uit op deze pagina',
   statusOn: 'AI toegestaan. Zet hem om.', statusOff: 'Veto. 150+ AI-diensten geblokkeerd.',
   how: 'Zo werkt het',

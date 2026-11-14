@@ -128,7 +128,7 @@ strong { font-weight: 600; }
 .stream .lbl { color: var(--ink); font-weight: 600; margin-inline-end: .35rem; }
 .vetoed .stream .lbl { color: var(--ink); text-decoration: none; }
 .stream span { transition: color .4s ease, text-decoration-color .4s ease; text-decoration: line-through; text-decoration-color: transparent; text-decoration-thickness: .12em; }
-.vetoed .stream span { color: #9aa49f; text-decoration-color: var(--ink); }
+.vetoed .stream span { color: var(--mute); text-decoration-color: var(--ink); }
 @media (prefers-reduced-motion: reduce) { .stream span, .rocker, .led { transition: none !important; } }
 
 /* Sections */
@@ -370,3 +370,19 @@ code, kbd { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; fo
 :lang(ar) { --f: 'Segoe UI', Tahoma, 'Noto Sans Arabic', 'Geeza Pro', system-ui, sans-serif; }
 :lang(ar) body { line-height: 1.75; }
 [dir='rtl'] .steps li::before { font-family: 'Atkinson Next', system-ui, sans-serif; }
+
+/* Home hero: what the switch does, shown on a browser window (3-second test, 13 Nov) */
+.hero .trust { margin: var(--s4) 0 0; font-size: 1rem; color: var(--mute); }
+.hero .motto { margin: var(--s2) 0 0; font-size: 1rem; font-weight: 600; color: var(--moss); }
+.hero .plate { gap: var(--s3); }
+.hero .switch { width: 13rem; height: 19rem; padding: 1rem; }
+.hero .rocker { inset: 1.9rem 2.3rem; }
+.bmock { width: 18.5rem; max-width: 100%; background: #fff; border: 2px solid var(--ink); }
+.bbar { display: flex; align-items: center; gap: .35rem; padding: .45rem .6rem; background: var(--paper); border-bottom: 2px solid var(--rule); }
+.bbar i { width: .5rem; height: .5rem; background: var(--rule); }
+.bbar span { flex: 1; margin-inline-start: .4rem; padding: .1rem .5rem; background: #fff; border: 1px solid var(--rule); font-size: .875rem; color: var(--mute); }
+.bmock p { margin: 0; padding: 1.1rem .8rem; text-align: center; font-weight: 600; font-size: 1.125rem; }
+.bmock .m-on { color: var(--ai); } .bmock .m-off { display: none; color: var(--moss); }
+.vetoed .bmock .m-on { display: none; } .vetoed .bmock .m-off { display: inline; }
+.vetoed .bmock .bbar span { text-decoration: line-through; }
+@media (max-width: 860px) { .hero { padding-top: var(--s5); } .hero .wrap { gap: var(--s5); } }

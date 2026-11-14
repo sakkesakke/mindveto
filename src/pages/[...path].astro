@@ -88,6 +88,7 @@ const P = PLANS[lang];
 <Base lang={lang} page={key} title={title} desc={desc} jsonld={jsonld}>
 {isHome ? (
   <>
+  <div id="hz" class="vetoed">
   <section class="hero" aria-labelledby="h1">
     <div class="wrap">
       <div>
@@ -97,20 +98,27 @@ const P = PLANS[lang];
           <a class="btn solid" href={href('download', lang)}>{t.getFree}</a>
           <a class="btn line" href="#who">{h.doorsH}</a>
         </div>
+        <p class="trust">{h.trust}</p>
+        <p class="motto">{h.motto}</p>
       </div>
       <div class="plate">
-        <button class="switch" id="sw" type="button" role="switch" aria-checked="false" aria-label={h.switchLabel}>
+        <div class="bmock" aria-hidden="true">
+          <div class="bbar"><i></i><i></i><i></i><span dir="ltr">chatgpt.com</span></div>
+          <p><span class="m-on">{h.mockOn}</span><span class="m-off">{h.mockOff}</span></p>
+        </div>
+        <button class="switch" id="sw" type="button" role="switch" aria-checked="true" aria-label={h.switchLabel}>
           <span class="screw t"></span>
           <span class="rocker" data-on={h.switchOn} data-off={h.switchOff}><span class="led"></span></span>
           <span class="screw b"></span>
         </button>
-        <p class="status" id="st" aria-live="polite">{h.statusOn}</p>
+        <p class="status" id="st" aria-live="polite">{h.statusOff}</p>
       </div>
     </div>
   </section>
   <section class="stream" aria-label="AI services">
     <div class="wrap"><p><span class="lbl">{STREAM_LABEL[lang]}</span> {AI_NAMES.slice(0, 9).map((n, i) => <><span style={`transition-delay:${i * 40}ms`}>{n}</span>{' '}</>)}<span style={`transition-delay:${9 * 40}ms`}>+150</span></p></div>
   </section>
+  </div>
 
   <section class="band paper" id="who" aria-labelledby="who-h">
     <div class="wrap">
@@ -170,7 +178,7 @@ const P = PLANS[lang];
     sw.addEventListener('click', function () {
       var v = sw.getAttribute('aria-checked') !== 'true';
       sw.setAttribute('aria-checked', String(v));
-      document.body.classList.toggle('vetoed', v);
+      document.getElementById('hz').classList.toggle('vetoed', v);
       st.textContent = v ? sOff : sOn;
     });
   </script>

@@ -54,7 +54,7 @@ const fullTitle = page === 'home' || title.length > 48 ? title : `${title} | Min
   <div class="wrap">
     <a class="brand" href={href('home', lang)}>
       <svg viewBox="0 0 44 62" aria-hidden="true"><rect x="2.5" y="2.5" width="39" height="57" rx="11" fill="#f6f7f3" stroke="#18241f" stroke-width="5"/><rect x="12" y="12" width="20" height="38" rx="5" fill="#fff" stroke="#18241f" stroke-width="2.5"/><path d="M12 31h20v14a5 5 0 0 1-5 5H17a5 5 0 0 1-5-5z" fill="#18241f"/><circle cx="22" cy="20" r="2.4" fill="#5b3ce0"/></svg>
-      Mindveto<span class="tag">The AI kill switch</span>
+      Mindveto<span class="tag">{t.killSwitch}</span>
     </a>
     <details class="menu"><summary>{t.menu}</summary>
       <nav class="nav" aria-label={t.navLabel}>
@@ -78,7 +78,7 @@ const fullTitle = page === 'home' || title.length > 48 ? title : `${title} | Min
   <div class="wrap">
     <div class="cols">
       <div>
-        <p class="fbrand"><img src="/brand/mark-dark.svg" alt="" width="22" height="31"><strong>Mindveto</strong><span>The AI kill switch</span></p>
+        <p class="fbrand"><img src="/brand/mark-dark.svg" alt="" width="22" height="31"><strong>Mindveto</strong><span>{t.killSwitch}</span></p>
         <p>{t.tagline}</p>
         <p><a href="mailto:hello@mindveto.app">hello@mindveto.app</a></p>
       </div>

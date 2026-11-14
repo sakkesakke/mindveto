@@ -9,7 +9,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     tagline: 'Made by Amghar Said.',
     fine: 'No cookies, no trackers, no ads on this site.',
     langName: 'English', langLabel: 'Language', getFree: 'Download free', related: 'Related',
-    locale: 'en_GB', family: "Block porn and gambling", guide: 'How to block ChatGPT', ent: 'Enterprise no.',
+    locale: 'en_GB', killSwitch: 'The AI kill switch', family: "Block porn and gambling", guide: 'How to block ChatGPT', ent: 'Enterprise no.',
     demoH: 'See it work', demoCap: '9 seconds, no sound. Recorded with the real extension on a test page; the numbers are made up.',
   },
   nl: {
@@ -20,7 +20,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     tagline: 'Gemaakt door Amghar Said.',
     fine: 'Geen cookies, geen trackers, geen advertenties op deze site.',
     langName: 'Nederlands', langLabel: 'Taal', getFree: 'Gratis downloaden', related: 'Ook interessant',
-    locale: 'nl_NL', family: "Porno en gokken blokkeren", guide: 'ChatGPT blokkeren', ent: 'Ondernemingsnr.',
+    locale: 'nl_NL', killSwitch: 'De AI-uitknop', family: "Porno en gokken blokkeren", guide: 'ChatGPT blokkeren', ent: 'Ondernemingsnr.',
     demoH: 'Zie het werken', demoCap: '9 seconden, zonder geluid. Opgenomen met de echte extensie op een testpagina; de nummers zijn verzonnen.',
   },
   fr: {
@@ -31,7 +31,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     tagline: 'Créé par Amghar Said.',
     fine: 'Pas de cookies, pas de traceurs, pas de publicité sur ce site.',
     langName: 'Français', langLabel: 'Langue', getFree: 'Télécharger gratuitement', related: 'À voir aussi',
-    locale: 'fr_FR', family: "Bloquer porno et jeux d’argent", guide: 'Bloquer ChatGPT', ent: 'N° d’entreprise',
+    locale: 'fr_FR', killSwitch: 'L’interrupteur d’IA', family: "Bloquer porno et jeux d’argent", guide: 'Bloquer ChatGPT', ent: 'N° d’entreprise',
     demoH: 'Voyez-le à l’œuvre', demoCap: '9 secondes, sans son. Enregistré avec la vraie extension sur une page de test ; les numéros sont fictifs.',
   },
   es: {
@@ -42,7 +42,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     tagline: 'Hecho por Amghar Said.',
     fine: 'Sin cookies, sin rastreadores, sin anuncios en este sitio.',
     langName: 'Español', langLabel: 'Idioma', getFree: 'Descargar gratis', related: 'Relacionado',
-    locale: 'es_ES', family: "Bloquear porno y apuestas", guide: 'Cómo bloquear ChatGPT', ent: 'N.º de empresa',
+    locale: 'es_ES', killSwitch: 'El interruptor de la IA', family: "Bloquear porno y apuestas", guide: 'Cómo bloquear ChatGPT', ent: 'N.º de empresa',
     demoH: 'Míralo en acción', demoCap: '9 segundos, sin sonido. Grabado con la extensión real en una página de prueba; los números son inventados. Vídeo en inglés.',
   },
   de: {
@@ -53,7 +53,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     tagline: 'Entwickelt von Amghar Said.',
     fine: 'Keine Cookies, keine Tracker, keine Werbung auf dieser Website.',
     langName: 'Deutsch', langLabel: 'Sprache', getFree: 'Kostenlos herunterladen', related: 'Auch interessant',
-    locale: 'de_DE', family: "Pornos und Glücksspiel sperren", guide: 'ChatGPT blockieren', ent: 'Unternehmensnr.',
+    locale: 'de_DE', killSwitch: 'Der KI-Ausschalter', family: "Pornos und Glücksspiel sperren", guide: 'ChatGPT blockieren', ent: 'Unternehmensnr.',
     demoH: 'So funktioniert es', demoCap: '9 Sekunden, ohne Ton. Mit der echten Erweiterung auf einer Testseite aufgenommen; die Nummern sind erfunden. Video auf Englisch.',
   },
   pt: {
@@ -64,7 +64,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     tagline: 'Feito por Amghar Said.',
     fine: 'Sem cookies, sem rastreadores, sem anúncios neste site.',
     langName: 'Português', langLabel: 'Idioma', getFree: 'Baixar grátis', related: 'Veja também',
-    locale: 'pt_BR', family: "Bloquear pornô e apostas", guide: 'Como bloquear o ChatGPT', ent: 'N.º da empresa',
+    locale: 'pt_BR', killSwitch: 'O interruptor da IA', family: "Bloquear pornô e apostas", guide: 'Como bloquear o ChatGPT', ent: 'N.º da empresa',
     demoH: 'Veja funcionando', demoCap: '9 segundos, sem som. Gravado com a extensão real numa página de teste; os números são inventados. Vídeo em inglês.',
   },
   it: {
@@ -75,7 +75,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     tagline: 'Creato da Amghar Said.',
     fine: 'Niente cookie, niente tracker, niente pubblicità su questo sito.',
     langName: 'Italiano', langLabel: 'Lingua', getFree: 'Scarica gratis', related: 'Vedi anche',
-    locale: 'it_IT', family: "Bloccare porno e scommesse", guide: 'Come bloccare ChatGPT', ent: 'N. impresa',
+    locale: 'it_IT', killSwitch: 'L’interruttore dell’IA', family: "Bloccare porno e scommesse", guide: 'Come bloccare ChatGPT', ent: 'N. impresa',
     demoH: 'Guardalo in azione', demoCap: '9 secondi, senza audio. Registrato con l’estensione reale su una pagina di prova; i numeri sono inventati. Video in inglese.',
   },
   ar: {
@@ -86,7 +86,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     tagline: 'من صنع أمغار سعيد.',
     fine: 'لا ملفات تعريف ارتباط، لا أدوات تتبّع، لا إعلانات على هذا الموقع.',
     langName: 'العربية', langLabel: 'اللغة', getFree: 'نزّل مجانًا', related: 'ذو صلة',
-    locale: 'ar_AR', family: "حجب الإباحية والقمار", guide: 'كيف تحظر ChatGPT', ent: 'رقم المؤسسة',
+    locale: 'ar_AR', killSwitch: 'مفتاح إيقاف الذكاء الاصطناعي', family: "حجب الإباحية والقمار", guide: 'كيف تحظر ChatGPT', ent: 'رقم المؤسسة',
     demoH: 'شاهده وهو يعمل', demoCap: '9 ثوانٍ، بدون صوت. سُجّل بالإضافة الحقيقية على صفحة تجريبية؛ الأرقام مختلقة. الفيديو بالإنجليزية.',
   },
 };

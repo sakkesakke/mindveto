@@ -6,8 +6,9 @@ import { COMPANY } from './company';
 export const home: Home = {
   title: 'Mindveto: ChatGPT und 150+ KI-Tools per Schalter sperren',
   desc: 'Sperrt ChatGPT, Gemini, Copilot und über 150 KI-Tools in Browsern, auf Android, Windows, Mac und im Netzwerk. PIN, Prüfungsknopf. Kostenlos, ohne Tracking.',
-  h1: 'Dein Kopf hat das letzte Wort.',
-  lead: 'Mindveto schaltet ChatGPT, Gemini, Copilot und über 150 weitere KI-Tools ab: in einem Browser, auf einem Handy, einem Computer oder im ganzen Netzwerk. Eine PIN entscheidet, wer sie wieder einschalten darf.',
+  h1: 'Schalte ChatGPT und 150+ KI-Tools ab.',
+  motto: 'Dein Kopf hat das letzte Wort.', trust: 'Kostenlos. Kein Konto, kein Tracking. Entwickelt von Amghar Said.', mockOn: 'KI-Chat ist offen', mockOff: 'Von Mindveto gesperrt',
+  lead: 'Für Eltern, Schulen und Büros. Mindveto läuft im Browser, auf dem Handy, dem Computer oder im ganzen Netzwerk, und eine PIN entscheidet, wer KI wieder einschalten darf.',
   switchOn: 'KI', switchOff: 'Veto', switchLabel: 'Ausprobieren: KI auf dieser Seite abschalten',
   statusOn: 'KI erlaubt. Umlegen.', statusOff: 'Veto. Über 150 KI-Dienste gesperrt.',
   how: 'So funktioniert es',

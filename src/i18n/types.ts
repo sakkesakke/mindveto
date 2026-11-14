@@ -22,6 +22,7 @@ export type Page = {
 };
 export type Home = {
   title: string; desc: string; h1: string; lead: string;
+  motto: string; trust: string; mockOn: string; mockOff: string;
   switchOn: string; switchOff: string; statusOn: string; statusOff: string; switchLabel: string;
   how: string;
   doorsH: string; doors: { key: PageKey; who: string; why: string; go: string }[];

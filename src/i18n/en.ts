@@ -5,8 +5,9 @@ import { COMPANY } from './company';
 export const home: Home = {
   title: 'Mindveto: block ChatGPT and 150+ AI tools with one switch',
   desc: 'Block ChatGPT, Gemini, Copilot and 150+ AI tools on browsers, Android, Windows, Mac and networks. PIN lock, exam button, paste guard. Free, no tracking.',
-  h1: 'Your mind gets the last word.',
-  lead: 'Mindveto switches off ChatGPT, Gemini, Copilot and 150+ other AI tools on a browser, a phone, a computer or a whole network. A PIN decides who can switch them back on.',
+  h1: 'Switch off ChatGPT and 150+ AI tools.',
+  motto: 'Your mind gets the last word.', trust: 'Free. No account, no tracking. Made by Amghar Said.', mockOn: 'AI chat is open', mockOff: 'Blocked by Mindveto',
+  lead: 'For parents, schools and offices. Mindveto works on a browser, a phone, a computer or a whole network, and a PIN decides who can switch AI back on.',
   switchOn: 'AI', switchOff: 'Veto', switchLabel: 'Try it: switch AI off on this page',
   statusOn: 'AI allowed. Flip it.', statusOff: 'Veto. 150+ AI services blocked.',
   how: 'How it works',

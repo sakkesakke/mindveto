@@ -144,7 +144,7 @@ export const pages: Record<string, Page> = {
     desc: 'Free extension that blocks ChatGPT, Gemini, Claude and 150+ AI sites in Chrome, Edge, Brave and Opera. PIN, schedule, paste guard. No tracking.',
     h1: 'The AI switch for your browser.',
     lead: 'One switch blocks 150+ AI chatbots and AI tools. A PIN stops anyone else from changing it. Works in Chrome, Edge, Brave and Opera.',
-    actions: [{ label: 'Download v1.6.0 (735 KB)', url: DL + 'human-override-1.6.0.zip', solid: true, download: true }, { label: 'Install steps', url: '#install' }],
+    actions: [{ label: 'Download v1.6.1 (736 KB)', url: DL + 'human-override-1.6.1.zip', solid: true, download: true }, { label: 'Install steps', url: '#install' }],
     blocks: [
       { h: 'What is inside', list: [
         'Blocks AI chat, AI search, AI image, video, voice and music tools, AI writing and homework tools, AI coding tools and AI note-takers.',
@@ -166,7 +166,7 @@ export const pages: Record<string, Page> = {
         'Pin the icon to your toolbar, open it and set a PIN.',
       ], note: 'For parents and schools: on the extension’s “Details” page, switch on “Allow in Incognito”. Otherwise private windows are not blocked.' },
       { h: 'Facts', facts: [
-        ['Version', '1.6.0 (Manifest V3)'], ['Size', '735 KB'], ['Browsers', 'Chrome, Edge, Brave, Opera. Firefox and the official stores: coming soon'],
+        ['Version', '1.6.1 (Manifest V3)'], ['Size', '736 KB'], ['Browsers', 'Chrome, Edge, Brave, Opera. Firefox and the official stores: coming soon'],
         ['Permissions', 'Blocking rules, local storage, a daily timer'], ['Data sent', 'None. Only the public list is downloaded once a day'], ['Price', 'Free'],
       ]},
     ],
@@ -330,7 +330,7 @@ export const pages: Record<string, Page> = {
     h1: 'Download Mindveto.',
     lead: 'Pick the device you want to protect. Everything is free and needs no account.',
     blocks: [
-      { h: 'Browser on a laptop or PC', p: ['Browser extension. Chrome, Edge, Brave and Opera. Version 1.6.0, 735 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-1.6.0.zip', solid: true, download: true }, { label: 'Install steps', to: 'browser' }] },
+      { h: 'Browser on a laptop or PC', p: ['Browser extension. Chrome, Edge, Brave and Opera. Version 1.6.1, 736 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-1.6.1.zip', solid: true, download: true }, { label: 'Install steps', to: 'browser' }] },
       { h: 'Android phone or tablet', p: ['Android app (beta). Blocks AI in every app. 389 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Install steps', to: 'android' }] },
       { h: 'Windows PC: every app', p: ['Windows. Every browser and app on the PC. 501 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Install steps', to: 'windows' }] },
       { h: 'Mac or Linux computer', p: ['Mac and Linux. One command, system-wide. 498 KB.'], actions: [{ label: 'Download', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Install steps', to: 'maclinux' }] },

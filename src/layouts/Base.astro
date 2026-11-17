@@ -13,7 +13,7 @@ const nav: PageKey[] = ['parents', 'schools', 'offices', 'download', 'pricing', 
 const productKeys: PageKey[] = ['browser', 'android', 'windows', 'maclinux', 'network', 'exam', 'paste'];
 const org = {
   '@context': 'https://schema.org', '@type': 'Organization', name: 'Mindveto', url: SITE + '/',
-  logo: SITE + '/icon-512.png', slogan: 'The AI kill switch', founder: { '@type': 'Person', name: 'Amghar Said' },
+  logo: SITE + '/icon-512.png', slogan: 'The AI kill switch', founder: { '@type': 'Person', name: 'Amghar Said', sameAs: ['https://www.linkedin.com/in/amghar-said-67a95a22/'] },
   description: 'Mindveto makes an AI blocker for browsers, Android, Windows, Mac, Linux and networks. It runs on the device and collects no personal data.',
   foundingDate: '2026', areaServed: 'Worldwide', knowsAbout: ['AI blocking', 'parental controls', 'exam proctoring without surveillance', 'data loss prevention for AI chatbots'],
   email: 'hello@mindveto.app', contactPoint: { '@type': 'ContactPoint', contactType: 'customer support', email: 'hello@mindveto.app', availableLanguage: ['en', 'nl', 'fr'] },
@@ -108,7 +108,7 @@ const fullTitle = page === 'home' || title.length > 48 ? title : `${title} | Min
         </ul>
       </div>
     </div>
-    <p class="fine">© 2026 Amghar Said{COMPANY.kbo ? ` · ${t.ent} ${COMPANY.kbo}` : ''}{COMPANY.address ? ` · ${COMPANY.address}` : ''}. {t.fine}</p>
+    <p class="fine">© 2026 <a href="https://www.linkedin.com/in/amghar-said-67a95a22/" rel="me noopener">Amghar Said</a>{COMPANY.kbo ? ` · ${t.ent} ${COMPANY.kbo}` : ''}{COMPANY.address ? ` · ${COMPANY.address}` : ''}. {t.fine}</p>
   </div>
 </footer>
 </body>

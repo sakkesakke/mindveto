@@ -2,6 +2,7 @@ import type { Lang } from './routes';
 
 export const UI: Record<Lang, Record<string, string>> = {
   en: {
+    blog: 'Blog', by: 'By', sources: 'Sources', notLegal: 'General information, not legal or medical advice. Checked on the date above; rules and apps change.',
     skip: 'Skip to content', menu: 'Menu', navLabel: 'Main',
     parents: 'Parents', schools: 'Schools', offices: 'Offices', download: 'Download', pricing: 'Pricing', help: 'Help',
     home: 'Home', products: 'Products', forWho: 'Who it is for', company: 'Mindveto',
@@ -13,6 +14,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     demoH: 'See it work', demoCap: '9 seconds, no sound. Recorded with the real extension on a test page; the numbers are made up.',
   },
   nl: {
+    blog: 'Blog', by: 'Door', sources: 'Bronnen', notLegal: 'Algemene informatie, geen juridisch of medisch advies. Gecontroleerd op de datum hierboven; regels en apps veranderen.',
     skip: 'Naar de inhoud', menu: 'Menu', navLabel: 'Hoofdmenu',
     parents: 'Ouders', schools: 'Scholen', offices: 'Kantoren', download: 'Download', pricing: 'Prijzen', help: 'Hulp',
     home: 'Home', products: 'Producten', forWho: 'Voor wie', company: 'Mindveto',
@@ -24,6 +26,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     demoH: 'Zie het werken', demoCap: '9 seconden, zonder geluid. Opgenomen met de echte extensie op een testpagina; de nummers zijn verzonnen.',
   },
   fr: {
+    blog: 'Blog', by: 'Par', sources: 'Sources', notLegal: 'Information générale, pas un avis juridique ou médical. Vérifié à la date ci-dessus ; règles et applis évoluent.',
     skip: 'Aller au contenu', menu: 'Menu', navLabel: 'Menu principal',
     parents: 'Parents', schools: 'Écoles', offices: 'Bureaux', download: 'Télécharger', pricing: 'Tarifs', help: 'Aide',
     home: 'Accueil', products: 'Produits', forWho: 'Pour qui', company: 'Mindveto',
@@ -35,6 +38,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     demoH: 'Voyez-le à l’œuvre', demoCap: '9 secondes, sans son. Enregistré avec la vraie extension sur une page de test ; les numéros sont fictifs.',
   },
   es: {
+    blog: 'Blog', by: 'Por', sources: 'Fuentes', notLegal: 'Información general, no asesoramiento legal ni médico. Revisado en la fecha indicada; las normas y las apps cambian.',
     skip: 'Ir al contenido', menu: 'Menú', navLabel: 'Menú principal',
     parents: 'Padres', schools: 'Escuelas', offices: 'Oficinas', download: 'Descargar', pricing: 'Precios', help: 'Ayuda',
     home: 'Inicio', products: 'Productos', forWho: 'Para quién', company: 'Mindveto',
@@ -46,6 +50,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     demoH: 'Míralo en acción', demoCap: '9 segundos, sin sonido. Grabado con la extensión real en una página de prueba; los números son inventados. Vídeo en inglés.',
   },
   de: {
+    blog: 'Blog', by: 'Von', sources: 'Quellen', notLegal: 'Allgemeine Information, keine Rechts- oder medizinische Beratung. Geprüft am obigen Datum; Regeln und Apps ändern sich.',
     skip: 'Zum Inhalt', menu: 'Menü', navLabel: 'Hauptmenü',
     parents: 'Eltern', schools: 'Schulen', offices: 'Büros', download: 'Download', pricing: 'Preise', help: 'Hilfe',
     home: 'Start', products: 'Produkte', forWho: 'Für wen', company: 'Mindveto',
@@ -57,6 +62,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     demoH: 'So funktioniert es', demoCap: '9 Sekunden, ohne Ton. Mit der echten Erweiterung auf einer Testseite aufgenommen; die Nummern sind erfunden. Video auf Englisch.',
   },
   pt: {
+    blog: 'Blog', by: 'Por', sources: 'Fontes', notLegal: 'Informação geral, não é aconselhamento jurídico ou médico. Verificado na data acima; regras e apps mudam.',
     skip: 'Ir para o conteúdo', menu: 'Menu', navLabel: 'Menu principal',
     parents: 'Pais', schools: 'Escolas', offices: 'Escritórios', download: 'Baixar', pricing: 'Preços', help: 'Ajuda',
     home: 'Início', products: 'Produtos', forWho: 'Para quem', company: 'Mindveto',
@@ -68,6 +74,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     demoH: 'Veja funcionando', demoCap: '9 segundos, sem som. Gravado com a extensão real numa página de teste; os números são inventados. Vídeo em inglês.',
   },
   it: {
+    blog: 'Blog', by: 'Di', sources: 'Fonti', notLegal: 'Informazione generale, non consulenza legale o medica. Verificato alla data indicata; regole e app cambiano.',
     skip: 'Vai al contenuto', menu: 'Menu', navLabel: 'Menu principale',
     parents: 'Genitori', schools: 'Scuole', offices: 'Uffici', download: 'Scarica', pricing: 'Prezzi', help: 'Aiuto',
     home: 'Home', products: 'Prodotti', forWho: 'Per chi', company: 'Mindveto',
@@ -79,6 +86,7 @@ export const UI: Record<Lang, Record<string, string>> = {
     demoH: 'Guardalo in azione', demoCap: '9 secondi, senza audio. Registrato con l’estensione reale su una pagina di prova; i numeri sono inventati. Video in inglese.',
   },
   ar: {
+    blog: 'المدونة', by: 'بقلم', sources: 'المصادر', notLegal: 'معلومات عامة وليست استشارة قانونية أو طبية. رُوجعت في التاريخ أعلاه؛ القواعد والتطبيقات تتغير.',
     skip: 'انتقل إلى المحتوى', menu: 'القائمة', navLabel: 'القائمة الرئيسية',
     parents: 'الآباء', schools: 'المدارس', offices: 'المكاتب', download: 'تنزيل', pricing: 'الأسعار', help: 'مساعدة',
     home: 'الرئيسية', products: 'المنتجات', forWho: 'لمن', company: 'Mindveto',

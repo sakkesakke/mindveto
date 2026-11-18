@@ -4,7 +4,7 @@ import { LANGS, ROUTES, href, SITE, type Lang, type PageKey } from '../i18n/rout
 import { UI } from '../i18n/ui';
 import { localize } from '../i18n/localize';
 import { PRODUCT_NAMES, PRODUCT_LINES, PRODUCT_KEYS } from '../i18n/products';
-import { VETO_CAP, AI_NAMES, PLANS, EXAM_UI, STREAM_LABEL, PASTE_MOCK, UI_PREVIEW } from '../i18n/extra';
+import { VETO_CAP, AI_NAMES, PLANS, EXAM_UI, CHECK_UI, CHECK_SVC, STREAM_LABEL, PASTE_MOCK, UI_PREVIEW } from '../i18n/extra';
 import type { Action, Home, Page } from '../i18n/types';
 import * as en from '../i18n/en';
 import * as nl from '../i18n/nl';
@@ -76,6 +76,7 @@ if (!isHome) {
   });
 }
 const X = EXAM_UI[lang];
+const K = CHECK_UI[lang];
 const DEMO = { h: t.demoH, cap: t.demoCap };
 const VL = ['en', 'nl', 'fr'].includes(lang) ? lang : 'en'; // demo videos exist in EN/NL/FR; other languages show the English one
 const M = PASTE_MOCK[lang] ?? PASTE_MOCK.en;
@@ -330,6 +331,36 @@ AI is allowed again.` : `! Title: Mindveto AI block list
           $('forget').onclick=function(){if(Date.now()-armed>5000){armed=Date.now();$('forget').textContent=X.yes;return}C=null;save();until=0;armed=0;$('forget').textContent=X.fg;draw()};
           addEventListener('hashchange',function(){if(location.hash.length>1){var o=load();until=0;draw();poll();msg(o?X.other:'')}});
           var other=load();draw();poll();setInterval(poll,20000);setInterval(draw,1000);if(other)msg(X.other);
+          })();
+          </script>
+        </section>
+      )}
+
+      {key === 'check' && (
+        <section aria-label={K.btn}>
+          <div class="tool" id="check">
+            <p class="small">{K.pv}</p>
+            <button class="btn solid" id="ck" type="button">{K.btn}</button>
+            <p class="state off" id="cksum" aria-live="polite" hidden></p>
+            <table class="cktab">
+              <thead><tr><th scope="col">{K.svc}</th><th scope="col">{K.res}</th></tr></thead>
+              <tbody>{CHECK_SVC.map(([n, d]) => <tr><td>{n}</td><td data-d={d}>–</td></tr>)}</tbody>
+            </table>
+            <p class="small" id="ckhint" hidden>{K.hint}</p>
+          </div>
+          <script is:inline define:vars={{ K }}>
+          (function(){
+          var b=document.getElementById('ck'),sum=document.getElementById('cksum'),hint=document.getElementById('ckhint'),cells=[].slice.call(document.querySelectorAll('.cktab td[data-d]'));
+          function probe(d){var c=new AbortController(),t=setTimeout(function(){c.abort()},6000);
+            return fetch('https://'+d+'/favicon.ico?mv='+Date.now(),{mode:'no-cors',cache:'no-store',credentials:'omit',referrerPolicy:'no-referrer',signal:c.signal})
+              .then(function(){clearTimeout(t);return 'open'},function(e){clearTimeout(t);return e&&e.name==='AbortError'?'none':'blocked'})}
+          b.onclick=function(){b.disabled=true;b.textContent=K.run;sum.hidden=true;hint.hidden=true;cells.forEach(function(c){c.textContent='…';c.className=''});
+            fetch('/robots.txt?mv='+Date.now(),{cache:'no-store'}).then(function(){
+              return Promise.all(cells.map(function(c){return probe(c.dataset.d).then(function(r){c.textContent=K[r];c.className='ck-'+r;return r})}))
+                .then(function(rs){var open=rs.filter(function(r){return r==='open'}).length,t=rs.length;
+                  sum.className='state '+(open?'on':'off');sum.textContent=open===0?K.all:open===t?K.zero:K.some.replace('{n}',open).replace('{t}',t);sum.hidden=false;hint.hidden=!open})
+            },function(){sum.className='state off';sum.textContent=K.offline;sum.hidden=false;cells.forEach(function(c){c.textContent='–'})})
+            .then(function(){b.disabled=false;b.textContent=K.btn})};
           })();
           </script>
         </section>

@@ -387,3 +387,12 @@ code, kbd { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; fo
 .vetoed .bmock .m-on { display: none; } .vetoed .bmock .m-off { display: inline; }
 .vetoed .bmock .bbar span { text-decoration: line-through; }
 @media (max-width: 860px) { .hero { padding-top: var(--s5); } .hero .wrap { gap: var(--s5); } }
+
+/* "Is it working?" test page */
+.cktab { border-collapse: collapse; width: 100%; margin: var(--s5) 0 var(--s3); }
+.cktab th, .cktab td { text-align: start; padding: var(--s2) var(--s3); border-bottom: 1px solid var(--rule); }
+.cktab th { font-weight: 600; color: var(--mute); }
+.ck-blocked { color: var(--moss); font-weight: 600; }
+.ck-open { color: var(--ai); font-weight: 600; }
+.ck-none { color: var(--mute); }
+#cksum { margin-top: var(--s4); }

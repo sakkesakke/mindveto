@@ -25,6 +25,8 @@ export const ROUTES = {
   privacy:  { en: 'privacy/',          nl: 'nl/privacy/',          fr: 'fr/confidentialite/' , es: 'es/privacidad/', de: 'de/datenschutz/', pt: 'pt/privacidade/', it: 'it/privacy/', ar: 'ar/privacy/' },
   terms:    { en: 'terms/',            nl: 'nl/voorwaarden/',      fr: 'fr/conditions/' , es: 'es/condiciones/', de: 'de/nutzungsbedingungen/', pt: 'pt/termos/', it: 'it/termini/', ar: 'ar/terms/' },
   legal:    { en: 'legal/',            nl: 'nl/wettelijk/',        fr: 'fr/mentions-legales/' , es: 'es/aviso-legal/', de: 'de/impressum/', pt: 'pt/aviso-legal/', it: 'it/note-legali/', ar: 'ar/legal/' },
+  check: { en: "is-it-working/", nl: "nl/werkt-het/", fr: "fr/ca-marche/", es: "es/funciona/", de: "de/funktioniert-es/", pt: "pt/funciona/", it: "it/funziona/", ar: "ar/is-it-working/" },
+  bypass: { en: "bypass-tricks/", nl: "nl/omzeiltrucs/", fr: "fr/contournements/", es: "es/trucos-evasion/", de: "de/umgehungstricks/", pt: "pt/truques-contorno/", it: "it/trucchi-aggiramento/", ar: "ar/bypass-tricks/" },
 } as const;
 
 export type PageKey = keyof typeof ROUTES;

@@ -31,6 +31,7 @@ body {
   margin: 0; background: var(--chalk); color: var(--ink);
   font: 400 1.125rem/1.6 var(--f); font-feature-settings: 'kern';
   text-rendering: optimizeLegibility;
+  font-size-adjust: from-font;   /* fallback font keeps the same x-height while Atkinson loads (no layout shift) */
 }
 img, svg { display: block; max-width: 100%; }
 a { color: var(--moss); text-decoration-thickness: .08em; text-underline-offset: .18em; }
@@ -396,3 +397,10 @@ code, kbd { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; fo
 .ck-open { color: var(--ai); font-weight: 600; }
 .ck-none { color: var(--mute); }
 #cksum { margin-top: var(--s4); }
+
+/* Modern Web Guidance (Chrome/Edge/Firefox/MDN): terminal samples are <pre><code>; the inner code keeps the terminal look */
+.ui-term code { font: inherit; color: inherit; background: none; padding: 0; border-radius: 0; }
+/* Calm cross-fade between pages (multi-page site); off for people who ask for less motion. Unsupported browsers just navigate. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+}

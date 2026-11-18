@@ -234,7 +234,7 @@ const P = PLANS[lang];
       )}
       {(aside === 'win' || aside === 'mac' || aside === 'list') && (
         <figure class="mock">
-          <pre class="ui-term" aria-label={U.label}>{aside === 'win' ? `  MINDVETO  -  the AI kill switch
+          <pre class="ui-term" role="region" tabindex="0" aria-label={U.label}><code>{aside === 'win' ? `  MINDVETO  -  the AI kill switch
 
   1) Block AI on this PC
      (or update the list)
@@ -267,7 +267,7 @@ AI is allowed again.` : `! Title: Mindveto AI block list
 ||perplexity.ai^
 ||chat.deepseek.com^
 ||character.ai^
-...`}</pre>
+...`}</code></pre>
           <figcaption>{U.label}</figcaption>
         </figure>
       )}
@@ -457,7 +457,7 @@ AI is allowed again.` : `! Title: Mindveto AI block list
       )}
       {(aside === 'win' || aside === 'mac' || aside === 'list') && (
         <figure class="mock">
-          <pre class="ui-term" tabindex="0" aria-label={U.label}>{aside === 'win' ? `  MINDVETO  -  the AI kill switch
+          <pre class="ui-term" role="region" tabindex="0" aria-label={U.label}><code>{aside === 'win' ? `  MINDVETO  -  the AI kill switch
 
   1) Block AI on this PC
      (or update the list)
@@ -490,7 +490,7 @@ AI is allowed again.` : `! Title: Mindveto AI block list
 ||perplexity.ai^
 ||chat.deepseek.com^
 ||character.ai^
-...`}</pre>
+...`}</code></pre>
           <figcaption>{U.label}</figcaption>
         </figure>
       )}

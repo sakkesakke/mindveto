@@ -147,7 +147,7 @@ export const pages: Record<string, Page> = {
     desc: 'إضافة مجانية تحظر ChatGPT وGemini وClaude وأكثر من 150 موقع ذكاء اصطناعي في Chrome وEdge وBrave وOpera. رمز PIN وجدول وحارس لصق. بلا تتبّع.',
     h1: 'مفتاح الذكاء الاصطناعي لمتصفحك.',
     lead: 'مفتاح واحد يحظر أكثر من 150 روبوت محادثة وأداة ذكاء اصطناعي. ورمز PIN يمنع غيرك من تغييره. يعمل في Chrome وEdge وBrave وOpera.',
-    actions: [{ label: 'نزّل الإصدار 1.7.0 (736 KB)', url: DL + 'human-override-1.7.0.zip', solid: true, download: true }, { label: 'خطوات التثبيت', url: '#install' }],
+    actions: [{ label: 'نزّل الإصدار 1.8.0 (738 KB)', url: DL + 'human-override-1.8.0.zip', solid: true, download: true }, { label: 'خطوات التثبيت', url: '#install' }],
     blocks: [
       { h: 'ما الذي بداخله', list: [
         'يحظر محادثة الذكاء الاصطناعي وبحثه، وأدوات الصور والفيديو والصوت والموسيقى، وأدوات الكتابة والواجبات، وأدوات البرمجة، وأدوات تدوين الملاحظات بالذكاء الاصطناعي.',
@@ -170,7 +170,7 @@ export const pages: Record<string, Page> = {
         'ثبّت الأيقونة في الشريط، وافتحها، واضبط رمز PIN.',
       ], note: 'للآباء والمدارس: في صفحة “التفاصيل” للإضافة، فعّل “السماح في وضع التصفح المتخفي”. وإلا فلن تُحظر النوافذ الخاصة.' },
       { h: 'حقائق', facts: [
-        ['الإصدار', '1.7.0 (Manifest V3)'], ['الحجم', '736 KB'], ['المتصفحات', 'Chrome وEdge وBrave وOpera. Firefox والمتاجر الرسمية: قريبًا'],
+        ['الإصدار', '1.8.0 (Manifest V3)'], ['الحجم', '738 KB'], ['المتصفحات', 'Chrome وEdge وBrave وOpera. Firefox والمتاجر الرسمية: قريبًا'],
         ['الأذونات', 'قواعد حظر، تخزين محلي، مؤقّت يومي'], ['البيانات المرسلة', 'لا شيء. تُنزَّل القائمة العامة فقط مرة يوميًا'], ['السعر', 'مجاني'],
       ]},
     ],
@@ -334,7 +334,7 @@ export const pages: Record<string, Page> = {
     h1: 'نزّل Mindveto.',
     lead: 'اختر الجهاز الذي تريد حمايته. كل شيء مجاني ولا يحتاج حسابًا. التطبيقات حاليًا بالإنجليزية والهولندية والفرنسية.',
     blocks: [
-      { h: 'متصفح على حاسوب محمول أو مكتبي', p: ['إضافة المتصفح. Chrome وEdge وBrave وOpera. الإصدار 1.7.0، 736 KB.'], actions: [{ label: 'تنزيل', url: DL + 'human-override-1.7.0.zip', solid: true, download: true }, { label: 'خطوات التثبيت', to: 'browser' }] },
+      { h: 'متصفح على حاسوب محمول أو مكتبي', p: ['إضافة المتصفح. Chrome وEdge وBrave وOpera. الإصدار 1.8.0، 738 KB.'], actions: [{ label: 'تنزيل', url: DL + 'human-override-1.8.0.zip', solid: true, download: true }, { label: 'خطوات التثبيت', to: 'browser' }] },
       { h: 'هاتف أو جهاز لوحي أندرويد', p: ['تطبيق أندرويد (تجريبي). يحظر الذكاء الاصطناعي في كل التطبيقات. 389 KB.'], actions: [{ label: 'تنزيل', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'خطوات التثبيت', to: 'android' }] },
       { h: 'حاسوب ويندوز: كل التطبيقات', p: ['ويندوز. كل المتصفحات والتطبيقات على الحاسوب. 501 KB.'], actions: [{ label: 'تنزيل', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'خطوات التثبيت', to: 'windows' }] },
       { h: 'حاسوب ماك أو لينكس', p: ['ماك ولينكس. أمر واحد، على النظام كله. 498 KB.'], actions: [{ label: 'تنزيل', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'خطوات التثبيت', to: 'maclinux' }] },

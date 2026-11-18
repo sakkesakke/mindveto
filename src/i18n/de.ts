@@ -147,7 +147,7 @@ export const pages: Record<string, Page> = {
     desc: 'Kostenlose Erweiterung: sperrt ChatGPT, Gemini, Claude und über 150 KI-Seiten in Chrome, Edge, Brave und Opera. PIN, Zeitplan, Einfüge-Schutz. Kein Tracking.',
     h1: 'Der KI-Schalter für Ihren Browser.',
     lead: 'Ein Schalter sperrt über 150 KI-Chatbots und KI-Tools. Eine PIN verhindert, dass jemand anderes ihn ändert. Funktioniert in Chrome, Edge, Brave und Opera.',
-    actions: [{ label: 'v1.7.0 herunterladen (736 KB)', url: DL + 'human-override-1.7.0.zip', solid: true, download: true }, { label: 'Installationsschritte', url: '#install' }],
+    actions: [{ label: 'v1.8.0 herunterladen (738 KB)', url: DL + 'human-override-1.8.0.zip', solid: true, download: true }, { label: 'Installationsschritte', url: '#install' }],
     blocks: [
       { h: 'Was drin ist', list: [
         'Sperrt KI-Chat, KI-Suche, KI-Bild-, Video-, Stimm- und Musiktools, KI-Schreib- und Hausaufgabentools, KI-Programmiertools und KI-Protokollanten.',
@@ -170,7 +170,7 @@ export const pages: Record<string, Page> = {
         'Heften Sie das Symbol an die Leiste, öffnen Sie es und setzen Sie eine PIN.',
       ], note: 'Für Eltern und Schulen: Schalten Sie auf der Seite „Details“ der Erweiterung „Im Inkognitomodus zulassen“ ein. Sonst werden private Fenster nicht gesperrt.' },
       { h: 'Fakten', facts: [
-        ['Version', '1.7.0 (Manifest V3)'], ['Größe', '736 KB'], ['Browser', 'Chrome, Edge, Brave, Opera. Firefox und die offiziellen Stores: bald'],
+        ['Version', '1.8.0 (Manifest V3)'], ['Größe', '738 KB'], ['Browser', 'Chrome, Edge, Brave, Opera. Firefox und die offiziellen Stores: bald'],
         ['Berechtigungen', 'Sperrregeln, lokaler Speicher, ein täglicher Timer'], ['Gesendete Daten', 'Keine. Nur die öffentliche Liste wird einmal täglich geladen'], ['Preis', 'Kostenlos'],
       ]},
     ],
@@ -334,7 +334,7 @@ export const pages: Record<string, Page> = {
     h1: 'Mindveto herunterladen.',
     lead: 'Wählen Sie das Gerät, das Sie schützen möchten. Alles ist kostenlos und braucht kein Konto. Die Apps sind vorerst auf Englisch, Niederländisch und Französisch.',
     blocks: [
-      { h: 'Browser auf Laptop oder PC', p: ['Browser-Erweiterung. Chrome, Edge, Brave und Opera. Version 1.7.0, 736 KB.'], actions: [{ label: 'Herunterladen', url: DL + 'human-override-1.7.0.zip', solid: true, download: true }, { label: 'Installationsschritte', to: 'browser' }] },
+      { h: 'Browser auf Laptop oder PC', p: ['Browser-Erweiterung. Chrome, Edge, Brave und Opera. Version 1.8.0, 738 KB.'], actions: [{ label: 'Herunterladen', url: DL + 'human-override-1.8.0.zip', solid: true, download: true }, { label: 'Installationsschritte', to: 'browser' }] },
       { h: 'Android-Handy oder -Tablet', p: ['Android-App (Beta). Sperrt KI in jeder App. 389 KB.'], actions: [{ label: 'Herunterladen', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Installationsschritte', to: 'android' }] },
       { h: 'Windows-PC: jede App', p: ['Windows. Jeder Browser und jede App auf dem PC. 501 KB.'], actions: [{ label: 'Herunterladen', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Installationsschritte', to: 'windows' }] },
       { h: 'Mac- oder Linux-Computer', p: ['Mac und Linux. Ein Befehl, systemweit. 498 KB.'], actions: [{ label: 'Herunterladen', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Installationsschritte', to: 'maclinux' }] },

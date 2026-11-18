@@ -404,3 +404,8 @@ code, kbd { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; fo
 @media (prefers-reduced-motion: no-preference) {
   @view-transition { navigation: auto; }
 }
+
+/* Blog articles */
+.byline { margin-top: var(--s4); }
+.sources ol { padding-inline-start: 1.2em; }
+.sources li { overflow-wrap: anywhere; }

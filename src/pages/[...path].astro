@@ -50,8 +50,16 @@ if (!isHome) {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Mindveto', item: SITE + href('home', lang) },
-      { '@type': 'ListItem', position: 2, name: pg!.h1.replace(/\.$/, ''), item: SITE + href(key, lang) },
+      ...(pg!.article ? [{ '@type': 'ListItem', position: 2, name: 'Blog', item: SITE + href('blog', lang) }] : []),
+      { '@type': 'ListItem', position: pg!.article ? 3 : 2, name: pg!.h1.replace(/\.$/, ''), item: SITE + href(key, lang) },
     ],
+  });
+  if (pg!.article) jsonld.push({
+    '@context': 'https://schema.org', '@type': 'Article', headline: pg!.title, description: pg!.desc, inLanguage: lang,
+    datePublished: pg!.article.date, dateModified: pg!.article.updated ?? pg!.article.date, mainEntityOfPage: SITE + href(key, lang),
+    author: { '@type': 'Person', name: 'Amghar Said', url: SITE + href('about', lang), sameAs: ['https://www.linkedin.com/in/amghar-said-67a95a22/'] },
+    publisher: { '@type': 'Organization', name: 'Mindveto', url: SITE + '/', logo: { '@type': 'ImageObject', url: SITE + '/icon-512.png' } },
+    citation: pg!.article.sources.map(([, u]) => u),
   });
   if (pg!.faq?.length) jsonld.push({
     '@context': 'https://schema.org', '@type': 'FAQPage',
@@ -80,7 +88,7 @@ const K = CHECK_UI[lang];
 const DEMO = { h: t.demoH, cap: t.demoCap };
 const VL = ['en', 'nl', 'fr'].includes(lang) ? lang : 'en'; // demo videos exist in EN/NL/FR; other languages show the English one
 const M = PASTE_MOCK[lang] ?? PASTE_MOCK.en;
-const NO_ASIDE: PageKey[] = ['help', 'about', 'privacy', 'terms', 'legal', 'pricing', 'download', 'policy', 'guide', 'family'];
+const NO_ASIDE: PageKey[] = ['help', 'about', 'privacy', 'terms', 'legal', 'pricing', 'download', 'policy', 'guide', 'family', 'blog', 'charai', 'aiact'];
 const ASIDE: Partial<Record<PageKey, string>> = { offices: 'paste', paste: 'paste', browser: 'popup', parents: 'switch', schools: 'popup', exam: 'exam', android: 'phone', windows: 'win', maclinux: 'mac', network: 'list', about: 'switch' };
 const aside = isHome || NO_ASIDE.includes(key) ? null : ASIDE[key] ?? null;
 const U = UI_PREVIEW[lang] ?? UI_PREVIEW.en;
@@ -193,6 +201,7 @@ const P = PLANS[lang];
         {isProduct && <p class="crumbs"><a href={href('home', lang)}>Mindveto</a> / <a href={href('download', lang)}>{t.products}</a></p>}
         <h1>{pg!.h1.replace(/\.$/, '')}</h1>
         <p class="lead">{pg!.lead}</p>
+        {pg!.article && <p class="small byline">{t.by} <a href={href('about', lang)}>Amghar Said</a> · <time datetime={pg!.article.date}>{new Date(pg!.article.date + 'T12:00:00Z').toLocaleDateString(lang === 'en' ? 'en-GB' : lang, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}</time></p>}
         {pg!.actions && <div class="actions">{pg!.actions.map((a) => <a class={'btn ' + (a.solid ? 'solid' : 'line')} href={link(a)} download={a.download ? '' : undefined}>{a.label}</a>)}</div>}
       </div>
       {aside && aside !== 'switch' && <div class="mside" aria-hidden="true">
@@ -397,6 +406,14 @@ AI is allowed again.` : `! Title: Mindveto AI block list
           {b.actions && <div class="actions">{b.actions.map((a) => <a class={'btn ' + (a.solid ? 'solid' : 'line')} href={link(a)} download={a.download ? '' : undefined}>{a.label}</a>)}</div>}
         </section>
       ))}
+
+      {pg!.article && (
+        <section class="sources">
+          <h2>{t.sources}</h2>
+          <ol>{pg!.article.sources.map(([n, u]) => <li><a href={u} rel="noopener">{n}</a></li>)}</ol>
+          <p class="small">{t.notLegal}</p>
+        </section>
+      )}
 
       {key === 'policy' && <script is:inline>document.querySelectorAll('a[href="#print"]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); window.print(); }); });</script>}
 

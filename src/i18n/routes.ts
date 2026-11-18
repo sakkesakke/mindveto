@@ -27,6 +27,9 @@ export const ROUTES = {
   legal:    { en: 'legal/',            nl: 'nl/wettelijk/',        fr: 'fr/mentions-legales/' , es: 'es/aviso-legal/', de: 'de/impressum/', pt: 'pt/aviso-legal/', it: 'it/note-legali/', ar: 'ar/legal/' },
   check: { en: "is-it-working/", nl: "nl/werkt-het/", fr: "fr/ca-marche/", es: "es/funciona/", de: "de/funktioniert-es/", pt: "pt/funciona/", it: "it/funziona/", ar: "ar/is-it-working/" },
   bypass: { en: "bypass-tricks/", nl: "nl/omzeiltrucs/", fr: "fr/contournements/", es: "es/trucos-evasion/", de: "de/umgehungstricks/", pt: "pt/truques-contorno/", it: "it/trucchi-aggiramento/", ar: "ar/bypass-tricks/" },
+  blog: { en: 'blog/', nl: 'nl/blog/', fr: 'fr/blog/', es: 'es/blog/', de: 'de/blog/', pt: 'pt/blog/', it: 'it/blog/', ar: 'ar/blog/' },
+  charai: { en: 'blog/is-character-ai-safe-for-kids/', nl: 'nl/blog/is-character-ai-veilig-voor-kinderen/', fr: 'fr/blog/character-ai-est-il-sur-pour-les-enfants/', es: 'es/blog/es-character-ai-seguro-para-ninos/', de: 'de/blog/ist-character-ai-sicher-fuer-kinder/', pt: 'pt/blog/character-ai-e-seguro-para-criancas/', it: 'it/blog/character-ai-e-sicuro-per-bambini/', ar: 'ar/blog/is-character-ai-safe-for-kids/' },
+  aiact: { en: 'blog/ai-act-article-4-schools/', nl: 'nl/blog/ai-act-artikel-4-scholen/', fr: 'fr/blog/ai-act-article-4-ecoles/', es: 'es/blog/ley-ia-articulo-4-colegios/', de: 'de/blog/ki-verordnung-artikel-4-schulen/', pt: 'pt/blog/ai-act-artigo-4-escolas/', it: 'it/blog/ai-act-articolo-4-scuole/', ar: 'ar/blog/ai-act-article-4-schools/' },
 } as const;
 
 export type PageKey = keyof typeof ROUTES;

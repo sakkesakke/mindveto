@@ -19,6 +19,7 @@ export type Page = {
   blocks: Block[];
   faq?: { q: string; a: string }[];
   related?: PageKey[];
+  article?: { date: string; updated?: string; sources: [string, string][] };   // blog article: byline, Article schema, sources list
 };
 export type Home = {
   title: string; desc: string; h1: string; lead: string;

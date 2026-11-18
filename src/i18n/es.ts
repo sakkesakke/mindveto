@@ -147,7 +147,7 @@ export const pages: Record<string, Page> = {
     desc: 'Extensión gratuita que bloquea ChatGPT, Gemini, Claude y más de 150 sitios de IA en Chrome, Edge, Brave y Opera. PIN, horario, guardia de pegado. Sin rastreo.',
     h1: 'El interruptor de IA para tu navegador.',
     lead: 'Un interruptor bloquea más de 150 chatbots y herramientas de IA. Un PIN impide que otra persona lo cambie. Funciona en Chrome, Edge, Brave y Opera.',
-    actions: [{ label: 'Descargar v1.7.0 (736 KB)', url: DL + 'human-override-1.7.0.zip', solid: true, download: true }, { label: 'Pasos de instalación', url: '#install' }],
+    actions: [{ label: 'Descargar v1.8.0 (738 KB)', url: DL + 'human-override-1.8.0.zip', solid: true, download: true }, { label: 'Pasos de instalación', url: '#install' }],
     blocks: [
       { h: 'Qué incluye', list: [
         'Bloquea chat de IA, búsqueda con IA, herramientas de imagen, vídeo, voz y música con IA, herramientas de escritura y deberes, de programación y tomadores de notas con IA.',
@@ -170,7 +170,7 @@ export const pages: Record<string, Page> = {
         'Fija el icono en la barra, ábrelo y pon un PIN.',
       ], note: 'Para padres y escuelas: en la página “Detalles” de la extensión, activa “Permitir en modo incógnito”. Si no, las ventanas privadas no se bloquean.' },
       { h: 'Datos', facts: [
-        ['Versión', '1.7.0 (Manifest V3)'], ['Tamaño', '736 KB'], ['Navegadores', 'Chrome, Edge, Brave, Opera. Firefox y las tiendas oficiales: pronto'],
+        ['Versión', '1.8.0 (Manifest V3)'], ['Tamaño', '738 KB'], ['Navegadores', 'Chrome, Edge, Brave, Opera. Firefox y las tiendas oficiales: pronto'],
         ['Permisos', 'Reglas de bloqueo, almacenamiento local, un temporizador diario'], ['Datos enviados', 'Ninguno. Solo se descarga la lista pública una vez al día'], ['Precio', 'Gratis'],
       ]},
     ],
@@ -334,7 +334,7 @@ export const pages: Record<string, Page> = {
     h1: 'Descargar Mindveto.',
     lead: 'Elige el dispositivo que quieres proteger. Todo es gratis y no necesita cuenta. Las apps están en inglés, neerlandés y francés por ahora.',
     blocks: [
-      { h: 'Navegador en un portátil o PC', p: ['Extensión de navegador. Chrome, Edge, Brave y Opera. Versión 1.7.0, 736 KB.'], actions: [{ label: 'Descargar', url: DL + 'human-override-1.7.0.zip', solid: true, download: true }, { label: 'Pasos de instalación', to: 'browser' }] },
+      { h: 'Navegador en un portátil o PC', p: ['Extensión de navegador. Chrome, Edge, Brave y Opera. Versión 1.8.0, 738 KB.'], actions: [{ label: 'Descargar', url: DL + 'human-override-1.8.0.zip', solid: true, download: true }, { label: 'Pasos de instalación', to: 'browser' }] },
       { h: 'Teléfono o tableta Android', p: ['App para Android (beta). Bloquea la IA en todas las apps. 389 KB.'], actions: [{ label: 'Descargar', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Pasos de instalación', to: 'android' }] },
       { h: 'PC con Windows: todas las apps', p: ['Windows. Todos los navegadores y apps del PC. 501 KB.'], actions: [{ label: 'Descargar', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Pasos de instalación', to: 'windows' }] },
       { h: 'Ordenador Mac o Linux', p: ['Mac y Linux. Un comando, en todo el sistema. 498 KB.'], actions: [{ label: 'Descargar', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Pasos de instalación', to: 'maclinux' }] },

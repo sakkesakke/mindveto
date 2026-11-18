@@ -146,7 +146,7 @@ export const pages: Record<string, Page> = {
     desc: 'Gratis extensie die ChatGPT, Gemini, Claude en 150+ AI-sites blokkeert in Chrome, Edge, Brave en Opera. Pincode, rooster, plakbewaker.',
     h1: 'De AI-schakelaar voor je browser.',
     lead: 'Eén schakelaar blokkeert 150+ AI-chatbots en AI-tools. Een pincode zorgt dat niemand anders het wijzigt. Werkt in Chrome, Edge, Brave en Opera.',
-    actions: [{ label: 'Download v1.7.0 (736 KB)', url: DL + 'human-override-1.7.0.zip', solid: true, download: true }, { label: 'Installatiestappen', url: '#install' }],
+    actions: [{ label: 'Download v1.8.0 (738 KB)', url: DL + 'human-override-1.8.0.zip', solid: true, download: true }, { label: 'Installatiestappen', url: '#install' }],
     blocks: [
       { h: 'Wat erin zit', list: [
         'Blokkeert AI-chat, AI-zoeken, AI-tools voor beeld, video, stem en muziek, AI voor schrijven en huiswerk, AI voor programmeren en AI-notulisten.',
@@ -168,7 +168,7 @@ export const pages: Record<string, Page> = {
         'Maak het icoon vast in je werkbalk, open het en stel een pincode in.',
       ], note: 'Voor ouders en scholen: zet op de pagina “Details” van de extensie “Toestaan in incognito” aan. Anders worden privévensters niet geblokkeerd.' },
       { h: 'Feiten', facts: [
-        ['Versie', '1.7.0 (Manifest V3)'], ['Grootte', '736 KB'], ['Browsers', 'Chrome, Edge, Brave, Opera. Firefox en de officiële stores: binnenkort'],
+        ['Versie', '1.8.0 (Manifest V3)'], ['Grootte', '738 KB'], ['Browsers', 'Chrome, Edge, Brave, Opera. Firefox en de officiële stores: binnenkort'],
         ['Rechten', 'Blokkeerregels, lokale opslag, een dagelijkse timer'], ['Verstuurde gegevens', 'Geen. Alleen de openbare lijst wordt dagelijks opgehaald'], ['Prijs', 'Gratis'],
       ]},
     ],
@@ -332,7 +332,7 @@ export const pages: Record<string, Page> = {
     h1: 'Mindveto downloaden.',
     lead: 'Kies het toestel dat je wilt beschermen. Alles is gratis en vraagt geen account.',
     blocks: [
-      { h: 'Browser op een laptop of pc', p: ['Browserextensie. Chrome, Edge, Brave en Opera. Versie 1.7.0, 736 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-1.7.0.zip', solid: true, download: true }, { label: 'Installatiestappen', to: 'browser' }] },
+      { h: 'Browser op een laptop of pc', p: ['Browserextensie. Chrome, Edge, Brave en Opera. Versie 1.8.0, 738 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-1.8.0.zip', solid: true, download: true }, { label: 'Installatiestappen', to: 'browser' }] },
       { h: 'Android-telefoon of -tablet', p: ['Android-app (bèta). Blokkeert AI in elke app. 389 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'Installatiestappen', to: 'android' }] },
       { h: 'Windows-pc: elke app', p: ['Windows. Elke browser en app op de pc. 501 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-windows.zip', solid: true, download: true }, { label: 'Installatiestappen', to: 'windows' }] },
       { h: 'Mac- of Linux-computer', p: ['Mac en Linux. Eén commando, voor het hele systeem. 498 KB.'], actions: [{ label: 'Downloaden', url: DL + 'human-override-mac-linux.zip', solid: true, download: true }, { label: 'Installatiestappen', to: 'maclinux' }] },

@@ -1,0 +1,13 @@
+Copyright (c) 2026 Amghar Said. All rights reserved.
+
+This repository (the mindveto.app website: code, texts in all languages, design, images and the name "Mindveto") is the
+property of Amghar Said. No license is granted to copy, modify, publish, distribute or sell any part of it without prior
+written permission. Being able to see this repository on GitHub does not give any of these rights.
+
+Not owned by Amghar Said (each part keeps its own license, which applies to that part only):
+- public/fonts/: Atkinson Hyperlegible Next and Figtree (SIL Open Font License 1.1, see OFL.txt and OFL-figtree.txt);
+- public/downloads/: copies of the Mindveto apps, covered by public/downloads/LICENSE.txt, with third-party domain lists
+  (MIT License or CC0) credited in public/downloads/adult/NOTICE.txt and the THIRD_PARTY_NOTICES.txt inside each zip;
+- npm packages installed at build time (see package.json), each under its own license.
+
+Contact: https://mindveto.app/

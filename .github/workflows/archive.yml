@@ -1,0 +1,27 @@
+name: Internet Archive snapshots
+# Asks the Wayback Machine (web.archive.org, free) to save the main mindveto.app pages once a week. Those snapshots are
+# independent, dated public evidence of what mindveto.app looked like (copyright evidence for Amghar Said).
+# A failed snapshot never fails the job: the archive is sometimes busy; next week tries again.
+on:
+  schedule:
+    - cron: '23 4 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Save pages in the Wayback Machine
+        run: |
+          s=https://mindveto.app
+          ok=0; n=0
+          for p in / /nl/ /fr/ /es/ /de/ /pt/ /it/ /ar/ /parents/ /schools/ /offices/ /download/ /browser-extension/ \
+                   /android/ /windows/ /mac-linux/ /network/ /paste-guard/ /exam-button/ /block-chatgpt/ /block-porn/ \
+                   /is-it-working/ /bypass-tricks/ /pricing/ /about/ /privacy/ /terms/ /downloads/LICENSE.txt; do
+            n=$((n+1))
+            c=$(curl -s -o /dev/null -m 120 -w '%{http_code}' -A 'mindveto-archive-bot' "https://web.archive.org/save/$s$p" || echo 000)
+            echo "$c $s$p"; case "$c" in 2*|3*) ok=$((ok+1));; esac
+            sleep 20
+          done
+          echo "Saved $ok of $n pages."

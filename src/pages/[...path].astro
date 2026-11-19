@@ -210,7 +210,7 @@ const LC_EX = [['https://www.ing.com/', PR.lc.exGood], ['https://paypa1-login.co
         {pg!.article && <p class="small byline">{t.by} <a href={href('about', lang)}>Amghar Said</a> · <time datetime={pg!.article.date}>{new Date(pg!.article.date + 'T12:00:00Z').toLocaleDateString(lang === 'en' ? 'en-GB' : lang, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}</time></p>}
         {pg!.actions && <div class="actions">{pg!.actions.map((a) => <a class={'btn ' + (a.solid ? 'solid' : 'line')} href={link(a)} download={a.download ? '' : undefined}>{a.label}</a>)}</div>}
       </div>
-      {aside && aside !== 'switch' && <div class="mside" aria-hidden="true">
+      {aside && aside !== 'switch' && <div class="mside">
       {aside === 'paste' && (
         <figure class="pmock" aria-label={M.h}>
           <p class="pm-h">{M.h}</p>

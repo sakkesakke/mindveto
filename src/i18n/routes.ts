@@ -30,6 +30,8 @@ export const ROUTES = {
   blog: { en: 'blog/', nl: 'nl/blog/', fr: 'fr/blog/', es: 'es/blog/', de: 'de/blog/', pt: 'pt/blog/', it: 'it/blog/', ar: 'ar/blog/' },
   charai: { en: 'blog/is-character-ai-safe-for-kids/', nl: 'nl/blog/is-character-ai-veilig-voor-kinderen/', fr: 'fr/blog/character-ai-est-il-sur-pour-les-enfants/', es: 'es/blog/es-character-ai-seguro-para-ninos/', de: 'de/blog/ist-character-ai-sicher-fuer-kinder/', pt: 'pt/blog/character-ai-e-seguro-para-criancas/', it: 'it/blog/character-ai-e-sicuro-per-bambini/', ar: 'ar/blog/is-character-ai-safe-for-kids/' },
   aiact: { en: 'blog/ai-act-article-4-schools/', nl: 'nl/blog/ai-act-artikel-4-scholen/', fr: 'fr/blog/ai-act-article-4-ecoles/', es: 'es/blog/ley-ia-articulo-4-colegios/', de: 'de/blog/ki-verordnung-artikel-4-schulen/', pt: 'pt/blog/ai-act-artigo-4-escolas/', it: 'it/blog/ai-act-articolo-4-scuole/', ar: 'ar/blog/ai-act-article-4-schools/' },
+  linkcheck: { en: 'link-check/', nl: 'nl/linkcheck/', fr: 'fr/verifier-un-lien/', es: 'es/comprobar-enlace/', de: 'de/link-pruefen/', pt: 'pt/verificar-link/', it: 'it/controlla-link/', ar: 'ar/link-check/' },
+  quiz: { en: 'ai-phishing-quiz/', nl: 'nl/ai-phishing-quiz/', fr: 'fr/quiz-hameconnage-ia/', es: 'es/test-phishing-ia/', de: 'de/ki-phishing-quiz/', pt: 'pt/quiz-phishing-ia/', it: 'it/quiz-phishing-ia/', ar: 'ar/ai-phishing-quiz/' },
 } as const;
 
 export type PageKey = keyof typeof ROUTES;

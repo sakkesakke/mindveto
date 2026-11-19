@@ -6,6 +6,9 @@ import { localize } from '../i18n/localize';
 import { PRODUCT_NAMES, PRODUCT_LINES, PRODUCT_KEYS } from '../i18n/products';
 import { VETO_CAP, AI_NAMES, PLANS, EXAM_UI, CHECK_UI, CHECK_SVC, STREAM_LABEL, PASTE_MOCK, UI_PREVIEW } from '../i18n/extra';
 import type { Action, Home, Page } from '../i18n/types';
+import { PROTECT } from '../i18n/protect';
+import LC_JS from '../scripts/linkcheck.js?raw';
+import QZ_JS from '../scripts/quiz.js?raw';
 import * as en from '../i18n/en';
 import * as nl from '../i18n/nl';
 import * as fr from '../i18n/fr';
@@ -88,11 +91,14 @@ const K = CHECK_UI[lang];
 const DEMO = { h: t.demoH, cap: t.demoCap };
 const VL = ['en', 'nl', 'fr'].includes(lang) ? lang : 'en'; // demo videos exist in EN/NL/FR; other languages show the English one
 const M = PASTE_MOCK[lang] ?? PASTE_MOCK.en;
-const NO_ASIDE: PageKey[] = ['help', 'about', 'privacy', 'terms', 'legal', 'pricing', 'download', 'policy', 'guide', 'family', 'blog', 'charai', 'aiact'];
+const NO_ASIDE: PageKey[] = ['help', 'about', 'privacy', 'terms', 'legal', 'pricing', 'download', 'policy', 'guide', 'family', 'blog', 'charai', 'aiact', 'linkcheck', 'quiz'];
 const ASIDE: Partial<Record<PageKey, string>> = { offices: 'paste', paste: 'paste', browser: 'popup', parents: 'switch', schools: 'popup', exam: 'exam', android: 'phone', windows: 'win', maclinux: 'mac', network: 'list', about: 'switch' };
 const aside = isHome || NO_ASIDE.includes(key) ? null : ASIDE[key] ?? null;
 const U = UI_PREVIEW[lang] ?? UI_PREVIEW.en;
 const P = PLANS[lang];
+const PR = localize(PROTECT[lang], lang);
+const js = (name: string, data: object, code: string) => `var ${name}=${JSON.stringify(data).replace(/</g, '\\u003c')};\n${code}`;
+const LC_EX = [['https://www.ing.com/', PR.lc.exGood], ['https://paypa1-login.com/verify', PR.lc.exBad], ['https://xn--pypal-4ve.com/', PR.lc.exHidden]];
 ---
 <Base lang={lang} page={key} title={title} desc={desc} jsonld={jsonld}>
 {isHome ? (
@@ -375,6 +381,52 @@ AI is allowed again.` : `! Title: Mindveto AI block list
         </section>
       )}
 
+      {key === 'linkcheck' && (
+        <section aria-label={PR.lc.btn}>
+          <div class="tool lk">
+            <form id="lcf" role="search" novalidate>
+              <label for="lcu">{PR.lc.label}</label>
+              <div class="lk-row">
+                <input id="lcu" name="u" type="text" dir="ltr" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="2000" placeholder="https://">
+                <button class="btn solid" type="submit">{PR.lc.btn}</button>
+              </div>
+            </form>
+            <p class="small">{PR.lc.pv}</p>
+            <p class="small lk-ex">{PR.lc.ex} {LC_EX.map(([u, l]) => <><button class="lk-exb" type="button" data-ex={u}>{l}</button>{' '}</>)}</p>
+            <div id="lcout" aria-live="polite" hidden></div>
+          </div>
+          <script is:inline set:html={js('L', PR.lc, LC_JS)} />
+        </section>
+      )}
+
+      {key === 'quiz' && (
+        <section id="quiz" aria-labelledby="qz-h">
+          <h2 id="qz-h">{PR.qz.h}</h2>
+          <p class="small">{PR.qz.pv}</p>
+          <ol class="qz">
+            {PR.items.map((q, i) => (
+              <li class="q tool" data-a={q.a}>
+                <h3>{i + 1}. {q.t}</h3>
+                <p class="qz-scene">{q.s}</p>
+                <div class="actions qz-btns" hidden><button class="btn line" type="button" data-v="real">{PR.qz.real}</button><button class="btn line" type="button" data-v="fake">{PR.qz.fake}</button></div>
+                <details class="qz-ans"><summary>{PR.qz.show}</summary><p><strong>{q.a === 'real' ? PR.qz.real : PR.qz.fake}.</strong> <span class="qz-e">{q.e}</span></p></details>
+                <p class="qz-fb" hidden></p>
+              </li>
+            ))}
+          </ol>
+          <p class="small" id="qleft" aria-live="polite"></p>
+          <div class="tool" id="qres" hidden>
+            <h2>{PR.qz.resH}</h2>
+            <p class="state" id="qscore" aria-live="polite"></p>
+            <label for="qname">{PR.qz.name}</label>
+            <input id="qname" type="text" autocomplete="off" maxlength="80">
+            <div class="actions"><button class="btn solid" id="qprint" type="button">{PR.qz.print}</button><button class="btn line" id="qagain" type="button">{PR.qz.again}</button></div>
+          </div>
+          <div id="qcert" class="qcert"></div>
+          <script is:inline set:html={js('Q', PR.qz, QZ_JS)} />
+        </section>
+      )}
+
       {(key === 'paste' || key === 'offices') && (
         <section class="wide demo" aria-label={DEMO.h}>
           <h2>{DEMO.h}</h2>
@@ -416,6 +468,16 @@ AI is allowed again.` : `! Title: Mindveto AI block list
       )}
 
       {key === 'policy' && <script is:inline>document.querySelectorAll('a[href="#print"]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); window.print(); }); });</script>}
+
+      {(key === 'parents' || key === 'schools' || key === 'offices') && (
+        <section aria-labelledby="pr-hub">
+          <h2 id="pr-hub">{PR.hub.h}</h2>
+          <div class="rels">
+            <a class="rel" href={href('linkcheck', lang)}><strong>{PR.hub.lcT}</strong><span>{PR.hub.lcD}</span></a>
+            <a class="rel" href={href('quiz', lang)}><strong>{PR.hub.qzT}</strong><span>{PR.hub.qzD}</span></a>
+          </div>
+        </section>
+      )}
 
       {pg!.faq && (
         <section class="faq">

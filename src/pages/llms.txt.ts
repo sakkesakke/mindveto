@@ -26,6 +26,7 @@ export function GET() {
     'Honest limits:\n' + en.home.limits.map((l) => `- ${l}`).join('\n'),
     group('Guides', ['guide', 'family', 'policy', 'help']),
     group('Articles', ['charai', 'aiact']),
+    group('Free safety tools (run in the browser, nothing is sent)', ['linkcheck', 'quiz', 'check']),
     group('Who it is for', ['parents', 'schools', 'offices']),
     group('Products', ['browser', 'android', 'windows', 'maclinux', 'network', 'exam', 'paste']),
     group('Company', ['download', 'pricing', 'about', 'privacy', 'terms']),

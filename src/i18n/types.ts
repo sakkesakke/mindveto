@@ -12,6 +12,7 @@ export type Block = {
   note?: string;
   human?: boolean;       // note in the "human" colour instead of the AI colour
   actions?: Action[];
+  stats?: [string, string, string, string, string][];   // statistics: [number, statement, source name, year, link]
 };
 export type Page = {
   title: string; desc: string; h1: string; lead: string;
@@ -20,6 +21,8 @@ export type Page = {
   faq?: { q: string; a: string }[];
   related?: PageKey[];
   article?: { date: string; updated?: string; sources: [string, string][] };   // blog article: byline, Article schema, sources list
+  checked?: string;      // ISO date the facts were last checked against their sources (shown under the byline)
+  cite?: string;         // "how to cite this page" text (may contain inline HTML written by us)
 };
 export type Home = {
   title: string; desc: string; h1: string; lead: string;

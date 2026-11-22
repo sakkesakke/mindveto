@@ -7,6 +7,7 @@ import { PRODUCT_NAMES, PRODUCT_LINES, PRODUCT_KEYS } from '../i18n/products';
 import { VETO_CAP, AI_NAMES, PLANS, EXAM_UI, CHECK_UI, CHECK_SVC, STREAM_LABEL, PASTE_MOCK, UI_PREVIEW } from '../i18n/extra';
 import type { Action, Home, Page } from '../i18n/types';
 import { PROTECT } from '../i18n/protect';
+import { LINKABLE } from '../i18n/linkable';
 import LC_JS from '../scripts/linkcheck.js?raw';
 import QZ_JS from '../scripts/quiz.js?raw';
 import * as en from '../i18n/en';
@@ -44,6 +45,12 @@ const title = isHome ? h.title : pg!.title;
 const desc = isHome ? h.desc : pg!.desc;
 
 const BUILT = new Date().toISOString().slice(0, 10);
+const inBlog = ROUTES[key].en.startsWith('blog/');
+const LKU = LINKABLE[lang].ui;
+const fmtDate = (d: string) => new Date(d + 'T12:00:00Z').toLocaleDateString(lang === 'en' ? 'en-GB' : lang, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+// Statistics are numbered across all blocks of a page, so every figure has a stable anchor (#s1, #s2 …).
+const statFrom: number[] = [];
+(pg?.blocks ?? []).reduce((n, b) => { statFrom.push(n); return n + (b.stats?.length ?? 0); }, 0);
 const jsonld: object[] = [{
   '@context': 'https://schema.org', '@type': 'WebPage', name: title, description: desc, url: SITE + href(key, lang), inLanguage: lang,
   dateModified: BUILT, isPartOf: { '@type': 'WebSite', name: 'Mindveto', url: SITE + '/' },
@@ -53,8 +60,8 @@ if (!isHome) {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Mindveto', item: SITE + href('home', lang) },
-      ...(pg!.article ? [{ '@type': 'ListItem', position: 2, name: 'Blog', item: SITE + href('blog', lang) }] : []),
-      { '@type': 'ListItem', position: pg!.article ? 3 : 2, name: pg!.h1.replace(/\.$/, ''), item: SITE + href(key, lang) },
+      ...(inBlog ? [{ '@type': 'ListItem', position: 2, name: 'Blog', item: SITE + href('blog', lang) }] : []),
+      { '@type': 'ListItem', position: inBlog ? 3 : 2, name: pg!.h1.replace(/\.$/, ''), item: SITE + href(key, lang) },
     ],
   });
   if (pg!.article) jsonld.push({
@@ -91,7 +98,7 @@ const K = CHECK_UI[lang];
 const DEMO = { h: t.demoH, cap: t.demoCap };
 const VL = ['en', 'nl', 'fr'].includes(lang) ? lang : 'en'; // demo videos exist in EN/NL/FR; other languages show the English one
 const M = PASTE_MOCK[lang] ?? PASTE_MOCK.en;
-const NO_ASIDE: PageKey[] = ['help', 'about', 'privacy', 'terms', 'legal', 'pricing', 'download', 'policy', 'guide', 'family', 'blog', 'charai', 'aiact', 'linkcheck', 'quiz'];
+const NO_ASIDE: PageKey[] = ['help', 'about', 'privacy', 'terms', 'legal', 'pricing', 'download', 'policy', 'guide', 'family', 'blog', 'charai', 'aiact', 'linkcheck', 'quiz', 'stats', 'gdpr'];
 const ASIDE: Partial<Record<PageKey, string>> = { offices: 'paste', paste: 'paste', browser: 'popup', parents: 'switch', schools: 'popup', exam: 'exam', android: 'phone', windows: 'win', maclinux: 'mac', network: 'list', about: 'switch' };
 const aside = isHome || NO_ASIDE.includes(key) ? null : ASIDE[key] ?? null;
 const U = UI_PREVIEW[lang] ?? UI_PREVIEW.en;
@@ -207,7 +214,8 @@ const LC_EX = [['https://www.ing.com/', PR.lc.exGood], ['https://paypa1-login.co
         {isProduct && <p class="crumbs"><a href={href('home', lang)}>Mindveto</a> / <a href={href('download', lang)}>{t.products}</a></p>}
         <h1>{pg!.h1.replace(/\.$/, '')}</h1>
         <p class="lead">{pg!.lead}</p>
-        {pg!.article && <p class="small byline">{t.by} <a href={href('about', lang)}>Amghar Said</a> · <time datetime={pg!.article.date}>{new Date(pg!.article.date + 'T12:00:00Z').toLocaleDateString(lang === 'en' ? 'en-GB' : lang, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}</time></p>}
+        {pg!.article && <p class="small byline">{t.by} <a href={href('about', lang)}>Amghar Said</a> · <time datetime={pg!.article.date}>{fmtDate(pg!.article.date)}</time></p>}
+        {pg!.checked && <p class="small checked">{LKU.checked}: <time datetime={pg!.checked}>{fmtDate(pg!.checked)}</time></p>}
         {pg!.actions && <div class="actions">{pg!.actions.map((a) => <a class={'btn ' + (a.solid ? 'solid' : 'line')} href={link(a)} download={a.download ? '' : undefined}>{a.label}</a>)}</div>}
       </div>
       {aside && aside !== 'switch' && <div class="mside">
@@ -453,11 +461,19 @@ AI is allowed again.` : `! Title: Mindveto AI block list
           {b.list && <ul>{b.list.map((x) => <li set:html={x} />)}</ul>}
           {b.steps && !b.fold && <ol class="steps">{b.steps.map((x) => <li set:html={x} />)}</ol>}
           {b.steps && b.fold && <><p class="quiet">{b.foldLead}</p><details class="fold"><summary>{b.fold}</summary><ol class="steps">{b.steps.map((x) => <li set:html={x} />)}</ol></details></>}
+          {b.stats && <ul class="stats">{b.stats.map(([n, x, src, yr, u], j) => <li id={`s${statFrom[i] + j + 1}`}><p class="sn">{n}</p><p class="st">{x}</p><p class="small ss">{LKU.src}: <a href={u} rel="noopener">{src}</a>{lang === 'ar' ? '، ' : ', '}{yr} · <a href={`#s${statFrom[i] + j + 1}`}>#s{statFrom[i] + j + 1}</a></p></li>)}</ul>}
           {b.facts && <table class="facts"><tbody>{b.facts.map(([a, v]) => <tr><th scope="row">{a}</th><td set:html={v} /></tr>)}</tbody></table>}
           {b.note && <p class={'note' + (b.human ? ' human' : '')}>{b.note}</p>}
           {b.actions && <div class="actions">{b.actions.map((a) => <a class={'btn ' + (a.solid ? 'solid' : 'line')} href={link(a)} download={a.download ? '' : undefined}>{a.label}</a>)}</div>}
         </section>
       ))}
+
+      {pg!.cite && (
+        <section class="cite" id="cite">
+          <h2>{LKU.cite}</h2>
+          <p set:html={pg!.cite} />
+        </section>
+      )}
 
       {pg!.article && (
         <section class="sources">
@@ -475,6 +491,8 @@ AI is allowed again.` : `! Title: Mindveto AI block list
           <div class="rels">
             <a class="rel" href={href('linkcheck', lang)}><strong>{PR.hub.lcT}</strong><span>{PR.hub.lcD}</span></a>
             <a class="rel" href={href('quiz', lang)}><strong>{PR.hub.qzT}</strong><span>{PR.hub.qzD}</span></a>
+            <a class="rel" href={href('stats', lang)}><strong>{LKU.statsT}</strong><span>{LKU.statsD}</span></a>
+            {key === 'offices' && <a class="rel" href={href('gdpr', lang)}><strong>{LKU.gdprT}</strong><span>{LKU.gdprD}</span></a>}
           </div>
         </section>
       )}

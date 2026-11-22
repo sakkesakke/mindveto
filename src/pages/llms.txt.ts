@@ -25,11 +25,14 @@ export function GET() {
     ].join('\n'),
     'Honest limits:\n' + en.home.limits.map((l) => `- ${l}`).join('\n'),
     group('Guides', ['guide', 'family', 'policy', 'help']),
-    group('Articles', ['charai', 'aiact']),
+    group('Articles', ['gdpr', 'charai', 'aiact']),
+    group('Data (every figure checked against its source; free to quote with a link)', ['stats']),
     group('Free safety tools (run in the browser, nothing is sent)', ['linkcheck', 'quiz', 'check']),
     group('Who it is for', ['parents', 'schools', 'offices']),
     group('Products', ['browser', 'android', 'windows', 'maclinux', 'network', 'exam', 'paste']),
     group('Company', ['download', 'pricing', 'about', 'privacy', 'terms']),
+    `## Key figures (each checked against its source on ${en.pages.stats.checked}; details: ${SITE}/${ROUTES.stats.en})\n\n` +
+      en.pages.stats.blocks.flatMap((b) => b.stats ?? []).map(([n, t, src, yr, u]) => `- ${n} ${t} (${src}, ${yr}: ${u})`).join('\n'),
     '## Common questions\n\n' + faqs.join('\n'),
   ].join('\n\n') + '\n';
   return new Response(body, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });

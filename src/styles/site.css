@@ -446,3 +446,16 @@ code, kbd { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; fo
   .pq .qcert h2 { font-size: 18pt; margin: 0 0 8pt; }
   .pq .qc-score { font-size: 16pt; font-weight: 600; }
 }
+
+/* Statistics page: one figure per row, the number large, the source under it. Every row has an anchor (#s1 …). */
+.stats { list-style: none; padding: 0; margin: var(--s4) 0 0; max-width: 46rem; }
+.stats li { display: grid; grid-template-columns: minmax(7rem, 9rem) minmax(0, 1fr); column-gap: var(--s5); padding: var(--s4) 0; border-bottom: 1px solid var(--rule); margin: 0; scroll-margin-top: var(--s6); }
+.stats li:first-child { border-top: 1px solid var(--rule); }
+.stats li:target { background: var(--paper); box-shadow: 0 0 0 var(--s2) var(--paper); }
+.stats p { margin: 0; max-width: none; }
+.stats .sn { grid-row: span 2; font-size: clamp(1.5rem, 2.6vw, 2rem); font-weight: 600; line-height: 1.1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
+.stats .st { line-height: 1.5; }
+.stats .ss { margin-top: var(--s2); overflow-wrap: anywhere; }
+@media (max-width: 560px) { .stats li { grid-template-columns: minmax(0, 1fr); } .stats .sn { grid-row: auto; margin-bottom: var(--s1); } }
+.checked { margin-top: var(--s1); }
+.cite p { max-width: 46rem; overflow-wrap: anywhere; }

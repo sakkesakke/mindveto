@@ -32,6 +32,8 @@ export const ROUTES = {
   aiact: { en: 'blog/ai-act-article-4-schools/', nl: 'nl/blog/ai-act-artikel-4-scholen/', fr: 'fr/blog/ai-act-article-4-ecoles/', es: 'es/blog/ley-ia-articulo-4-colegios/', de: 'de/blog/ki-verordnung-artikel-4-schulen/', pt: 'pt/blog/ai-act-artigo-4-escolas/', it: 'it/blog/ai-act-articolo-4-scuole/', ar: 'ar/blog/ai-act-article-4-schools/' },
   linkcheck: { en: 'link-check/', nl: 'nl/linkcheck/', fr: 'fr/verifier-un-lien/', es: 'es/comprobar-enlace/', de: 'de/link-pruefen/', pt: 'pt/verificar-link/', it: 'it/controlla-link/', ar: 'ar/link-check/' },
   quiz: { en: 'ai-phishing-quiz/', nl: 'nl/ai-phishing-quiz/', fr: 'fr/quiz-hameconnage-ia/', es: 'es/test-phishing-ia/', de: 'de/ki-phishing-quiz/', pt: 'pt/quiz-phishing-ia/', it: 'it/quiz-phishing-ia/', ar: 'ar/ai-phishing-quiz/' },
+  stats: { en: 'ai-statistics/', nl: 'nl/ai-statistieken/', fr: 'fr/statistiques-ia/', es: 'es/estadisticas-ia/', de: 'de/ki-statistiken/', pt: 'pt/estatisticas-ia/', it: 'it/statistiche-ia/', ar: 'ar/ai-statistics/' },
+  gdpr: { en: 'blog/chatgpt-customer-data-gdpr/', nl: 'nl/blog/chatgpt-klantgegevens-avg/', fr: 'fr/blog/chatgpt-donnees-clients-rgpd/', es: 'es/blog/chatgpt-datos-clientes-rgpd/', de: 'de/blog/chatgpt-kundendaten-dsgvo/', pt: 'pt/blog/chatgpt-dados-clientes-rgpd/', it: 'it/blog/chatgpt-dati-clienti-gdpr/', ar: 'ar/blog/chatgpt-customer-data-gdpr/' },
 } as const;
 
 export type PageKey = keyof typeof ROUTES;

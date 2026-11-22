@@ -7,7 +7,8 @@ met de repo **sakkesakke/mindveto**.
 Goal: get the Mindveto Android app live on Google Play.
 
 Read first, in this order:
-1. docs/play-store/README.md and files 1 to 6 in docs/play-store/ (this repo, sakkesakke/mindveto).
+1. docs/play-store/README.md and files 0 to 6 in docs/play-store/ (this repo, sakkesakke/mindveto).
+   File 0 is about the website mindveto.app itself.
 2. This repo's CLAUDE.md (site rules: 8 languages, no trackers, honest limits, checks before merge).
 3. The app code lives in sakkesakke/geopolcoins, folder human-override/android/ (attach it with add_repo, push access).
    Read its CLAUDE.md and docs/HANDOFF.md. docs/google-play.md there is the old 10 Nov plan; docs/play-store/ replaces it.

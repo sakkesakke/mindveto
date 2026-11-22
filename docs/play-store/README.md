@@ -1,7 +1,7 @@
 # Mindveto op Google Play: start hier
 
 Stand: 22 november 2026. Deze map bevat alles wat een nieuwe chat nodig heeft om de Mindveto Android-app
-in Google Play te zetten. Er staan geen wachtwoorden of sleutels in (en die horen hier ook nooit).
+in Google Play te zetten, en alles over de website mindveto.app zelf. Er staan geen wachtwoorden of sleutels in (en die horen hier ook nooit).
 
 ## Zo start je de nieuwe chat
 1. Open een nieuwe Claude Code-chat met de repo **sakkesakke/mindveto**.
@@ -12,6 +12,7 @@ in Google Play te zetten. Er staan geen wachtwoorden of sleutels in (en die hore
 | Bestand | Voor wie | Wat |
 | --- | --- | --- |
 | [`START-PROMPT.md`](START-PROMPT.md) | jij → nieuwe chat | De tekst om te plakken |
+| [`0-website.md`](0-website.md) | Claude | Alles over mindveto.app zelf: pagina's, talen, regels, design, live zetten |
 | [`1-app-facts.md`](1-app-facts.md) | Claude | Feiten uit de app-code: naam, pakket, rechten, verbindingen, bouwen |
 | [`2-fix-before-upload.md`](2-fix-before-upload.md) | Claude + jij | Wat eerst in de code moet veranderen |
 | [`3-play-console-answers.md`](3-play-console-answers.md) | Claude + jij | Voorstel-antwoorden voor elk Play Console-formulier |

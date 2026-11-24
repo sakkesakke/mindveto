@@ -27,7 +27,15 @@ in Google Play te zetten, en alles over de website mindveto.app zelf. Er staan g
 - Het oude stappenplan van 10 november staat in `sakkesakke/geopolcoins` → `docs/google-play.md`.
   Het gebruikt nog de oude naam "Human Override" en een oude privacylink. Deze map vervangt het.
 
-## 4 beslissingen die alleen jij kunt nemen (vóór de eerste upload)
+## Stand 24 november 2026
+- Beslist: pakketnaam **app.mindveto**, doneerknop **weg**, **eerst gratis**, **persoonlijk account** (geopolcoins#216, gemerged).
+- VPN-uitlegscherm, link naar mindveto.app/terms/ en versie 1.0.x zitten in de app. Extensie 1.8.1 zonder Ko-fi-links staat live.
+- Uploadsleutel staat in GitHub: build 51 zegt "Signing with the permanent upload key" (`app.mindveto` 1.0.51).
+- Icoon en feature graphic: `assets/`.
+- Sitetekst: Plus "komt later", geen 15-dagen-proef of 250-aanbod meer beloofd bij de Play-start (8 talen). Winkeltekst EN/NL/FR: `4-store-listing.md`.
+- Nog te doen: Play-account ($25, eigenaar), Android-screenshots, gesloten test.
+
+## 4 beslissingen (genomen op 24 november, zie hierboven)
 1. **Pakketnaam.** Nu `xyz.geopolcoins.humanoverride`. Na de eerste upload kan die **nooit meer** veranderen.
    Voorstel: `app.mindveto` (past bij het merk, geen "geopolcoins"). Kost bijna niets: de site zegt nu al "om bij te werken,
    eerst de oude versie verwijderen" (beta), dus bestaande gebruikers moeten toch al opnieuw installeren.

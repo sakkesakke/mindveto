@@ -19,7 +19,7 @@ Third-party names (ChatGPT, Gemini …) only in the full description, as plain f
 - NL `Blokkeer ChatGPT en 150+ AI-apps in elke app. Pincode, sabotagelog. Gratis.` (75)
 - FR `Bloquez ChatGPT et 150+ IA dans toutes les applis. PIN, journal. Sans compte.` (77)
 If Google flags a third-party name in the short description, use: EN `Switch off AI chatbots in every app on this phone. PIN lock, tamper log.` (72)
-NL says "Gratis": keep it only if the pricing decision is "free at launch".
+NL says "Gratis": OK, the decision (24 Nov) is free at launch.
 
 ## Full description, EN
 ```
@@ -40,19 +40,63 @@ Honest limits
 • Android allows one VPN at a time, and the phone owner can switch any VPN off in Settings. Turn on "Always-on VPN" and set a PIN.
 • New AI tools appear every week. The list updates daily, but one may slip through for a few days.
 
+Free. The app is in English, Dutch and French.
 Made by Amghar Said. Questions: hello@mindveto.app
 ```
-(Adjust the first and last lines once the pricing decision is made. Never mention prices or trials that the build does not offer.)
+(Pricing decision 24 Nov: free at launch. Never mention prices or trials that the build does not offer.)
 
-## Full description, NL and FR
-Translate the EN text above. Reuse the app's own NL/FR strings for the limits (`honest_text`, `fam_text`, `guard_text`
-in `res/values-nl` and `res/values-fr`) so app and store say the same. The other 5 site languages (ES/DE/PT/IT/AR) are
-optional for the store: the app itself is only EN/NL/FR, so say that in those listings or leave them out.
+## Full description, NL
+```
+Mindveto is een schakelaar die AI uitzet op deze telefoon. Het blokkeert ChatGPT, Gemini, Copilot, Claude, Character.AI en 150+ andere AI-diensten in elke app en browser, met een openbare blokkeerlijst die elke dag bijwerkt.
+
+Gemaakt voor ouders, scholen en kantoren:
+• Eén grote knop: AI geblokkeerd, of AI toegestaan.
+• Pincode, zodat niemand anders AI in de app weer kan aanzetten.
+• Sabotagelog: foute pincodes en uitzetten worden op deze telefoon genoteerd, met een melding als de bescherming stopt.
+• Optioneel gezinsfilter: sites voor volwassenen, SafeSearch in Google, Bing, DuckDuckGo en YouTube, gok-, dating- en willekeurige videochatsites, en VPN- en proxydiensten.
+• Optionele camera- en microfoonbewaker: een melding als een app ze begint te gebruiken.
+
+Privé vanaf het begin
+Mindveto gebruikt de VpnService van Android alleen als lokaal filter voor adresopzoekingen (DNS) op de telefoon. AI-adressen krijgen het antwoord "bestaat niet". Andere opzoekingen gaan naar de gewone DNS-server van de telefoon, en al het andere verkeer gaat rechtstreeks naar het internet. Geen account, geen advertenties, geen trackers. Niets wat je typt of bezoekt, wordt naar ons gestuurd.
+
+Eerlijke grenzen
+• Het kan geen AI blokkeren die ingebouwd is in apps die je toelaat, AI die volledig op de telefoon draait, of apps met hun eigen beveiligde DNS.
+• Android laat één VPN tegelijk toe, en de eigenaar van de telefoon kan elke VPN uitzetten in Instellingen. Zet "Altijd-aan VPN" aan en stel een pincode in.
+• Er komen elke week nieuwe AI-tools bij. De lijst werkt elke dag bij, maar een nieuwe kan een paar dagen doorglippen.
+
+Gratis. De app is in het Engels, Nederlands en Frans.
+Gemaakt door Amghar Said. Vragen: hello@mindveto.app
+```
+
+## Full description, FR
+```
+Mindveto est un interrupteur qui coupe l'IA sur ce téléphone. Il bloque ChatGPT, Gemini, Copilot, Claude, Character.AI et plus de 150 autres services d'IA dans toutes les applis et tous les navigateurs, avec une liste de blocage publique mise à jour chaque jour.
+
+Fait pour les parents, les écoles et les bureaux :
+• Un grand bouton : IA bloquée, ou IA autorisée.
+• Code PIN, pour que personne d'autre ne puisse réactiver l'IA dans l'appli.
+• Journal anti-sabotage : les mauvais PIN et les désactivations sont notés sur ce téléphone, avec une notification si la protection s'arrête.
+• Filtre familial en option : sites pour adultes, SafeSearch dans Google, Bing, DuckDuckGo et YouTube, sites de jeux d'argent, de rencontre et de chat vidéo aléatoire, et services VPN et proxy.
+• Garde caméra et micro en option : une notification quand une appli commence à les utiliser.
+
+Privé par conception
+Mindveto utilise le VpnService d'Android uniquement comme filtre local pour les recherches d'adresses (DNS) sur le téléphone. Les adresses d'IA reçoivent la réponse « n'existe pas ». Les autres recherches vont au serveur DNS habituel du téléphone, et tout le reste va directement sur Internet. Pas de compte, pas de publicité, pas de traceurs. Rien de ce que vous tapez ou visitez ne nous est envoyé.
+
+Limites honnêtes
+• Il ne peut pas bloquer l'IA intégrée aux applis que vous autorisez, l'IA qui tourne entièrement sur le téléphone, ni les applis qui utilisent leur propre DNS sécurisé.
+• Android n'autorise qu'un VPN à la fois, et le propriétaire du téléphone peut couper tout VPN dans les Paramètres. Activez « VPN permanent » et définissez un PIN.
+• De nouveaux outils d'IA apparaissent chaque semaine. La liste se met à jour chaque jour, mais un nouveau peut passer pendant quelques jours.
+
+Gratuit. L'appli est en anglais, néerlandais et français.
+Créé par Amghar Said. Questions : hello@mindveto.app
+```
+
+The other 5 site languages (ES/DE/PT/IT/AR) are left out of the store listing for now: the app itself is only EN/NL/FR.
 
 ## Graphics
 | Asset | Spec to re-check | Have it? |
 | --- | --- | --- |
-| App icon | 512 × 512 PNG, full square (Google applies the rounded mask) | mindveto `public/icon-512.png` is 512 × 512 but already has rounded corners on white: make a full-square version from `public/brand/app-icon.svg` |
-| Feature graphic | 1024 × 500 | No. Make one in the site style ("Kalme controle": chalk/paper/pine, violet only for AI), e.g. based on `public/og.png` (1200 × 630) |
+| App icon | 512 × 512 PNG, full square (Google applies the rounded mask) | **Yes**: [`assets/icon-512.png`](assets/icon-512.png) (full square, from `public/brand/app-icon.svg`) |
+| Feature graphic | 1024 × 500 | **Yes**: [`assets/feature-graphic-1024x500.png`](assets/feature-graphic-1024x500.png) (site style, violet only on "AI") |
 | Phone screenshots | 2 to 8, portrait | No Android ones yet (`docs/store-kit/screenshots/` in geopolcoins are browser-extension shots). Make them on an emulator (API 34+, 1080 × 2400): 1) big button "AI BLOCKED" with counter, 2) PIN card, 3) family filter, 4) tamper log. EN, NL, FR |
 | Video | optional YouTube link | Existing promo `https://youtu.be/c-_Isw8tUY8` is about the extension: only use it if it shows the Android app |

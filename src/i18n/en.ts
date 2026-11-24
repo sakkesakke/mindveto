@@ -36,7 +36,7 @@ export const home: Home = {
     'New AI tools appear every week. The list updates daily, but one may slip through for a few days.',
   ],
   priceH: 'Free to start',
-  priceP: 'Blocking stays free for everyone. Paid plans for families, schools and offices start with the Google Play launch.',
+  priceP: 'Blocking stays free for everyone. Paid plans for families, schools and offices come later.',
   priceGo: 'See the plans',
 };
 
@@ -76,7 +76,7 @@ export const pages: Record<string, Page> = {
     faq: [
       { q: 'Does it work on iPhone?', a: L('There is no iPhone app yet. You can block AI on an iPhone with our free list and a DNS service: see <a href="/network/">whole network</a>. Apple Screen Time can also block single sites.') },
       { q: 'My child uses a school laptop. Can I install it there?', a: 'Ask the school first. School devices are managed by the school, and many schools can install Mindveto for all pupils at once.' },
-      { q: 'Is it really free?', a: 'Yes. Blocking, PIN and schedule stay free. A paid Plus plan with extras for families comes with the Google Play launch.' },
+      { q: 'Is it really free?', a: 'Yes. Blocking, PIN and schedule stay free. A paid Plus plan with extras for families comes later.' },
     ],
     related: ['family', 'browser', 'android'],
   },
@@ -204,7 +204,7 @@ export const pages: Record<string, Page> = {
         'Open the app and tap the big button.',
         'Turn on “Always-on VPN” and “Block connections without VPN” (the app shows how). Then it cannot be skipped.',
         'Set a PIN.',
-      ], note: 'Beta: to update, uninstall the old version first. The Google Play version is coming, with a 15-day free trial of Plus.' },
+      ], note: 'Beta: to update, uninstall the old version first. A Google Play version is coming.' },
       { h: 'Facts', facts: [
         ['Version', 'Beta, target Android 16 (SDK 36)'], ['Size', '389 KB'], ['Needs', 'Android 8 or newer'],
         ['Tamper alerts', 'Yes, a notification if protection stops'], ['Data sent', 'None'], ['Price', 'Free during the beta'],
@@ -353,11 +353,10 @@ export const pages: Record<string, Page> = {
     title: 'Mindveto pricing: Free, Plus, School and Business',
     desc: 'Blocking is free. Plus €14.99 a year for families, €1 per pupil for schools, €2.50 per user a month for offices. Free during the launch.',
     h1: 'Blocking is free. Extras pay for the work.',
-    lead: 'Today every feature is free while we launch. Paid plans start with the Google Play version.',
+    lead: 'Today every feature is free while we launch. Paid plans come later; we will say so here first.',
     blocks: [],
     faq: [
       { q: 'When do I have to pay?', a: 'Not now. When paid plans start, you choose yourself whether to upgrade. Nothing is charged automatically and the free plan stays.' },
-      { q: 'Is there a launch offer?', a: 'Yes. The first 250 people who install the Android app from Google Play get Plus free for one year. A counter on this page will show how many places are left.' },
       { q: 'Do prices include VAT?', a: 'Yes, prices for consumers include Belgian VAT. Schools and companies get an invoice.' },
     ],
     related: ['parents', 'schools', 'offices'],

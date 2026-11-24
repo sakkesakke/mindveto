@@ -36,7 +36,7 @@ export const home: Home = {
     'Elke week verschijnen nieuwe AI-tools. De lijst wordt dagelijks bijgewerkt, maar er kan er een paar dagen één doorglippen.',
   ],
   priceH: 'Gratis om te starten',
-  priceP: 'Blokkeren blijft gratis voor iedereen. Betaalde plannen voor gezinnen, scholen en kantoren starten met de lancering op Google Play.',
+  priceP: 'Blokkeren blijft gratis voor iedereen. Betaalde plannen voor gezinnen, scholen en kantoren komen later.',
   priceGo: 'Bekijk de plannen',
 };
 
@@ -76,7 +76,7 @@ export const pages: Record<string, Page> = {
     faq: [
       { q: 'Werkt het op een iPhone?', a: L('Er is nog geen iPhone-app. Je kunt AI op een iPhone blokkeren met onze gratis lijst en een DNS-dienst: zie <a href="/nl/netwerk/">hele netwerk</a>. Apple Schermtijd kan ook losse sites blokkeren.') },
       { q: 'Mijn kind gebruikt een laptop van school. Kan ik het daarop zetten?', a: 'Vraag het eerst aan de school. Schooltoestellen worden door de school beheerd, en veel scholen kunnen Mindveto voor alle leerlingen tegelijk installeren.' },
-      { q: 'Is het echt gratis?', a: 'Ja. Blokkeren, pincode en rooster blijven gratis. Een betaald Plus-plan met extra’s voor gezinnen komt met de lancering op Google Play.' },
+      { q: 'Is het echt gratis?', a: 'Ja. Blokkeren, pincode en rooster blijven gratis. Een betaald Plus-plan met extra’s voor gezinnen komt later.' },
     ],
     related: ['family', 'browser', 'android'],
   },
@@ -204,7 +204,7 @@ export const pages: Record<string, Page> = {
         'Open de app en tik op de grote knop.',
         'Zet “Altijd-aan VPN” en “Verbindingen zonder VPN blokkeren” aan (de app toont hoe). Dan kan hij niet omzeild worden.',
         'Stel een pincode in.',
-      ], note: 'Bèta: verwijder eerst de oude versie om bij te werken. De versie op Google Play komt eraan, met 15 dagen Plus gratis.' },
+      ], note: 'Bèta: verwijder eerst de oude versie om bij te werken. Een versie op Google Play komt eraan.' },
       { h: 'Feiten', facts: [
         ['Versie', 'Bèta, gericht op Android 16 (SDK 36)'], ['Grootte', '389 KB'], ['Vereist', 'Android 8 of nieuwer'],
         ['Sabotagemeldingen', 'Ja, een melding als de bescherming stopt'], ['Verstuurde gegevens', 'Geen'], ['Prijs', 'Gratis tijdens de bèta'],
@@ -353,11 +353,10 @@ export const pages: Record<string, Page> = {
     title: 'Mindveto prijzen: Gratis, Plus, School en Business',
     desc: 'Blokkeren is gratis. Plus €14,99 per jaar voor gezinnen, €1 per leerling voor scholen, €2,50 per gebruiker per maand voor kantoren.',
     h1: 'Blokkeren is gratis. Extra’s betalen het werk.',
-    lead: 'Vandaag is elke functie gratis terwijl we lanceren. Betaalde plannen starten met de versie op Google Play.',
+    lead: 'Vandaag is elke functie gratis terwijl we lanceren. Betaalde plannen komen later; dat melden we eerst hier.',
     blocks: [],
     faq: [
       { q: 'Wanneer moet ik betalen?', a: 'Nu niet. Als de betaalde plannen starten, kies je zelf of je overstapt. Er wordt niets automatisch aangerekend en het gratis plan blijft.' },
-      { q: 'Is er een lanceringsaanbod?', a: 'Ja. De eerste 250 mensen die de Android-app via Google Play installeren, krijgen Plus een jaar gratis. Een teller op deze pagina toont hoeveel plaatsen er nog zijn.' },
       { q: 'Zijn de prijzen inclusief btw?', a: 'Ja, prijzen voor consumenten zijn inclusief Belgische btw. Scholen en bedrijven krijgen een factuur.' },
     ],
     related: ['parents', 'schools', 'offices'],

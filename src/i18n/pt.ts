@@ -37,7 +37,7 @@ export const home: Home = {
     'Novas IAs surgem toda semana. A lista é atualizada diariamente, mas alguma pode escapar por alguns dias.',
   ],
   priceH: 'Grátis para começar',
-  priceP: 'Bloquear continua grátis para todos. Os planos pagos para famílias, escolas e escritórios começam com o lançamento no Google Play.',
+  priceP: 'Bloquear continua grátis para todos. Os planos pagos para famílias, escolas e escritórios chegam mais tarde.',
   priceGo: 'Ver os planos',
 };
 
@@ -77,7 +77,7 @@ export const pages: Record<string, Page> = {
     faq: [
       { q: 'Funciona no iPhone?', a: L('Ainda não há app para iPhone. Você pode bloquear a IA num iPhone com nossa lista gratuita e um serviço de DNS: veja <a href="/network/">rede inteira</a>. O Tempo de Uso da Apple também bloqueia sites específicos.') },
       { q: 'Meu filho usa um notebook da escola. Posso instalar nele?', a: 'Pergunte primeiro à escola. Os dispositivos escolares são geridos pela escola, e muitas escolas podem instalar o Mindveto para todos os alunos de uma vez.' },
-      { q: 'É grátis mesmo?', a: 'Sim. Bloqueio, PIN e horário continuam grátis. Um plano Plus pago com extras para famílias chega com o lançamento no Google Play.' },
+      { q: 'É grátis mesmo?', a: 'Sim. Bloqueio, PIN e horário continuam grátis. Um plano Plus pago com extras para famílias chega mais tarde.' },
     ],
     related: ['family', 'browser', 'android'],
   },
@@ -206,7 +206,7 @@ export const pages: Record<string, Page> = {
         'Abra o app e toque no botão grande.',
         'Ative “VPN sempre ativa” e “Bloquear conexões sem VPN” (o app mostra como). Assim não pode ser contornado.',
         'Defina um PIN.',
-      ], note: 'Beta: para atualizar, desinstale primeiro a versão antiga. A versão do Google Play virá com 15 dias grátis do Plus. Por enquanto o app está em inglês, holandês e francês.' },
+      ], note: 'Beta: para atualizar, desinstale primeiro a versão antiga. Uma versão no Google Play está a caminho. Por enquanto o app está em inglês, holandês e francês.' },
       { h: 'Dados', facts: [
         ['Versão', 'Beta, Android 16 (SDK 36)'], ['Tamanho', '389 KB'], ['Requer', 'Android 8 ou mais recente'],
         ['Alertas de violação', 'Sim, uma notificação se a proteção parar'], ['Dados enviados', 'Nenhum'], ['Preço', 'Grátis durante a beta'],
@@ -355,11 +355,10 @@ export const pages: Record<string, Page> = {
     title: 'Preços do Mindveto: Grátis, Plus, Escola e Business',
     desc: 'Bloquear é grátis. Plus 14,99 € por ano para famílias, 1 € por aluno para escolas, 2,50 € por usuário por mês para escritórios. Grátis durante o lançamento.',
     h1: 'Bloquear é grátis. Os extras pagam o trabalho.',
-    lead: 'Hoje todas as funções são grátis enquanto lançamos. Os planos pagos começam com a versão do Google Play.',
+    lead: 'Hoje todas as funções são grátis enquanto lançamos. Os planos pagos chegam mais tarde; vamos avisar aqui primeiro.',
     blocks: [],
     faq: [
       { q: 'Quando eu tenho que pagar?', a: 'Agora não. Quando os planos pagos começarem, você decide se quer mudar. Nada é cobrado automaticamente e o plano grátis continua.' },
-      { q: 'Há oferta de lançamento?', a: 'Sim. As primeiras 250 pessoas que instalarem o app de Android pelo Google Play ganham o Plus grátis por um ano. Um contador nesta página vai mostrar quantas vagas restam.' },
       { q: 'Os preços incluem impostos?', a: 'Sim, os preços para consumidores incluem o IVA belga. Escolas e empresas recebem uma fatura.' },
     ],
     related: ['parents', 'schools', 'offices'],

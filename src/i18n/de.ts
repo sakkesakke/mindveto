@@ -37,7 +37,7 @@ export const home: Home = {
     'Jede Woche erscheinen neue KI-Tools. Die Liste wird täglich aktualisiert, aber eins kann ein paar Tage durchrutschen.',
   ],
   priceH: 'Kostenlos starten',
-  priceP: 'Sperren bleibt für alle kostenlos. Bezahlte Pläne für Familien, Schulen und Büros starten mit dem Google-Play-Launch.',
+  priceP: 'Sperren bleibt für alle kostenlos. Bezahlte Pläne für Familien, Schulen und Büros kommen später.',
   priceGo: 'Pläne ansehen',
 };
 
@@ -77,7 +77,7 @@ export const pages: Record<string, Page> = {
     faq: [
       { q: 'Funktioniert es auf dem iPhone?', a: L('Eine iPhone-App gibt es noch nicht. Sie können KI auf einem iPhone mit unserer kostenlosen Liste und einem DNS-Dienst sperren: siehe <a href="/network/">ganzes Netzwerk</a>. Auch Apples Bildschirmzeit kann einzelne Seiten sperren.') },
       { q: 'Mein Kind nutzt einen Schul-Laptop. Kann ich es dort installieren?', a: 'Fragen Sie zuerst die Schule. Schulgeräte werden von der Schule verwaltet, und viele Schulen können Mindveto für alle Schüler auf einmal installieren.' },
-      { q: 'Ist es wirklich kostenlos?', a: 'Ja. Sperren, PIN und Zeitplan bleiben kostenlos. Ein bezahlter Plus-Plan mit Extras für Familien kommt mit dem Google-Play-Launch.' },
+      { q: 'Ist es wirklich kostenlos?', a: 'Ja. Sperren, PIN und Zeitplan bleiben kostenlos. Ein bezahlter Plus-Plan mit Extras für Familien kommt später.' },
     ],
     related: ['family', 'browser', 'android'],
   },
@@ -206,7 +206,7 @@ export const pages: Record<string, Page> = {
         'Öffnen Sie die App und tippen Sie auf den großen Knopf.',
         'Schalten Sie „Durchgehend aktives VPN“ und „Verbindungen ohne VPN blockieren“ ein (die App zeigt, wie). Dann lässt es sich nicht umgehen.',
         'Setzen Sie eine PIN.',
-      ], note: 'Beta: Deinstallieren Sie zum Aktualisieren zuerst die alte Version. Die Google-Play-Version kommt mit 15 Tagen Plus gratis. Die App ist vorerst auf Englisch, Niederländisch und Französisch.' },
+      ], note: 'Beta: Deinstallieren Sie zum Aktualisieren zuerst die alte Version. Eine Google-Play-Version kommt bald. Die App ist vorerst auf Englisch, Niederländisch und Französisch.' },
       { h: 'Fakten', facts: [
         ['Version', 'Beta, Ziel Android 16 (SDK 36)'], ['Größe', '389 KB'], ['Voraussetzung', 'Android 8 oder neuer'],
         ['Manipulationswarnungen', 'Ja, eine Meldung, wenn der Schutz stoppt'], ['Gesendete Daten', 'Keine'], ['Preis', 'Kostenlos während der Beta'],
@@ -355,11 +355,10 @@ export const pages: Record<string, Page> = {
     title: 'Mindveto Preise: Kostenlos, Plus, Schule und Business',
     desc: 'Sperren ist kostenlos. Plus 14,99 € pro Jahr für Familien, 1 € pro Schüler für Schulen, 2,50 € pro Nutzer und Monat für Büros. Kostenlos während des Starts.',
     h1: 'Sperren ist kostenlos. Extras bezahlen die Arbeit.',
-    lead: 'Heute ist jede Funktion kostenlos, während wir starten. Bezahlte Pläne beginnen mit der Google-Play-Version.',
+    lead: 'Heute ist jede Funktion kostenlos, während wir starten. Bezahlte Pläne kommen später; wir kündigen sie zuerst hier an.',
     blocks: [],
     faq: [
       { q: 'Wann muss ich zahlen?', a: 'Jetzt nicht. Wenn bezahlte Pläne starten, entscheiden Sie selbst, ob Sie upgraden. Nichts wird automatisch abgebucht, und der kostenlose Plan bleibt.' },
-      { q: 'Gibt es ein Startangebot?', a: 'Ja. Die ersten 250 Personen, die die Android-App aus Google Play installieren, bekommen Plus ein Jahr kostenlos. Ein Zähler auf dieser Seite zeigt, wie viele Plätze noch frei sind.' },
       { q: 'Sind die Preise inklusive MwSt.?', a: 'Ja, Preise für Privatkunden enthalten die belgische MwSt. Schulen und Unternehmen erhalten eine Rechnung.' },
     ],
     related: ['parents', 'schools', 'offices'],

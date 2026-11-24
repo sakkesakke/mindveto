@@ -36,7 +36,7 @@ export const home: Home = {
     'De nouveaux outils d’IA apparaissent chaque semaine. La liste est mise à jour chaque jour, mais l’un d’eux peut passer quelques jours.',
   ],
   priceH: 'Gratuit pour commencer',
-  priceP: 'Le blocage reste gratuit pour tous. Les formules payantes pour familles, écoles et bureaux démarrent avec le lancement sur Google Play.',
+  priceP: 'Le blocage reste gratuit pour tous. Les formules payantes pour familles, écoles et bureaux arriveront plus tard.',
   priceGo: 'Voir les formules',
 };
 
@@ -76,7 +76,7 @@ export const pages: Record<string, Page> = {
     faq: [
       { q: 'Est-ce que ça marche sur iPhone ?', a: L('Il n’y a pas encore d’appli iPhone. Vous pouvez bloquer l’IA sur un iPhone avec notre liste gratuite et un service DNS : voir <a href="/fr/reseau/">tout le réseau</a>. Temps d’écran d’Apple peut aussi bloquer des sites isolés.') },
       { q: 'Mon enfant utilise un portable de l’école. Puis-je l’y installer ?', a: 'Demandez d’abord à l’école. Les appareils scolaires sont gérés par l’école, et beaucoup d’écoles peuvent installer Mindveto pour tous les élèves à la fois.' },
-      { q: 'C’est vraiment gratuit ?', a: 'Oui. Le blocage, le PIN et l’horaire restent gratuits. Une formule Plus payante avec des extras pour les familles arrive avec le lancement sur Google Play.' },
+      { q: 'C’est vraiment gratuit ?', a: 'Oui. Le blocage, le PIN et l’horaire restent gratuits. Une formule Plus payante avec des extras pour les familles arrivera plus tard.' },
     ],
     related: ['family', 'browser', 'android'],
   },
@@ -204,7 +204,7 @@ export const pages: Record<string, Page> = {
         'Ouvrez l’appli et touchez le grand bouton.',
         'Activez « VPN permanent » et « Bloquer les connexions sans VPN » (l’appli montre comment). Elle ne peut alors pas être contournée.',
         'Définissez un PIN.',
-      ], note: 'Bêta : pour mettre à jour, désinstallez d’abord l’ancienne version. La version Google Play arrive, avec 15 jours de Plus gratuits.' },
+      ], note: 'Bêta : pour mettre à jour, désinstallez d’abord l’ancienne version. Une version Google Play arrive.' },
       { h: 'Fiche', facts: [
         ['Version', 'Bêta, cible Android 16 (SDK 36)'], ['Taille', '389 Ko'], ['Nécessite', 'Android 8 ou plus récent'],
         ['Alertes anti-sabotage', 'Oui, une notification si la protection s’arrête'], ['Données envoyées', 'Aucune'], ['Prix', 'Gratuit pendant la bêta'],
@@ -353,11 +353,10 @@ export const pages: Record<string, Page> = {
     title: 'Tarifs Mindveto : Gratuit, Plus, École et Business',
     desc: 'Le blocage est gratuit. Plus 14,99 € par an pour les familles, 1 € par élève pour les écoles, 2,50 € par utilisateur et par mois pour les bureaux.',
     h1: 'Le blocage est gratuit. Les extras financent le travail.',
-    lead: 'Aujourd’hui, toutes les fonctions sont gratuites pendant le lancement. Les formules payantes démarrent avec la version Google Play.',
+    lead: 'Aujourd’hui, toutes les fonctions sont gratuites pendant le lancement. Les formules payantes arriveront plus tard ; nous l’annoncerons d’abord ici.',
     blocks: [],
     faq: [
       { q: 'Quand dois-je payer ?', a: 'Pas maintenant. Quand les formules payantes démarrent, vous choisissez vous-même de passer à une formule payante. Rien n’est débité automatiquement et la formule gratuite reste.' },
-      { q: 'Y a-t-il une offre de lancement ?', a: 'Oui. Les 250 premières personnes qui installent l’appli Android depuis Google Play reçoivent Plus gratuitement pendant un an. Un compteur sur cette page indiquera les places restantes.' },
       { q: 'Les prix incluent-ils la TVA ?', a: 'Oui, les prix pour les particuliers incluent la TVA belge. Les écoles et entreprises reçoivent une facture.' },
     ],
     related: ['parents', 'schools', 'offices'],

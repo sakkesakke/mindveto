@@ -31,8 +31,9 @@ in Google Play te zetten, en alles over de website mindveto.app zelf. Er staan g
 - Beslist: pakketnaam **app.mindveto**, doneerknop **weg**, **eerst gratis**, **persoonlijk account** (geopolcoins#216, gemerged).
 - VPN-uitlegscherm, link naar mindveto.app/terms/ en versie 1.0.x zitten in de app. Extensie 1.8.1 zonder Ko-fi-links staat live.
 - Uploadsleutel staat in GitHub: build 51 zegt "Signing with the permanent upload key" (`app.mindveto` 1.0.51).
-- Icoon en feature graphic: `assets/`. Winkeltekst EN/NL/FR: `4-store-listing.md`.
-- Nog te doen: Play-account ($25, eigenaar), Android-screenshots, sitetekst over Plus/Founders aanpassen (8 talen), gesloten test.
+- Icoon en feature graphic: `assets/`.
+- Sitetekst: Plus "komt later", geen 15-dagen-proef of 250-aanbod meer beloofd bij de Play-start (8 talen). Winkeltekst EN/NL/FR: `4-store-listing.md`.
+- Nog te doen: Play-account ($25, eigenaar), Android-screenshots, gesloten test.
 
 ## 4 beslissingen (genomen op 24 november, zie hierboven)
 1. **Pakketnaam.** Nu `xyz.geopolcoins.humanoverride`. Na de eerste upload kan die **nooit meer** veranderen.

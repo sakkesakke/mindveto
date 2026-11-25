@@ -8,7 +8,7 @@ import { LK } from './linkable/de';
 export const home: Home = {
   title: 'Mindveto: ChatGPT und 150+ KI-Tools per Schalter sperren',
   desc: 'Sperrt ChatGPT, Gemini, Copilot und über 150 KI-Tools in Browsern, auf Android, Windows, Mac und im Netzwerk. PIN, Prüfungsknopf. Kostenlos, ohne Tracking.',
-  h1: 'Schalte ChatGPT und 150+ KI-Tools ab.',
+  h1: 'Sperre ChatGPT und 150+ KI-Tools.',
   motto: 'Dein Kopf hat das letzte Wort.', trust: 'Kostenlos. Kein Konto, kein Tracking. Entwickelt von Amghar Said.', mockOn: 'KI-Chat ist offen', mockOff: 'Von Mindveto gesperrt',
   lead: 'Für Eltern, Schulen und Büros. Mindveto läuft im Browser, auf dem Handy, dem Computer oder im ganzen Netzwerk, und eine PIN entscheidet, wer KI wieder einschalten darf.',
   switchOn: 'KI', switchOff: 'Veto', switchLabel: 'Ausprobieren: KI auf dieser Seite abschalten',
@@ -27,7 +27,7 @@ export const home: Home = {
   ledger: [
     ['Nichts', 'Die Seiten, die Sie besuchen, was Sie tippen, was Sie einfügen.', true],
     ['Nichts', 'Ihr Name, Ihre E-Mail-Adresse oder ein Konto. Es gibt kein Konto.', true],
-    ['Einmal am Tag', 'Die Erweiterung lädt die öffentliche Liste der KI-Adressen. Sie sendet nichts mit.', false],
+    ['Einmal am Tag', 'Die Erweiterung lädt die öffentliche Liste der KI-Adressen. Sie sendet keine Einstellungen oder Surfdaten mit. Wie bei jedem Download sieht der Server Ihre IP-Adresse.', false],
     ['Nur wenn Sie beitreten', 'Im Prüfungsmodus wird der Klassencode einmal pro Minute gesendet, um zu fragen, ob die Prüfung läuft. Keine Namen.', false],
   ],
   limitsH: 'Ehrliche Grenzen',
@@ -66,7 +66,7 @@ export const pages: Record<string, Page> = {
       ]},
       { h: 'In 10 Minuten eingerichtet', steps: [
         L('Auf dem Familien-PC: Installieren Sie die <a href="/browser-extension/">Browser-Erweiterung</a>, oder sperren Sie KI in jeder App mit dem Download für <a href="/windows/">Windows</a> oder <a href="/mac-linux/">Mac</a>.'),
-        L('Auf dem Android-Handy Ihres Kindes: Installieren Sie die <a href="/android/">Android-App</a> und schalten Sie „Durchgehend aktives VPN“ ein, damit sie nicht umgangen werden kann.'),
+        L('Auf dem Android-Handy Ihres Kindes: Installieren Sie die <a href="/android/">Android-App</a> und schalten Sie „Durchgehend aktives VPN“ ein, damit sie viel schwerer zu umgehen ist.'),
         'Setzen Sie überall dieselbe PIN und behalten Sie sie für sich.',
         'Geben Sie Ihrem Kind ein normales Konto (ohne Admin-Rechte) auf dem Computer. Dann kann es Mindveto nicht entfernen.',
       ]},
@@ -119,7 +119,7 @@ export const pages: Record<string, Page> = {
   offices: {
     title: 'Mandantendaten nicht mehr in ChatGPT einfügen',
     desc: 'Einfüge-Schutz für Büros: eine Warnung, bevor IBANs, Ausweisnummern, Kundenlisten oder vertrauliche Texte in KI-Chats landen. Nur freigegebene KI.',
-    h1: 'Mandantendaten bleiben aus öffentlichen Chatbots.',
+    h1: 'Eine Warnung, bevor Mandantendaten in einem Chatbot landen.',
     lead: 'Eine Steuerfachangestellte fügt einen Kontoauszug in einen Chatbot ein, um ihn „zusammenzufassen“. Mindveto stoppt diesen Moment auf dem Bildschirm, bevor die Daten das Büro verlassen.',
     actions: [{ label: 'Private Daten in ChatGPT schützen', to: 'paste', solid: true }, { label: 'Preise für Teams', to: 'pricing' }],
     blocks: [
@@ -132,7 +132,7 @@ export const pages: Record<string, Page> = {
       { h: 'Warum Büros es wählen', p: [
         'Große Data-Loss-Tools schicken Ihre Daten zur Prüfung in ihre Cloud und kosten Tausende. Mindveto prüft auf dem PC selbst, der Text verlässt das Büro nie.',
         'Es passt zu Steuerberatern, Kanzleien, Notariaten, Versicherungsmaklern, Personalabteilungen und Arztpraxen: kleine Teams mit vertraulichen Akten und ohne IT-Abteilung.',
-      ], note: 'In Deutschland, Österreich und vielen anderen Ländern muss der Betriebsrat oder das Personal informiert werden, bevor Sie ein solches Werkzeug einführen. Mindveto liest nichts und sendet nichts, das macht dieses Gespräch leichter.', human: true },
+      ], note: 'In Deutschland, Österreich und vielen anderen Ländern muss der Betriebsrat oder das Personal informiert werden, bevor Sie ein solches Werkzeug einführen. Mindveto prüft eingefügten Text nur auf dem Gerät und sendet nichts an uns, das macht dieses Gespräch leichter.', human: true },
       { h: 'Ausrollen', steps: [
         L('Installieren Sie die <a href="/browser-extension/">Browser-Erweiterung</a> auf jedem Arbeitsrechner, oder zwangsinstallieren Sie sie per Edge- oder Chrome-Richtlinie.'),
         'Haken Sie die KI an, die Ihr Büro erlaubt, und fügen Sie Ihre privaten Wörter hinzu.',
@@ -178,7 +178,7 @@ export const pages: Record<string, Page> = {
       ], note: 'Für Eltern und Schulen: Schalten Sie auf der Seite „Details“ der Erweiterung „Im Inkognitomodus zulassen“ ein. Sonst werden private Fenster nicht gesperrt.' },
       { h: 'Fakten', facts: [
         ['Version', '1.8.1 (Manifest V3)'], ['Größe', '738 KB'], ['Browser', 'Chrome, Edge, Brave, Opera. Firefox und die offiziellen Stores: bald'],
-        ['Berechtigungen', 'Sperrregeln, lokaler Speicher, ein täglicher Timer'], ['Gesendete Daten', 'Keine. Nur die öffentliche Liste wird einmal täglich geladen'], ['Preis', 'Kostenlos'],
+        ['Berechtigungen', 'Sperrregeln, lokaler Speicher, ein täglicher Timer und Zugriff auf alle Seiten: nötig, um jede KI-Adresse auf die Mindveto-Seite umzuleiten. Der Einfüge-Schutz läuft nur auf KI-Seiten'], ['Gesendete Daten', 'Keine Surfdaten. Die öffentliche Liste wird einmal täglich geladen; der Prüfungsmodus sendet nur einen Klassencode, einmal pro Minute'], ['Preis', 'Kostenlos'],
       ]},
     ],
     faq: [
@@ -204,12 +204,12 @@ export const pages: Record<string, Page> = {
         'Öffnen Sie den Download-Link auf dem Handy.',
         'Wenn Android fragt, erlauben Sie „Unbekannte Apps installieren“ für Ihren Browser.',
         'Öffnen Sie die App und tippen Sie auf den großen Knopf.',
-        'Schalten Sie „Durchgehend aktives VPN“ und „Verbindungen ohne VPN blockieren“ ein (die App zeigt, wie). Dann lässt es sich nicht umgehen.',
+        'Schalten Sie „Durchgehend aktives VPN“ und „Verbindungen ohne VPN blockieren“ ein (die App zeigt, wie). Dann ist es viel schwerer zu umgehen.',
         'Setzen Sie eine PIN.',
       ], note: 'Beta: Deinstallieren Sie zum Aktualisieren zuerst die alte Version. Eine Google-Play-Version kommt bald. Die App ist vorerst auf Englisch, Niederländisch und Französisch.' },
       { h: 'Fakten', facts: [
         ['Version', 'Beta, Ziel Android 16 (SDK 36)'], ['Größe', '389 KB'], ['Voraussetzung', 'Android 8 oder neuer'],
-        ['Manipulationswarnungen', 'Ja, eine Meldung, wenn der Schutz stoppt'], ['Gesendete Daten', 'Keine'], ['Preis', 'Kostenlos während der Beta'],
+        ['Manipulationswarnungen', 'Ja, eine Meldung, wenn der Schutz stoppt'], ['Gesendete Daten', 'Nichts an uns. Nicht gesperrte Anfragen gehen wie üblich an einen DNS-Server'], ['Preis', 'Kostenlos während der Beta'],
       ]},
     ],
     faq: [
@@ -303,7 +303,7 @@ export const pages: Record<string, Page> = {
     ],
     faq: [
       { q: 'Was brauchen die Schüler?', a: L('Die <a href="/browser-extension/">Mindveto-Erweiterung</a> im Browser, mit dem Code Ihrer Klasse beigetreten. Auf Schulrechnern installiert die Schule sie einmal.') },
-      { q: 'Was speichert Ihr Server?', a: 'Einen gehashten Klassencode, einen gehashten Lehrkraft-Schlüssel und das Prüfungsende. Keine Namen, keine E-Mail-Adressen, keine IP-Adressen.' },
+      { q: 'Was speichert Ihr Server?', a: 'Einen gehashten Klassencode, einen gehashten Lehrkraft-Schlüssel und das Prüfungsende. Keine Namen, keine E-Mail-Adressen. Gegen Missbrauch wird eine gehashte IP-Adresse eine Stunde lang gespeichert.' },
     ],
     related: ['schools', 'browser', 'network'],
   },
@@ -425,10 +425,11 @@ export const pages: Record<string, Page> = {
         'Keine Cookies, keine Analyse, keine Tracker, keine Werbung, keine Schriften oder Skripte anderer Firmen.',
         'Die Website liegt bei GitHub Pages (GitHub, Inc., USA). Wie jeder Webhoster verarbeitet GitHub Ihre IP-Adresse kurz in Server-Logs, um die Seite auszuliefern und zu schützen. Wir erhalten diese Logs nicht.',
         'Die Seite des Prüfungsknopfs speichert Ihren Klassencode und Lehrkraft-Schlüssel in Ihrem eigenen Browser (lokaler Speicher), nur damit die Seite funktioniert. Sie können sie mit „Diese Klasse vergessen“ löschen.',
-        "Die Testseite „Funktioniert es?“ kontaktiert KI-Seiten nur, wenn du ihren Knopf drückst. Diese Seiten sehen dann deine IP-Adresse, wie bei einem normalen Besuch. Das Ergebnis bleibt in deinem Browser.",
+        "Die Testseite „Funktioniert es?“ kontaktiert KI-Seiten, und Wikipedia als Kontrolle, nur, wenn du ihren Knopf drückst. Diese Seiten sehen dann deine IP-Adresse, wie bei einem normalen Besuch. Das Ergebnis bleibt in deinem Browser.",
       ]},
       { h: 'Apps und Skripte', list: [
         'Sperren, Einfüge-Schutz und alle Einstellungen laufen auf Ihrem Gerät. Eingefügter Text wird nie gespeichert oder gesendet.',
+        'Die Erweiterung fragt nur deshalb nach Zugriff auf alle Seiten, damit ihre Sperrregeln jede KI-Adresse auf die Mindveto-Seite umleiten können. Der Einfüge-Schutz läuft nur auf den KI-Seiten, die in der Erweiterung stehen, und sendet nicht, was er liest.',
         'Die Browser-Erweiterung lädt einmal täglich die öffentliche Sperrliste. Sie sendet dabei keine personenbezogenen Daten.',
         'Die Android-App filtert nur Namensabfragen auf dem Handy. Sie sendet uns nichts.',
         'Um Website-Namen aufzulösen, gibt die Android-App nicht gesperrte Anfragen an den DNS-Server weiter, den dein Handy ohnehin nutzt. Antwortet er nicht, nutzt sie Cloudflare (1.1.1.1) oder Quad9 (9.9.9.9). Diese Dienste sehen den Website-Namen und deine IP-Adresse, wie bei jeder DNS-Anfrage.',
@@ -513,7 +514,7 @@ export const pages: Record<string, Page> = {
         'Wer Administrator des Geräts ist, kann eine Sperre entfernen. Geben Sie Kindern und Personal ein normales Konto.',
         'Browser-Erweiterungen decken keine anderen Browser oder Apps ab. Dafür sperren Sie auf dem Computer, dem Handy oder im Netzwerk.',
         'Listen, die ganze Domains sperren, können keine einzelne Seite sperren. Einige Sperren auf Seitenebene, etwa Bing Chat, wirken nur in der Browser-Erweiterung.',
-      ], note: 'Sperren wirkt am besten mit einer klaren Regel: Wann ist KI erlaubt, und warum gerade nicht. Mindveto liest nichts und sendet nichts; es verhindert nur, dass KI-Adressen geöffnet werden.', human: true },
+      ], note: 'Sperren wirkt am besten mit einer klaren Regel: Wann ist KI erlaubt, und warum gerade nicht. Mindveto prüft alles auf dem Gerät und sendet nichts an uns; es verhindert nur, dass KI-Adressen geöffnet werden.', human: true },
     ],
     faq: [
       { q: 'Wie blockiere ich ChatGPT auf dem Handy meines Kindes?', a: L('Auf Android: Installieren Sie die <a href="/android/">Mindveto-App</a>, schalten Sie „Durchgehend aktives VPN“ ein und setzen Sie eine PIN. Auf dem iPhone: Nutzen Sie einen DNS-Dienst mit unserer kostenlosen Liste, oder Apples Bildschirmzeit, um chatgpt.com zu sperren. Siehe <a href="/parents/">für Eltern</a>.') },

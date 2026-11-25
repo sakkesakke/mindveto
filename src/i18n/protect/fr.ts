@@ -28,7 +28,7 @@ export const P: Protect = {
       ],
       faq: [
         { q: 'Le lien que je colle est-il envoyé à Mindveto ?', a: 'Non. La vérification se fait dans votre navigateur. La page n’a le droit d’ouvrir aucune connexion réseau, le lien ne peut donc pas quitter votre appareil.' },
-        { q: 'Le résultat dit « Semble correct ». Est-il sûr alors ?', a: 'Cela veut dire que nous n’avons trouvé aucun des signes d’alerte habituels. Ce n’est pas une garantie. Si le message vous presse ou demande de l’argent, un mot de passe ou un code, vérifiez autrement.' },
+        { q: 'Le résultat dit « Aucun signe d’alerte trouvé ». Est-il sûr alors ?', a: 'Cela veut dire que nous n’avons trouvé aucun des signes d’alerte habituels. Ce n’est pas une garantie. Si le message vous presse ou demande de l’argent, un mot de passe ou un code, vérifiez autrement.' },
         { q: 'Puis-je vérifier un QR code ?', a: 'Scannez le QR code avec votre appareil photo, mais ne l’ouvrez pas encore. Copiez le lien affiché et collez-le ici.' },
         { q: 'Mindveto bloque-t-il les sites d’arnaque ?', a: 'Cette page vérifie seulement des liens. L’<a href="/fr/extension-navigateur/">extension de navigateur</a> Mindveto bloque les sites d’IA et, avec le filtre familial, les sites pour adultes et de jeux d’argent. Ce n’est pas un antivirus.' },
       ],
@@ -68,7 +68,7 @@ export const P: Protect = {
   lc: {
     label: 'Collez un lien', btn: 'Vérifier ce lien', pv: 'La vérification se fait uniquement dans cet onglet. Le lien n’est envoyé ni à nous ni à personne.',
     ex: 'Ou essayez un exemple :', exGood: 'une vraie banque', exBad: 'un faux nom', exHidden: 'des lettres cachées',
-    v_ok: 'Semble correct : aucun signe d’alerte trouvé.', v_warn: 'Prudence : quelque chose semble inhabituel.', v_bad: 'N’ouvrez pas ce lien.', v_notweb: 'Ce n’est pas un lien web normal.',
+    v_ok: 'Aucun signe d’alerte trouvé dans cette adresse. Ce n’est pas une garantie.', v_warn: 'Prudence : quelque chose semble inhabituel.', v_bad: 'N’ouvrez pas ce lien.', v_notweb: 'Ce n’est pas un lien web normal.',
     empty: 'Collez d’abord un lien.', opens: 'Ce lien ouvre le site :', looks: 'À l’écran, il ressemble à :',
     none: 'Vérifiez quand même : le message vous presse-t-il, ou demande-t-il un mot de passe, un code ou de l’argent ?',
     honest: 'Aucun vérificateur ne détecte tout. En cas de doute, ouvrez l’appli ou tapez vous-même l’adresse que vous connaissez.',

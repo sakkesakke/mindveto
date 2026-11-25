@@ -27,7 +27,7 @@ export const P: Protect = {
       ],
       faq: [
         { q: 'Is the link I paste sent to Mindveto?', a: 'No. The check runs in your browser. The page is not allowed to make any network connection, so the link cannot leave your device.' },
-        { q: 'The result says “Looks OK”. Is it safe then?', a: 'It means we found none of the usual warning signs. It is not a guarantee. If the message rushes you or asks for money, a password or a code, check another way.' },
+        { q: 'The result says “No warning signs found”. Is it safe then?', a: 'It means we found none of the usual warning signs. It is not a guarantee. If the message rushes you or asks for money, a password or a code, check another way.' },
         { q: 'Can it check a QR code?', a: 'Scan the QR code with your camera, but do not open it yet. Copy the link it shows and paste it here.' },
         { q: 'Does Mindveto block scam sites?', a: 'This page only checks links. The Mindveto <a href="/browser-extension/">browser extension</a> blocks AI sites and, with the family filter, adult and gambling sites. It is not a virus scanner.' },
       ],
@@ -67,7 +67,7 @@ export const P: Protect = {
   lc: {
     label: 'Paste a link', btn: 'Check this link', pv: 'The check runs in this browser tab only. The link is not sent to us or to anyone else.',
     ex: 'Or try an example:', exGood: 'a real bank', exBad: 'a lookalike', exHidden: 'hidden letters',
-    v_ok: 'Looks OK: we found no warning signs.', v_warn: 'Be careful: something looks unusual.', v_bad: 'Do not open this link.', v_notweb: 'This is not a normal web link.',
+    v_ok: 'No warning signs found in this address. That is not a guarantee.', v_warn: 'Be careful: something looks unusual.', v_bad: 'Do not open this link.', v_notweb: 'This is not a normal web link.',
     empty: 'Paste a link first.', opens: 'This link opens the site:', looks: 'On screen it looks like:',
     none: 'Still check: does the message rush you, or ask for a password, a code or money?',
     honest: 'No checker catches everything. When in doubt, open the app or type the address you know yourself.',

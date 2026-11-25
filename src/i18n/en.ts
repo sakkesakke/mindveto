@@ -7,7 +7,7 @@ import { LK } from './linkable/en';
 export const home: Home = {
   title: 'Mindveto: block ChatGPT and 150+ AI tools with one switch',
   desc: 'Block ChatGPT, Gemini, Copilot and 150+ AI tools on browsers, Android, Windows, Mac and networks. PIN lock, exam button, paste guard. Free, no tracking.',
-  h1: 'Switch off ChatGPT and 150+ AI tools.',
+  h1: 'Block ChatGPT and 150+ AI tools.',
   motto: 'Your mind gets the last word.', trust: 'Free. No account, no tracking. Made by Amghar Said.', mockOn: 'AI chat is open', mockOff: 'Blocked by Mindveto',
   lead: 'For parents, schools and offices. Mindveto works on a browser, a phone, a computer or a whole network, and a PIN decides who can switch AI back on.',
   switchOn: 'AI', switchOff: 'Veto', switchLabel: 'Try it: switch AI off on this page',
@@ -26,7 +26,7 @@ export const home: Home = {
   ledger: [
     ['Nothing', 'The pages you visit, what you type, what you paste.', true],
     ['Nothing', 'Your name, e-mail address or an account. There is no account.', true],
-    ['Once a day', 'The extension downloads the public list of AI addresses. It sends nothing with it.', false],
+    ['Once a day', 'The extension downloads the public list of AI addresses. It sends no settings or browsing data with it. Like any download, the server sees your IP address.', false],
     ['Only if you join', 'In exam mode, the class code is sent once a minute to ask whether the exam is on. No names.', false],
   ],
   limitsH: 'Honest limits',
@@ -65,7 +65,7 @@ export const pages: Record<string, Page> = {
       ]},
       { h: 'Set it up in 10 minutes', steps: [
         L('On the family computer: install the <a href="/browser-extension/">browser extension</a>, or block AI in every app with the <a href="/windows/">Windows</a> or <a href="/mac-linux/">Mac</a> download.'),
-        L('On your child’s Android phone: install the <a href="/android/">Android app</a> and turn on “Always-on VPN” so it cannot be skipped.'),
+        L('On your child’s Android phone: install the <a href="/android/">Android app</a> and turn on “Always-on VPN” so it is much harder to skip.'),
         'Set the same PIN everywhere and keep it to yourself.',
         'Give your child a normal (non-admin) account on the computer. Then they cannot remove it.',
       ]},
@@ -118,7 +118,7 @@ export const pages: Record<string, Page> = {
   offices: {
     title: 'Stop staff pasting client data into ChatGPT',
     desc: 'Paste guard for offices: a warning before IBANs, ID numbers, client lists or confidential text go into AI chats. Allow only approved AI.',
-    h1: 'Client data stays out of public chatbots.',
+    h1: 'A warning before client data goes into a chatbot.',
     lead: 'An accountant pastes a bank statement into a chatbot to “summarise it”. Mindveto stops that moment on the screen, before the data leaves the office.',
     actions: [{ label: 'Protect private data in ChatGPT', to: 'paste', solid: true }, { label: 'Pricing for teams', to: 'pricing' }],
     blocks: [
@@ -131,7 +131,7 @@ export const pages: Record<string, Page> = {
       { h: 'Why firms choose it', p: [
         'Big data-loss tools send your data to their cloud to check it, and cost thousands. Mindveto checks on the PC itself, so the text never leaves the office.',
         'It fits accountants, lawyers, notaries, insurance brokers, HR and medical practices: small teams with confidential files and no IT department.',
-      ], note: 'In Belgium, the Netherlands and Germany, the works council or staff may need to be informed before you introduce a tool like this. Mindveto reads nothing and sends nothing, which makes that conversation easier.', human: true },
+      ], note: 'In Belgium, the Netherlands and Germany, the works council or staff may need to be informed before you introduce a tool like this. Mindveto checks pasted text on the device only and sends nothing to us, which makes that conversation easier.', human: true },
       { h: 'Roll it out', steps: [
         L('Install the <a href="/browser-extension/">browser extension</a> on each work computer, or force-install it with Edge or Chrome policy.'),
         'Tick the AI your firm allows and add your private words.',
@@ -176,7 +176,7 @@ export const pages: Record<string, Page> = {
       ], note: 'For parents and schools: on the extension’s “Details” page, switch on “Allow in Incognito”. Otherwise private windows are not blocked.' },
       { h: 'Facts', facts: [
         ['Version', '1.8.1 (Manifest V3)'], ['Size', '738 KB'], ['Browsers', 'Chrome, Edge, Brave, Opera. Firefox and the official stores: coming soon'],
-        ['Permissions', 'Blocking rules, local storage, a daily timer'], ['Data sent', 'None. Only the public list is downloaded once a day'], ['Price', 'Free'],
+        ['Permissions', 'Blocking rules, local storage, a daily timer, and access to all sites: needed to send any AI address to the Mindveto page. The paste guard runs only on AI sites'], ['Data sent', 'No browsing data. The public list is downloaded once a day; exam mode sends only a class code, once a minute'], ['Price', 'Free'],
       ]},
     ],
     faq: [
@@ -188,7 +188,7 @@ export const pages: Record<string, Page> = {
 
   android: {
     title: 'Block AI apps on Android',
-    desc: 'Android app that blocks ChatGPT, Gemini, Character.AI and 150+ AI services in every app on the phone. PIN and tamper alerts. Nothing sent.',
+    desc: 'Android app that blocks ChatGPT, Gemini, Character.AI and 150+ AI services in every app on the phone. PIN and tamper alerts. Nothing sent to us.',
     h1: 'AI off in every app on the phone.',
     lead: 'Browsers are only half the story: AI apps live on the phone. The Mindveto Android app blocks AI addresses for every app, and tells you if someone tries to switch it off.',
     actions: [{ label: 'Download for Android (389 KB, beta)', url: DL + 'human-override-android.apk', solid: true, download: true }, { label: 'SHA-256', url: DL + 'human-override-android.sha256' }],
@@ -202,12 +202,12 @@ export const pages: Record<string, Page> = {
         'Open the download link on the phone.',
         'When Android asks, allow “install unknown apps” for your browser.',
         'Open the app and tap the big button.',
-        'Turn on “Always-on VPN” and “Block connections without VPN” (the app shows how). Then it cannot be skipped.',
+        'Turn on “Always-on VPN” and “Block connections without VPN” (the app shows how). Then it is much harder to skip.',
         'Set a PIN.',
       ], note: 'Beta: to update, uninstall the old version first. A Google Play version is coming.' },
       { h: 'Facts', facts: [
         ['Version', 'Beta, target Android 16 (SDK 36)'], ['Size', '389 KB'], ['Needs', 'Android 8 or newer'],
-        ['Tamper alerts', 'Yes, a notification if protection stops'], ['Data sent', 'None'], ['Price', 'Free during the beta'],
+        ['Tamper alerts', 'Yes, a notification if protection stops'], ['Data sent', 'Nothing to us. Lookups that are not blocked go to a DNS server, as usual'], ['Price', 'Free during the beta'],
       ]},
     ],
     faq: [
@@ -301,7 +301,7 @@ export const pages: Record<string, Page> = {
     ],
     faq: [
       { q: 'What do pupils need?', a: L('The <a href="/browser-extension/">Mindveto extension</a> in their browser, joined to your class with the code. On school computers the school installs it once.') },
-      { q: 'What does your server keep?', a: 'A hashed class code, a hashed teacher key and the exam end time. No names, no e-mail addresses, no IP addresses.' },
+      { q: 'What does your server keep?', a: 'A hashed class code, a hashed teacher key and the exam end time. No names, no e-mail addresses. To stop abuse, a hashed IP address is kept for one hour.' },
     ],
     related: ['schools', 'browser', 'network'],
   },
@@ -423,10 +423,11 @@ export const pages: Record<string, Page> = {
         'No cookies, no analytics, no trackers, no advertising, no fonts or scripts from other companies.',
         'The site is hosted on GitHub Pages (GitHub, Inc., USA). Like every web host, GitHub briefly processes your IP address in server logs to deliver and protect the site. We do not receive these logs.',
         'The exam button page stores your class code and teacher key in your own browser (local storage), only so the page works. You can remove them with “Forget this class”.',
-        "The “Is it working?” test page only contacts AI sites when you press its button. Those sites then see your IP address, as with a normal visit. The result stays in your browser.",
+        "The “Is it working?” test page only contacts AI sites, and Wikipedia as a control, when you press its button. Those sites then see your IP address, as with a normal visit. The result stays in your browser.",
       ]},
       { h: 'The apps and scripts', list: [
         'Blocking, the paste guard and all settings work on your device. Pasted text is never stored or sent.',
+        'The extension asks for access to all sites only so its blocking rules can send any AI address to the Mindveto page. The paste guard runs only on the AI sites listed in the extension and does not send what it reads.',
         'The browser extension downloads the public block list once a day. It sends no personal data with that request.',
         'The Android app only filters internet name lookups on the phone. It sends nothing to us.',
         'To look up website names, the Android app passes lookups that are not blocked to the DNS server your phone already uses. If that does not answer, it uses Cloudflare (1.1.1.1) or Quad9 (9.9.9.9). Those services see the website name and your IP address, as with any DNS lookup.',
@@ -510,7 +511,7 @@ export const pages: Record<string, Page> = {
         'Whoever is administrator of the device can remove a block. Give children and staff a normal (non-admin) account.',
         'Browser extensions do not cover other browsers or apps. For that, block on the computer, the phone or the network.',
         'Lists that block whole domains cannot block a single page. A few page-level blocks, such as Bing Chat, only work in the browser extension.',
-      ], note: 'Blocking works best together with a clear rule: when is AI allowed, and why not now. Mindveto reads nothing and sends nothing; it only stops AI addresses from opening.', human: true },
+      ], note: 'Blocking works best together with a clear rule: when is AI allowed, and why not now. Mindveto checks everything on the device and sends nothing to us; it only stops AI addresses from opening.', human: true },
     ],
     faq: [
       { q: 'How do I block ChatGPT on my child’s phone?', a: L('On Android, install the <a href="/android/">Mindveto app</a>, turn on “Always-on VPN” and set a PIN. On an iPhone, use a DNS service with our free list, or Apple Screen Time to block chatgpt.com. See <a href="/parents/">for parents</a>.') },

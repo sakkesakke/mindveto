@@ -7,7 +7,7 @@ import { LK } from './linkable/nl';
 export const home: Home = {
   title: 'Mindveto: blokkeer ChatGPT en 150+ AI-tools met één knop',
   desc: 'Blokkeer ChatGPT, Gemini, Copilot en 150+ AI-tools op browsers, Android, Windows, Mac en netwerken. Pincode, examenknop, plakbewaker. Gratis.',
-  h1: 'Zet ChatGPT en 150+ AI-tools uit.',
+  h1: 'Blokkeer ChatGPT en 150+ AI-tools.',
   motto: 'Jouw verstand heeft het laatste woord.', trust: 'Gratis. Geen account, geen tracking. Gemaakt door Amghar Said.', mockOn: 'AI-chat staat open', mockOff: 'Geblokkeerd door Mindveto',
   lead: 'Voor ouders, scholen en kantoren. Mindveto werkt in een browser, op een telefoon, een computer of een heel netwerk, en een pincode bepaalt wie AI weer aan mag zetten.',
   switchOn: 'AI', switchOff: 'Veto', switchLabel: 'Probeer het: zet AI uit op deze pagina',
@@ -26,7 +26,7 @@ export const home: Home = {
   ledger: [
     ['Niets', 'De pagina’s die je bezoekt, wat je typt, wat je plakt.', true],
     ['Niets', 'Je naam, e-mailadres of een account. Er is geen account.', true],
-    ['Eén keer per dag', 'De extensie haalt de openbare lijst met AI-adressen op. Ze stuurt daarbij niets mee.', false],
+    ['Eén keer per dag', 'De extensie haalt de openbare lijst met AI-adressen op. Ze stuurt geen instellingen of surfgegevens mee. Zoals bij elke download ziet de server je IP-adres.', false],
     ['Alleen als je meedoet', 'In examenmodus wordt de klascode één keer per minuut verstuurd om te vragen of het examen loopt. Geen namen.', false],
   ],
   limitsH: 'Eerlijke grenzen',
@@ -65,7 +65,7 @@ export const pages: Record<string, Page> = {
       ]},
       { h: 'In 10 minuten ingesteld', steps: [
         L('Op de gezinscomputer: installeer de <a href="/nl/browserextensie/">browserextensie</a>, of blokkeer AI in elke app met de download voor <a href="/nl/windows/">Windows</a> of <a href="/nl/mac-linux/">Mac</a>.'),
-        L('Op de Android-telefoon van je kind: installeer de <a href="/nl/android/">Android-app</a> en zet “Altijd-aan VPN” aan, zodat hij niet omzeild kan worden.'),
+        L('Op de Android-telefoon van je kind: installeer de <a href="/nl/android/">Android-app</a> en zet “Altijd-aan VPN” aan, zodat hij veel moeilijker te omzeilen is.'),
         'Gebruik overal dezelfde pincode en houd ze voor jezelf.',
         'Geef je kind een gewone account (geen beheerder) op de computer. Dan kan het Mindveto niet verwijderen.',
       ]},
@@ -118,7 +118,7 @@ export const pages: Record<string, Page> = {
   offices: {
     title: 'Voorkom dat personeel klantgegevens in ChatGPT plakt',
     desc: 'Plakbewaker voor kantoren: een waarschuwing voor IBAN’s, klantlijsten of vertrouwelijke tekst in AI-chats belanden. Alleen goedgekeurde AI.',
-    h1: 'Klantgegevens blijven uit publieke chatbots.',
+    h1: 'Een waarschuwing voor klantgegevens in een chatbot belanden.',
     lead: 'Een boekhouder plakt een rekeninguittreksel in een chatbot om het “samen te vatten”. Mindveto stopt dat moment op het scherm, voor de gegevens het kantoor verlaten.',
     actions: [{ label: 'Bescherm privégegevens in ChatGPT', to: 'paste', solid: true }, { label: 'Prijzen voor teams', to: 'pricing' }],
     blocks: [
@@ -131,7 +131,7 @@ export const pages: Record<string, Page> = {
       { h: 'Waarom kantoren ervoor kiezen', p: [
         'Grote tools tegen datalekken sturen je gegevens naar hun cloud om ze te controleren, en kosten duizenden euro’s. Mindveto controleert op de pc zelf, dus de tekst verlaat het kantoor nooit.',
         'Het past bij boekhouders, advocaten, notarissen, verzekeringsmakelaars, HR en medische praktijken: kleine teams met vertrouwelijke dossiers en zonder IT-afdeling.',
-      ], note: 'In België, Nederland en Duitsland moet de ondernemingsraad of het personeel soms eerst geïnformeerd worden voor je zo’n tool invoert. Mindveto leest niets en stuurt niets, en dat maakt dat gesprek makkelijker.', human: true },
+      ], note: 'In België, Nederland en Duitsland moet de ondernemingsraad of het personeel soms eerst geïnformeerd worden voor je zo’n tool invoert. Mindveto controleert geplakte tekst alleen op het toestel en stuurt niets naar ons, en dat maakt dat gesprek makkelijker.', human: true },
       { h: 'Uitrollen', steps: [
         L('Installeer de <a href="/nl/browserextensie/">browserextensie</a> op elke werkcomputer, of installeer ze verplicht via Edge- of Chrome-beleid.'),
         'Vink de AI aan die je kantoor toelaat en voeg je privéwoorden toe.',
@@ -176,7 +176,7 @@ export const pages: Record<string, Page> = {
       ], note: 'Voor ouders en scholen: zet op de pagina “Details” van de extensie “Toestaan in incognito” aan. Anders worden privévensters niet geblokkeerd.' },
       { h: 'Feiten', facts: [
         ['Versie', '1.8.1 (Manifest V3)'], ['Grootte', '738 KB'], ['Browsers', 'Chrome, Edge, Brave, Opera. Firefox en de officiële stores: binnenkort'],
-        ['Rechten', 'Blokkeerregels, lokale opslag, een dagelijkse timer'], ['Verstuurde gegevens', 'Geen. Alleen de openbare lijst wordt dagelijks opgehaald'], ['Prijs', 'Gratis'],
+        ['Rechten', 'Blokkeerregels, lokale opslag, een dagelijkse timer, en toegang tot alle sites: nodig om elk AI-adres naar de Mindveto-pagina te sturen. De plakbewaker werkt alleen op AI-sites'], ['Verstuurde gegevens', 'Geen surfgegevens. De openbare lijst wordt dagelijks opgehaald; de examenmodus stuurt alleen een klascode, één keer per minuut'], ['Prijs', 'Gratis'],
       ]},
     ],
     faq: [
@@ -202,12 +202,12 @@ export const pages: Record<string, Page> = {
         'Open de downloadlink op de telefoon.',
         'Als Android het vraagt: sta “onbekende apps installeren” toe voor je browser.',
         'Open de app en tik op de grote knop.',
-        'Zet “Altijd-aan VPN” en “Verbindingen zonder VPN blokkeren” aan (de app toont hoe). Dan kan hij niet omzeild worden.',
+        'Zet “Altijd-aan VPN” en “Verbindingen zonder VPN blokkeren” aan (de app toont hoe). Dan is hij veel moeilijker te omzeilen.',
         'Stel een pincode in.',
       ], note: 'Bèta: verwijder eerst de oude versie om bij te werken. Een versie op Google Play komt eraan.' },
       { h: 'Feiten', facts: [
         ['Versie', 'Bèta, gericht op Android 16 (SDK 36)'], ['Grootte', '389 KB'], ['Vereist', 'Android 8 of nieuwer'],
-        ['Sabotagemeldingen', 'Ja, een melding als de bescherming stopt'], ['Verstuurde gegevens', 'Geen'], ['Prijs', 'Gratis tijdens de bèta'],
+        ['Sabotagemeldingen', 'Ja, een melding als de bescherming stopt'], ['Verstuurde gegevens', 'Niets naar ons. Niet-geblokkeerde opzoekingen gaan zoals gewoonlijk naar een DNS-server'], ['Prijs', 'Gratis tijdens de bèta'],
       ]},
     ],
     faq: [
@@ -301,7 +301,7 @@ export const pages: Record<string, Page> = {
     ],
     faq: [
       { q: 'Wat hebben leerlingen nodig?', a: L('De <a href="/nl/browserextensie/">Mindveto-extensie</a> in hun browser, gekoppeld aan je klas met de code. Op schoolcomputers installeert de school ze één keer.') },
-      { q: 'Wat bewaart jullie server?', a: 'Een gehashte klascode, een gehashte lerarensleutel en het einduur van het examen. Geen namen, geen e-mailadressen, geen IP-adressen.' },
+      { q: 'Wat bewaart jullie server?', a: 'Een gehashte klascode, een gehashte lerarensleutel en het einduur van het examen. Geen namen, geen e-mailadressen. Tegen misbruik wordt een gehasht IP-adres één uur bewaard.' },
     ],
     related: ['schools', 'browser', 'network'],
   },
@@ -423,10 +423,11 @@ export const pages: Record<string, Page> = {
         'Geen cookies, geen statistieken, geen trackers, geen advertenties, geen lettertypen of scripts van andere bedrijven.',
         'De site staat op GitHub Pages (GitHub, Inc., VS). Zoals elke webhost verwerkt GitHub je IP-adres kort in serverlogs om de site te leveren en te beschermen. Wij krijgen die logs niet.',
         'De pagina van de examenknop bewaart je klascode en lerarensleutel in je eigen browser (lokale opslag), alleen zodat de pagina werkt. Je wist ze met “Vergeet deze klas”.',
-        "De testpagina “Werkt het?” maakt alleen contact met AI-sites als je op de knop drukt. Die sites zien dan je IP-adres, zoals bij een gewoon bezoek. Het resultaat blijft in je browser.",
+        "De testpagina “Werkt het?” maakt alleen contact met AI-sites, en met Wikipedia als controle, als je op de knop drukt. Die sites zien dan je IP-adres, zoals bij een gewoon bezoek. Het resultaat blijft in je browser.",
       ]},
       { h: 'De apps en scripts', list: [
         'Blokkeren, de plakbewaker en alle instellingen werken op je toestel. Geplakte tekst wordt nooit bewaard of verstuurd.',
+        'De extensie vraagt toegang tot alle sites alleen zodat de blokkeerregels elk AI-adres naar de Mindveto-pagina kunnen sturen. De plakbewaker werkt alleen op de AI-sites die in de extensie staan en verstuurt niet wat hij leest.',
         'De browserextensie haalt één keer per dag de openbare blokkeerlijst op. Ze stuurt daarbij geen persoonsgegevens mee.',
         'De Android-app filtert alleen naamopvragingen op de telefoon. Hij stuurt ons niets.',
         'Om websitenamen op te zoeken, stuurt de Android-app opvragingen die niet geblokkeerd zijn door naar de DNS-server die je telefoon al gebruikt. Antwoordt die niet, dan gebruikt de app Cloudflare (1.1.1.1) of Quad9 (9.9.9.9). Die diensten zien de websitenaam en je IP-adres, zoals bij elke DNS-opvraging.',
@@ -510,7 +511,7 @@ export const pages: Record<string, Page> = {
         'Wie beheerder is van het toestel kan een blokkade verwijderen. Geef kinderen en personeel een gewoon account (geen beheerder).',
         'Browserextensies dekken geen andere browsers of apps. Blokkeer daarvoor op de computer, de telefoon of het netwerk.',
         'Lijsten die hele domeinen blokkeren kunnen geen losse pagina blokkeren. Enkele blokkades op paginaniveau, zoals Bing Chat, werken alleen in de browserextensie.',
-      ], note: 'Blokkeren werkt het best samen met een duidelijke afspraak: wanneer mag AI, en waarom nu niet. Mindveto leest niets en stuurt niets; het zorgt alleen dat AI-adressen niet openen.', human: true },
+      ], note: 'Blokkeren werkt het best samen met een duidelijke afspraak: wanneer mag AI, en waarom nu niet. Mindveto controleert alles op het toestel en stuurt niets naar ons; het zorgt alleen dat AI-adressen niet openen.', human: true },
     ],
     faq: [
       { q: 'Hoe blokkeer ik ChatGPT op de telefoon van mijn kind?', a: L('Op Android: installeer de <a href="/nl/android/">Mindveto-app</a>, zet “Altijd-aan VPN” aan en kies een pincode. Op een iPhone: gebruik een DNS-dienst met onze gratis lijst, of Apple Schermtijd om chatgpt.com te blokkeren. Zie <a href="/nl/ouders/">voor ouders</a>.') },

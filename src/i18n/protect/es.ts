@@ -27,7 +27,7 @@ export const P: Protect = {
       ],
       faq: [
         { q: '¿Se envía a Mindveto el enlace que pego?', a: 'No. La comprobación se hace en tu navegador. La página no puede abrir ninguna conexión de red, así que el enlace no sale de tu dispositivo.' },
-        { q: 'El resultado dice «Parece correcto». ¿Entonces es seguro?', a: 'Significa que no encontramos ninguna de las señales de alerta habituales. No es una garantía. Si el mensaje te mete prisa o pide dinero, una contraseña o un código, compruébalo por otra vía.' },
+        { q: 'El resultado dice «No hay señales de alerta». ¿Entonces es seguro?', a: 'Significa que no encontramos ninguna de las señales de alerta habituales. No es una garantía. Si el mensaje te mete prisa o pide dinero, una contraseña o un código, compruébalo por otra vía.' },
         { q: '¿Puedo comprobar un código QR?', a: 'Escanea el código QR con la cámara, pero no lo abras todavía. Copia el enlace que muestra y pégalo aquí.' },
         { q: '¿Mindveto bloquea sitios de estafa?', a: 'Esta página solo comprueba enlaces. La <a href="/browser-extension/">extensión de navegador</a> de Mindveto bloquea sitios de IA y, con el filtro familiar, sitios para adultos y de apuestas. No es un antivirus.' },
       ],
@@ -67,7 +67,7 @@ export const P: Protect = {
   lc: {
     label: 'Pega un enlace', btn: 'Comprobar este enlace', pv: 'La comprobación se hace solo en esta pestaña. El enlace no se envía ni a nosotros ni a nadie.',
     ex: 'O prueba un ejemplo:', exGood: 'un banco real', exBad: 'un nombre falso', exHidden: 'letras ocultas',
-    v_ok: 'Parece correcto: no encontramos señales de alerta.', v_warn: 'Cuidado: algo parece inusual.', v_bad: 'No abras este enlace.', v_notweb: 'Esto no es un enlace web normal.',
+    v_ok: 'No hay señales de alerta en esta dirección. No es una garantía.', v_warn: 'Cuidado: algo parece inusual.', v_bad: 'No abras este enlace.', v_notweb: 'Esto no es un enlace web normal.',
     empty: 'Pega primero un enlace.', opens: 'Este enlace abre el sitio:', looks: 'En pantalla se ve como:',
     none: 'Comprueba igualmente: ¿te mete prisa el mensaje, o pide una contraseña, un código o dinero?',
     honest: 'Ningún comprobador lo detecta todo. Si dudas, abre la app o escribe tú la dirección que conoces.',

@@ -395,6 +395,7 @@ export const pages: Record<string, Page> = {
       { h: 'Who makes it', p: [
         'Amghar Said coordinates educational stays for teenagers in his day job. Technology has been his passion for 30 years, and Mindveto is a project he builds alongside his work.',
         L('Follow him or send a message on <a href="https://www.linkedin.com/in/amghar-said-67a95a22/" rel="me">LinkedIn</a>.'),
+        L('Another project by Amghar Said: <a href="https://dyskids.app/" rel="me">dyskids.app</a>, free homework help for children with dyslexia. It reads questions aloud and breaks them into small steps.'),
       ]},
       { h: 'Why the name', p: [
         'In the 1980s the brain researcher Benjamin Libet described how our conscious mind can stop an urge just before we act: a veto. Mindveto gives that pause to people who want it from AI.',

@@ -397,6 +397,7 @@ export const pages: Record<string, Page> = {
       { h: 'Chi lo fa', p: [
         'Nel suo lavoro, Amghar Said coordina soggiorni educativi per adolescenti. La tecnologia è la sua passione da 30 anni, e Mindveto è un progetto che costruisce accanto al lavoro.',
         L('Seguilo o scrivigli su <a href="https://www.linkedin.com/in/amghar-said-67a95a22/" rel="me">LinkedIn</a>.'),
+        L('Un altro progetto di Amghar Said: <a href="https://dyskids.app/" rel="me">dyskids.app</a>, aiuto gratuito per i compiti per bambini con dislessia. Legge le domande ad alta voce e le divide in piccoli passi.'),
       ]},
       { h: 'Perché il nome', p: [
         'Negli anni Ottanta il neuroscienziato Benjamin Libet descrisse come la mente cosciente possa fermare un impulso poco prima di agire: un veto. Mindveto dà questa pausa a chi la vuole di fronte all’IA.',

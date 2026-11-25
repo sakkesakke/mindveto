@@ -397,6 +397,7 @@ export const pages: Record<string, Page> = {
       { h: 'Wer es macht', p: [
         'Im Beruf koordiniert Amghar Said pädagogische Aufenthalte für Jugendliche. Technik ist seit 30 Jahren seine Leidenschaft, und Mindveto baut er neben seiner Arbeit.',
         L('Folge ihm oder schreib ihm auf <a href="https://www.linkedin.com/in/amghar-said-67a95a22/" rel="me">LinkedIn</a>.'),
+        L('Ein weiteres Projekt von Amghar Said: <a href="https://dyskids.app/" rel="me">dyskids.app</a>, kostenlose Hausaufgabenhilfe für Kinder mit Legasthenie. Es liest Fragen vor und teilt sie in kleine Schritte auf.'),
       ]},
       { h: 'Warum der Name', p: [
         'In den 1980er-Jahren beschrieb der Hirnforscher Benjamin Libet, wie unser Bewusstsein einen Impuls kurz vor dem Handeln stoppen kann: ein Veto. Mindveto gibt diese Pause allen, die sie bei KI wollen.',

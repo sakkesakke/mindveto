@@ -395,6 +395,7 @@ export const pages: Record<string, Page> = {
       { h: 'Wie het maakt', p: [
         'Amghar Said coördineert in zijn dagelijkse job educatieve verblijven voor jongeren. Technologie is al 30 jaar zijn passie, en Mindveto bouwt hij naast zijn werk.',
         L('Volg hem of stuur een bericht op <a href="https://www.linkedin.com/in/amghar-said-67a95a22/" rel="me">LinkedIn</a>.'),
+        L('Een ander project van Amghar Said: <a href="https://dyskids.app/" rel="me">dyskids.app</a>, gratis huiswerkhulp voor kinderen met dyslexie. Het leest vragen voor en deelt ze op in kleine stappen.'),
       ]},
       { h: 'Waarom de naam', p: [
         'In de jaren 1980 beschreef hersenonderzoeker Benjamin Libet hoe ons bewuste denken een impuls kan stoppen vlak voor we handelen: een veto. Mindveto geeft die pauze aan wie ze wil tegenover AI.',

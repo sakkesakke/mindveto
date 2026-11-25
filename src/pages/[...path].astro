@@ -267,7 +267,9 @@ const LC_EX = [['https://www.ing.com/', PR.lc.exGood], ['https://paypa1-login.co
      Windows, Edge and Chrome
      (Copilot, Recall, ...)
   4) Turn that built-in AI back on
-  5) Quit
+  5) Family filter ON
+  6) Family filter OFF
+  7) Quit
 
   Choice: 1
 
@@ -374,15 +376,22 @@ AI is allowed again.` : `! Title: Mindveto AI block list
           <script is:inline define:vars={{ K }}>
           (function(){
           var b=document.getElementById('ck'),sum=document.getElementById('cksum'),hint=document.getElementById('ckhint'),cells=[].slice.call(document.querySelectorAll('.cktab td[data-d]'));
-          function probe(d){var c=new AbortController(),t=setTimeout(function(){c.abort()},6000);
-            return fetch('https://'+d+'/favicon.ico?mv='+Date.now(),{mode:'no-cors',cache:'no-store',credentials:'omit',referrerPolicy:'no-referrer',signal:c.signal})
+          // 'blocked' = the request failed fast (Mindveto, another filter or a site outage); 'none' = no answer within 6 s.
+          // A normal site (Wikipedia) is probed as a control: if it fails too, the test cannot say anything.
+          function probe(d,path){var c=new AbortController(),t=setTimeout(function(){c.abort()},6000);
+            return fetch('https://'+d+(path||'/favicon.ico')+'?mv='+Date.now(),{mode:'no-cors',cache:'no-store',credentials:'omit',referrerPolicy:'no-referrer',signal:c.signal})
               .then(function(){clearTimeout(t);return 'open'},function(e){clearTimeout(t);return e&&e.name==='AbortError'?'none':'blocked'})}
+          function verdict(rs,ctl){var t=rs.length,n=function(k){return rs.filter(function(r){return r===k}).length},open=n('open'),bl=n('blocked'),x=n('none');
+            if(open) return ['on',open===t?K.zero:K.some.replace('{n}',open).replace('{t}',t)];
+            if(ctl!=='open') return ['off warn',K.ctl];
+            if(bl===0) return ['off warn',K.unk];
+            if(x) return ['off warn',K.part.replace('{b}',bl).replace('{t}',t).replace('{x}',x)];
+            return ['off',K.all]}
           b.onclick=function(){b.disabled=true;b.textContent=K.run;sum.hidden=true;hint.hidden=true;cells.forEach(function(c){c.textContent='…';c.className=''});
             fetch('/robots.txt?mv='+Date.now(),{cache:'no-store'}).then(function(){
-              return Promise.all(cells.map(function(c){return probe(c.dataset.d).then(function(r){c.textContent=K[r];c.className='ck-'+r;return r})}))
-                .then(function(rs){var open=rs.filter(function(r){return r==='open'}).length,t=rs.length;
-                  sum.className='state '+(open?'on':'off');sum.textContent=open===0?K.all:open===t?K.zero:K.some.replace('{n}',open).replace('{t}',t);sum.hidden=false;hint.hidden=!open})
-            },function(){sum.className='state off';sum.textContent=K.offline;sum.hidden=false;cells.forEach(function(c){c.textContent='–'})})
+              return Promise.all([probe('www.wikipedia.org','/static/favicon/wikipedia.ico')].concat(cells.map(function(c){return probe(c.dataset.d).then(function(r){c.textContent=K[r];c.className='ck-'+r;return r})})))
+                .then(function(all){var v=verdict(all.slice(1),all[0]);sum.className='state '+v[0];sum.textContent=v[1];sum.hidden=false;hint.hidden=v[0]==='off'})
+            },function(){sum.className='state off warn';sum.textContent=K.offline;sum.hidden=false;cells.forEach(function(c){c.textContent='–'})})
             .then(function(){b.disabled=false;b.textContent=K.btn})};
           })();
           </script>
@@ -564,7 +573,9 @@ AI is allowed again.` : `! Title: Mindveto AI block list
      Windows, Edge and Chrome
      (Copilot, Recall, ...)
   4) Turn that built-in AI back on
-  5) Quit
+  5) Family filter ON
+  6) Family filter OFF
+  7) Quit
 
   Choice: 1
 

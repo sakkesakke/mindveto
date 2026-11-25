@@ -8,7 +8,7 @@ import { LK } from './linkable/es';
 export const home: Home = {
   title: 'Mindveto: bloquea ChatGPT y más de 150 IA con un interruptor',
   desc: 'Bloquea ChatGPT, Gemini, Copilot y más de 150 herramientas de IA en navegadores, Android, Windows, Mac y redes. PIN, botón de examen. Gratis, sin rastreo.',
-  h1: 'Apaga ChatGPT y más de 150 herramientas de IA.',
+  h1: 'Bloquea ChatGPT y más de 150 herramientas de IA.',
   motto: 'Tu mente tiene la última palabra.', trust: 'Gratis. Sin cuenta, sin rastreo. Hecho por Amghar Said.', mockOn: 'El chat de IA está abierto', mockOff: 'Bloqueado por Mindveto',
   lead: 'Para padres, escuelas y oficinas. Mindveto funciona en un navegador, un teléfono, un ordenador o toda una red, y un PIN decide quién puede volver a encender la IA.',
   switchOn: 'IA', switchOff: 'Veto', switchLabel: 'Pruébalo: apaga la IA en esta página',
@@ -27,7 +27,7 @@ export const home: Home = {
   ledger: [
     ['Nada', 'Las páginas que visitas, lo que escribes, lo que pegas.', true],
     ['Nada', 'Tu nombre, tu correo o una cuenta. No hay cuenta.', true],
-    ['Una vez al día', 'La extensión descarga la lista pública de direcciones de IA. No envía nada con ella.', false],
+    ['Una vez al día', 'La extensión descarga la lista pública de direcciones de IA. No envía ajustes ni datos de navegación. Como en cualquier descarga, el servidor ve tu dirección IP.', false],
     ['Solo si te unes', 'En modo examen, el código de clase se envía una vez por minuto para saber si el examen está activo. Sin nombres.', false],
   ],
   limitsH: 'Límites honestos',
@@ -66,7 +66,7 @@ export const pages: Record<string, Page> = {
       ]},
       { h: 'Configúralo en 10 minutos', steps: [
         L('En el ordenador familiar: instala la <a href="/browser-extension/">extensión de navegador</a>, o bloquea la IA en todas las apps con la descarga para <a href="/windows/">Windows</a> o <a href="/mac-linux/">Mac</a>.'),
-        L('En el móvil Android de tu hijo: instala la <a href="/android/">app para Android</a> y activa “VPN siempre activada” para que no se pueda saltar.'),
+        L('En el móvil Android de tu hijo: instala la <a href="/android/">app para Android</a> y activa “VPN siempre activada” para que sea mucho más difícil de saltar.'),
         'Pon el mismo PIN en todas partes y guárdalo para ti.',
         'Da a tu hijo una cuenta normal (sin administrador) en el ordenador. Así no puede quitarlo.',
       ]},
@@ -119,7 +119,7 @@ export const pages: Record<string, Page> = {
   offices: {
     title: 'Evita que tu equipo pegue datos de clientes en ChatGPT',
     desc: 'Guardia de pegado para oficinas: un aviso antes de que IBAN, números de identidad, listas de clientes o textos confidenciales lleguen a chats de IA.',
-    h1: 'Los datos de clientes se quedan fuera de los chatbots públicos.',
+    h1: 'Un aviso antes de que los datos de clientes acaben en un chatbot.',
     lead: 'Un contable pega un extracto bancario en un chatbot para “resumirlo”. Mindveto detiene ese momento en la pantalla, antes de que los datos salgan de la oficina.',
     actions: [{ label: 'Proteger datos privados en ChatGPT', to: 'paste', solid: true }, { label: 'Precios para equipos', to: 'pricing' }],
     blocks: [
@@ -132,7 +132,7 @@ export const pages: Record<string, Page> = {
       { h: 'Por qué lo eligen las empresas', p: [
         'Las grandes herramientas contra fugas de datos envían tus datos a su nube para revisarlos, y cuestan miles. Mindveto comprueba en el propio PC, así que el texto nunca sale de la oficina.',
         'Encaja en gestorías, despachos de abogados, notarías, corredurías de seguros, RR. HH. y consultas médicas: equipos pequeños con expedientes confidenciales y sin departamento de IT.',
-      ], note: 'En muchos países hay que informar al comité de empresa o a la plantilla antes de introducir una herramienta así. Mindveto no lee nada ni envía nada, y eso facilita esa conversación.', human: true },
+      ], note: 'En muchos países hay que informar al comité de empresa o a la plantilla antes de introducir una herramienta así. Mindveto revisa el texto pegado solo en el dispositivo y no nos envía nada, y eso facilita esa conversación.', human: true },
       { h: 'Despliégalo', steps: [
         L('Instala la <a href="/browser-extension/">extensión de navegador</a> en cada ordenador de trabajo, o instálala de forma obligatoria con políticas de Edge o Chrome.'),
         'Marca la IA que permite tu empresa y añade tus palabras privadas.',
@@ -178,7 +178,7 @@ export const pages: Record<string, Page> = {
       ], note: 'Para padres y escuelas: en la página “Detalles” de la extensión, activa “Permitir en modo incógnito”. Si no, las ventanas privadas no se bloquean.' },
       { h: 'Datos', facts: [
         ['Versión', '1.8.1 (Manifest V3)'], ['Tamaño', '738 KB'], ['Navegadores', 'Chrome, Edge, Brave, Opera. Firefox y las tiendas oficiales: pronto'],
-        ['Permisos', 'Reglas de bloqueo, almacenamiento local, un temporizador diario'], ['Datos enviados', 'Ninguno. Solo se descarga la lista pública una vez al día'], ['Precio', 'Gratis'],
+        ['Permisos', 'Reglas de bloqueo, almacenamiento local, un temporizador diario y acceso a todos los sitios: necesario para enviar cualquier dirección de IA a la página de Mindveto. La guardia de pegado solo funciona en sitios de IA'], ['Datos enviados', 'Ningún dato de navegación. La lista pública se descarga una vez al día; el modo examen solo envía un código de clase, una vez por minuto'], ['Precio', 'Gratis'],
       ]},
     ],
     faq: [
@@ -204,12 +204,12 @@ export const pages: Record<string, Page> = {
         'Abre el enlace de descarga en el móvil.',
         'Cuando Android pregunte, permite “instalar apps desconocidas” para tu navegador.',
         'Abre la app y toca el botón grande.',
-        'Activa “VPN siempre activada” y “Bloquear conexiones sin VPN” (la app te muestra cómo). Así no se puede saltar.',
+        'Activa “VPN siempre activada” y “Bloquear conexiones sin VPN” (la app te muestra cómo). Así es mucho más difícil de saltar.',
         'Pon un PIN.',
       ], note: 'Beta: para actualizar, desinstala primero la versión antigua. Pronto habrá una versión en Google Play. La app está en inglés, neerlandés y francés por ahora.' },
       { h: 'Datos', facts: [
         ['Versión', 'Beta, Android 16 (SDK 36)'], ['Tamaño', '389 KB'], ['Requiere', 'Android 8 o posterior'],
-        ['Alertas de manipulación', 'Sí, un aviso si la protección se detiene'], ['Datos enviados', 'Ninguno'], ['Precio', 'Gratis durante la beta'],
+        ['Alertas de manipulación', 'Sí, un aviso si la protección se detiene'], ['Datos enviados', 'Nada a nosotros. Las consultas no bloqueadas van a un servidor DNS, como siempre'], ['Precio', 'Gratis durante la beta'],
       ]},
     ],
     faq: [
@@ -303,7 +303,7 @@ export const pages: Record<string, Page> = {
     ],
     faq: [
       { q: '¿Qué necesitan los alumnos?', a: L('La <a href="/browser-extension/">extensión Mindveto</a> en su navegador, unida a tu clase con el código. En los ordenadores del centro, el centro la instala una vez.') },
-      { q: '¿Qué guarda vuestro servidor?', a: 'Un código de clase cifrado (hash), una clave de docente cifrada y la hora de fin del examen. Sin nombres, sin correos, sin direcciones IP.' },
+      { q: '¿Qué guarda vuestro servidor?', a: 'Un código de clase cifrado (hash), una clave de docente cifrada y la hora de fin del examen. Sin nombres, sin correos. Para evitar abusos se guarda una IP cifrada (hash) durante una hora.' },
     ],
     related: ['schools', 'browser', 'network'],
   },
@@ -425,10 +425,11 @@ export const pages: Record<string, Page> = {
         'Sin cookies, sin analítica, sin rastreadores, sin publicidad, sin fuentes ni scripts de otras empresas.',
         'La web está alojada en GitHub Pages (GitHub, Inc., EE. UU.). Como cualquier alojamiento, GitHub trata brevemente tu dirección IP en registros del servidor para servir y proteger la web. Nosotros no recibimos esos registros.',
         'La página del botón de examen guarda tu código de clase y tu clave de docente en tu propio navegador (almacenamiento local), solo para que la página funcione. Puedes borrarlos con “Olvidar esta clase”.',
-        "La página de prueba «¿Funciona?» solo contacta con sitios de IA cuando pulsas su botón. Esos sitios ven entonces tu dirección IP, como en una visita normal. El resultado se queda en tu navegador.",
+        "La página de prueba «¿Funciona?» solo contacta con sitios de IA, y con Wikipedia como control, cuando pulsas su botón. Esos sitios ven entonces tu dirección IP, como en una visita normal. El resultado se queda en tu navegador.",
       ]},
       { h: 'Las apps y los scripts', list: [
         'El bloqueo, la guardia de pegado y todos los ajustes funcionan en tu dispositivo. El texto pegado nunca se guarda ni se envía.',
+        'La extensión pide acceso a todos los sitios solo para que sus reglas de bloqueo puedan enviar cualquier dirección de IA a la página de Mindveto. La guardia de pegado solo funciona en los sitios de IA listados en la extensión y no envía lo que lee.',
         'La extensión descarga la lista pública de bloqueo una vez al día. No envía datos personales con esa petición.',
         'La app de Android solo filtra consultas de nombres de internet en el móvil. No nos envía nada.',
         'Para buscar nombres de sitios, la app de Android pasa las consultas no bloqueadas al servidor DNS que tu teléfono ya usa. Si no responde, usa Cloudflare (1.1.1.1) o Quad9 (9.9.9.9). Esos servicios ven el nombre del sitio y tu dirección IP, como en cualquier consulta DNS.',
@@ -513,7 +514,7 @@ export const pages: Record<string, Page> = {
         'Quien es administrador del dispositivo puede quitar un bloqueo. Da a niños y personal una cuenta normal (sin administrador).',
         'Las extensiones de navegador no cubren otros navegadores ni apps. Para eso, bloquea en el ordenador, el móvil o la red.',
         'Las listas que bloquean dominios completos no pueden bloquear una sola página. Algunos bloqueos a nivel de página, como Bing Chat, solo funcionan en la extensión.',
-      ], note: 'El bloqueo funciona mejor junto a una norma clara: cuándo se permite la IA, y por qué ahora no. Mindveto no lee nada ni envía nada; solo impide que se abran direcciones de IA.', human: true },
+      ], note: 'El bloqueo funciona mejor junto a una norma clara: cuándo se permite la IA, y por qué ahora no. Mindveto lo revisa todo en el dispositivo y no nos envía nada; solo impide que se abran direcciones de IA.', human: true },
     ],
     faq: [
       { q: '¿Cómo bloqueo ChatGPT en el móvil de mi hijo?', a: L('En Android, instala la <a href="/android/">app Mindveto</a>, activa “VPN siempre activada” y pon un PIN. En un iPhone, usa un servicio DNS con nuestra lista gratuita, o Tiempo de uso de Apple para bloquear chatgpt.com. Mira <a href="/parents/">para padres</a>.') },

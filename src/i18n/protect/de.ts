@@ -27,7 +27,7 @@ export const P: Protect = {
       ],
       faq: [
         { q: 'Wird der Link, den ich einfüge, an Mindveto gesendet?', a: 'Nein. Die Prüfung läuft in deinem Browser. Die Seite darf keine Netzwerkverbindung aufbauen, also kann der Link dein Gerät nicht verlassen.' },
-        { q: 'Das Ergebnis sagt „Sieht in Ordnung aus“. Ist er dann sicher?', a: 'Es bedeutet, dass wir keines der üblichen Warnzeichen gefunden haben. Es ist keine Garantie. Wenn die Nachricht dich drängt oder Geld, ein Passwort oder einen Code will, prüfe auf anderem Weg.' },
+        { q: 'Das Ergebnis sagt „Keine Warnzeichen gefunden“. Ist er dann sicher?', a: 'Es bedeutet, dass wir keines der üblichen Warnzeichen gefunden haben. Es ist keine Garantie. Wenn die Nachricht dich drängt oder Geld, ein Passwort oder einen Code will, prüfe auf anderem Weg.' },
         { q: 'Kann ich einen QR-Code prüfen?', a: 'Scanne den QR-Code mit der Kamera, aber öffne ihn noch nicht. Kopiere den angezeigten Link und füge ihn hier ein.' },
         { q: 'Blockiert Mindveto Betrugsseiten?', a: 'Diese Seite prüft nur Links. Die Mindveto-<a href="/browser-extension/">Browser-Erweiterung</a> sperrt KI-Seiten und mit dem Familienfilter Erwachsenen- und Glücksspielseiten. Sie ist kein Virenscanner.' },
       ],
@@ -67,7 +67,7 @@ export const P: Protect = {
   lc: {
     label: 'Link einfügen', btn: 'Diesen Link prüfen', pv: 'Die Prüfung läuft nur in diesem Browser-Tab. Der Link wird weder an uns noch an andere gesendet.',
     ex: 'Oder probiere ein Beispiel:', exGood: 'eine echte Bank', exBad: 'ein falscher Name', exHidden: 'versteckte Buchstaben',
-    v_ok: 'Sieht in Ordnung aus: keine Warnzeichen gefunden.', v_warn: 'Vorsicht: Etwas wirkt ungewöhnlich.', v_bad: 'Öffne diesen Link nicht.', v_notweb: 'Das ist kein normaler Weblink.',
+    v_ok: 'Keine Warnzeichen in dieser Adresse gefunden. Das ist keine Garantie.', v_warn: 'Vorsicht: Etwas wirkt ungewöhnlich.', v_bad: 'Öffne diesen Link nicht.', v_notweb: 'Das ist kein normaler Weblink.',
     empty: 'Füge zuerst einen Link ein.', opens: 'Dieser Link öffnet die Seite:', looks: 'Auf dem Bildschirm sieht es so aus:',
     none: 'Prüfe trotzdem: Drängt dich die Nachricht, oder will sie ein Passwort, einen Code oder Geld?',
     honest: 'Kein Prüfer erkennt alles. Im Zweifel öffne die App oder tippe die Adresse, die du kennst, selbst ein.',

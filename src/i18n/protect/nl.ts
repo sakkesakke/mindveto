@@ -28,7 +28,7 @@ export const P: Protect = {
       ],
       faq: [
         { q: 'Wordt de link die ik plak naar Mindveto gestuurd?', a: 'Nee. De check draait in je browser. De pagina mag geen enkele netwerkverbinding maken, dus de link kan je toestel niet verlaten.' },
-        { q: 'Het resultaat zegt “Lijkt in orde”. Is hij dan veilig?', a: 'Het betekent dat we geen van de gewone waarschuwingstekens vonden. Het is geen garantie. Zet het bericht je onder druk of vraagt het geld, een wachtwoord of een code? Controleer dan op een andere manier.' },
+        { q: 'Het resultaat zegt “Geen waarschuwingstekens gevonden”. Is hij dan veilig?', a: 'Het betekent dat we geen van de gewone waarschuwingstekens vonden. Het is geen garantie. Zet het bericht je onder druk of vraagt het geld, een wachtwoord of een code? Controleer dan op een andere manier.' },
         { q: 'Kan ik een QR-code controleren?', a: 'Scan de QR-code met je camera, maar open hem nog niet. Kopieer de link die je ziet en plak hem hier.' },
         { q: 'Blokkeert Mindveto oplichterssites?', a: 'Deze pagina controleert alleen links. De Mindveto-<a href="/nl/browserextensie/">browserextensie</a> blokkeert AI-sites en, met de gezinsfilter, sites voor volwassenen en gokken. Het is geen virusscanner.' },
       ],
@@ -68,7 +68,7 @@ export const P: Protect = {
   lc: {
     label: 'Plak een link', btn: 'Controleer deze link', pv: 'De check draait alleen in dit browsertabblad. De link wordt niet naar ons of naar iemand anders gestuurd.',
     ex: 'Of probeer een voorbeeld:', exGood: 'een echte bank', exBad: 'een namaaknaam', exHidden: 'verborgen letters',
-    v_ok: 'Lijkt in orde: we vonden geen waarschuwingstekens.', v_warn: 'Wees voorzichtig: er lijkt iets ongewoon.', v_bad: 'Open deze link niet.', v_notweb: 'Dit is geen gewone weblink.',
+    v_ok: 'Geen waarschuwingstekens gevonden in dit adres. Dat is geen garantie.', v_warn: 'Wees voorzichtig: er lijkt iets ongewoon.', v_bad: 'Open deze link niet.', v_notweb: 'Dit is geen gewone weblink.',
     empty: 'Plak eerst een link.', opens: 'Deze link opent de site:', looks: 'Op je scherm ziet het eruit als:',
     none: 'Controleer toch: zet het bericht je onder druk, of vraagt het een wachtwoord, een code of geld?',
     honest: 'Geen enkele check vangt alles. Twijfel je, open dan de app of typ zelf het adres dat je kent.',

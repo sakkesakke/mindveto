@@ -27,7 +27,7 @@ export const P: Protect = {
       ],
       faq: [
         { q: 'O link que colo é enviado à Mindveto?', a: 'Não. A verificação corre no seu navegador. A página não pode abrir nenhuma ligação de rede, por isso o link não sai do seu aparelho.' },
-        { q: 'O resultado diz «Parece bem». Então é seguro?', a: 'Quer dizer que não encontrámos nenhum dos sinais de alerta habituais. Não é uma garantia. Se a mensagem o apressa ou pede dinheiro, uma palavra-passe ou um código, verifique de outra forma.' },
+        { q: 'O resultado diz «Nenhum sinal de alerta». Então é seguro?', a: 'Quer dizer que não encontrámos nenhum dos sinais de alerta habituais. Não é uma garantia. Se a mensagem o apressa ou pede dinheiro, uma palavra-passe ou um código, verifique de outra forma.' },
         { q: 'Posso verificar um código QR?', a: 'Leia o código QR com a câmara, mas não o abra ainda. Copie o link que aparece e cole-o aqui.' },
         { q: 'A Mindveto bloqueia sites de burla?', a: 'Esta página só verifica links. A <a href="/browser-extension/">extensão de navegador</a> da Mindveto bloqueia sites de IA e, com o filtro familiar, sites para adultos e de jogo. Não é um antivírus.' },
       ],
@@ -67,7 +67,7 @@ export const P: Protect = {
   lc: {
     label: 'Cole um link', btn: 'Verificar este link', pv: 'A verificação corre só neste separador. O link não é enviado a nós nem a ninguém.',
     ex: 'Ou experimente um exemplo:', exGood: 'um banco verdadeiro', exBad: 'um nome falso', exHidden: 'letras escondidas',
-    v_ok: 'Parece bem: não encontrámos sinais de alerta.', v_warn: 'Cuidado: algo parece invulgar.', v_bad: 'Não abra este link.', v_notweb: 'Isto não é um link web normal.',
+    v_ok: 'Nenhum sinal de alerta neste endereço. Não é uma garantia.', v_warn: 'Cuidado: algo parece invulgar.', v_bad: 'Não abra este link.', v_notweb: 'Isto não é um link web normal.',
     empty: 'Cole primeiro um link.', opens: 'Este link abre o site:', looks: 'No ecrã parece:',
     none: 'Verifique mesmo assim: a mensagem apressa-o, ou pede uma palavra-passe, um código ou dinheiro?',
     honest: 'Nenhum verificador apanha tudo. Na dúvida, abra a app ou escreva o endereço que conhece.',

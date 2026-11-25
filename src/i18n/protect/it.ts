@@ -27,7 +27,7 @@ export const P: Protect = {
       ],
       faq: [
         { q: 'Il link che incollo viene inviato a Mindveto?', a: 'No. Il controllo avviene nel tuo browser. La pagina non può aprire nessuna connessione di rete, quindi il link non può lasciare il tuo dispositivo.' },
-        { q: 'Il risultato dice «Sembra a posto». Allora è sicuro?', a: 'Significa che non abbiamo trovato nessuno dei soliti segnali d’allarme. Non è una garanzia. Se il messaggio ti mette fretta o chiede soldi, una password o un codice, verifica in un altro modo.' },
+        { q: 'Il risultato dice «Nessun segnale d’allarme». Allora è sicuro?', a: 'Significa che non abbiamo trovato nessuno dei soliti segnali d’allarme. Non è una garanzia. Se il messaggio ti mette fretta o chiede soldi, una password o un codice, verifica in un altro modo.' },
         { q: 'Posso controllare un codice QR?', a: 'Inquadra il codice QR con la fotocamera, ma non aprirlo ancora. Copia il link che mostra e incollalo qui.' },
         { q: 'Mindveto blocca i siti truffa?', a: 'Questa pagina controlla solo i link. L’<a href="/browser-extension/">estensione per browser</a> di Mindveto blocca i siti di IA e, con il filtro famiglia, i siti per adulti e di scommesse. Non è un antivirus.' },
       ],
@@ -67,7 +67,7 @@ export const P: Protect = {
   lc: {
     label: 'Incolla un link', btn: 'Controlla questo link', pv: 'Il controllo avviene solo in questa scheda. Il link non viene inviato né a noi né ad altri.',
     ex: 'Oppure prova un esempio:', exGood: 'una banca vera', exBad: 'un nome falso', exHidden: 'lettere nascoste',
-    v_ok: 'Sembra a posto: nessun segnale d’allarme trovato.', v_warn: 'Attenzione: qualcosa sembra insolito.', v_bad: 'Non aprire questo link.', v_notweb: 'Questo non è un normale link web.',
+    v_ok: 'Nessun segnale d’allarme in questo indirizzo. Non è una garanzia.', v_warn: 'Attenzione: qualcosa sembra insolito.', v_bad: 'Non aprire questo link.', v_notweb: 'Questo non è un normale link web.',
     empty: 'Prima incolla un link.', opens: 'Questo link apre il sito:', looks: 'Sullo schermo sembra:',
     none: 'Controlla comunque: il messaggio ti mette fretta, o chiede una password, un codice o soldi?',
     honest: 'Nessun controllo trova tutto. Nel dubbio apri l’app o scrivi tu l’indirizzo che conosci.',

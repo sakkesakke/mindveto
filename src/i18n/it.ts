@@ -396,6 +396,7 @@ export const pages: Record<string, Page> = {
     blocks: [
       { h: 'Chi lo fa', p: [
         'Nel suo lavoro, Amghar Said coordina soggiorni educativi per adolescenti. La tecnologia è la sua passione da 30 anni, e Mindveto è un progetto che costruisce accanto al lavoro.',
+        L('Ha creato anche <a href="https://dyskids.app/" rel="me">Dys Kids</a>, un’app gratuita di aiuto per i compiti per bambini con dislessia: ascoltare una domanda, dividerla in passi, mostrare il ragionamento.'),
         L('Seguilo o scrivigli su <a href="https://www.linkedin.com/in/amghar-said-67a95a22/" rel="me">LinkedIn</a>.'),
       ]},
       { h: 'Perché il nome', p: [

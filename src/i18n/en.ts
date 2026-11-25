@@ -394,6 +394,7 @@ export const pages: Record<string, Page> = {
     blocks: [
       { h: 'Who makes it', p: [
         'Amghar Said coordinates educational stays for teenagers in his day job. Technology has been his passion for 30 years, and Mindveto is a project he builds alongside his work.',
+        L('He also made <a href="https://dyskids.app/" rel="me">Dys Kids</a>, a free homework help app for kids with dyslexia: listen to a question, break it into steps, show your thinking.'),
         L('Follow him or send a message on <a href="https://www.linkedin.com/in/amghar-said-67a95a22/" rel="me">LinkedIn</a>.'),
       ]},
       { h: 'Why the name', p: [

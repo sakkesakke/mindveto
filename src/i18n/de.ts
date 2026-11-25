@@ -396,6 +396,7 @@ export const pages: Record<string, Page> = {
     blocks: [
       { h: 'Wer es macht', p: [
         'Im Beruf koordiniert Amghar Said pädagogische Aufenthalte für Jugendliche. Technik ist seit 30 Jahren seine Leidenschaft, und Mindveto baut er neben seiner Arbeit.',
+        L('Er hat auch <a href="https://dyskids.app/" rel="me">Dys Kids</a> gemacht, eine kostenlose Hausaufgabenhilfe für Kinder mit Legasthenie: eine Frage anhören, in Schritte teilen, das eigene Denken zeigen.'),
         L('Folge ihm oder schreib ihm auf <a href="https://www.linkedin.com/in/amghar-said-67a95a22/" rel="me">LinkedIn</a>.'),
       ]},
       { h: 'Warum der Name', p: [

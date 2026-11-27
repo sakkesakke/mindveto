@@ -221,7 +221,7 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;',
 const count = n => findings.filter(f => f.sev === n).length;
 const date = new Date().toISOString().slice(0, 10);
 let font = '';
-try { font = fs.readFileSync(path.join(HERE, '../public/fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2')).toString('base64'); } catch {}
+try { font = fs.readFileSync(path.join(HERE, 'fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2')).toString('base64'); } catch {}
 const html = `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(t.title)} – ${esc(site.hostname)}</title>
 <style>

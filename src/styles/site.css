@@ -223,6 +223,7 @@ code, kbd { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; fo
 .foot .fine { margin-top: var(--s7); font-size: .9rem; color: #b8c2bd; max-width: none; }
 .foot .fine a { text-decoration: underline; text-underline-offset: 2px; }
 @media (max-width: 760px) { .foot .cols { grid-template-columns: 1fr 1fr; } .foot .cols > div:first-child { grid-column: 1 / -1; } }
+@media (max-width: 380px) { .foot .cols { grid-template-columns: minmax(0, 1fr); } .foot .cols a { overflow-wrap: break-word; } }
 
 /* Inner page header with a side picture */
 .pagehead .withaside { display: grid; grid-template-columns: minmax(0, 40rem) 1fr; gap: var(--s8); align-items: center; }
@@ -258,9 +259,9 @@ code, kbd { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; fo
 }
 
 /* Faithful previews of the real apps */
-.mock { margin: 0; display: grid; gap: var(--s3); justify-items: center; }
+.mock { margin: 0; display: grid; grid-template-columns: minmax(0, auto); gap: var(--s3); justify-items: center; max-width: 100%; min-width: 0; }
 .mock figcaption { font-size: .9rem; color: var(--mute); }
-.ui-pop { width: 20rem; background: #fff; border-radius: 12px; padding: var(--s4); font-size: .92rem; line-height: 1.4; box-shadow: 0 1px 2px rgba(24,36,31,.08), 0 18px 40px -18px rgba(24,36,31,.35); }
+.ui-pop { width: 20rem; max-width: 100%; background: #fff; border-radius: 12px; padding: var(--s4); font-size: .92rem; line-height: 1.4; box-shadow: 0 1px 2px rgba(24,36,31,.08), 0 18px 40px -18px rgba(24,36,31,.35); }
 .ui-head { display: flex; align-items: center; gap: .5rem; font-weight: 600; margin-bottom: var(--s3); }
 .ui-big { background: var(--ink); color: var(--paper); border-radius: 10px; padding: var(--s4); text-align: center; display: grid; gap: 2px; }
 .ui-big span { font-weight: 600; font-size: 1.15rem; letter-spacing: .02em; }
@@ -292,7 +293,7 @@ code, kbd { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; fo
 .toollist a:hover .tn { text-decoration: underline; }
 .toollist .tn { font-weight: 600; }
 .toollist .tl { color: var(--mute); }
-@media (max-width: 960px) { .toolsplit { grid-template-columns: 1fr; gap: var(--s6); } .toolsplit .mock { justify-self: start; } }
+@media (max-width: 960px) { .toolsplit { grid-template-columns: minmax(0, 1fr); gap: var(--s6); } .toolsplit .mock { justify-self: start; } }
 @media (max-width: 560px) { .toollist a { grid-template-columns: 1fr; gap: 2px; } }
 
 /* Inner pages: text column + a preview that stays in view */

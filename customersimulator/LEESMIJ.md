@@ -1,6 +1,6 @@
 # CustomerSimulator
 
-CustomerSimulator bezoekt één webpagina zoals zeven verschillende klanten dat doen. Daarna schrijft hij een rapport in gewone taal, in het Nederlands of het Engels.
+CustomerSimulator bezoekt één of meer webpagina's zoals zeven verschillende klanten dat doen. Daarna schrijft hij een rapport in gewone taal, in het Nederlands of het Engels.
 
 | Klant | Wat wordt getest |
 |---|---|
@@ -23,18 +23,30 @@ Het rapport is één HTML-bestand met screenshots erin. Je kunt het mailen of af
 ## Een website testen
 
 1. Typ `node simulate.mjs https://website-van-de-klant.nl` en druk op **Enter**.
-2. Wacht ongeveer 15 seconden.
-3. Het rapport staat in de map `reports`.
+2. Wacht ongeveer 15 seconden per pagina.
+3. Wil je meerdere pagina's in één rapport (het Winkelpakket)? Zet dan alle adressen achter elkaar:
+   `node simulate.mjs https://winkel.be https://winkel.be/product https://winkel.be/contact`
 4. Wil je het rapport in het Engels? Zet dan `--lang en` achter de opdracht.
-5. Open het bestand en kies **Afdrukken → Opslaan als PDF** om een PDF te maken.
 
-Een voorbeeld vind je in `voorbeeld-rapport.html` (de test van mindveto.app zelf).
+## Wat je krijgt (in de map `reports`)
+
+| Bestand | Waarvoor |
+|---|---|
+| `…-nl.pdf` | Het rapport als PDF. Dit stuur je naar de klant nadat hij betaald heeft. |
+| `…-nl.html` | Hetzelfde rapport als webpagina. |
+| `…-nl-mail.txt` | Een kant-en-klare eerste mail met de 3 grootste problemen. Vul alleen je naam in. |
+| `klanten.csv` | Je klantenlijst. Er komt bij elke test een regel bij. Open hem in Excel en vul zelf in: gemaild op, antwoord, betaald. |
+| `…-nl.json` | De ruwe gegevens (alleen nodig voor Claude). |
+
+De map `reports` gaat nooit naar GitHub. Rapporten over websites van anderen blijven op je eigen computer.
+
+Een voorbeeld vind je in `voorbeeld-rapport.html` en `voorbeeld-rapport.pdf` (de test van mindveto.app zelf).
 
 ## Eerlijke grenzen
 
 Deze grenzen staan ook in elk rapport:
 
-- Er wordt maar één pagina getest.
+- Alleen de pagina's die je opgeeft worden getest, niet de hele website.
 - Er wordt niets gekocht, er wordt niet ingelogd en er worden geen formulieren verstuurd.
 - Een automatische scan vindt ongeveer een derde tot de helft van de toegankelijkheidsproblemen.
 - Het rapport is geen juridisch advies en geen bewijs dat de site aan de wet voldoet.

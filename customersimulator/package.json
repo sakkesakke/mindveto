@@ -1,0 +1,14 @@
+{
+  "name": "customersimulator",
+  "private": true,
+  "type": "module",
+  "description": "Visits a web page as seven different customers and writes a plain-language report.",
+  "scripts": {
+    "test-site": "node simulate.mjs",
+    "setup": "npm install && npx playwright install chromium"
+  },
+  "dependencies": {
+    "axe-core": "4.14.1",
+    "playwright": "1.63.0"
+  }
+}

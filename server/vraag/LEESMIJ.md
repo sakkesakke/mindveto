@@ -13,7 +13,11 @@ Een leerkracht plakt een tekst van een leerling. Een gratis open AI-model op je 
 - Je Oracle-server met **Docker** erop. Typ `docker --version` om dat te controleren.
 - Ongeveer **8 GB vrij geheugen** en **10 GB vrije schijfruimte**.
 
-## Installeren (één keer)
+## Snelste manier: de server installeert zichzelf
+
+Plak het hele bestand `cloud-init.yaml` bij het aanmaken van de Oracle-server in het vak **Initialization script** (onder **Show advanced options → Management**). Na 15 à 20 minuten draait alles. In `/root/mindveto-setup.txt` staat dan je eerste testcode.
+
+## Installeren met de hand (één keer)
 
 1. Log in op je server.
 2. Haal de code op:

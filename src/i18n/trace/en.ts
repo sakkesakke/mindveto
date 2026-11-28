@@ -56,6 +56,7 @@ export const TR: Trace = {
     sigH: 'Worth a conversation', sigNone: 'Nothing unusual in this trace.',
     sBig: 'A large piece was pasted: {n} characters at {t}.', sShare: '{p}% of all added characters were pasted.',
     sPace: 'A lot of text for the time: {n} characters per active minute.', sAway: 'The page was left {n} times ({m} min in total).',
+    sWipe: 'Just before a large paste, {n} characters of the text were deleted.', sAwayP: 'The student came back to the page {s} seconds before a large paste.',
     sNoDel: 'Almost no corrections: {n} characters deleted.',
     sigNote: 'These are facts about how the text was made, not proof of AI use. Ask the student to explain their text.',
     pasteH: 'Pastes', pasteRow: '{t} · {n} characters',

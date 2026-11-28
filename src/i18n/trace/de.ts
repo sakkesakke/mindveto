@@ -56,6 +56,7 @@ export const TR: Trace = {
     sigH: 'Gesprächsanlass', sigNone: 'Nichts Auffälliges in dieser Spur.',
     sBig: 'Ein großes Stück wurde eingefügt: {n} Zeichen bei {t}.', sShare: '{p} % aller hinzugefügten Zeichen wurden eingefügt.',
     sPace: 'Viel Text für die Zeit: {n} Zeichen pro Schreibminute.', sAway: 'Die Seite wurde {n}-mal verlassen (insgesamt {m} Min.).',
+    sWipe: 'Kurz vor einer großen Einfügung wurden {n} Zeichen des Textes gelöscht.', sAwayP: 'Die Seite wurde {s} Sekunden vor einer großen Einfügung wieder geöffnet.',
     sNoDel: 'Fast keine Korrekturen: {n} Zeichen gelöscht.',
     sigNote: 'Das sind Fakten darüber, wie der Text entstand, kein Beweis für KI-Nutzung. Lassen Sie sich den Text erklären.',
     pasteH: 'Einfügungen', pasteRow: '{t} · {n} Zeichen',

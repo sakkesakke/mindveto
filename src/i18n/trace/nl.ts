@@ -56,6 +56,7 @@ export const TR: Trace = {
     sigH: 'Goed om over te praten', sigNone: 'Niets opvallends in dit spoor.',
     sBig: 'Er werd een groot stuk geplakt: {n} tekens na {t}.', sShare: '{p}% van alle toegevoegde tekens werd geplakt.',
     sPace: 'Veel tekst voor de tijd: {n} tekens per minuut schrijven.', sAway: 'De pagina werd {n} keer verlaten (samen {m} min).',
+    sWipe: 'Vlak voor een groot stuk plakken werden {n} tekens van de tekst gewist.', sAwayP: 'De leerling kwam {s} seconden voor een groot stuk plakken terug naar de pagina.',
     sNoDel: 'Bijna niets verbeterd: {n} tekens gewist.',
     sigNote: 'Dit zijn feiten over hoe de tekst ontstond, geen bewijs van AI-gebruik. Vraag de leerling de tekst uit te leggen.',
     pasteH: 'Geplakt', pasteRow: '{t} · {n} tekens',

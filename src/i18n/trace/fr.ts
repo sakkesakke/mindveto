@@ -56,6 +56,7 @@ export const TR: Trace = {
     sigH: 'À discuter', sigNone: 'Rien d’inhabituel dans cette trace.',
     sBig: 'Un grand morceau a été collé : {n} caractères à {t}.', sShare: '{p} % de tous les caractères ajoutés ont été collés.',
     sPace: 'Beaucoup de texte pour le temps : {n} caractères par minute d’écriture.', sAway: 'La page a été quittée {n} fois ({m} min au total).',
+    sWipe: 'Juste avant un grand collage, {n} caractères du texte ont été effacés.', sAwayP: 'L’élève est revenu sur la page {s} secondes avant un grand collage.',
     sNoDel: 'Presque aucune correction : {n} caractères effacés.',
     sigNote: 'Ce sont des faits sur la façon dont le texte est né, pas une preuve d’usage de l’IA. Demandez à l’élève d’expliquer son texte.',
     pasteH: 'Collages', pasteRow: '{t} · {n} caractères',

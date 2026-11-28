@@ -56,6 +56,7 @@ export const TR: Trace = {
     sigH: 'Para conversar', sigNone: 'Nada fuera de lo normal en este rastro.',
     sBig: 'Se pegó un trozo grande: {n} caracteres a los {t}.', sShare: 'El {p} % de todos los caracteres añadidos se pegó.',
     sPace: 'Mucho texto para el tiempo: {n} caracteres por minuto de escritura.', sAway: 'Se salió de la página {n} veces ({m} min en total).',
+    sWipe: 'Justo antes de un pegado grande se borraron {n} caracteres del texto.', sAwayP: 'El alumno volvió a la página {s} segundos antes de un pegado grande.',
     sNoDel: 'Casi ninguna corrección: {n} caracteres borrados.',
     sigNote: 'Son hechos sobre cómo nació el texto, no una prueba de uso de IA. Pide al alumno que explique su texto.',
     pasteH: 'Pegados', pasteRow: '{t} · {n} caracteres',

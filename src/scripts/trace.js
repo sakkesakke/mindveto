@@ -43,6 +43,7 @@
     // What changed: compare the old and new text from both ends.
     var a = 0; while (a < prev.length && a < v.length && prev.charCodeAt(a) === v.charCodeAt(a)) a++;
     var b = 0; while (b < prev.length - a && b < v.length - a && prev.charCodeAt(prev.length - 1 - b) === v.charCodeAt(v.length - 1 - b)) b++;
+    if (!st.ev.length && !st.snaps.length) st.start = Date.now(); // the clock starts at the first change, not when the page opens
     var ins = v.length - a - b, del = prev.length - a - b, t = now();
     var code = /Paste|Drop/.test(it) ? 'p' : it === 'deleteByCut' ? 'c' : /^delete/.test(it) ? 'x' : /^history/.test(it) ? 'u' : it === 'insertReplacementText' ? 'r' : 't';
     if (!it && ins > 40) code = 'p'; // browsers without inputType: a big jump at once is a paste
@@ -121,6 +122,15 @@
     if (added >= 300 && share >= 30) sig.push(fill(W.sShare, { p: share }));
     if (d.text.length >= 600 && pace > 120) sig.push(fill(W.sPace, { n: num(pace) }));
     if (awayN >= 5 || awayMs >= 10 * 60000) sig.push(fill(W.sAway, { n: num(awayN), m: num(mins(awayMs)) }));
+    // A big paste right after most of the text was deleted, or right after coming back to the page.
+    var big = pastes.filter(function (r) { return r[2] >= 200; });
+    var wipe = 0, back = -1;
+    big.forEach(function (r) {
+      ev.forEach(function (x) { if ((x[1] === 'x' || x[1] === 'c') && x[3] >= 50 && x[0] <= r[0] && r[0] - x[0] <= 30000) wipe = Math.max(wipe, x[3]); });
+      d.away.forEach(function (w) { var at = w[0] + (w[1] || 0); if (at <= r[0] && r[0] - at <= 60000 && (back < 0 || r[0] - at < back)) back = r[0] - at; });
+    });
+    if (wipe) sig.push(fill(W.sWipe, { n: num(wipe) }));
+    if (back >= 0) sig.push(fill(W.sAwayP, { s: num(Math.max(1, back / 1000)) }));
     if (typed >= 800 && deleted < typed * 0.02) sig.push(fill(W.sNoDel, { n: num(deleted) }));
     out.appendChild(el('h3', '', W.sigH));
     if (sig.length) { var ul = el('ul', 'tr-sig'); sig.forEach(function (s) { ul.appendChild(el('li', '', s)); }); out.appendChild(ul); }

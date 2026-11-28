@@ -56,6 +56,7 @@ export const TR: Trace = {
     sigH: 'Da discutere', sigNone: 'Niente di insolito in questa traccia.',
     sBig: 'È stato incollato un pezzo grande: {n} caratteri a {t}.', sShare: 'Il {p}% di tutti i caratteri aggiunti è stato incollato.',
     sPace: 'Molto testo per il tempo: {n} caratteri per minuto di scrittura.', sAway: 'La pagina è stata lasciata {n} volte ({m} min in totale).',
+    sWipe: 'Subito prima di un grande incollaggio sono stati cancellati {n} caratteri del testo.', sAwayP: 'Lo studente è tornato sulla pagina {s} secondi prima di un grande incollaggio.',
     sNoDel: 'Quasi nessuna correzione: {n} caratteri cancellati.',
     sigNote: 'Sono fatti su come è nato il testo, non una prova di uso dell’IA. Chiedi allo studente di spiegare il testo.',
     pasteH: 'Incollaggi', pasteRow: '{t} · {n} caratteri',

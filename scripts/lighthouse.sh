@@ -9,7 +9,7 @@ FAIL=0
 # Warm-up run, not scored: the first Lighthouse run on a fresh machine pays for starting Chrome and a cold disk cache,
 # so whichever page comes first scored low by chance (/ got 76-88 while the same layout at /nl/ got 100).
 npx -y lighthouse@12.8.2 "http://127.0.0.1:$PORT/" --quiet --chrome-flags="--headless=new --no-sandbox" --output=json --output-path=/tmp/lh-warmup.json >/dev/null 2>&1 || true
-for u in / /block-porn/ /parents/ /schools/ /offices/ /browser-extension/ /download/ /pricing/ /blog/ /blog/is-character-ai-safe-for-kids/ /blog/chatgpt-customer-data-gdpr/ /ai-statistics/ /link-check/ /ai-phishing-quiz/ /nl/ /fr/ /de/ /ar/ /de/ki-statistiken/ /ar/ai-statistics/; do
+for u in / /block-porn/ /parents/ /schools/ /offices/ /browser-extension/ /download/ /pricing/ /blog/ /blog/is-character-ai-safe-for-kids/ /blog/chatgpt-customer-data-gdpr/ /ai-statistics/ /link-check/ /ai-phishing-quiz/ /writing-trace/ /nl/schrijfspoor/ /nl/ /fr/ /de/ /ar/ /de/ki-statistiken/ /ar/ai-statistics/; do
   npx -y lighthouse@12.8.2 "http://127.0.0.1:$PORT$u" --quiet --chrome-flags="--headless=new --no-sandbox" --output=json --output-path=/tmp/lh.json >/dev/null 2>&1 || { echo "::warning::Lighthouse did not run for $u"; continue; }
   node -e 'const c=require("/tmp/lh.json").categories;const s=Object.entries(c).map(([k,v])=>[k,Math.round((v.score||0)*100)]);const bad=s.filter(([,n])=>n<90);console.log((bad.length?"FAIL ":"ok   ")+process.argv[1]+" "+s.map(([k,n])=>k+"="+n).join(" "));process.exit(bad.length?1:0)' "$u" || FAIL=1
 done

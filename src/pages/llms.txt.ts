@@ -27,7 +27,7 @@ export function GET() {
     group('Guides', ['guide', 'family', 'policy', 'help']),
     group('Articles', ['gdpr', 'charai', 'aiact']),
     group('Data (every figure checked against its source; free to quote with a link)', ['stats']),
-    group('Free safety tools (run in the browser, nothing is sent)', ['linkcheck', 'quiz', 'check']),
+    group('Free safety tools (run in the browser, nothing is sent)', ['linkcheck', 'quiz', 'check', 'trace']),
     group('Who it is for', ['parents', 'schools', 'offices']),
     group('Products', ['browser', 'android', 'windows', 'maclinux', 'network', 'exam', 'paste']),
     group('Company', ['download', 'pricing', 'about', 'privacy', 'terms']),

@@ -11,7 +11,7 @@ export const AS: Ask = {
         { h: 'Come funziona', steps: [
           'Chiedi un codice gratuito via e-mail a hello@mindveto.app. Vale per 5 testi al mese.',
           'Incolla il testo dello studente (da 300 a 6.000 caratteri) e scegli la lingua delle domande.',
-          'Aspetta 1 o 2 minuti. Un modello di IA aperto sul server di Mindveto scrive cinque domande.',
+          'Aspetta da 2 a 4 minuti. Un modello di IA aperto sul server di Mindveto scrive cinque domande.',
           'Fai le domande in un breve colloquio e ascolta come lo studente spiega le sue scelte.',
         ]},
         { h: 'Come sono le domande', list: [
@@ -31,7 +31,7 @@ export const AS: Ask = {
       ],
       faq: [
         { q: 'È un rilevatore di IA?', a: 'No. Non giudica il testo. Ti dà domande per parlare di fatti con lo studente.' },
-        { q: 'Perché ci vogliono uno o due minuti?', a: 'Il modello gira sul nostro server senza hardware costoso, così il tuo testo non va mai a un servizio di IA esterno. Per questo è più lento.' },
+        { q: 'Perché ci vogliono alcuni minuti?', a: 'Il modello gira sul nostro server senza hardware costoso, così il tuo testo non va mai a un servizio di IA esterno. Per questo è più lento.' },
         { q: 'E se mi servono più di 5 testi al mese?', a: 'Scrivi a hello@mindveto.app. Le scuole possono avere un piano più grande.' },
       ],
       related: ['trace', 'exam', 'schools'],
@@ -41,7 +41,7 @@ export const AS: Ask = {
     codeL: 'Il tuo codice', codeHelp: 'Non hai ancora un codice? Chiedi un codice gratuito (5 testi al mese):', mailSub: 'Codice gratuito per Chiedi allo studente',
     textL: 'Testo dello studente', langL: 'Lingua delle domande', count: '{n} / {max} caratteri',
     pv: 'Il testo viene inviato solo al server di Mindveto per creare le domande, e cancellato subito dopo.',
-    btn: 'Crea domande', wait: 'Creazione delle domande… ci vogliono 1 o 2 minuti. Tieni aperta questa pagina.',
+    btn: 'Crea domande', wait: 'Creazione delle domande… ci vogliono da 2 a 4 minuti. Tieni aperta questa pagina.',
     resH: 'Domande per il colloquio', about: 'Su:', used: '{used} di {limit} testi usati questo mese.',
     copy: 'Copia le domande', copied: 'Copiato.', note: 'Salta una domanda che non va bene. Decide il colloquio, non questa pagina.',
     eCode: 'Questo codice non è valido. Controllalo o scrivi a hello@mindveto.app.', eShort: 'Il testo è troppo corto: almeno {min} caratteri.',

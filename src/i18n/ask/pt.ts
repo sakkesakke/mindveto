@@ -11,7 +11,7 @@ export const AS: Ask = {
         { h: 'Como funciona', steps: [
           'Peça um código grátis por e-mail para hello@mindveto.app. Dá direito a 5 textos por mês.',
           'Cole o texto do aluno (300 a 6.000 caracteres) e escolha a língua das perguntas.',
-          'Espere 1 a 2 minutos. Um modelo de IA aberto no servidor próprio da Mindveto escreve cinco perguntas.',
+          'Espere 2 a 4 minutos. Um modelo de IA aberto no servidor próprio da Mindveto escreve cinco perguntas.',
           'Faça as perguntas numa conversa curta e ouça como o aluno explica as suas escolhas.',
         ]},
         { h: 'Como são as perguntas', list: [
@@ -31,7 +31,7 @@ export const AS: Ask = {
       ],
       faq: [
         { q: 'Isto é um detetor de IA?', a: 'Não. Não julga o texto. Dá-lhe perguntas para falar de factos com o aluno.' },
-        { q: 'Porque demora um ou dois minutos?', a: 'O modelo funciona no nosso próprio servidor sem hardware caro, para que o seu texto nunca vá para um serviço de IA externo. Por isso é mais lento.' },
+        { q: 'Porque demora alguns minutos?', a: 'O modelo funciona no nosso próprio servidor sem hardware caro, para que o seu texto nunca vá para um serviço de IA externo. Por isso é mais lento.' },
         { q: 'E se precisar de mais de 5 textos por mês?', a: 'Escreva para hello@mindveto.app. As escolas podem ter um plano maior.' },
       ],
       related: ['trace', 'exam', 'schools'],
@@ -41,7 +41,7 @@ export const AS: Ask = {
     codeL: 'O seu código', codeHelp: 'Ainda sem código? Peça um código grátis (5 textos por mês):', mailSub: 'Código grátis para Pergunte ao aluno',
     textL: 'Texto do aluno', langL: 'Língua das perguntas', count: '{n} / {max} caracteres',
     pv: 'O texto é enviado apenas para o servidor próprio da Mindveto para criar as perguntas, e é apagado logo a seguir.',
-    btn: 'Criar perguntas', wait: 'A criar perguntas… demora 1 a 2 minutos. Mantenha esta página aberta.',
+    btn: 'Criar perguntas', wait: 'A criar perguntas… demora 2 a 4 minutos. Mantenha esta página aberta.',
     resH: 'Perguntas para a conversa', about: 'Sobre:', used: '{used} de {limit} textos usados este mês.',
     copy: 'Copiar perguntas', copied: 'Copiado.', note: 'Salte uma pergunta que não sirva. Decide a conversa, não esta página.',
     eCode: 'Este código não é válido. Verifique-o ou escreva para hello@mindveto.app.', eShort: 'O texto é demasiado curto: pelo menos {min} caracteres.',

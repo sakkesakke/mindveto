@@ -11,14 +11,14 @@ import { loadCodes, saveCodes, hashCode, monthKey } from './codes.mjs';
 
 const PORT = +(process.env.PORT || 8787);
 const OLLAMA = (process.env.OLLAMA_URL || 'http://ollama:11434').replace(/\/$/, '');
-const MODEL = process.env.MODEL || 'qwen2.5:7b';                 // the free model; a paid plan can use a better one later
+const MODEL = process.env.MODEL || 'qwen2.5:14b';                 // the free model; a paid plan can use a better one later
 const MODEL_PAID = process.env.MODEL_PAID || MODEL;
 const ORIGINS = (process.env.ALLOW_ORIGIN || 'https://mindveto.app').split(',').map((s) => s.trim());
 const MIN_CHARS = +(process.env.MIN_CHARS || 300);
 const MAX_CHARS = +(process.env.MAX_CHARS || 6000);              // about 2 to 3 pages
 const LIMITS = { free: +(process.env.FREE_LIMIT || 5), paid: +(process.env.PAID_LIMIT || 300) };
-const TIMEOUT = +(process.env.TIMEOUT_MS || 240000);
-const QUEUE_MAX = +(process.env.QUEUE_MAX || 5);
+const TIMEOUT = +(process.env.TIMEOUT_MS || 420000);         // the 14b model needs 3-4 minutes on the free server
+const QUEUE_MAX = +(process.env.QUEUE_MAX || 2);              // with ~4 minutes per text, a longer queue would only time out
 const LANGS = { en: 'English', nl: 'Dutch', fr: 'French', es: 'Spanish', de: 'German', pt: 'Portuguese', it: 'Italian', ar: 'Arabic' };
 
 // ---------- small helpers ----------

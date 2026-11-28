@@ -11,7 +11,7 @@ export const AS: Ask = {
         { h: 'How it works', steps: [
           'Ask for a free code by email at hello@mindveto.app. It gives you 5 texts a month.',
           'Paste the student text (300 to 6,000 characters) and choose the language of the questions.',
-          'Wait 1 to 2 minutes. An open AI model on Mindveto’s own server writes five questions.',
+          'Wait 2 to 4 minutes. An open AI model on Mindveto’s own server writes five questions.',
           'Ask the questions in a short conversation, and listen to how the student explains their choices.',
         ]},
         { h: 'What the questions are like', list: [
@@ -31,7 +31,7 @@ export const AS: Ask = {
       ],
       faq: [
         { q: 'Is this an AI detector?', a: 'No. It does not judge the text. It gives you questions, so you can talk with the student about facts.' },
-        { q: 'Why does it take a minute or two?', a: 'The model runs on our own server without expensive hardware, so your text never goes to an outside AI service. That makes it slower.' },
+        { q: 'Why does it take a few minutes?', a: 'The model runs on our own server without expensive hardware, so your text never goes to an outside AI service. That makes it slower.' },
         { q: 'What if I need more than 5 texts a month?', a: 'Mail hello@mindveto.app. Schools can get a bigger plan.' },
       ],
       related: ['trace', 'exam', 'schools'],
@@ -41,7 +41,7 @@ export const AS: Ask = {
     codeL: 'Your code', codeHelp: 'No code yet? Ask for a free code (5 texts a month):', mailSub: 'Free code for Ask the student',
     textL: 'Student text', langL: 'Language of the questions', count: '{n} / {max} characters',
     pv: 'The text is sent only to Mindveto’s own server to make the questions, and is deleted right after.',
-    btn: 'Make questions', wait: 'Making questions… this takes 1 to 2 minutes. Keep this page open.',
+    btn: 'Make questions', wait: 'Making questions… this takes 2 to 4 minutes. Keep this page open.',
     resH: 'Questions for the conversation', about: 'About:', used: '{used} of {limit} texts used this month.',
     copy: 'Copy questions', copied: 'Copied.', note: 'Skip a question that does not fit. The conversation decides, not this page.',
     eCode: 'This code is not valid. Check it, or mail hello@mindveto.app.', eShort: 'The text is too short: at least {min} characters.',

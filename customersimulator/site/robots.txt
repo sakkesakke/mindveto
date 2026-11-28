@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://check.mindveto.app/sitemap.xml

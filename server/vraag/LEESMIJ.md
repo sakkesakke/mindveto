@@ -87,5 +87,5 @@ De map `data/` bevat alleen een onleesbare versie (hash) van elke code en de tel
 ## Bijwerken
 
 ```bash
-cd mindveto && git pull && cd server/vraag && docker compose up -d --build
+cd /opt/mindveto && sudo git fetch --depth 1 origin main && sudo git checkout -B main FETCH_HEAD && cd server/vraag && sudo docker compose --profile tls up -d --build
 ```

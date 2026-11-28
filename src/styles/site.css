@@ -462,3 +462,22 @@ code, kbd { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; fo
 @media (max-width: 560px) { .stats li { grid-template-columns: minmax(0, 1fr); } .stats .sn { grid-row: auto; margin-bottom: var(--s1); } }
 .checked { margin-top: var(--s1); }
 .cite p { max-width: 46rem; overflow-wrap: anywhere; }
+
+/* Writing trace (/writing-trace/) */
+.tr label { display: block; font-weight: 600; margin: var(--s3) 0 var(--s1); }
+.tr input[type="text"], .tr textarea { width: 100%; font: inherit; color: var(--ink); background: #fff; padding: .7rem .9rem; border: 2px solid var(--ink); border-radius: 12px; }
+.tr textarea { min-height: 18rem; resize: vertical; line-height: 1.6; }
+.tr input[type="file"] { font: inherit; max-width: 100%; }
+.tr input[type="range"] { width: 100%; }
+.tr-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 0 var(--s4); }
+.tr-facts { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--s1) var(--s4); margin: var(--s3) 0 var(--s5); }
+.tr-facts dt { color: var(--mute); }
+.tr-facts dd { margin: 0; font-weight: 600; text-align: end; }
+.tr-sig li, .tr-pastes li { margin: var(--s2) 0; overflow-wrap: anywhere; }
+.tr-chart { display: block; width: 100%; height: auto; background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; }
+.tr-line { fill: none; stroke: var(--moss); stroke-width: 2.5; stroke-linejoin: round; }
+.tr-dot { fill: var(--ink); }
+.tr-replay { white-space: pre-wrap; overflow-wrap: anywhere; background: var(--paper); padding: var(--s3) var(--s4); border-radius: 8px; max-height: 18rem; overflow: auto; }
+#tr-out h2 { margin-top: var(--s5); }
+#tr-out h3 { margin: var(--s5) 0 var(--s2); }
+.tr input[type="range"] { accent-color: var(--moss); }

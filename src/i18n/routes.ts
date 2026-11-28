@@ -33,6 +33,7 @@ export const ROUTES = {
   linkcheck: { en: 'link-check/', nl: 'nl/linkcheck/', fr: 'fr/verifier-un-lien/', es: 'es/comprobar-enlace/', de: 'de/link-pruefen/', pt: 'pt/verificar-link/', it: 'it/controlla-link/', ar: 'ar/link-check/' },
   quiz: { en: 'ai-phishing-quiz/', nl: 'nl/ai-phishing-quiz/', fr: 'fr/quiz-hameconnage-ia/', es: 'es/test-phishing-ia/', de: 'de/ki-phishing-quiz/', pt: 'pt/quiz-phishing-ia/', it: 'it/quiz-phishing-ia/', ar: 'ar/ai-phishing-quiz/' },
   stats: { en: 'ai-statistics/', nl: 'nl/ai-statistieken/', fr: 'fr/statistiques-ia/', es: 'es/estadisticas-ia/', de: 'de/ki-statistiken/', pt: 'pt/estatisticas-ia/', it: 'it/statistiche-ia/', ar: 'ar/ai-statistics/' },
+  trace: { en: 'writing-trace/', nl: 'nl/schrijfspoor/', fr: 'fr/trace-ecriture/', es: 'es/rastro-escritura/', de: 'de/schreibspur/', pt: 'pt/rasto-escrita/', it: 'it/traccia-scrittura/', ar: 'ar/writing-trace/' },
   gdpr: { en: 'blog/chatgpt-customer-data-gdpr/', nl: 'nl/blog/chatgpt-klantgegevens-avg/', fr: 'fr/blog/chatgpt-donnees-clients-rgpd/', es: 'es/blog/chatgpt-datos-clientes-rgpd/', de: 'de/blog/chatgpt-kundendaten-dsgvo/', pt: 'pt/blog/chatgpt-dados-clientes-rgpd/', it: 'it/blog/chatgpt-dati-clienti-gdpr/', ar: 'ar/blog/chatgpt-customer-data-gdpr/' },
 } as const;
 

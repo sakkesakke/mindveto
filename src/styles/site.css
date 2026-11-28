@@ -31,7 +31,6 @@ body {
   margin: 0; background: var(--chalk); color: var(--ink);
   font: 400 1.125rem/1.6 var(--f); font-feature-settings: 'kern';
   text-rendering: optimizeLegibility;
-  font-size-adjust: from-font;   /* fallback font keeps the same x-height while Atkinson loads (no layout shift) */
 }
 img, svg { display: block; max-width: 100%; }
 a { color: var(--moss); text-decoration-thickness: .08em; text-underline-offset: .18em; }

@@ -26,12 +26,12 @@ export const AS: Ask = {
           'Entfernen Sie Namen und andere persönliche Daten aus dem Text, bevor Sie ihn einfügen.',
         ], note: 'Das Gespräch entscheidet, nicht diese Seite.', human: true },
         { h: 'Datenschutz', p: [
-          'Der Text geht nur an den eigenen Server von Mindveto ({region}), um die Fragen zu erstellen, und wird gleich danach gelöscht. Er wird nicht gespeichert, nicht protokolliert und nicht zum Training eines Modells verwendet. Kein anderes Unternehmen sieht ihn. Wir speichern nur Ihren Code, unlesbar gemacht, und wie viele Texte Sie diesen Monat genutzt haben.',
+          'Der Text geht nur an den eigenen Server von Mindveto ({region}), um die Fragen zu erstellen, und wird gleich danach gelöscht. Er wird nicht gespeichert, nicht protokolliert und nicht zum Training eines Modells verwendet. Kein externer KI-Dienst sieht ihn. Wir speichern nur Ihren Code, unlesbar gemacht, und wie viele Texte Sie diesen Monat genutzt haben.',
         ]},
       ],
       faq: [
         { q: 'Ist das ein KI-Detektor?', a: 'Nein. Es beurteilt den Text nicht. Es gibt Ihnen Fragen, damit Sie mit dem Schüler über Fakten sprechen.' },
-        { q: 'Warum dauert es ein bis zwei Minuten?', a: 'Das Modell läuft auf unserem eigenen Server ohne teure Hardware, damit Ihr Text nie zu einem anderen Unternehmen geht. Deshalb ist es langsamer.' },
+        { q: 'Warum dauert es ein bis zwei Minuten?', a: 'Das Modell läuft auf unserem eigenen Server ohne teure Hardware, damit Ihr Text nie zu einem externen KI-Dienst geht. Deshalb ist es langsamer.' },
         { q: 'Und wenn ich mehr als 5 Texte im Monat brauche?', a: 'Schreiben Sie an hello@mindveto.app. Schulen können einen größeren Plan bekommen.' },
       ],
       related: ['trace', 'exam', 'schools'],

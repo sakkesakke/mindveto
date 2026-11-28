@@ -26,12 +26,12 @@ export const AS: Ask = {
           'Haal namen en andere persoonsgegevens uit de tekst voor je hem plakt.',
         ], note: 'Het gesprek beslist, niet deze pagina.', human: true },
         { h: 'Privacy', p: [
-          'De tekst gaat alleen naar de eigen server van Mindveto ({region}) om de vragen te maken, en wordt meteen daarna gewist. Hij wordt niet bewaard, niet gelogd en niet gebruikt om een model te trainen. Geen ander bedrijf ziet hem. We houden alleen je code bij, onleesbaar gemaakt, en hoeveel teksten je deze maand gebruikte.',
+          'De tekst gaat alleen naar de eigen server van Mindveto ({region}) om de vragen te maken, en wordt meteen daarna gewist. Hij wordt niet bewaard, niet gelogd en niet gebruikt om een model te trainen. Geen externe AI-dienst ziet hem. We houden alleen je code bij, onleesbaar gemaakt, en hoeveel teksten je deze maand gebruikte.',
         ]},
       ],
       faq: [
         { q: 'Is dit een AI-detector?', a: 'Nee. Het oordeelt niet over de tekst. Het geeft je vragen, zodat je met de leerling over feiten praat.' },
-        { q: 'Waarom duurt het een à twee minuten?', a: 'Het model draait op onze eigen server zonder dure hardware, zodat je tekst nooit naar een ander bedrijf gaat. Daardoor is het trager.' },
+        { q: 'Waarom duurt het een à twee minuten?', a: 'Het model draait op onze eigen server zonder dure hardware, zodat je tekst nooit naar een externe AI-dienst gaat. Daardoor is het trager.' },
         { q: 'En als ik meer dan 5 teksten per maand nodig heb?', a: 'Mail naar hello@mindveto.app. Scholen kunnen een groter pakket krijgen.' },
       ],
       related: ['trace', 'exam', 'schools'],

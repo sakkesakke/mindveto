@@ -26,12 +26,12 @@ export const AS: Ask = {
           'Retirez les noms et autres données personnelles du texte avant de le coller.',
         ], note: 'C’est la discussion qui décide, pas cette page.', human: true },
         { h: 'Vie privée', p: [
-          'Le texte va uniquement au serveur de Mindveto ({region}) pour créer les questions, puis il est effacé aussitôt. Il n’est ni conservé, ni journalisé, ni utilisé pour entraîner un modèle. Aucune autre entreprise ne le voit. Nous gardons seulement votre code, rendu illisible, et le nombre de textes utilisés ce mois-ci.',
+          'Le texte va uniquement au serveur de Mindveto ({region}) pour créer les questions, puis il est effacé aussitôt. Il n’est ni conservé, ni journalisé, ni utilisé pour entraîner un modèle. Aucun service d’IA externe ne le voit. Nous gardons seulement votre code, rendu illisible, et le nombre de textes utilisés ce mois-ci.',
         ]},
       ],
       faq: [
         { q: 'Est-ce un détecteur d’IA ?', a: 'Non. Il ne juge pas le texte. Il vous donne des questions pour parler de faits avec l’élève.' },
-        { q: 'Pourquoi cela prend-il une ou deux minutes ?', a: 'Le modèle tourne sur notre propre serveur sans matériel coûteux, pour que votre texte n’aille jamais chez une autre entreprise. C’est donc plus lent.' },
+        { q: 'Pourquoi cela prend-il une ou deux minutes ?', a: 'Le modèle tourne sur notre propre serveur sans matériel coûteux, pour que votre texte n’aille jamais vers un service d’IA externe. C’est donc plus lent.' },
         { q: 'Et si j’ai besoin de plus de 5 textes par mois ?', a: 'Écrivez à hello@mindveto.app. Les écoles peuvent obtenir une formule plus grande.' },
       ],
       related: ['trace', 'exam', 'schools'],

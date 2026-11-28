@@ -26,12 +26,12 @@ export const AS: Ask = {
           'Remove names and other personal data from the text before you paste it.',
         ], note: 'The conversation decides, not this page.', human: true },
         { h: 'Privacy', p: [
-          'The text goes only to Mindveto’s own server ({region}) to make the questions, and is deleted right after. It is not stored, not logged and not used to train any model. No other company sees it. We keep only your code, as an unreadable hash, and how many texts you used this month.',
+          'The text goes only to Mindveto’s own server ({region}) to make the questions, and is deleted right after. It is not stored, not logged and not used to train any model. No outside AI service sees it. We keep only your code, as an unreadable hash, and how many texts you used this month.',
         ]},
       ],
       faq: [
         { q: 'Is this an AI detector?', a: 'No. It does not judge the text. It gives you questions, so you can talk with the student about facts.' },
-        { q: 'Why does it take a minute or two?', a: 'The model runs on our own server without expensive hardware, so your text never goes to another company. That makes it slower.' },
+        { q: 'Why does it take a minute or two?', a: 'The model runs on our own server without expensive hardware, so your text never goes to an outside AI service. That makes it slower.' },
         { q: 'What if I need more than 5 texts a month?', a: 'Mail hello@mindveto.app. Schools can get a bigger plan.' },
       ],
       related: ['trace', 'exam', 'schools'],

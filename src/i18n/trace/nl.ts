@@ -35,7 +35,7 @@ export const TR: Trace = {
         { q: 'Is het gratis?', a: 'Ja. Het werkt in de browser en vraagt geen account.' },
         { q: 'Kunnen leerlingen zien wat er genoteerd wordt?', a: 'Ja. Voor ze inleveren, kunnen ze hun eigen bestand openen bij “Ik ben leerkracht” en precies hetzelfde zien.' },
       ],
-      related: ['exam', 'schools', 'paste'],
+      related: ['ask', 'exam', 'schools'],
     },
   },
   ui: {

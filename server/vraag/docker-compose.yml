@@ -1,0 +1,30 @@
+# Mindveto "Ask the student" on its own. It shares nothing with other projects on the same server:
+# its own network, its own data folder, its own containers.
+name: mindveto-vraag
+services:
+  ollama:
+    image: ollama/ollama:latest
+    restart: unless-stopped
+    volumes: [ "ollama:/root/.ollama" ]
+    networks: [ vraag ]
+  api:
+    build: .
+    restart: unless-stopped
+    depends_on: [ ollama ]
+    env_file: .env
+    environment:
+      OLLAMA_URL: http://ollama:11434
+    volumes: [ "./data:/app/data" ]
+    networks: [ vraag ]
+    # Only reachable from the server itself; the reverse proxy (Caddy below, or your own) puts it on the internet.
+    ports: [ "127.0.0.1:8787:8787" ]
+  caddy:
+    # Use this only if nothing else on the server uses ports 80 and 443. Start with: docker compose --profile tls up -d
+    profiles: [ tls ]
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports: [ "80:80", "443:443" ]
+    volumes: [ "./Caddyfile:/etc/caddy/Caddyfile:ro", "caddy:/data" ]
+    networks: [ vraag ]
+volumes: { ollama: {}, caddy: {} }
+networks: { vraag: {} }

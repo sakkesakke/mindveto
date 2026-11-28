@@ -4,6 +4,7 @@ import { COMPANY } from './company';
 import { P as PR } from './protect/it';
 import { LK } from './linkable/it';
 import { TR } from './trace/it';
+import { ASK, ASK_REGION } from './ask';
 
 // Internal links use the English paths; localize.ts rewrites them to /it/ paths at build time.
 export const home: Home = {
@@ -427,6 +428,7 @@ export const pages: Record<string, Page> = {
         'Il sito è ospitato su GitHub Pages (GitHub, Inc., USA). Come ogni hosting, GitHub tratta brevemente il tuo indirizzo IP nei log del server per servire e proteggere il sito. Noi non riceviamo questi log.',
         'La pagina del pulsante esame salva il codice classe e la chiave insegnante nel tuo browser (archiviazione locale), solo perché la pagina funzioni. Puoi cancellarli con “Dimentica questa classe”.',
         'La pagina della traccia di scrittura conserva la bozza dello studente e la sua traccia nel tuo browser (archiviazione locale), solo per non perdere lavoro ricaricando. Non viene inviato nulla. «Inizia un nuovo testo» la cancella.',
+        `La pagina «Chiedi allo studente» invia il testo incollato al server di Mindveto (${ASK_REGION.it}), solo per creare le domande. Il testo viene cancellato subito dopo: non conservato, non registrato, non usato per addestrare un modello, e nessun servizio di IA esterno lo vede. Il server conserva il tuo codice di accesso solo in forma illeggibile (hash), con un contatore mensile. Il codice resta anche nel tuo browser (archiviazione locale), così non devi riscriverlo. Il Marocco è fuori dall’UE: si applica l’accordo sul trattamento dei dati di Oracle con le clausole contrattuali tipo dell’UE. Togli prima i nomi dal testo.`,
         "La pagina di test «Funziona?» contatta i siti di IA, e Wikipedia come controllo, solo quando premi il pulsante. Quei siti vedono allora il tuo indirizzo IP, come in una visita normale. Il risultato resta nel tuo browser.",
       ]},
       { h: 'App e script', list: [
@@ -553,4 +555,5 @@ export const pages: Record<string, Page> = {
   ...PR.pages,
   ...LK.pages,
   ...TR.pages,
+  ...ASK.it.pages,
 };

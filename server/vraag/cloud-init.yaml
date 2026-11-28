@@ -1,0 +1,21 @@
+#cloud-config
+# Paste this whole file into "Initialization script" (cloud-init) when you create the Oracle instance
+# (Ubuntu 24.04, Ampere A1). The server then sets itself up: Docker, firewall ports 80/443,
+# the "Ask the student" API, the AI model and HTTPS for api.mindveto.app. It takes about 15-20 minutes.
+# Progress: sudo tail -f /var/log/cloud-init-output.log   Result: sudo cat /root/mindveto-setup.txt
+package_update: true
+packages: [git, docker.io, docker-compose-v2, iptables-persistent]
+runcmd:
+  - systemctl enable --now docker
+  # Oracle's Ubuntu image blocks every port except SSH in iptables. Open only 80 and 443.
+  - iptables -I INPUT -p tcp -m multiport --dports 80,443 -m state --state NEW -j ACCEPT
+  - netfilter-persistent save
+  - git clone --depth 1 https://github.com/sakkesakke/mindveto.git /opt/mindveto
+  - cp /opt/mindveto/server/vraag/.env.example /opt/mindveto/server/vraag/.env
+  - mkdir -p /opt/mindveto/server/vraag/data && chown 1000:1000 /opt/mindveto/server/vraag/data
+  - cd /opt/mindveto/server/vraag && docker compose --profile tls up -d --build
+  - cd /opt/mindveto/server/vraag && docker compose exec -T ollama ollama pull qwen2.5:7b
+  # First free access code for the owner, so the page can be tested right away.
+  - cd /opt/mindveto/server/vraag && docker compose exec -T api node admin.mjs new free "owner test" > /root/mindveto-setup.txt
+  - curl -s http://127.0.0.1:8787/health >> /root/mindveto-setup.txt
+  - echo "setup done $(date -u)" >> /root/mindveto-setup.txt

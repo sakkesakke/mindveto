@@ -4,6 +4,7 @@ import { COMPANY } from './company';
 import { P as PR } from './protect/pt';
 import { LK } from './linkable/pt';
 import { TR } from './trace/pt';
+import { ASK, ASK_REGION } from './ask';
 
 // Internal links use the English paths; localize.ts rewrites them to /pt/ paths at build time.
 export const home: Home = {
@@ -427,6 +428,7 @@ export const pages: Record<string, Page> = {
         'O site está hospedado no GitHub Pages (GitHub, Inc., EUA). Como qualquer hospedagem, o GitHub trata brevemente seu endereço IP em registros do servidor para entregar e proteger o site. Nós não recebemos esses registros.',
         'A página do botão de prova guarda seu código de turma e sua chave de professor no seu próprio navegador (armazenamento local), só para a página funcionar. Você pode apagá-los com “Esquecer esta turma”.',
         'A página de rasto de escrita guarda o rascunho do aluno e o seu rasto no seu próprio navegador (armazenamento local), apenas para não perder trabalho ao recarregar. Nada é enviado. «Começar um texto novo» apaga-o.',
+        `A página «Pergunte ao aluno» envia o texto que cola para o servidor próprio da Mindveto (${ASK_REGION.pt}), apenas para criar as perguntas. O texto é apagado logo a seguir: não é guardado, não é registado, não é usado para treinar um modelo e nenhum serviço de IA externo o vê. O servidor guarda o seu código de acesso apenas de forma ilegível (hash), com um contador mensal. O código também fica no seu navegador (armazenamento local) para não ter de o escrever outra vez. Marrocos fica fora da UE: aplica-se o acordo de tratamento de dados da Oracle com as cláusulas contratuais-tipo da UE. Retire primeiro os nomes do texto.`,
         "A página de teste «Funciona?» só contacta sites de IA, e a Wikipédia como controlo, quando carrega no botão. Esses sites veem então o seu endereço IP, como numa visita normal. O resultado fica no seu navegador.",
       ]},
       { h: 'Os apps e scripts', list: [
@@ -553,4 +555,5 @@ export const pages: Record<string, Page> = {
   ...PR.pages,
   ...LK.pages,
   ...TR.pages,
+  ...ASK.pt.pages,
 };

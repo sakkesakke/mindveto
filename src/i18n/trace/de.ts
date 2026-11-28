@@ -35,7 +35,7 @@ export const TR: Trace = {
         { q: 'Ist es kostenlos?', a: 'Ja. Es läuft im Browser und braucht kein Konto.' },
         { q: 'Sehen Schüler, was notiert wird?', a: 'Ja. Vor der Abgabe können sie ihre eigene Datei in der Lehrkraft-Ansicht öffnen und genau dasselbe sehen.' },
       ],
-      related: ['exam', 'schools', 'paste'],
+      related: ['ask', 'exam', 'schools'],
     },
   },
   ui: {

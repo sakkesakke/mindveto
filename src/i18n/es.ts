@@ -4,6 +4,7 @@ import { COMPANY } from './company';
 import { P as PR } from './protect/es';
 import { LK } from './linkable/es';
 import { TR } from './trace/es';
+import { ASK, ASK_REGION } from './ask';
 
 // Internal links are written with the English paths; localize.ts rewrites them to /es/ paths at build time.
 export const home: Home = {
@@ -427,6 +428,7 @@ export const pages: Record<string, Page> = {
         'La web está alojada en GitHub Pages (GitHub, Inc., EE. UU.). Como cualquier alojamiento, GitHub trata brevemente tu dirección IP en registros del servidor para servir y proteger la web. Nosotros no recibimos esos registros.',
         'La página del botón de examen guarda tu código de clase y tu clave de docente en tu propio navegador (almacenamiento local), solo para que la página funcione. Puedes borrarlos con “Olvidar esta clase”.',
         'La página de rastro de escritura guarda el borrador del alumno y su rastro en tu propio navegador (almacenamiento local), solo para no perder trabajo al recargar. No se envía nada. «Empezar un texto nuevo» lo borra.',
+        `La página «Pregunta al alumno» envía el texto que pegas al servidor propio de Mindveto (${ASK_REGION.es}), solo para crear las preguntas. El texto se borra justo después: no se guarda, no se registra, no se usa para entrenar un modelo y ningún servicio de IA externo lo ve. El servidor guarda tu código de acceso solo de forma ilegible (hash), con un contador mensual. El código también se guarda en tu navegador (almacenamiento local) para no tener que escribirlo otra vez. Marruecos está fuera de la UE: se aplica el acuerdo de tratamiento de datos de Oracle con las cláusulas contractuales tipo de la UE. Quita primero los nombres del texto.`,
         "La página de prueba «¿Funciona?» solo contacta con sitios de IA, y con Wikipedia como control, cuando pulsas su botón. Esos sitios ven entonces tu dirección IP, como en una visita normal. El resultado se queda en tu navegador.",
       ]},
       { h: 'Las apps y los scripts', list: [
@@ -553,4 +555,5 @@ export const pages: Record<string, Page> = {
   ...PR.pages,
   ...LK.pages,
   ...TR.pages,
+  ...ASK.es.pages,
 };

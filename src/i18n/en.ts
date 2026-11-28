@@ -4,6 +4,7 @@ import { COMPANY } from './company';
 import { P as PR } from './protect/en';
 import { LK } from './linkable/en';
 import { TR } from './trace/en';
+import { ASK, ASK_REGION } from './ask';
 
 export const home: Home = {
   title: 'Mindveto: block ChatGPT and 150+ AI tools with one switch',
@@ -425,6 +426,7 @@ export const pages: Record<string, Page> = {
         'The site is hosted on GitHub Pages (GitHub, Inc., USA). Like every web host, GitHub briefly processes your IP address in server logs to deliver and protect the site. We do not receive these logs.',
         'The exam button page stores your class code and teacher key in your own browser (local storage), only so the page works. You can remove them with “Forget this class”.',
         'The writing trace page keeps the student’s draft and its trace in your own browser (local storage), only so a refresh does not lose work. Nothing is sent. “Start a new text” removes it.',
+        `The “Ask the student” page sends the text you paste to Mindveto’s own server (${ASK_REGION.en}) only to make the questions. The text is deleted right after: not stored, not logged, not used to train a model, and no outside AI service sees it. The server keeps your access code only as an unreadable hash, with a monthly counter. The code is also kept in your browser (local storage) so you do not have to type it again. Morocco is outside the EU: Oracle’s data processing agreement with the EU standard contractual clauses applies. Remove names from the text first.`,
         "The “Is it working?” test page only contacts AI sites, and Wikipedia as a control, when you press its button. Those sites then see your IP address, as with a normal visit. The result stays in your browser.",
       ]},
       { h: 'The apps and scripts', list: [
@@ -550,4 +552,5 @@ export const pages: Record<string, Page> = {
   ...PR.pages,
   ...LK.pages,
   ...TR.pages,
+  ...ASK.en.pages,
 };

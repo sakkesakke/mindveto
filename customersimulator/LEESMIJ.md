@@ -26,7 +26,9 @@ Het rapport is één HTML-bestand met screenshots erin. Je kunt het mailen of af
 2. Wacht ongeveer 15 seconden per pagina.
 3. Wil je meerdere pagina's in één rapport (het Winkelpakket)? Zet dan alle adressen achter elkaar:
    `node simulate.mjs https://winkel.be https://winkel.be/product https://winkel.be/contact`
-4. Wil je het rapport in het Engels? Zet dan `--lang en` achter de opdracht.
+4. Wil je dat de tool zelf de 5 belangrijkste pagina's kiest (home, product, winkel, winkelmand, contact)? Zet dan `--crawl` achter het adres:
+   `node simulate.mjs https://winkel.be --crawl`
+5. Wil je het rapport in het Engels? Zet dan `--lang en` achter de opdracht.
 
 ## Wat je krijgt (in de map `reports`)
 
@@ -50,3 +52,11 @@ Deze grenzen staan ook in elk rapport:
 - Er wordt niets gekocht, er wordt niet ingelogd en er worden geen formulieren verstuurd.
 - Een automatische scan vindt ongeveer een derde tot de helft van de toegankelijkheidsproblemen.
 - Het rapport is geen juridisch advies en geen bewijs dat de site aan de wet voldoet.
+
+## De verkoopwebsite (map `site`)
+
+In de map `site` staat een kant-en-klare website voor CustomerSimulator: `index.html`, `privacy.html` en `voorwaarden.html`.
+
+1. Vervang overal `[JOUW-EMAIL]`, `[BEDRIJFSNAAM]`, `[NUMMER]`, `[ADRES]` en `[DATUM]` door je eigen gegevens.
+2. Laat de algemene voorwaarden nalezen door een boekhouder of jurist.
+3. Zet de map online op een eigen domein (bijvoorbeeld via GitHub Pages of je hostingbedrijf).

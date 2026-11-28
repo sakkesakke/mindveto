@@ -20,7 +20,7 @@ const args = process.argv.slice(2);
 const targets = [...new Set(args.filter(a => /^https?:\/\//.test(a)))];
 const li = args.indexOf('--lang');
 const lang = li >= 0 && args[li + 1] === 'en' ? 'en' : 'nl';
-if (!targets.length) { console.error('Gebruik: node simulate.mjs https://website.nl [https://website.nl/andere-pagina] [--lang en]'); process.exit(1); }
+if (!targets.length) { console.error('Gebruik: node simulate.mjs https://website.nl [https://website.nl/andere-pagina] [--crawl] [--lang en]'); process.exit(1); }
 const t = T[lang];
 const host = new URL(targets[0]).hostname;
 let target, site, findings, goods, shots, facts; // set per page by testPage()
@@ -36,6 +36,33 @@ const WIDE = (w) => [...document.querySelectorAll('body *')].filter(e => { const
   .slice(0, 4).map(e => e.tagName.toLowerCase() + (e.id ? '#' + e.id : '') + (typeof e.className === 'string' && e.className.trim() ? '.' + e.className.trim().split(/\s+/).join('.') : ''));
 
 const browser = await chromium.launch();
+// --crawl: start from the first address and pick up to 5 important pages of the same site by themselves.
+const KINDS = [
+  ['product', /\/(product|products|produkt|artikel|item|p)\/|[?&](product|sku)=/i, /product|artikel|bekijk|view/i],
+  ['shop', /\/(shop|winkel|webshop|collectie|collections?|categorie|category|aanbod|assortiment)(\/|$)/i, /shop|winkel|collectie|assortiment|aanbod|producten|products/i],
+  ['cart', /(cart|winkelwagen|winkelmand|mandje|basket|checkout|afrekenen)/i, /winkelwagen|winkelmand|mandje|cart|basket|afrekenen|checkout/i],
+  ['contact', /contact|kontakt/i, /contact|kontakt/i],
+  ['about', /(over-ons|overons|about|wie-zijn|ons-verhaal|about-us)/i, /over ons|about|wie zijn|ons verhaal/i],
+];
+if (args.includes('--crawl')) {
+  const start = new URL(targets[0]);
+  const ctx = await browser.newContext();
+  const page = await ctx.newPage();
+  try {
+    await page.goto(start.href, { waitUntil: 'load', timeout: 60000 });
+    const links = await page.evaluate(() => [...document.querySelectorAll('a[href]')].map(a => ({ href: a.href.split('#')[0], text: (a.innerText || a.getAttribute('aria-label') || '').trim(), nav: !!a.closest('header,nav') })));
+    const same = links.filter(l => { try { const u = new URL(l.href); return u.hostname === start.hostname && /^https?:$/.test(u.protocol) && !/\.(pdf|jpe?g|png|zip|webp|svg)$/i.test(u.pathname) && !/^(mailto|tel):/.test(l.href); } catch { return false; } });
+    for (const [, hrefRe, textRe] of KINDS) {
+      if (targets.length >= 5) break;
+      const hit = same.find(l => !targets.includes(l.href) && (hrefRe.test(new URL(l.href).pathname + new URL(l.href).search) || textRe.test(l.text)));
+      if (hit) targets.push(hit.href);
+    }
+    // Still fewer than 5? Take the main menu links in order.
+    for (const l of same.filter(l => l.nav)) { if (targets.length >= 5) break; if (!targets.includes(l.href) && l.href !== start.href) targets.push(l.href); }
+  } catch (e) { console.error('crawl:', String(e.message).slice(0, 120)); }
+  await ctx.close();
+}
+
 const pages = [];
 for (const url of targets) {
   target = url; site = new URL(url); findings = []; goods = []; shots = {}; facts = {};
@@ -186,7 +213,9 @@ async function testPage() {
       const ring = (s.outlineStyle !== 'none' && parseFloat(s.outlineWidth) > 0) || s.boxShadow !== 'none';
       const label = (e.innerText || e.getAttribute('aria-label') || e.getAttribute('placeholder') || e.tagName).trim().replace(/\s+/g, ' ').slice(0, 40);
       const id = e.tagName + '|' + label + '|' + Math.round(r.x) + ',' + Math.round(r.y);
-      return { id, label, ring, onscreen: r.width > 0 && r.height > 0 };
+      // Inside <video>, <audio> and <iframe> the focus moves to the browser's or embed's own controls, which draw their own ring.
+      const inner = /^(VIDEO|AUDIO|IFRAME)$/.test(e.tagName) && !e.matches(':focus-visible');
+      return { id, label, ring: ring || inner, onscreen: r.width > 0 && r.height > 0 };
     });
     if (!f) continue;
     if (!first) first = f.label;

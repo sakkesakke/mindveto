@@ -5,13 +5,13 @@ Een leerkracht plakt een tekst van een leerling. Een gratis open AI-model op je 
 - **Privacy:** de tekst gaat alleen naar jouw server, wordt niet bewaard en niet gelogd. Er is geen ander bedrijf bij betrokken.
 - **Gratis:** 5 teksten per maand per code. **Betalend:** 300 per maand. Je past die aantallen aan in `.env`.
 - **Lengte:** minstens 300 en hoogstens 6000 tekens per tekst (ongeveer 2 à 3 pagina's).
-- **Model:** `qwen2.5:7b` (vrije licentie, Apache 2.0). Wil je later een beter model voor betalende klanten? Dan vul je `MODEL_PAID` in.
+- **Model:** `qwen2.5:14b` (vrije licentie, Apache 2.0). Wil je later een beter model voor betalende klanten? Dan vul je `MODEL_PAID` in.
 - **Los van je andere project:** eigen containers, eigen netwerk, eigen map. Er wordt niets gedeeld.
 
 ## Wat je nodig hebt
 
 - Je Oracle-server met **Docker** erop. Typ `docker --version` om dat te controleren.
-- Ongeveer **8 GB vrij geheugen** en **10 GB vrije schijfruimte**.
+- Ongeveer **12 GB vrij geheugen** en **15 GB vrije schijfruimte**.
 
 ## Snelste manier: de server installeert zichzelf
 
@@ -32,9 +32,9 @@ Plak het hele bestand `cloud-init.yaml` bij het aanmaken van de Oracle-server in
    ```bash
    docker compose up -d --build
    ```
-5. Download het AI-model (ongeveer 5 GB, dat duurt even):
+5. Download het AI-model (ongeveer 9 GB, dat duurt even):
    ```bash
-   docker compose exec ollama ollama pull qwen2.5:7b
+   docker compose exec ollama ollama pull qwen2.5:14b
    ```
 6. Test of het werkt. Je moet `{"ok":true}` zien:
    ```bash

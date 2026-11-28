@@ -11,7 +11,7 @@ export const AS: Ask = {
         { h: 'So funktioniert es', steps: [
           'Fordern Sie per E-Mail an hello@mindveto.app einen kostenlosen Code an. Er gilt für 5 Texte im Monat.',
           'Fügen Sie den Schülertext ein (300 bis 6.000 Zeichen) und wählen Sie die Sprache der Fragen.',
-          'Warten Sie 1 bis 2 Minuten. Ein offenes KI-Modell auf dem eigenen Server von Mindveto schreibt fünf Fragen.',
+          'Warten Sie 2 bis 4 Minuten. Ein offenes KI-Modell auf dem eigenen Server von Mindveto schreibt fünf Fragen.',
           'Stellen Sie die Fragen in einem kurzen Gespräch und hören Sie zu, wie die Entscheidungen erklärt werden.',
         ]},
         { h: 'Wie die Fragen aussehen', list: [
@@ -31,7 +31,7 @@ export const AS: Ask = {
       ],
       faq: [
         { q: 'Ist das ein KI-Detektor?', a: 'Nein. Es beurteilt den Text nicht. Es gibt Ihnen Fragen, damit Sie mit dem Schüler über Fakten sprechen.' },
-        { q: 'Warum dauert es ein bis zwei Minuten?', a: 'Das Modell läuft auf unserem eigenen Server ohne teure Hardware, damit Ihr Text nie zu einem externen KI-Dienst geht. Deshalb ist es langsamer.' },
+        { q: 'Warum dauert es einige Minuten?', a: 'Das Modell läuft auf unserem eigenen Server ohne teure Hardware, damit Ihr Text nie zu einem externen KI-Dienst geht. Deshalb ist es langsamer.' },
         { q: 'Und wenn ich mehr als 5 Texte im Monat brauche?', a: 'Schreiben Sie an hello@mindveto.app. Schulen können einen größeren Plan bekommen.' },
       ],
       related: ['trace', 'exam', 'schools'],
@@ -41,7 +41,7 @@ export const AS: Ask = {
     codeL: 'Ihr Code', codeHelp: 'Noch kein Code? Fordern Sie einen kostenlosen Code an (5 Texte im Monat):', mailSub: 'Kostenloser Code für Fragen an Schüler',
     textL: 'Schülertext', langL: 'Sprache der Fragen', count: '{n} / {max} Zeichen',
     pv: 'Der Text wird nur an den eigenen Server von Mindveto gesendet, um die Fragen zu erstellen, und gleich danach gelöscht.',
-    btn: 'Fragen erstellen', wait: 'Fragen werden erstellt… das dauert 1 bis 2 Minuten. Lassen Sie diese Seite offen.',
+    btn: 'Fragen erstellen', wait: 'Fragen werden erstellt… das dauert 2 bis 4 Minuten. Lassen Sie diese Seite offen.',
     resH: 'Fragen für das Gespräch', about: 'Zu:', used: '{used} von {limit} Texten diesen Monat genutzt.',
     copy: 'Fragen kopieren', copied: 'Kopiert.', note: 'Überspringen Sie eine Frage, die nicht passt. Das Gespräch entscheidet, nicht diese Seite.',
     eCode: 'Dieser Code ist ungültig. Prüfen Sie ihn oder schreiben Sie an hello@mindveto.app.', eShort: 'Der Text ist zu kurz: mindestens {min} Zeichen.',

@@ -25,7 +25,7 @@
     if (t.length > max) { say(fill(A.eLong, { max: max })); text.focus(); return; }
     try { localStorage.setItem(KEY, c); } catch (e) { /* not saved */ }
     btn.disabled = true; out.replaceChildren(); say(A.wait, 'off');
-    var ctl = new AbortController(), timer = setTimeout(function () { ctl.abort(); }, 300000);
+    var ctl = new AbortController(), timer = setTimeout(function () { ctl.abort(); }, 480000);
     fetch(A.api + '/v1/questions', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ code: c, text: t, lang: lang.value }), signal: ctl.signal })
       .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
       .then(function (r) {

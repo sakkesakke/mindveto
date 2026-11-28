@@ -4,6 +4,7 @@ import { COMPANY } from './company';
 import { P as PR } from './protect/de';
 import { LK } from './linkable/de';
 import { TR } from './trace/de';
+import { ASK, ASK_REGION } from './ask';
 
 // Internal links use the English paths; localize.ts rewrites them to /de/ paths at build time.
 export const home: Home = {
@@ -427,6 +428,7 @@ export const pages: Record<string, Page> = {
         'Die Website liegt bei GitHub Pages (GitHub, Inc., USA). Wie jeder Webhoster verarbeitet GitHub Ihre IP-Adresse kurz in Server-Logs, um die Seite auszuliefern und zu schützen. Wir erhalten diese Logs nicht.',
         'Die Seite des Prüfungsknopfs speichert Ihren Klassencode und Lehrkraft-Schlüssel in Ihrem eigenen Browser (lokaler Speicher), nur damit die Seite funktioniert. Sie können sie mit „Diese Klasse vergessen“ löschen.',
         'Die Schreibspur-Seite speichert den Entwurf und seine Spur in Ihrem eigenen Browser (lokaler Speicher), nur damit beim Neuladen nichts verloren geht. Es wird nichts gesendet. „Neuen Text beginnen“ löscht ihn.',
+        `Die Seite „Fragen an Schüler“ sendet den eingefügten Text an den eigenen Server von Mindveto (${ASK_REGION}), nur um die Fragen zu erstellen. Der Text wird gleich danach gelöscht: nicht gespeichert, nicht protokolliert, nicht zum Training eines Modells genutzt, und kein anderes Unternehmen sieht ihn. Der Server speichert Ihren Zugangscode nur unlesbar (als Hash), mit einem Monatszähler. Der Code bleibt außerdem in Ihrem Browser (lokaler Speicher), damit Sie ihn nicht erneut eingeben müssen.`,
         "Die Testseite „Funktioniert es?“ kontaktiert KI-Seiten, und Wikipedia als Kontrolle, nur, wenn du ihren Knopf drückst. Diese Seiten sehen dann deine IP-Adresse, wie bei einem normalen Besuch. Das Ergebnis bleibt in deinem Browser.",
       ]},
       { h: 'Apps und Skripte', list: [
@@ -553,4 +555,5 @@ export const pages: Record<string, Page> = {
   ...PR.pages,
   ...LK.pages,
   ...TR.pages,
+  ...ASK.de.pages,
 };

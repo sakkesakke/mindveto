@@ -35,7 +35,7 @@ export const TR: Trace = {
         { q: 'Is it free?', a: 'Yes. It runs in the browser and needs no account.' },
         { q: 'Can students see what is recorded?', a: 'Yes. Before handing it in, they can open their own file in the teacher view and see exactly the same.' },
       ],
-      related: ['exam', 'schools', 'paste'],
+      related: ['ask', 'exam', 'schools'],
     },
   },
   ui: {

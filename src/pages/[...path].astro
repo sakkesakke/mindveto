@@ -12,6 +12,8 @@ import LC_JS from '../scripts/linkcheck.js?raw';
 import QZ_JS from '../scripts/quiz.js?raw';
 import TR_JS from '../scripts/trace.js?raw';
 import { TRACE } from '../i18n/trace';
+import AS_JS from '../scripts/ask.js?raw';
+import { ASK, ASK_API, ASK_LANG_NAMES } from '../i18n/ask';
 import * as en from '../i18n/en';
 import * as nl from '../i18n/nl';
 import * as fr from '../i18n/fr';
@@ -100,7 +102,7 @@ const K = CHECK_UI[lang];
 const DEMO = { h: t.demoH, cap: t.demoCap };
 const VL = ['en', 'nl', 'fr'].includes(lang) ? lang : 'en'; // demo videos exist in EN/NL/FR; other languages show the English one
 const M = PASTE_MOCK[lang] ?? PASTE_MOCK.en;
-const NO_ASIDE: PageKey[] = ['help', 'about', 'privacy', 'terms', 'legal', 'pricing', 'download', 'policy', 'guide', 'family', 'blog', 'charai', 'aiact', 'linkcheck', 'quiz', 'stats', 'gdpr', 'trace'];
+const NO_ASIDE: PageKey[] = ['help', 'about', 'privacy', 'terms', 'legal', 'pricing', 'download', 'policy', 'guide', 'family', 'blog', 'charai', 'aiact', 'linkcheck', 'quiz', 'stats', 'gdpr', 'trace', 'ask'];
 const ASIDE: Partial<Record<PageKey, string>> = { offices: 'paste', paste: 'paste', browser: 'popup', parents: 'switch', schools: 'popup', exam: 'exam', android: 'phone', windows: 'win', maclinux: 'mac', network: 'list', about: 'switch' };
 const aside = isHome || NO_ASIDE.includes(key) ? null : ASIDE[key] ?? null;
 const U = UI_PREVIEW[lang] ?? UI_PREVIEW.en;
@@ -108,6 +110,8 @@ const P = PLANS[lang];
 const PR = localize(PROTECT[lang], lang);
 const js = (name: string, data: object, code: string) => `var ${name}=${JSON.stringify(data).replace(/</g, '\\u003c')};\n${code}`;
 const TRU = TRACE[lang].ui;
+const ASU = ASK[lang].ui;
+const ASK_MAX = 6000;
 const LC_EX = [['https://www.ing.com/', PR.lc.exGood], ['https://paypa1-login.com/verify', PR.lc.exBad], ['https://xn--pypal-4ve.com/', PR.lc.exHidden]];
 ---
 <Base lang={lang} page={key} title={title} desc={desc} jsonld={jsonld}>
@@ -416,6 +420,26 @@ AI is allowed again.` : `! Title: Mindveto AI block list
             <div id="lcout" aria-live="polite" hidden></div>
           </div>
           <script is:inline set:html={js('L', PR.lc, LC_JS)} />
+        </section>
+      )}
+
+      {key === 'ask' && (
+        <section id="ask" aria-label={pg!.h1}>
+          <div class="tool tr">
+            <label for="as-code">{ASU.codeL}</label>
+            <input id="as-code" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="40" dir="ltr" placeholder="MV-XXXX-XXXX-XXXX">
+            <p class="small">{ASU.codeHelp} <a href={`mailto:hello@mindveto.app?subject=${encodeURIComponent(ASU.mailSub)}`}>hello@mindveto.app</a></p>
+            <label for="as-text">{ASU.textL}</label>
+            <textarea id="as-text" rows="14" maxlength={ASK_MAX}></textarea>
+            <p class="small" id="as-count"></p>
+            <label for="as-lang">{ASU.langL}</label>
+            <select id="as-lang">{ASK_LANG_NAMES.map(([v, n]) => <option value={v} lang={v} selected={v === lang}>{n}</option>)}</select>
+            <p class="small">{ASU.pv}</p>
+            <div class="actions"><button class="btn solid" id="as-go" type="button">{ASU.btn}</button></div>
+            <p id="as-state" class="state off" role="status" hidden></p>
+            <div id="as-out"></div>
+          </div>
+          <script is:inline set:html={js('A', { ...ASU, api: ASK_API, max: ASK_MAX }, AS_JS)} />
         </section>
       )}
 

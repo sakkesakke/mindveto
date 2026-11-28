@@ -35,7 +35,7 @@ export const TR: Trace = {
         { q: '¿Es gratis?', a: 'Sí. Funciona en el navegador y no necesita cuenta.' },
         { q: '¿Pueden los alumnos ver lo que se anota?', a: 'Sí. Antes de entregar, pueden abrir su propio archivo en la vista del docente y ver exactamente lo mismo.' },
       ],
-      related: ['exam', 'schools', 'paste'],
+      related: ['ask', 'exam', 'schools'],
     },
   },
   ui: {

@@ -481,3 +481,10 @@ code, kbd { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; fo
 #tr-out h2 { margin-top: var(--s5); }
 #tr-out h3 { margin: var(--s5) 0 var(--s2); }
 .tr input[type="range"] { accent-color: var(--moss); }
+/* Ask the student (/ask-the-student/) */
+#ask select { font: inherit; padding: .7rem .9rem; border-radius: 12px; border: 2px solid var(--ink); background: #fff; color: var(--ink); max-width: 100%; }
+.as-q { padding-inline-start: 1.25rem; }
+.as-q li { margin: var(--s4) 0; overflow-wrap: anywhere; }
+.as-q li p { margin: var(--s1) 0 0; }
+#as-state { margin-top: var(--s4); }
+#as-out h2 { margin-top: var(--s6); }

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CustomerSimulator: zie waar uw klanten afhaken</title>
+<meta name="description" content="Wij testen uw webwinkel zoals zeven echte klanten: op een telefoon, met het toetsenbord, ingezoomd en traag. U krijgt een rapport in gewone taal.">
+<link rel="preload" href="atkinson-hyperlegible-next-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: 'Atkinson Next'; src: url('atkinson-hyperlegible-next-latin-wght-normal.woff2') format('woff2'); font-weight: 200 800; font-display: swap; }
+:root { --chalk: #e6eae4; --paper: #f6f7f3; --ink: #18241f; --mute: #4a5753; --moss: #2f5e4f; --rule: #c4ccc6; --red: #9b2c1f; --amber: #7a5200; color-scheme: light; }
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--chalk); color: var(--ink); font: 400 1.125rem/1.6 'Atkinson Next', system-ui, sans-serif; }
+a { color: var(--moss); text-underline-offset: .18em; }
+a:hover { color: var(--ink); }
+:focus-visible { outline: 3px solid var(--moss); outline-offset: 3px; }
+.wrap { max-width: 64rem; margin: 0 auto; padding: 0 1.25rem; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--paper); padding: .5rem 1rem; }
+.skip:focus { left: 1rem; top: 1rem; }
+header.top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.25rem 0; }
+.brand { font-weight: 600; color: var(--ink); text-decoration: none; }
+.btn { display: inline-block; background: var(--ink); color: #fff; font-weight: 600; text-decoration: none; padding: .75rem 1.25rem; border: 2px solid var(--ink); }
+.btn:hover { background: var(--moss); border-color: var(--moss); color: #fff; }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn.ghost:hover { background: var(--paper); color: var(--ink); border-color: var(--ink); }
+h1, h2, h3 { font-weight: 600; line-height: 1.1; letter-spacing: -.02em; margin: 0 0 1rem; overflow-wrap: break-word; hyphens: auto; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.75rem); max-width: 16ch; }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.25rem); }
+h3 { font-size: 1.15rem; }
+p, li { overflow-wrap: break-word; }
+.hero { padding: 3rem 0 4rem; }
+.lead { font-size: 1.3rem; color: var(--mute); max-width: 36em; }
+.cta { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+section { padding: 4rem 0; border-top: 1px solid var(--rule); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: 1rem; margin-top: 2rem; }
+.card { background: var(--paper); border: 1px solid var(--rule); padding: 1.25rem; }
+.card p { margin: 0; color: var(--mute); }
+.n { font-size: .85rem; font-weight: 600; color: var(--moss); letter-spacing: .04em; text-transform: uppercase; display: block; margin-bottom: .35rem; }
+.sample { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
+.finding { background: var(--paper); border: 1px solid var(--rule); border-left: 4px solid var(--red); padding: 1rem; margin-bottom: .75rem; }
+.finding.a { border-left-color: var(--amber); }
+.finding b { display: block; }
+.finding small { font-weight: 600; text-transform: uppercase; letter-spacing: .04em; font-size: .75rem; color: var(--red); }
+.finding.a small { color: var(--amber); }
+.finding p { margin: .25rem 0 0; font-size: 1rem; color: var(--mute); }
+.price { display: flex; flex-direction: column; }
+.price .amt { font-size: 2.25rem; font-weight: 600; margin: .25rem 0 .75rem; }
+.price .amt small { font-size: 1rem; font-weight: 400; color: var(--mute); }
+.price ul { padding-left: 1.1rem; margin: 0 0 1.25rem; color: var(--mute); font-size: 1rem; }
+.price .btn { margin-top: auto; text-align: center; }
+.price.main { border: 2px solid var(--ink); }
+.honest { background: var(--paper); border: 1px solid var(--rule); padding: 1.5rem; max-width: 46rem; }
+.honest ul { margin: .5rem 0 0; padding-left: 1.1rem; }
+.steps { counter-reset: s; list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 1rem; max-width: 46rem; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); gap: 1rem; align-items: start; }
+.steps li::before { content: counter(s); font-weight: 600; font-size: 1.25rem; border: 2px solid var(--ink); width: 2.5rem; height: 2.5rem; display: grid; place-items: center; }
+footer { padding: 2.5rem 0 3rem; border-top: 1px solid var(--rule); color: var(--mute); font-size: .95rem; }
+@media (max-width: 760px) { .sample { grid-template-columns: minmax(0, 1fr); } section { padding: 3rem 0; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#">CustomerSimulator</a>
+    <a class="btn ghost" href="#prijzen">Prijzen</a>
+  </header>
+</div>
+
+<main id="inhoud">
+  <div class="wrap hero">
+    <h1>Zie waar uw klanten afhaken</h1>
+    <p class="lead">Wij bezoeken uw webwinkel zoals zeven verschillende klanten dat doen. U krijgt een rapport in gewone taal: wat hen tegenhoudt, wat al goed werkt en hoe u het oplost.</p>
+    <div class="cta">
+      <a class="btn" href="mailto:[JOUW-EMAIL]?subject=Gratis%20check%20van%20mijn%20website">Vraag een gratis check</a>
+      <a class="btn ghost" href="voorbeeld-rapport.pdf">Bekijk een voorbeeldrapport (PDF)</a>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>Zeven klanten, één rapport</h2>
+      <p class="lead">Elke klant loopt ergens anders vast. Wij testen ze allemaal.</p>
+      <div class="grid">
+        <div class="card"><span class="n">Klant 1</span><h3>Op een laptop</h3><p>Is de site veilig, zijn er contactgegevens en werken alle links?</p></div>
+        <div class="card"><span class="n">Klant 2</span><h3>Op een telefoon</h3><p>Past alles op het scherm en zijn de knoppen groot genoeg voor een duim?</p></div>
+        <div class="card"><span class="n">Klant 3</span><h3>Met een beperking</h3><p>Automatische controle op de WCAG-richtlijnen: contrast, beschrijvingen bij afbeeldingen, labels.</p></div>
+        <div class="card"><span class="n">Klant 4</span><h3>Alleen met het toetsenbord</h3><p>Ziet de klant waar hij is, en raakt hij nergens vast?</p></div>
+        <div class="card"><span class="n">Klant 5</span><h3>Die 400 % inzoomt</h3><p>Blijft de pagina leesbaar zonder heen en weer te schuiven?</p></div>
+        <div class="card"><span class="n">Klant 6</span><h3>Met een trage verbinding</h3><p>Hoe lang wacht de klant voor hij iets ziet, en hoe zwaar is de pagina?</p></div>
+        <div class="card"><span class="n">Klant 7</span><h3>Die op privacy let</h3><p>Welke cookies en andere bedrijven laden al voordat de klant iets aanklikt?</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap sample">
+      <div>
+        <h2>Zo ziet het rapport eruit</h2>
+        <p>Het belangrijkste staat bovenaan. Bij elk probleem leest u waarom het klanten kost en wat u of uw webbouwer moet doen.</p>
+        <p>U krijgt het rapport als PDF, met schermafbeeldingen van uw site op een laptop en een telefoon.</p>
+        <p><a href="voorbeeld-rapport.pdf">Open het voorbeeldrapport (PDF)</a></p>
+      </div>
+      <div aria-label="Voorbeeld van drie bevindingen" role="group">
+        <div class="finding"><small>Ernstig · Telefoon</small><b>De pagina schuift opzij</b><p>Klanten moeten heen en weer vegen en missen knoppen.</p></div>
+        <div class="finding"><small>Ernstig · Toegankelijkheid</small><b>Tekst is te slecht leesbaar</b><p>Te weinig contrast. Maak de tekst donkerder.</p></div>
+        <div class="finding a"><small>Belangrijk · Privacy</small><b>4 cookies voordat de klant iets aanklikt</b><p>Controleer of die eerst toestemming nodig hebben.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prijzen">
+    <div class="wrap">
+      <h2>Prijzen</h2>
+      <p class="lead">Prijzen exclusief btw. U betaalt pas als u het volledige rapport wilt.</p>
+      <div class="grid">
+        <div class="card price"><h3>Gratis check</h3><p class="amt">€0</p><ul><li>De 3 grootste problemen van uw homepage</li><li>Per mail, binnen 2 werkdagen</li></ul><a class="btn ghost" href="mailto:[JOUW-EMAIL]?subject=Gratis%20check">Vraag aan</a></div>
+        <div class="card price"><h3>Basisrapport</h3><p class="amt">€49</p><ul><li>Volledig rapport van 1 pagina</li><li>15 minuten uitleg via een videogesprek</li></ul><a class="btn ghost" href="mailto:[JOUW-EMAIL]?subject=Basisrapport">Bestel</a></div>
+        <div class="card price main"><h3>Winkelpakket</h3><p class="amt">€149</p><ul><li>5 pagina's: home, product, winkelmand, contact, over ons</li><li>30 minuten uitleg via een videogesprek</li></ul><a class="btn" href="mailto:[JOUW-EMAIL]?subject=Winkelpakket">Bestel</a></div>
+        <div class="card price"><h3>Maandcontrole</h3><p class="amt">€29 <small>per maand</small></p><ul><li>Elke maand een nieuw rapport</li><li>Zo ziet u of uw site beter wordt</li><li>Maandelijks opzegbaar</li></ul><a class="btn ghost" href="mailto:[JOUW-EMAIL]?subject=Maandcontrole">Bestel</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Zo werkt het</h2>
+      <ol class="steps">
+        <li><div><h3>U stuurt ons het adres van uw website</h3><p>U hoeft niets te installeren en ons geen wachtwoord te geven.</p></div></li>
+        <li><div><h3>Wij testen uw site als zeven klanten</h3><p>Alleen openbare pagina's. Wij kopen niets en versturen geen formulieren.</p></div></li>
+        <li><div><h3>U krijgt het rapport en uitleg</h3><p>In gewone taal, met de belangrijkste punten eerst.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Wat wij eerlijk moeten zeggen</h2>
+      <div class="honest">
+        <p>Een automatische test is een sterke eerste stap, maar geen vervanging voor echte mensen.</p>
+        <ul>
+          <li>Automatische toegankelijkheidstests vinden ongeveer een derde tot de helft van alle problemen.</li>
+          <li>Wij testen alleen de pagina's die in het rapport staan.</li>
+          <li>Het rapport is geen juridisch advies en geen bewijs dat uw site voldoet aan de European Accessibility Act of de AVG.</li>
+          <li>Heel kleine bedrijven (minder dan 10 werknemers en hoogstens €2 miljoen omzet) die diensten aanbieden, zijn vrijgesteld van de European Accessibility Act. Een betere site levert wel meer klanten op.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>CustomerSimulator · [BEDRIJFSNAAM] · KBO [NUMMER] · <a href="mailto:[JOUW-EMAIL]">[JOUW-EMAIL]</a></p>
+    <p>Deze website gebruikt geen cookies en geen trackers. <a href="privacy.html">Privacyverklaring</a> · <a href="voorwaarden.html">Algemene voorwaarden</a></p>
+  </div>
+</footer>
+</body>
+</html>

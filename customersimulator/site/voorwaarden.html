@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Algemene voorwaarden – CustomerSimulator</title>
+<meta name="description" content="De algemene voorwaarden van CustomerSimulator: wat wij testen, wat het rapport wel en niet is, prijzen, betaling en opzeggen.">
+<link rel="preload" href="atkinson-hyperlegible-next-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: 'Atkinson Next'; src: url('atkinson-hyperlegible-next-latin-wght-normal.woff2') format('woff2'); font-weight: 200 800; font-display: swap; }
+:root { --chalk: #e6eae4; --paper: #f6f7f3; --ink: #18241f; --mute: #4a5753; --moss: #2f5e4f; --rule: #c4ccc6; --red: #9b2c1f; --amber: #7a5200; color-scheme: light; }
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--chalk); color: var(--ink); font: 400 1.125rem/1.6 'Atkinson Next', system-ui, sans-serif; }
+a { color: var(--moss); text-underline-offset: .18em; }
+a:hover { color: var(--ink); }
+:focus-visible { outline: 3px solid var(--moss); outline-offset: 3px; }
+.wrap { max-width: 64rem; margin: 0 auto; padding: 0 1.25rem; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--paper); padding: .5rem 1rem; }
+.skip:focus { left: 1rem; top: 1rem; }
+header.top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.25rem 0; }
+.brand { font-weight: 600; color: var(--ink); text-decoration: none; }
+.btn { display: inline-block; background: var(--ink); color: #fff; font-weight: 600; text-decoration: none; padding: .75rem 1.25rem; border: 2px solid var(--ink); }
+.btn:hover { background: var(--moss); border-color: var(--moss); color: #fff; }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn.ghost:hover { background: var(--paper); color: var(--ink); border-color: var(--ink); }
+h1, h2, h3 { font-weight: 600; line-height: 1.1; letter-spacing: -.02em; margin: 0 0 1rem; overflow-wrap: break-word; hyphens: auto; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.75rem); max-width: 16ch; }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.25rem); }
+h3 { font-size: 1.15rem; }
+p, li { overflow-wrap: break-word; }
+.hero { padding: 3rem 0 4rem; }
+.lead { font-size: 1.3rem; color: var(--mute); max-width: 36em; }
+.cta { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+section { padding: 4rem 0; border-top: 1px solid var(--rule); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: 1rem; margin-top: 2rem; }
+.card { background: var(--paper); border: 1px solid var(--rule); padding: 1.25rem; }
+.card p { margin: 0; color: var(--mute); }
+.n { font-size: .85rem; font-weight: 600; color: var(--moss); letter-spacing: .04em; text-transform: uppercase; display: block; margin-bottom: .35rem; }
+.sample { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
+.finding { background: var(--paper); border: 1px solid var(--rule); border-left: 4px solid var(--red); padding: 1rem; margin-bottom: .75rem; }
+.finding.a { border-left-color: var(--amber); }
+.finding b { display: block; }
+.finding small { font-weight: 600; text-transform: uppercase; letter-spacing: .04em; font-size: .75rem; color: var(--red); }
+.finding.a small { color: var(--amber); }
+.finding p { margin: .25rem 0 0; font-size: 1rem; color: var(--mute); }
+.price { display: flex; flex-direction: column; }
+.price .amt { font-size: 2.25rem; font-weight: 600; margin: .25rem 0 .75rem; }
+.price .amt small { font-size: 1rem; font-weight: 400; color: var(--mute); }
+.price ul { padding-left: 1.1rem; margin: 0 0 1.25rem; color: var(--mute); font-size: 1rem; }
+.price .btn { margin-top: auto; text-align: center; }
+.price.main { border: 2px solid var(--ink); }
+.honest { background: var(--paper); border: 1px solid var(--rule); padding: 1.5rem; max-width: 46rem; }
+.honest ul { margin: .5rem 0 0; padding-left: 1.1rem; }
+.steps { counter-reset: s; list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 1rem; max-width: 46rem; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); gap: 1rem; align-items: start; }
+.steps li::before { content: counter(s); font-weight: 600; font-size: 1.25rem; border: 2px solid var(--ink); width: 2.5rem; height: 2.5rem; display: grid; place-items: center; }
+footer { padding: 2.5rem 0 3rem; border-top: 1px solid var(--rule); color: var(--mute); font-size: .95rem; }
+@media (max-width: 760px) { .sample { grid-template-columns: minmax(0, 1fr); } section { padding: 3rem 0; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+<div class="wrap">
+  <header class="top"><a class="brand" href="index.html">CustomerSimulator</a><a class="btn ghost" href="index.html#prijzen">Prijzen</a></header>
+</div>
+<main id="inhoud"><div class="wrap" style="max-width:46rem;padding-bottom:4rem">
+<h1>Algemene voorwaarden</h1>
+<p><em>Laatst bijgewerkt: [DATUM]. Laat deze tekst nalezen door een boekhouder of jurist voor u hem gebruikt.</em></p>
+<h2>1. Wie</h2>
+<p>Deze voorwaarden gelden voor alle diensten van CustomerSimulator, een dienst van [BEDRIJFSNAAM], [ADRES], KBO [NUMMER].</p>
+<h2>2. Wat wij doen</h2>
+<p>Wij testen openbare pagina's van uw website met automatische tests en schrijven daar een rapport over. Wij loggen niet in, kopen niets en versturen geen formulieren.</p>
+<h2>3. Wat het rapport niet is</h2>
+<p>Het rapport is een automatische test. Het vindt niet alle problemen. Het is geen juridisch advies en geen bewijs dat uw website voldoet aan wetten zoals de European Accessibility Act of de AVG.</p>
+<h2>4. Prijs en betaling</h2>
+<p>De prijzen staan op onze website, exclusief btw. U betaalt via een factuur, binnen 14 dagen. U krijgt het volledige rapport nadat de betaling binnen is.</p>
+<h2>5. Maandcontrole</h2>
+<p>De maandcontrole loopt per maand en is elke maand opzegbaar met een mail, ten laatste 5 dagen voor de volgende maand begint.</p>
+<h2>6. Niet tevreden</h2>
+<p>Laat het ons binnen 14 dagen weten. Klopt er iets niet in het rapport, dan verbeteren wij het gratis.</p>
+<h2>7. Aansprakelijkheid</h2>
+<p>Wij doen ons best om juiste rapporten te maken. Onze aansprakelijkheid is beperkt tot het bedrag dat u voor de opdracht betaalde.</p>
+<h2>8. Recht</h2>
+<p>Het Belgisch recht is van toepassing. Bij een geschil zoeken wij eerst samen een oplossing.</p>
+</div></main>
+<footer><div class="wrap"><p>CustomerSimulator · [BEDRIJFSNAAM] · KBO [NUMMER] · <a href="mailto:[JOUW-EMAIL]">[JOUW-EMAIL]</a></p>
+<p><a href="privacy.html">Privacyverklaring</a> · <a href="voorwaarden.html">Algemene voorwaarden</a></p></div></footer>
+</body>
+</html>
